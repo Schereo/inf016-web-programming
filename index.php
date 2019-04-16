@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head >
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@
     essent option ex, pro in tractatos neglegentur. Omnium apeirian expetendis vel id.
 <p>222222222222222222222222222222</p>
 Eirmod utamur vis in, nec eu ferri dicit. Eros sale libris ut ius.
-Vix cu semper vivendo propriae.</p>
+Vix cu semper vivendo propriae.
 <img src="./media/oldenburg-stadt.jpeg" width="800" height="500" alt="Bild1">
 
 <p>Scripta mediocritatem nam eu, atomorum rationibus sententiae quo in. Elitr oblique est ex, vel iuvaret eripuit ad.
