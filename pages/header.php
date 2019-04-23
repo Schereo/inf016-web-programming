@@ -1,13 +1,8 @@
-<h1>Bildungsstätten</h1>
+<h1>Oscolia</h1>
 <nav>
-    <a href="pages/index.php">Home</a>
-    <a href="pages/index.html">Grundschulen</a>
-    <a href="pages/index.html">Oberschulen</a>
-    <a href="pages/index.html">Integrierte Gesamtschulen</a>
-    <a href="pages/index.html">Gymnasien</a>
-    <a href="pages/index.html">Förderschulen</a>
-    <a href="pages/BerufsbildendeSchulen.php">Berufsbildende Schulen</a>
-    <a href="https://google.de">Google</a>
-    <label for="search"></label>
-    <input type="search" id="search" placeholder="Suche…">
+    <a href ="#suche">| Schule suchen |</a>
+    <a href ="#map">Schulen Karten |</a>
+    <a href ="#anlegen">Schule anlegen |</a>
+   <a href ="#anmelden">Anmelden |</a>
+    <a href ="#registrieren">Registrieren |</a>
 </nav>
