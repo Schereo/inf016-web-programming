@@ -1,4 +1,8 @@
-<h1>Bildungsstätten</h1>
-<a href=>Home</a>
-<a href="pages/index.html">Stadtteile</a>
-<a href="https://google.de">Google</a>
+<h1>Oscolia</h1>
+<nav>
+    <a href ="#suche">| Schule suchen |</a>
+    <a href ="#map">Schulen Karten |</a>
+    <a href ="#anlegen">Schule anlegen |</a>
+   <a href ="#anmelden">Anmelden |</a>
+    <a href ="#registrieren">Registrieren |</a>
+</nav>
