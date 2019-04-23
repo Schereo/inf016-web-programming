@@ -1,14 +1,13 @@
-<fieldset> 
-    <legend>Feedback</legend>
-    <span class='review-holder'>
-      <span class='review'>
-        <span data-description='hate it'>1 Stern</span>
-        <span data-description="don't like it">2 Sterne</span>
-        <span data-description="it's ok">3 Sterne</span>
-        <span data-description="it's good">4 Sterne</span>
-        <span data-description="it's great">5 Sterne</span>
-      </span>
-    </span> <br> 
-    <textarea> </textarea>
-    
-</fieldset>
+<form action="">
+  <label for="rating1">1 Stern</label>
+  <input id="rating1" type="radio" name="rating" value="1">
+  <label for="rating2">2 Sterne</label>
+  <input id="rating2" type="radio" name="rating" value="2">
+  <label for="rating3">3 Sterne</label>
+  <input id="rating3" type="radio" name="rating" value="3">
+  <label for="rating4">4 Sterne</label>
+  <input id="rating4" type="radio" name="rating" value="4">
+  <label for="rating5">5 Sterne</label>
+  <input id="rating5" type="radio" name="rating" value="5">
+  <button type="submit">Bewerten</button>
+</form>
