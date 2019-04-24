@@ -24,10 +24,10 @@
         melius fierent qui, est quas sonet latine ei, odio scaevola iudicabit qui id. Insolens necessitatibus ut pro.</p>
 </header>
 <section>
-    <form action=""> 
+    <form>
         <h2 id="#suche">Schule Suchen</h2>
-        <input type="text" label="Schoolname" placeholder="Schulname">
-        <select label="Schooltype">
+        <input type="text" placeholder="Schulname">
+        <select>
             <option value="form1">Grundschule</option>
             <option value="form2">Gymnasium</option>
             <option value="form3">Oberschule</option>
@@ -35,7 +35,7 @@
             <option value="form5">Integrierte Gesamtschule</option>
             <option value="form6">Berufsbildende Schule</option>  
         </select>
-        <select label="district">
+        <select>
             <option value="st1">Alexandersfeld</option>
             <option value="st2">Bloherfelde</option>
             <option value="st3">Bürgerfelde</option>
@@ -54,40 +54,40 @@
             <option value="st16">Tweelbäke</option>   
             <option value="st17">Wechloy</option>   
         </select>
-        <button label="Signin" type="submit" name="anmelden">Suchen</button>    
+        <button type="submit" name="anmelden">Suchen</button>
     </form>
     <?php include 'pages/detail.php';?>   
 </section>  
 <section>
     <h2 id="map">Map</h2>
-    <iframe title="Map of Oldenburg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2393.0944202097276!2d8.187361315219686!3d53.14439997993721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b6dfb1330a433f%3A0xcd64e0ccd2c6150b!2sBBS+Berufsbildende+Schulen+Haarentor!5e0!3m2!1sde!2sde!4v1555402008182!5m2!1sde!2sde" width="300" height="225" frameborder="0" style="border:0" ></iframe>
+    <iframe title="Map of Oldenburg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2393.0944202097276!2d8.187361315219686!3d53.14439997993721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b6dfb1330a433f%3A0xcd64e0ccd2c6150b!2sBBS+Berufsbildende+Schulen+Haarentor!5e0!3m2!1sde!2sde!4v1555402008182!5m2!1sde!2sde" width="300" height="225" style="border:0" ></iframe>
     <br>
 </section>
 <section>
-    <form action=""> 
+    <form>
         <h2 id="anmelden">Anmelden</h2>
-        <input label="E-mail" type="text" name="mail" placeholder="E-Mail Adresse"><br>         
-        <input label="Password" type= "password" name="passwort" placeholder="Passwort"><br>     
-        <button label="Signin" type="submit" name="anmelden">Anmelden</button>
+        <input type="text" name="mail" placeholder="E-Mail Adresse"><br>
+        <input type= "password" name="passwort" placeholder="Passwort"><br>
+        <button type="submit" name="anmelden">Anmelden</button>
         <br>
     </form>
 </section>
 <section>
     <form> 
         <h2 id=registrieren>Registrieren</h2>
-        <input label="FirstName" type= "text" name="firstName" placeholder="Vorname"><br>        
-        <input label="Lastname" type="text" name="lastName" placeholder="Nachname"><br>         
-        <input label="E-Mail" type="text" name="email" placeholder="Email"><br>        
-        <input label="Password" type="password" name="passwort" placeholder="Passwort"><br>      
-        <input label="ReEnterPassword" type= "password" name="passwort2" placeholder="Passwort wiederholen"><br>      
-        <button label="Signup" type="submit" name="registrieren" > Registrieren </button>
+        <input type= "text" name="firstName" placeholder="Vorname"><br>
+        <input type="text" name="lastName" placeholder="Nachname"><br>
+        <input type="email" name="email" placeholder="Email"><br>
+        <input type="password" name="passwort" placeholder="Passwort"><br>
+        <input type= "password" name="passwort2" placeholder="Passwort wiederholen"><br>
+        <button type="submit" name="registrieren" > Registrieren </button>
     </form>
 </section>
 <section>
-    <form action=""> 
+    <form>
         <h2 id="anlegen">Anlegen</h2>
         <input type= "text" name="schulname" placeholder="Name der Schule">
-        <select label="Schooltype">
+        <select>
             <option value="form1">Grundschule</option>
             <option value="form2">Gymnasium</option>
             <option value="form3">Oberschule</option>
@@ -95,7 +95,7 @@
             <option value="form5">Integrierte Gesamtschule</option>
             <option value="form6">Berufsbildende Schule</option>   
         </select>
-        <select label="Disctrict"> 
+        <select>
             <option value="st1">Alexandersfeld</option>
             <option value="st2">Bloherfelde</option>
             <option value="st3">Bürgerfelde</option>
@@ -114,9 +114,9 @@
             <option value="st16">Tweelbäke</option>   
             <option value="st17">Wechloy</option>   
         </select><br>
-        <textarea label="SchoolDescription" placeholder="Beschreibung"> </textarea>
+        <textarea placeholder="Beschreibung"> </textarea>
         <br> 
-        <input label="SchoolImage" type="file" accept="image/png, image/jpeg"> 
+        <input type="file" accept="image/png, image/jpeg">
         <br>
         <button type="submit" name="anlegen">Schule Anlegen</button>
     </form>
