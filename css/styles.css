@@ -51,6 +51,10 @@ body {
   grid-template-columns: 1em 1fr 1fr 1fr 1fr 1fr 1fr 1em;
   grid-gap: 1em;
 }
+.responsive{
+  width: 100%;
+  height: auto;
+}
 
 nav > .logo {
   grid-column-start: 2;

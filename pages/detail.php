@@ -1,7 +1,7 @@
 <h3> Berufsbildene Schulen</h3>
 <article>  
     <h4> BBS Haarentor</h4>
-    <img src="../assets/images/bbs1.jpeg" alt="Picture of BBS Wechloy">   
+    <img src="../assets/images/bbs1.jpeg" alt="Picture of BBS Wechloy" class="responsive">
     <p> Berufsbildungszentrum für Wirtschaft, Informatik und Gesundheit<br>
         <b>Schlleitung:</b> Diedrich Ahlfeld<br>
         <b>Adresse:</b> Ammerländer Heerstraße 33/39, 26129 Oldenburg<br>

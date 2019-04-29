@@ -24,7 +24,7 @@
                     essent option ex, pro in tractatos neglegentur. Omnium apeirian expetendis vel id.</p>
                 <p>Eirmod utamur vis in, nec eu ferri dicit. Eros sale libris ut ius.
                     Vix cu semper vivendo propriae.</p>      
-                <img src="/assets/images/oldenburg-stadt.jpeg" width="775" height="500" alt="Picture of Oldenburg">  
+                <img src="/assets/images/oldenburg-stadt.jpeg" alt="Picture of Oldenburg" class="responsive">
                 <p>Scripta mediocritatem nam eu, atomorum rationibus sententiae quo in. Elitr oblique est ex, vel iuvaret eripuit ad.
                     Sea magna inimicus sadipscing in, per cetero fuisset ut. Error epicuri his te, an cibo duis regione has. Ad omnis
                     melius fierent qui, est quas sonet latine ei, odio scaevola iudicabit qui id. Insolens necessitatibus ut pro.</p>
