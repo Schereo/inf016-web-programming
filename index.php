@@ -25,7 +25,7 @@
 </header>
 <section>
     <form>
-        <h2 id="#suche">Schule Suchen</h2>
+        <h2 id="suche">Schule Suchen</h2>
         <input type="text" placeholder="Schulname">
         <select>
             <option value="form1">Grundschule</option>
@@ -121,6 +121,6 @@
         <button type="submit" name="anlegen">Schule Anlegen</button>
     </form>
 </section>
-<?php include 'pages/footer.php';?>  
+<?php include 'pages/footer.php';?>
 </body>
 </html> 
