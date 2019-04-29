@@ -79,9 +79,26 @@ body {
 
 .card .card-body .registerbutton { justify-content: start; padding: 1em; margin: 1em;}
 
-.card .card-body  > .body-right {}
+.card .card-body  > .body-right {align-self: end;}
 
-.card .card-body > .body-left {}
+.card .card-body > .body-left {align-self:start;}
+
+.card .card-body .card-body-detail { }
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 nav > .logo {
   grid-column-start: 2;

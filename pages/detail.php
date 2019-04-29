@@ -1,7 +1,8 @@
-<link rel="stylesheet" href="/../css/styles.css" />
-<article class="card">
+<article class>
     <h3 class="card-header"> BBS Wechloy</h3>
-    <img src="../assets/images/bbs1.jpeg" alt="Picture of BBS Wechloy" class="responsive">
+    <section class="card-body-detail row">
+    <img src="../assets/images/bbs1.jpeg" alt="Picture of BBS Wechloy" class="responsive column">
+        <div class="detail-contact column">
     <p> Berufsbildungszentrum für Wirtschaft, Informatik und Gesundheit<br>
         <b>Schlleitung:</b> Diedrich Ahlfeld<br>
         <b>Adresse:</b> Ammerländer Heerstraße 33/39, 26129 Oldenburg<br>
@@ -10,7 +11,8 @@
         <b>Internet:</b> <a href="http://www.bbs-haarentor.de">www.bbs-haarentor.de</a><br>
         <b>Sekretariat:</b> Montag bis Donnerstag von 7.30 Uhr bis 12 Uhr sowie von 12.30 Uhr
         bis 15 Uhr, Freitag von 7.30 Uhr bis 13.15 Uhr</p>
-    <aside> 
+        </div>
+        <div class="detail-information row">
         <h5>Weitere Infos</h5>
         <dl>
             <dt>Schülerinnen/Schüler</dt>
@@ -26,7 +28,10 @@
             <li>Berufliches Gymnasium »: Wirtschaft</li>
             <li>Berufsvorbereitungsjahr »: Wirtschaft</li>
             <li>Berufsvorbereitungsjahr – Sprachlernklassen »</li>
-        </ul>   
-    </aside>
-    <?php include 'feedback.php';?>
+        </ul>
+        </div>
+        <div class ="detail-feedback column">
+             <?php include 'feedback.php';?>
+        </div>
+    </section>
 </article>
