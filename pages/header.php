@@ -1,5 +1,5 @@
-<nav class="nav-container">
-    <a href="/" class="logo"><h1 >Oscolia</h1></a>
+<h1>Oscolia</h1>
+<nav>
     <ul>
         <li><a href ="#suche">Schule suchen</a></li>
         <li><a href ="#map">Schulen Karten</a></li>
