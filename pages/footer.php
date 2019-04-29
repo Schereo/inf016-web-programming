@@ -1,6 +1,6 @@
 <footer>
     <nav>
-        <ul>
+        <ul class="footer-container">
             <li><a href="pages/agb.php">AGB</a></li>
             <li><a href="pages/datenschutz.php">Datenschutz</a></li>
             <li><a href="pages/impressum.php">Impressum</a></li>

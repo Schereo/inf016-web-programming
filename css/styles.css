@@ -61,3 +61,10 @@ nav > .logo {
   grid-column-end: 2;
 }
 
+/* Footer Grid Styles */
+
+.footer-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
