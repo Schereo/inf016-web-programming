@@ -56,6 +56,16 @@ body {
   height: auto;
 }
 
+.card {}
+
+.card > .card-header {}
+
+.card > .card-footer {}
+
+.card > .card-body-right {}
+
+.card > .card-body-left {}
+
 nav > .logo {
   grid-column-start: 2;
   grid-column-end: 2;
