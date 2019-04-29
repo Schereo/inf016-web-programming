@@ -29,21 +29,20 @@ body {
   grid-column-start: 2;
   grid-column-end: 4;
   background-color: var(--light-main);
-  padding: 2em;
+
 }
 
 .left-grid-item {
   grid-column-start: 2;
   grid-column-end: 3;
   background-color: var(--light-main);
-  padding: 2em;
+
 }
 
 .right-grid-item {
   grid-column-start: 3;
   grid-column-end: 4;
   background-color: var(--light-main);
-  padding: 2em;
 }
 /* Nav Grid Styles */
 .nav-container {
@@ -56,21 +55,42 @@ body {
   height: auto;
 }
 
-.card {}
+.card {
+}
 
-.card > .card-header {}
+.card .card-header {
+  background-color: var(--main);
+  color: var(--background);
+  margin-top : 0;
+  margin-bottom: 0.3em;
+  padding: 0.6em;
 
-.card > .card-footer {}
+}
 
-.card > .card-body-right {}
+.card .card-footer {
+  display: flex;
+  padding: 0.5em;
+  justify-content: space-evenly;
 
-.card > .card-body-left {}
+}
+
+.card .card-body {
+  text-align: center;
+  padding: 1em;}
+
+.card .card-body .registerbutton { justify-content: start; padding: 1em; margin: 1em;}
+
+.card .card-body  > .body-right {}
+
+.card .card-body > .body-left {}
 
 nav > .logo {
   grid-column-start: 2;
-  grid-column-end: 2;
+    grid-column-end: 2;
 }
 
+input {margin: 0.3em;
+padding: 0.1em;}
 /* Footer Grid Styles */
 
 .footer-container {
