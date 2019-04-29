@@ -10,6 +10,7 @@
         <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
         <link rel="stylesheet" href="/css/styles.css" />
         <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="/css/search-styles.css"/>
     </head>
 <body>
     <div class="main-container">
@@ -63,9 +64,121 @@
                         <option value="st17">Wechloy</option>   
                     </select>
                     <button type="submit" name="anmelden">Suchen</button>
-                </form>
-                <?php include 'pages/detail.php';?>   
+                </form>            
             </section>
+            <div class="search-container">
+                <div class="small-card">
+                    <div class="small-card-header">
+                        <h3>BBS Wechloy</h3>
+                    </div>
+                    <div class="small-card-body">
+                        <img src="/assets/images/bbs2.jpeg" alt="BBS Haarentor" class="responsive">
+                        <ul>
+                            <li>BBS</li>
+                            <li>Haarentor</li>
+                            <li>1200 Schüler</li>
+                            <li>Bewertung</li>
+                        </ul>
+                    </div>
+                    <div class="small-card-footer">
+                        <a href="#">Details anzeigen</a>
+                        <a href="#">Zur Website</a>
+                    </div>
+                </div>
+                <div class="small-card">
+                    <div class="small-card-header">
+                        <h3>BBS Wechloy</h3>
+                    </div>
+                    <div class="small-card-body">
+                        <img src="/assets/images/bbs2.jpeg" alt="BBS Haarentor" class="responsive">
+                        <ul>
+                            <li>BBS</li>
+                            <li>Haarentor</li>
+                            <li>1200 Schüler</li>
+                            <li>Bewertung</li>
+                        </ul>
+                    </div>
+                    <div class="small-card-footer">
+                        <a href="#">Details anzeigen</a>
+                        <a href="#">Zur Website</a>
+                    </div>
+                </div>
+                <div class="small-card">
+                    <div class="small-card-header">
+                        <h3>BBS Wechloy</h3>
+                    </div>
+                    <div class="small-card-body">
+                        <img src="/assets/images/bbs2.jpeg" alt="BBS Haarentor" class="responsive">
+                        <ul>
+                            <li>BBS</li>
+                            <li>Haarentor</li>
+                            <li>1200 Schüler</li>
+                            <li>Bewertung</li>
+                        </ul>
+                    </div>
+                    <div class="small-card-footer">
+                        <a href="#">Details anzeigen</a>
+                        <a href="#">Zur Website</a>
+                    </div>
+                </div>
+                <div class="small-card">
+                    <div class="small-card-header">
+                        <h3>BBS Wechloy</h3>
+                    </div>
+                    <div class="small-card-body">
+                        <img src="/assets/images/bbs2.jpeg" alt="BBS Haarentor" class="responsive">
+                        <ul>
+                            <li>BBS</li>
+                            <li>Haarentor</li>
+                            <li>1200 Schüler</li>
+                            <li>Bewertung</li>
+                        </ul>
+                    </div>
+                    <div class="small-card-footer">
+                        <a href="#">Details anzeigen</a>
+                        <a href="#">Zur Website</a>
+                    </div>
+                </div>
+                <div class="small-card">
+                    <div class="small-card-header">
+                        <h3>BBS Wechloy</h3>
+                    </div>
+                    <div class="small-card-body">
+                        <img src="/assets/images/bbs2.jpeg" alt="BBS Haarentor" class="responsive">
+                        <ul>
+                            <li>BBS</li>
+                            <li>Haarentor</li>
+                            <li>1200 Schüler</li>
+                            <li>Bewertung</li>
+                        </ul>
+                    </div>
+                    <div class="small-card-footer">
+                        <a href="#">Details anzeigen</a>
+                        <a href="#">Zur Website</a>
+                    </div>
+                </div>
+                <div class="small-card">
+                    <div class="small-card-header">
+                        <h3>BBS Wechloy</h3>
+                    </div>
+                    <div class="small-card-body">
+                        <img src="/assets/images/bbs2.jpeg" alt="BBS Haarentor" class="responsive">
+                        <ul>
+                            <li>BBS</li>
+                            <li>Haarentor</li>
+                            <li>1200 Schüler</li>
+                            <li>Bewertung</li>
+                        </ul>
+                    </div>
+                    <div class="small-card-footer">
+                        <a href="#">Details anzeigen</a>
+                        <a href="#">Zur Website</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="large-grid-item">
+            <?php include 'pages/detail.php';?>   
         </div>
         <div class="large-grid-item">
             <section>
