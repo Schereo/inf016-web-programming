@@ -1,6 +1,6 @@
-<h3> Berufsbildene Schulen</h3>
-<article>  
-    <h4> BBS Haarentor</h4>
+<link rel="stylesheet" href="/../css/styles.css" />
+<article class="card">
+    <h3 class="card-header"> BBS Wechloy</h3>
     <img src="../assets/images/bbs1.jpeg" alt="Picture of BBS Wechloy" class="responsive">
     <p> Berufsbildungszentrum für Wirtschaft, Informatik und Gesundheit<br>
         <b>Schlleitung:</b> Diedrich Ahlfeld<br>
