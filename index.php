@@ -44,5 +44,6 @@
     <div class="strech-grid-item">
         <?php include 'pages/footer.php'; ?>
     </div>
+</div>
 </body>
 </html> 
