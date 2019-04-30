@@ -1,0 +1,7 @@
+.review-holder {
+  position: relative;
+  clear: both;
+  display: inline-block;
+  left: calc(50% - 50px);
+  margin-top: 10%;
+}

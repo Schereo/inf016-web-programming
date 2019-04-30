@@ -8,6 +8,39 @@
 body {
     font-family: 'Noto Sans', sans-serif;
     margin: 0;
+    color: #FCFCFC;
+}
+.default {
+    background: #6096BA;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    padding: 8px 11px;
+    color: #FCFCFC;
+}
+.subtitle{
+     font-size: 25px;
+}
+.rating{
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    text-align: left;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.star {
+    font-size: 50px;
+    color: black;
+}
+.rating > span:hover:before,
+.rating > span:hover~span:before{
+    font-size: 50px;
+    content: "\2605";
+    position: absolute;
+    
 }
 
 /*Main Grid Styles */
@@ -29,6 +62,7 @@ body {
     grid-column-start: 2;
     grid-column-end: 4;
     background-color: var(--light-main);
+    
 }
 
 .left-grid-item {
@@ -84,6 +118,7 @@ body {
     justify-content: start;
     padding: 1em;
     margin: 1em;
+    text-align: center;
 }
 
 .card .card-body > .body-right {
@@ -125,6 +160,7 @@ body {
     grid-row: 3
 }
 
+}
 .mapcontainer {
     display: grid;
     grid-template-columns: auto auto;

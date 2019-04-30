@@ -29,7 +29,7 @@
             <option value="st16">Tweelbäke</option>
             <option value="st17">Wechloy</option>
         </select>
-        <button type="submit" name="anmelden">Suchen</button>
+        <button class="default" type="submit" name="anmelden">Suchen</button>
     </form>
 </section>
 <div class="search-container">

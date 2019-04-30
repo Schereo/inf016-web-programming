@@ -41,7 +41,7 @@
 
         </div>
         <div class="mapfilterfooter">
-            <button type="submit" name="filtern">Filtern</button>
+            <button class="default" type="submit" name="filtern">Filtern</button>
         </div>
 
     </div>

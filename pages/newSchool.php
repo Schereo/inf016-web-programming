@@ -34,7 +34,7 @@
             <br>
             <div class="card-footer">
                 <input type="file" accept="image/png, image/jpeg">
-                <button type="submit" name="anlegen">Schule Anlegen</button>
+                <button class="default" type="submit" name="anlegen">Schule Anlegen</button>
             </div>
         </form>
     </div>

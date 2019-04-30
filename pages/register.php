@@ -9,7 +9,7 @@
             <input type="password" name="passwort2" placeholder="Passwort wiederholen"><br>
         </div>
         <div class="registerbutton">
-            <button type="submit" name="registrieren"> Registrieren</button>
+            <button class="default" type="submit" name="registrieren"> Registrieren</button>
         </div>
     </form>
 </section>
