@@ -85,20 +85,22 @@ body {
 
 .card .card-body .card-body-detail { }
 
-/* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+.detailcontainer {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+  column-gap: 1em;
+  row-gap:1em;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+.detail-picture { grid-column: 1; grid-row: 1/span 2}
+.detail-info { grid-column: 1;grid-row: 3}
+
+.detail-contact {grid-column: 2; grid-row: 1/span 2}
+
+.detail-feedback {grid-column: 2; grid-row: 3}
+
+
 
 nav > .logo {
   grid-column-start: 2;
