@@ -49,6 +49,7 @@ body {
     display: grid;
     grid-template-columns: 1em 1fr 1fr 1fr 1fr 1fr 1fr 1em;
     grid-gap: 1em;
+    justify-content: end;
 }
 
 .responsive {
@@ -176,5 +177,59 @@ input {
 .footer-container {
     display: flex;
     justify-content: space-evenly;
+}
+
+/* Header Style */
+
+.header {
+    grid-column: 3 /span 8;
+}
+
+.menu {
+    float: right;
+}
+.menu a {
+    clear: right;
+    text-decoration: none;
+    color: #FCFCFC;
+    margin: 0 10px;
+    line-height: 70px;
+}
+
+label {
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+}
+
+#toggle {
+    display: none;
+}
+
+@media only screen and (max-width: 954px) {
+
+    label {
+        display: block;
+        float: right;
+        cursor: pointer;
+    }
+
+    .menu {
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+
+    .menu a {
+        display: block;
+    }
+
+    #toggle:checked + .menu {
+        grid-column: 1 /span 8;
+        display: block;
+    }
+
 }
 
