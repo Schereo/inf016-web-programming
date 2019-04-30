@@ -1,8 +1,9 @@
 <section>
     <h2 id="#suche" class="card-header">Schule Suchen</h2>
-    <form>
-        <input type="text" placeholder="Schulname">
-        <select>
+    <form >
+        <input class="input" type="text">
+        <select class="input">
+            <option value="placeholder" disabled selected>Schulform</option>
             <option value="form1">Grundschule</option>
             <option value="form2">Gymnasium</option>
             <option value="form3">Oberschule</option>
@@ -10,7 +11,8 @@
             <option value="form5">Integrierte Gesamtschule</option>
             <option value="form6">Berufsbildende Schule</option>
         </select>
-        <select>
+        <select class="input">
+            <option value="placeholder" disabled selected>Stadtteil</option>
             <option value="st1">Alexandersfeld</option>
             <option value="st2">Bloherfelde</option>
             <option value="st3">Bürgerfelde</option>
