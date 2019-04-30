@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="/css/search-styles.css"/>
 <article class>
     <h3 class="card-header"> BBS Wechloy</h3>
     <section class="detailcontainer">
