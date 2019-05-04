@@ -1,4 +1,5 @@
 body {
+<<<<<<< HEAD
   font-family: sans-serif;
   margin: auto;
   max-width: 1280px;
@@ -20,5 +21,74 @@ body {
 
 .navbar a:hover {
   color: #ffffff;
+=======
+  font-family: 'Noto Sans', sans-serif;
+  margin: 0;
 }
+
+/*Main Grid Styles */
+.main-container {
+  display: grid;
+  grid-template-columns: 1em 1fr 1fr 1em;
+  grid-gap: 1em;
+}
+
+.strech-grid-item {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  background-color: var(--main);
+  padding: 2em;
+  margin: 0;
+}
+
+.large-grid-item {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  background-color: var(--light-main);
+  padding: 2em;
+}
+
+.left-grid-item {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  background-color: var(--light-main);
+  padding: 2em;
+}
+
+.right-grid-item {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  background-color: var(--light-main);
+  padding: 2em;
+}
+/* Nav Grid Styles */
+.nav-container {
+  display: grid;
+  grid-template-columns: 1em 1fr 1fr 1fr 1fr 1fr 1fr 1em;
+  grid-gap: 1em;
+}
+.responsive{
+  width: 100%;
+  height: auto;
+}
+
+nav > .logo {
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+
+/* Footer Grid Styles */
+
+.footer-container {
+  display: flex;
+  justify-content: space-evenly;
+>>>>>>> css-grid-layout
+}
+
+/* Card Styling */
+
+.card-body {
+  padding: 1em;
+}
+
 
