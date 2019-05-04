@@ -1,4 +1,4 @@
-<section class="large-grid-item">
+<section>
     <div class="card-header">
         <h2 id="#suche" >Schule Suchen</h2>
     </div>
