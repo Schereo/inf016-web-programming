@@ -40,9 +40,64 @@ body {
 }
 /* Nav Grid Styles */
 .nav-container {
-  display: grid;
-  grid-template-columns: 1em 1fr 1fr 1fr 1fr 1fr 1fr 1em;
-  grid-gap: 1em;
+    display: grid;
+    grid-template-columns: 1em 1fr 1fr 1fr 1fr 1fr 1fr 1em;
+    grid-gap: 1em;
+    justify-content: end;
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
+.card {
+}
+
+.card .card-header {
+    background-color: var(--main);
+    color: var(--background);
+    margin-top: 0;
+    margin-bottom: 0.3em;
+    padding: 0.6em;
+
+}
+
+.card .card-footer {
+    display: flex;
+    padding: 0.5em;
+    justify-content: space-evenly;
+
+}
+
+.card .card-body {
+    text-align: center;
+    padding: 1em;
+}
+
+.card .card-body .registerbutton {
+    justify-content: start;
+    padding: 1em;
+    margin: 1em;
+}
+
+.card .card-body > .body-right {
+    align-self: end;
+}
+
+.card .card-body > .body-left {
+    align-self: start;
+}
+
+.card .card-body .card-body-detail {
+}
+
+.detailcontainer {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    column-gap: 1em;
+    row-gap: 1em;
 }
 .responsive{
   width: 100%;
@@ -67,4 +122,58 @@ nav > .logo {
   padding: 1em;
 }
 
+
+/* Header Style */
+
+.header {
+    grid-column: 3 /span 8;
+}
+
+.menu {
+    float: right;
+}
+.menu a {
+    clear: right;
+    text-decoration: none;
+    color: #FCFCFC;
+    margin: 0 10px;
+    line-height: 70px;
+}
+
+label {
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+}
+
+#toggle {
+    display: none;
+}
+
+@media only screen and (max-width: 954px) {
+
+    label {
+        display: block;
+        float: right;
+        cursor: pointer;
+    }
+
+    .menu {
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+
+    .menu a {
+        display: block;
+    }
+
+    #toggle:checked + .menu {
+        grid-column: 1 /span 8;
+        display: block;
+    }
+
+}
 
