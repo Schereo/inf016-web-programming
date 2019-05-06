@@ -2,8 +2,8 @@
     <h2 id="anlegen" class="card-header">Anlegen</h2>
     <div class="card-body">
         <form>
-            <input type="text" name="schulname" placeholder="Name der Schule">
-            <select>
+            <input class="input" type="text" name="schulname" placeholder="Name der Schule">
+            <select class="input">
                 <option value="form1">Grundschule</option>
                 <option value="form2">Gymnasium</option>
                 <option value="form3">Oberschule</option>
@@ -11,7 +11,7 @@
                 <option value="form5">Integrierte Gesamtschule</option>
                 <option value="form6">Berufsbildende Schule</option>
             </select>
-            <select>
+            <select class="input">
                 <option value="st1">Alexandersfeld</option>
                 <option value="st2">Bloherfelde</option>
                 <option value="st3">Bürgerfelde</option>
@@ -34,7 +34,7 @@
             <br>
             <div class="card-footer">
                 <input type="file" accept="image/png, image/jpeg">
-                <button type="submit" name="anlegen">Schule Anlegen</button>
+                <button class="default" type="submit" name="anlegen">Schule Anlegen</button>
             </div>
         </form>
     </div>

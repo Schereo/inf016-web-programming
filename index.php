@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/css/styles.css"/>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
     <link rel="stylesheet" href="/css/search-styles.css"/>
+    <link rel="stylesheet" href="/css/feedback.css"/>
 </head>
 <body>
 <div class="main-container">
@@ -22,7 +23,7 @@
             <img src="/assets/images/oldenburg-stadt.jpeg" alt="Picture of Oldenburg" class="responsive">
         </header>
     </div>
-    <div class="large-grid-item">
+    <div class="large-grid-item card">
         <?php include 'pages/search.php'; ?>
     </div>
     <div class="large-grid-item card">

@@ -18,7 +18,7 @@
         <div class="mapfiltersearch">
             Stadtteil
             <form>
-                <select>
+                <select class="input">
                     <option value="st1">Alexandersfeld</option>
                     <option value="st2">Bloherfelde</option>
                     <option value="st3">Bürgerfelde</option>
@@ -41,7 +41,7 @@
 
         </div>
         <div class="mapfilterfooter">
-            <button type="submit" name="filtern">Filtern</button>
+            <button class="default" type="submit" name="filtern">Filtern</button>
         </div>
 
     </div>
