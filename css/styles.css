@@ -1,5 +1,8 @@
-@import "feedback.css";
+@import "card-styles.css";
+@import "feedback-styles.css";
 @import "search-styles.css";
+@import "specific-styles.css";
+@import "layout-styles.css";
 
 :root {
     --light-main: #B8B8B8;
@@ -12,8 +15,6 @@ body {
     font-family: 'Noto Sans', sans-serif;
     margin: 0;
 }
-
-
 
 /*Input Sytles */
 
@@ -33,169 +34,15 @@ body {
     padding: 8px 11px;
     color: #FCFCFC;
 }
-.subtitle{
+
+.subtitle {
     font-size: 25px;
-}
-
-/*Main Grid Styles */
-.main-container {
-  display: grid;
-  grid-template-columns: 1em 1fr 1fr 1em;
-  grid-gap: 1em;
-}
-
-.strech-grid-item {
-  grid-column-start: 1;
-  grid-column-end: 5;
-  background-color: var(--main);
-  padding: 2em;
-  margin: 0;
-}
-
-.large-grid-item {
-  grid-column-start: 2;
-  grid-column-end: 4;
-  background-color: var(--light-main);
-}
-
-.left-grid-item {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  background-color: var(--light-main);
-}
-
-.right-grid-item {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    background-color: var(--light-main);
-}
-/* Nav Grid Styles */
-.nav-container {
-    display: grid;
-    grid-template-columns: 1em 1fr 1fr 1fr 1fr 1fr 1fr 1em;
-    grid-gap: 1em;
-    justify-content: end;
-
-}
-
-.responsive {
-    width: 100%;
-    height: auto;
-}
-
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 10px;
-}
-
-.card .card-header {
-    background-color: var(--main);
-    color: var(--background);
-    margin-top: 0;
-    margin-bottom: 0.3em;
-    padding: 0.6em;
-    border-radius: 10px 10px 0px 0px;
-
-}
-
-.card .card-footer {
-    display: flex;
-    padding: 0.5em;
-    justify-content: space-evenly;
-
-}
-
-.card .card-body {
-    text-align: center;
-    padding: 1em;
-    color: #FCFCFC;
-}
-
-.card .card-body .registerbutton {
-    justify-content: start;
-    padding: 1em;
-    margin: 1em;
-    text-align: center;
-}
-
-.card .card-body > .body-right {
-    align-self: end;
-}
-
-.card .card-body > .body-left {
-    align-self: start;
-}
-
-.card .card-body .card-body-detail {
-}
-
-.detailcontainer {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto;
-    column-gap: 1em;
-    row-gap: 1em;
-}
-
-.detail-picture {
-    grid-column: 1;
-    grid-row: 1/span 2
-}
-
-.detail-info {
-    grid-column: 1;
-    grid-row: 3
-}
-
-.detail-contact {
-    grid-column: 2;
-    grid-row: 1/span 2
-}
-
-.detail-feedback {
-    grid-column: 2;
-    grid-row: 3
-}
-
-.mapcontainer {
-    display: grid;
-    grid-template-columns: auto auto;
-}
-
-.mapimage {
-    grid-column: 1;
-}
-
-.mapfilter {
-    grid-column: 2;
-    background-color: var(--main)
-}
-
-.mapfilter .mapfilterheader {
-    background-color: var(--main);
-    color: var(--background);
-    margin-top: 0;
-    margin-bottom: 0.3em;
-    padding: 0.6em;
-}
-
-.mapfilter .mapfilterbody {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto;
-}
-
-.mapfilter .mapfiltersearch {
-    grid-column: 2;
-}
-
-.mapfilter .mapfilterfooter {
 }
 
 
 nav > .logo {
-  grid-column-start: 2;
-  grid-column-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 2;
 }
 
 input {
@@ -206,16 +53,9 @@ input {
 /* Footer Grid Styles */
 
 .footer-container {
-  display: flex;
-  justify-content: space-evenly;
+    display: flex;
+    justify-content: space-evenly;
 }
-
-/* Card Styling */
-
-.card-body {
-  padding: 1em;
-}
-
 
 /* Header Style */
 
@@ -226,6 +66,7 @@ input {
 .menu {
     float: right;
 }
+
 .menu a {
     clear: right;
     text-decoration: none;
