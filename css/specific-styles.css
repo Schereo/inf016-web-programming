@@ -1,0 +1,63 @@
+/* Styles die spezifisch auf einzelnen Cards angewandt werden müssen */
+.detailcontainer {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    column-gap: 1em;
+    row-gap: 1em;
+}
+
+.detail-picture {
+    grid-column: 1;
+    grid-row: 1/span 2
+}
+
+.detail-info {
+    grid-column: 1;
+    grid-row: 3
+}
+
+.detail-contact {
+    grid-column: 2;
+    grid-row: 1/span 2
+}
+
+.detail-feedback {
+    grid-column: 2;
+    grid-row: 3
+}
+
+.mapcontainer {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.mapimage {
+    grid-column: 1;
+}
+
+.mapfilter {
+    grid-column: 2;
+    background-color: var(--main)
+}
+
+.mapfilter .mapfilterheader {
+    background-color: var(--main);
+    color: var(--background);
+    margin-top: 0;
+    margin-bottom: 0.3em;
+    padding: 0.6em;
+}
+
+.mapfilter .mapfilterbody {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+}
+
+.mapfilter .mapfiltersearch {
+    grid-column: 2;
+}
+
+.mapfilter .mapfilterfooter {
+}

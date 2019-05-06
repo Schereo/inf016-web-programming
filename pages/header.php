@@ -4,7 +4,7 @@
         <label for="toggle">&#9776;</label>
         <input type="checkbox" id="toggle"/>
     <div class="menu">
-        <a href ="#suche">Schule suchen</a>
+        <a href ="#suche" id="searchSchool">Schule suchen</a>
         <a href ="#map">Schulen Karten</a>
         <a href ="#anlegen">Schule anlegen</a>
         <a href ="#anmelden">Anmelden</a>
