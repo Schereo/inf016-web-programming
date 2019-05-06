@@ -14,7 +14,7 @@
 </head>
 <body>
 <div class="main-container">
-    <div class="strech-grid-item">
+    <div class="stretch-grid-item">
         <?php include 'pages/header.php'; ?>
     </div>
     <div class="large-grid-item card">
@@ -41,7 +41,7 @@
     <div class="large-grid-item card">
         <?php include 'pages/newSchool.php'; ?>
     </div>
-    <div class="strech-grid-item">
+    <div class="stretch-grid-item" id="indexfooter">
         <?php include 'pages/footer.php'; ?>
     </div>
 </div>

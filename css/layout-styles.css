@@ -6,13 +6,25 @@
     grid-gap: 1em;
 }
 
-.strech-grid-item {
+.stretch-grid-item {
     grid-column-start: 1;
     grid-column-end: 5;
     background-color: var(--main);
     padding: 2em;
     margin: 0;
 }
+#indexfooter.stretch-grid-item {
+  word-spacing: 10px;
+    text-align: center;
+    padding: 1em;
+    color : var(--background);
+    box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* Hyperlinks auch weiß machen, hier alternative Farben für gedrückte Links hinzufügen */
+#indexfooter.stretch-grid-item a{
+    color : var(--background);
+}
+
 
 .large-grid-item {
     grid-column-start: 2;
