@@ -14,7 +14,7 @@
 </head>
 <body>
 <div class="main-container">
-    <div class="stretch-grid-item">
+    <div class="stretch-grid-item" id="indexheader">
         <?php include 'pages/header.php'; ?>
     </div>
     <div class="large-grid-item card">

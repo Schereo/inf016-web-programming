@@ -73,6 +73,10 @@ input {
     color: #FCFCFC;
     margin: 0 10px;
     line-height: 70px;
+    border-color: var(--background);
+    padding: 5px;
+    background: var(--light-main);
+    border-radius: 5px 5px 5px 5px;
 }
 
 label {
