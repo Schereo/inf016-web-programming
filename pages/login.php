@@ -6,7 +6,7 @@
             <input class="input" type="password" name="passwort" placeholder="Passwort"><br>
         </div>
         <div class="card-footer">
-            <button class="default" type="submit" name="anmelden">Anmelden</button>
+            <button class="default card-footer" type="submit" name="anmelden">Anmelden</button>
             <a>Passwort vergessen</a>
         </div>
     </form>
