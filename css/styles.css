@@ -78,6 +78,11 @@ input {
     background: var(--light-main);
     border-radius: 5px 5px 5px 5px;
 }
+/* funktioniert noch nicht, kp wieso, padding nur zum Testen */
+.menu#searchSchool a {
+    background:gray;
+    padding:5em;
+}
 
 label {
     margin: 0 40px 0 0;
