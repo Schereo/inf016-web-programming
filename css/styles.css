@@ -68,12 +68,11 @@ body {
 }
 
 .card .card-body {
-    padding: 2em;
+    padding: 1em;
 }
 
 .card .card-body .registerbutton {
     justify-content: start;
-    padding: 1em;
     margin: 1em;
 }
 
