@@ -107,6 +107,7 @@ label {
 
     .menu a {
         display: block;
+        background-color: var(--main);
     }
 
     #toggle:checked + .menu {
