@@ -1,5 +1,5 @@
 <h2 class="card-header" xmlns="http://www.w3.org/1999/html">Map</h2>
-<section class="card mapcontainer">
+<section class="card-body mapcontainer">
 
     <div class="mapimage">
         <iframe title="Map of Oldenburg"

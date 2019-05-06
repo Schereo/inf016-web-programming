@@ -1,6 +1,6 @@
 <article class>
     <h3 class="card-header"> BBS Wechloy</h3>
-    <section class="detailcontainer">
+    <section class="detailcontainer card-body">
         <img src="../assets/images/bbs1.jpeg" alt="Picture of BBS Wechloy" class="responsive detail-picture">
         <div class="detail-contact">
             <p> Berufsbildungszentrum für Wirtschaft, Informatik und Gesundheit<br>
