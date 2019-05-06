@@ -7,6 +7,19 @@
     row-gap: 1em;
 }
 
+.info-container {
+     display: grid;
+     grid-template-columns: auto auto;
+     grid-template-rows: auto;
+     column-gap: 1em;
+     row-gap: 1em;
+    margin-bottom: 10px;
+ }
+
+.text-right.open-hours .info-container {
+    margin-bottom: 0px;
+}
+
 .detail-picture {
     grid-column: 1;
     grid-row: 1/span 2
@@ -60,4 +73,26 @@
 }
 
 .mapfilter .mapfilterfooter {
+}
+
+.info-container > .text-left {
+    text-align: left;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.info-container > .text-right {
+    text-align: right;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#gymnasien {
+    background-color: darkorange;
+}
+#oberschulen {
+    background-color: dodgerblue;
+}
+#bbs {
+    background-color: goldenrod;
 }

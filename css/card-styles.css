@@ -1,10 +1,10 @@
 /* Styles zum Kartendesign und für das Layout */
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 10px;
+    border-radius: 4px;
 }
-/* Card Styling */
 
+/* Card Styling */
 .card-body {
     padding: 1em;
 }
@@ -15,19 +15,16 @@
     margin-top: 0;
     margin-bottom: 0.3em;
     padding: 0.6em;
-    border-radius: 10px 10px 0px 0px;
-
+    border-radius: 4px 4px 0px 0px;
 }
 
 .card .card-footer {
     display: flex;
     padding: 0.5em;
     justify-content: space-evenly;
-
 }
 
 .card .card-body {
-    text-align: center;
     padding: 1em;
     color: #FCFCFC;
 }

@@ -63,6 +63,13 @@ input {
     grid-column: 3 /span 8;
 }
 
+#indexheader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
 .menu {
     float: right;
 }
@@ -119,15 +126,12 @@ label {
         grid-column: 1 /span 8;
         display: block;
     }
+
+    .main-container {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
 }
 
-#gymnasien {
-    background-color: darkorange;
-}
-#oberschulen {
-    background-color: dodgerblue;
-}
-#bbs {
-    background-color: goldenrod;
-}
+
 
