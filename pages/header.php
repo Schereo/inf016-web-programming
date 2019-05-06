@@ -1,10 +1,15 @@
 <nav class="nav-container">
     <a href="/" class="logo"><h1 >Oscolia</h1></a>
-    <ul>
-        <li><a href ="#suche">Schule suchen</a></li>
-        <li><a href ="#map">Schulen Karten</a></li>
-        <li><a href ="#anlegen">Schule anlegen</a></li>
-        <li><a href ="#anmelden">Anmelden</a></li>
-        <li><a href ="#registrieren">Registrieren</a></li>
-    </ul>          
+    <div class = "header">
+
+        <label for="toggle">&#9776;</label>
+        <input type="checkbox" id="toggle"/>
+    <div class="menu">
+        <a href ="#suche">Schule suchen</a>
+        <a href ="#map">Schulen Karten</a>
+        <a href ="#anlegen">Schule anlegen</a>
+        <a href ="#anmelden">Anmelden</a>
+        <a href ="#registrieren">Registrieren</a>
+    </div>
+    </div>
 </nav>

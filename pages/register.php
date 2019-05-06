@@ -10,6 +10,8 @@
         </div>
         <div class="registerbutton">
             <button class="default" type="submit" name="registrieren"> Registrieren</button>
+        <div class="registerbutton card-body">
+            <button type="submit" name="registrieren"> Registrieren</button>
         </div>
     </form>
 </section>

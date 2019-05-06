@@ -16,7 +16,7 @@ body {
 /*Input Sytles */
 
 .input {
-    padding: 5px 7px; 
+    padding: 5px 7px;
     border-radius: 4px;
     border: none;
 }
@@ -56,36 +56,34 @@ body {
     font-size: 50px;
     content: "\2605";
     position: absolute;
-    
+
 }
 
 /*Main Grid Styles */
 .main-container {
-    display: grid;
-    grid-template-columns: 1em 1fr 1fr 1em;
-    grid-gap: 1em;
+  display: grid;
+  grid-template-columns: 1em 1fr 1fr 1em;
+  grid-gap: 1em;
 }
 
 .strech-grid-item {
-    grid-column-start: 1;
-    grid-column-end: 5;
-    background-color: var(--main);
-    padding: 2em;
-    margin: 0;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  background-color: var(--main);
+  padding: 2em;
+  margin: 0;
 }
 
 .large-grid-item {
-    grid-column-start: 2;
-    grid-column-end: 4;
-    background-color: var(--light-main);
-    
+  grid-column-start: 2;
+  grid-column-end: 4;
+  background-color: var(--light-main);
 }
 
 .left-grid-item {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    background-color: var(--light-main);
-
+  grid-column-start: 2;
+  grid-column-end: 3;
+  background-color: var(--light-main);
 }
 
 .right-grid-item {
@@ -93,12 +91,12 @@ body {
     grid-column-end: 4;
     background-color: var(--light-main);
 }
-
 /* Nav Grid Styles */
 .nav-container {
     display: grid;
     grid-template-columns: 1em 1fr 1fr 1fr 1fr 1fr 1fr 1em;
     grid-gap: 1em;
+    justify-content: end;
 }
 
 .responsive {
@@ -214,8 +212,8 @@ body {
 
 
 nav > .logo {
-    grid-column-start: 2;
-    grid-column-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 2;
 }
 
 input {
@@ -226,7 +224,68 @@ input {
 /* Footer Grid Styles */
 
 .footer-container {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Card Styling */
+
+.card-body {
+  padding: 1em;
+}
+
+
+/* Header Style */
+
+.header {
+    grid-column: 3 /span 8;
+}
+
+.menu {
+    float: right;
+}
+.menu a {
+    clear: right;
+    text-decoration: none;
+    color: #FCFCFC;
+    margin: 0 10px;
+    line-height: 70px;
+}
+
+label {
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+}
+
+#toggle {
+    display: none;
+}
+
+@media only screen and (max-width: 954px) {
+
+    label {
+        display: block;
+        float: right;
+        cursor: pointer;
+    }
+
+    .menu {
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+
+    .menu a {
+        display: block;
+    }
+
+    #toggle:checked + .menu {
+        grid-column: 1 /span 8;
+        display: block;
+    }
+
 }
 
