@@ -7,4 +7,4 @@
         <span class="star" value="1">&#9734;</span> <br>
         <button type="submit" class="default">Bewertung speichern</button>
     </form>
-</div>
+</div> 
