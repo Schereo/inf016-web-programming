@@ -169,6 +169,26 @@ label {
         grid-column: 1 /span 8;
         display: block;
     }
-
 }
 
+button {
+    background-color: #6096BA;
+    color: #FCFCFC;
+    border-radius: 4px;
+}
+
+#gymnasien {
+    background-color: darkorange;
+}
+#oberschulen {
+    background-color: dodgerblue;
+}
+#bbs {
+    background-color: goldenrod;
+}
+#gesamtschulen {
+    background-color: blueviolet;
+}
+#grundschulen {
+    background-color: limegreen;
+}
