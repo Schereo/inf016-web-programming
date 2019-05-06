@@ -1,3 +1,6 @@
+@import "feedback.css";
+@import "search-styles.css";
+
 :root {
     --light-main: #B8B8B8;
     --main: #828C91;
@@ -72,6 +75,7 @@ body {
     grid-template-columns: 1em 1fr 1fr 1fr 1fr 1fr 1fr 1em;
     grid-gap: 1em;
     justify-content: end;
+
 }
 
 .responsive {
@@ -81,6 +85,7 @@ body {
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
 }
 
 .card .card-header {
@@ -89,6 +94,7 @@ body {
     margin-top: 0;
     margin-bottom: 0.3em;
     padding: 0.6em;
+    border-radius: 10px 10px 0px 0px;
 
 }
 
