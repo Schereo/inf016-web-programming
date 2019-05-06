@@ -1,26 +1,105 @@
-<!DOCTYPE html>
-<html lang="de">
-    <head>
-        <meta charset="UTF-8">
-        <title>Impressum</title>
-        <meta name="description" content="Bildungsstätten der Stadt Oldenburg">
-        <meta name="keywords" content="HTML,CSS,PHP,XML,JavaScript">
-        <meta name="author" content="Cedric, Nelly, Jens, Tim">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
-    </head>
-    <body>
-        <?php include 'header.php';?>
-        <h1>Impressum</h1>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia mattis auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies suscipit luctus. Sed accumsan, magna in interdum luctus, odio nisi finibus lectus, eu ultricies nisl ante quis arcu. Ut turpis nisl, facilisis eget euismod sed, molestie in turpis. Duis lacinia porttitor molestie. Quisque sollicitudin orci a erat maximus, dignissim viverra elit maximus. Curabitur consequat, erat vel tempus vulputate, libero tellus cursus urna, sed ullamcorper nisl nisi et est. Praesent ullamcorper gravida tellus eget tincidunt. Praesent ac lectus eget nunc mollis tincidunt et ac quam. Quisque vel pulvinar arcu. Fusce vel est orci. Suspendisse eu est consectetur, scelerisque sapien sit amet, facilisis metus.
+<link rel="stylesheet" href="/css/styles.css"/>
+<div class="main-container">
+    <div class="stretch-grid-item" id="indexheader">
+        <?php include 'header.php'; ?>
+    </div>
+    <div class="card large-grid-item">
+        <h1 class="card-header">Datenschutz</h1>
+        <div class="card-body impressum-body">
+            Impressum
 
-        Vestibulum a hendrerit erat. Integer at nibh varius velit consectetur pharetra. Suspendisse ut ultrices leo, vitae molestie mi. Fusce elementum neque in urna sagittis, vel interdum enim aliquet. Integer finibus rutrum maximus. Maecenas pharetra sodales felis, vel iaculis nibh viverra ac. In hac habitasse platea dictumst. Fusce maximus gravida erat vitae gravida. Maecenas in urna sapien.
+            <p>
+                Angaben gem. § 5 TMG:
 
-        Praesent aliquam pellentesque nulla, at scelerisque neque facilisis nec. Proin efficitur diam sit amet dolor tincidunt, eu mollis libero sagittis. Pellentesque enim mi, aliquam eu pretium sit amet, cursus sit amet ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque mattis efficitur est a pretium. Morbi rutrum volutpat metus, nec bibendum arcu porttitor pulvinar. Aenean tincidunt ipsum quis blandit ultrices. Phasellus sagittis orci et magna semper, eu porta arcu viverra.
+                Vorname, Name
+                Adresse
+                PLZ
 
-        Integer enim orci, vestibulum non erat ut, vulputate faucibus lectus. Cras ullamcorper nisi quis urna fringilla, sed molestie arcu condimentum. Proin posuere porta convallis. Sed sapien diam, dapibus nec metus vel, molestie aliquet magna. Etiam egestas nunc eu elit placerat posuere. Mauris erat libero, ullamcorper id sagittis at, congue eu nunc. Vestibulum auctor consectetur nulla, sit amet condimentum massa suscipit in. Phasellus dolor massa, mattis quis augue eu, mattis vestibulum ex. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed faucibus semper mauris vitae fermentum. Nunc nulla mi, tempus eu dolor et, convallis tempor metus. Sed iaculis maximus urna at sagittis. Proin interdum at purus quis vehicula. Pellentesque laoreet, velit vel lobortis lacinia, ligula nulla vestibulum nisl, a convallis velit orci vel nisl. Aliquam suscipit varius bibendum.
 
-        Phasellus rhoncus velit dolor, ac lobortis mi consequat ac. Curabitur sodales ipsum imperdiet, faucibus arcu pharetra, feugiat turpis. Ut dapibus tincidunt condimentum. Nulla pretium finibus sapien eu pretium. Aliquam ultricies molestie pulvinar. Aenean iaculis pellentesque varius. Fusce est velit, ullamcorper ut eros sit amet, elementum feugiat ipsum. Vestibulum ultricies tellus in lacus iaculis accumsan. Vestibulum ullamcorper efficitur mi ac vestibulum. Aliquam ultrices, turpis sit amet aliquet fermentum, orci enim sagittis tortor, ac consequat lectus mauris ac augue. Maecenas ac interdum purus, id volutpat mi. Quisque elementum sem at sem tincidunt, sit amet varius nulla aliquet. Nunc et libero vitae erat bibendum rutrum at nec lorem. Nunc consequat semper augue vel interdum. Praesent sagittis, justo eu feugiat elementum, ligula purus luctus sapien, quis rutrum diam ipsum a orci. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-        <?php include 'footer.php';?>
-    </body>
-</html>
+                Kontaktaufnahme:
+
+                Telefon:
+                Fax:
+                E-Mail:
+            </p>
+            <p>
+                Umsatzsteuer-ID
+
+                Umsatzsteuer-Identifikationsnummer gem. § 27 a Umsatzsteuergesetz:
+
+                DE XXX XXX XXX
+            </p>
+            <p>
+                Haftungsausschluss - Disclaimer:
+
+                Haftung für Inhalte
+
+                Alle Inhalte unseres Internetauftritts wurden mit größter Sorgfalt und nach bestem Gewissen erstellt.
+                Für
+                die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.
+                Als
+                Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen
+                Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet,
+                übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die
+                auf
+                eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von
+                Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt.
+
+                Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntniserlangung einer konkreten
+                Rechtsverletzung möglich. Bei Bekanntwerden von den o.g. Rechtsverletzungen werden wir diese Inhalte
+                unverzüglich entfernen.
+
+            </p>
+            <p>
+                Haftungsbeschränkung für externe Links
+
+
+                Unsere Webseite enthält Links auf externe Webseiten Dritter. Auf die Inhalte dieser direkt oder indirekt
+                verlinkten Webseiten haben wir keinen Einfluss. Daher können wir für die „externen Links“ auch keine
+                Gewähr
+                auf Richtigkeit der Inhalte übernehmen. Für die Inhalte der externen Links sind die jeweilige Anbieter
+                oder
+                Betreiber (Urheber) der Seiten verantwortlich.
+
+                Die externen Links wurden zum Zeitpunkt der Linksetzung auf eventuelle Rechtsverstöße überprüft und
+                waren im
+                Zeitpunkt der Linksetzung frei von rechtswidrigen Inhalten. Eine ständige inhaltliche Überprüfung der
+                externen Links ist ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht möglich. Bei direkten oder
+                indirekten Verlinkungen auf die Webseiten Dritter, die außerhalb unseres Verantwortungsbereichs liegen,
+                würde eine Haftungsverpflichtung ausschließlich in dem Fall nur bestehen, wenn wir von den Inhalten
+                Kenntnis
+                erlangen und es uns technisch möglich und zumutbar wäre, die Nutzung im Falle rechtswidriger Inhalte zu
+                verhindern.
+                Diese Haftungsausschlusserklärung gilt auch innerhalb des eigenen Internetauftrittes „Name Ihrer Domain“
+                gesetzten Links und Verweise von Fragestellern, Blogeinträgern, Gästen des Diskussionsforums. Für
+                illegale,
+                fehlerhafte oder unvollständige Inhalte und insbesondere für Schäden, die aus der Nutzung oder
+                Nichtnutzung
+                solcherart dargestellten Informationen entstehen, haftet allein der Diensteanbieter der Seite, auf
+                welche
+                verwiesen wurde, nicht derjenige, der über Links auf die jeweilige Veröffentlichung lediglich verweist.
+
+                Werden uns Rechtsverletzungen bekannt, werden die externen Links durch uns unverzüglich entfernt.
+            </p>
+            <p>
+                Urheberrecht
+
+                Die auf unserer Webseite veröffentlichen Inhalte und Werke unterliegen dem deutschen Urheberrecht
+                (http://www.gesetze-im-internet.de/bundesrecht/urhg/gesamt.pdf) . Die Vervielfältigung, Bearbeitung,
+                Verbreitung und jede Art der Verwertung des geistigen Eigentums in ideeller und materieller Sicht des
+                Urhebers außerhalb der Grenzen des Urheberrechtes bedürfen der vorherigen schriftlichen Zustimmung des
+                jeweiligen Urhebers i.S.d. Urhebergesetzes
+                (http://www.gesetze-im-internet.de/bundesrecht/urhg/gesamt.pdf ).
+                Downloads und Kopien dieser Seite sind nur für den privaten und nicht kommerziellen Gebrauch erlaubt.
+                Sind
+                die Inhalte auf unserer Webseite nicht von uns erstellt wurden, sind die Urheberrechte Dritter zu
+                beachten.
+                Die Inhalte Dritter werden als solche kenntlich gemacht. Sollten Sie trotzdem auf eine
+                Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden
+                von
+                Rechtsverletzungen werden wir derartige Inhalte unverzüglich entfernen.
+                Dieses Impressum wurde freundlicherweise von www.jurarat.de zur Verfügung gestellt.</p>
+            <div class="stretch-grid-item" id="indexfooter">
+                <?php include 'footer.php'; ?>
+            </div>
+        </div>
