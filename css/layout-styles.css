@@ -16,12 +16,8 @@
     margin: 0;
 }
 
-#indexheader.stretch-grid-item {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 0px 0px 10px 10px;
+#indexheader {
     background-color: var(--main);
-    padding: 2em;
 }
 
 #indexfooter.stretch-grid-item {

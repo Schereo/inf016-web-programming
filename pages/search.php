@@ -1,7 +1,7 @@
 <section>
     <h2 id="#suche" class="card-header">Schule Suchen</h2>
-    <div class="card-body search-container">
-        <form>
+    <div class="card-body">
+        <form class="search-container">
             <input class="input" type="text">
             <select class="input">
                 <option value="placeholder" disabled selected>Schulform</option>
