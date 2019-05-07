@@ -13,8 +13,6 @@
 .stretch-grid-item {
     grid-column-start: 1;
     grid-column-end: 5;
-    background-color: var(--main);
-    padding: 2em;
     margin: 0;
 }
 
@@ -24,7 +22,7 @@
 }
 
 #indexfooter.stretch-grid-item {
-  word-spacing: 10px;
+    word-spacing: 10px;
     text-align: center;
     padding: 1em;
     color : var(--background);
