@@ -39,6 +39,7 @@ body::-webkit-scrollbar-thumb {
     padding: 5px 7px;
     border-radius: 4px;
     border: none;
+    justify-content: space-evenly;
 }
 
 /*Button Sytles */
