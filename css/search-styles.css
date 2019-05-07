@@ -24,26 +24,50 @@
 }
 
 .small-card {
+    display: grid;
+    grid-template-rows: auto auto auto;
     background-color: var(--background);
     margin: 1em;
     border-radius: 5px;
     color: var(--main);
+    width: 160px;
 }
 
 .small-card > .small-card-header {
-    padding: 1em;
+    justify-content: center;
+    grid-row: 1;
+}
+
+.small-card-header > h3 {
+    align-self: center;
+    margin: 0 0 0 0;
 }
 
 .small-card > .small-card-body {
-    padding: 1em;
+    grid-row: 2;
     min-height: 5em;
 }
 
-.small-card > .small-card-footer {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 1em;
+.card-list {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 34px;
 }
+
+.card-list li:before {
+    content: '\2014';
+    margin-left: -25px;
+    margin-right: 8px;
+}
+
+.small-card > .small-card-footer {
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 1em;
+    font-size: 10px;
+}
+
 @media(max-width: 1200px) {
     .school-cards-container {
         grid-template-columns: 1fr 1fr 1fr;

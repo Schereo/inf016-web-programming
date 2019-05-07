@@ -4,7 +4,7 @@
         <img src="../assets/images/bbs1.jpeg" alt="Picture of BBS Wechloy" class="responsive detail-picture">
         <div class="detail-contact">
             <section>
-                <h1 class="info-container">
+                <h1 class="info-container detail-headline">
                     Berufsbildungszentrum für Wirtschaft, Informatik und Gesundheit
                 </h1>
                 <div class="info-container">
@@ -97,7 +97,7 @@
             </section>
         </div>
         <div class="detail-info">
-            <h5 id="detail-headline">Weitere Infos</h5>
+            <h5 class="detail-headline">Weitere Infos</h5>
             <div>
                 Schülerinnen/Schüler
                 circa 2.300

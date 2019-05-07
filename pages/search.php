@@ -41,7 +41,7 @@
                 </div>
                 <div class="small-card-body">
                     <img src="/assets/images/bbs2.jpeg" alt="BBS Haarentor" class="responsive">
-                    <ul>
+                    <ul class="card-list">
                         <li>BBS</li>
                         <li>Haarentor</li>
                         <li>1200 Schüler</li>
@@ -59,7 +59,7 @@
                 </div>
                 <div class="small-card-body">
                     <img src="/assets/images/bbs2.jpeg" alt="BBS Haarentor" class="responsive">
-                    <ul>
+                    <ul class="card-list">
                         <li>BBS</li>
                         <li>Haarentor</li>
                         <li>1200 Schüler</li>
@@ -77,7 +77,7 @@
                 </div>
                 <div class="small-card-body">
                     <img src="/assets/images/bbs2.jpeg" alt="BBS Haarentor" class="responsive">
-                    <ul>
+                    <ul class="card-list">
                         <li>BBS</li>
                         <li>Haarentor</li>
                         <li>1200 Schüler</li>
@@ -95,7 +95,7 @@
                 </div>
                 <div class="small-card-body">
                     <img src="/assets/images/bbs2.jpeg" alt="BBS Haarentor" class="responsive">
-                    <ul>
+                    <ul class="card-list">
                         <li>BBS</li>
                         <li>Haarentor</li>
                         <li>1200 Schüler</li>
@@ -113,7 +113,7 @@
                 </div>
                 <div class="small-card-body">
                     <img src="/assets/images/bbs2.jpeg" alt="BBS Haarentor" class="responsive">
-                    <ul>
+                    <ul class="card-list">
                         <li>BBS</li>
                         <li>Haarentor</li>
                         <li>1200 Schüler</li>
@@ -131,7 +131,7 @@
                 </div>
                 <div class="small-card-body">
                     <img src="/assets/images/bbs2.jpeg" alt="BBS Haarentor" class="responsive">
-                    <ul>
+                    <ul class="card-list">
                         <li>BBS</li>
                         <li>Haarentor</li>
                         <li>1200 Schüler</li>
