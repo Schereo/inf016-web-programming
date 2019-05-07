@@ -1,6 +1,6 @@
 <section>
     <h2 id="#suche" class="card-header">Schule Suchen</h2>
-    <form class="card-body">
+    <form class="card-body search-container">
         <input class="input" type="text">
         <select class="input">
             <option value="placeholder" disabled selected>Schulform</option>
@@ -34,7 +34,7 @@
         <button class="default-button button-size" type="submit" name="anmelden">Suchen</button>
     </form>
 </section>
-<div class="search-container">
+<div class="school-cards-container">
     <div class="small-card">
         <div class="small-card-header">
             <h3>BBS Wechloy</h3>

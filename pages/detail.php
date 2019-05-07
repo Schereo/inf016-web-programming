@@ -97,12 +97,13 @@
             </section>
         </div>
         <div class="detail-info">
-            <h5>Weitere Infos</h5>
-            <dl>
-                <dt>Schülerinnen/Schüler</dt>
-                <dd>circa 2.300</dd>
-                <dt>Mitarbeiterinnen/Mitarbeiter</dt>
-                <dd>circa 110</dd>
+            <h5 id="detail-headline">Weitere Infos</h5>
+            <div>
+                Schülerinnen/Schüler
+                circa 2.300
+                Mitarbeiterinnen/Mitarbeiter
+                circa 110
+            </div>
         </div>
         <div class="detail-feedback">
             <?php include 'feedback.php'; ?>

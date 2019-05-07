@@ -37,7 +37,7 @@
 
 .detail-feedback {
     grid-column: 2;
-    grid-row: 3
+    grid-row: 3;
 }
 
 .mapcontainer {
@@ -97,6 +97,11 @@
 
 .mapfilter .mapfilterfooter {
     grid-row: 5;
+}
+
+#detail-headline {
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .info-container > .text-left {
