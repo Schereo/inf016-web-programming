@@ -30,7 +30,7 @@
     margin: 1em;
     border-radius: 5px;
     color: var(--main);
-    width: 160px;
+    width: 250px;
 }
 
 .small-card > .small-card-header {
@@ -38,7 +38,7 @@
     grid-row: 1;
 }
 
-.small-card-header > h3 {
+.small-card-header > h2 {
     align-self: center;
     margin: 0 0 0 0;
 }
@@ -65,7 +65,7 @@
     display: grid;
     grid-template-columns: auto auto;
     padding: 1em;
-    font-size: 10px;
+    font-size: 20px;
 }
 
 @media(max-width: 1200px) {

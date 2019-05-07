@@ -37,7 +37,7 @@
         <div class="school-cards-container">
             <div class="small-card">
                 <div class="small-card-header">
-                    <h3>BBS Wechloy</h3>
+                    <h2>BBS Wechloy</h2>
                 </div>
                 <div class="small-card-body">
                     <img src="/assets/images/bbs2.jpeg" alt="BBS Haarentor" class="responsive">
@@ -55,7 +55,7 @@
             </div>
             <div class="small-card">
                 <div class="small-card-header">
-                    <h3>BBS Wechloy</h3>
+                    <h2>BBS Wechloy</h2>
                 </div>
                 <div class="small-card-body">
                     <img src="/assets/images/bbs2.jpeg" alt="BBS Haarentor" class="responsive">
@@ -73,7 +73,7 @@
             </div>
             <div class="small-card">
                 <div class="small-card-header">
-                    <h3>BBS Wechloy</h3>
+                    <h2>BBS Wechloy</h2>
                 </div>
                 <div class="small-card-body">
                     <img src="/assets/images/bbs2.jpeg" alt="BBS Haarentor" class="responsive">
@@ -91,7 +91,7 @@
             </div>
             <div class="small-card">
                 <div class="small-card-header">
-                    <h3>BBS Wechloy</h3>
+                    <h2>BBS Wechloy</h2>
                 </div>
                 <div class="small-card-body">
                     <img src="/assets/images/bbs2.jpeg" alt="BBS Haarentor" class="responsive">
@@ -109,7 +109,7 @@
             </div>
             <div class="small-card">
                 <div class="small-card-header">
-                    <h3>BBS Wechloy</h3>
+                    <h2>BBS Wechloy</h2>
                 </div>
                 <div class="small-card-body">
                     <img src="/assets/images/bbs2.jpeg" alt="BBS Haarentor" class="responsive">
@@ -127,7 +127,7 @@
             </div>
             <div class="small-card">
                 <div class="small-card-header">
-                    <h3>BBS Wechloy</h3>
+                    <h2>BBS Wechloy</h2>
                 </div>
                 <div class="small-card-body">
                     <img src="/assets/images/bbs2.jpeg" alt="BBS Haarentor" class="responsive">

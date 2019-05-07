@@ -45,6 +45,12 @@
     background-color: var(--light-main);
 }
 
+.left-grid-item > .login-body {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+}
+
 .right-grid-item {
     grid-column-start: 3;
     grid-column-end: 4;
@@ -64,3 +70,5 @@
     width: 100%;
     height: auto;
 }
+
+
