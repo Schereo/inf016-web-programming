@@ -34,11 +34,14 @@
             </div>
 
             <textarea class="textarea" placeholder="Beschreibung"> </textarea>
-            <form class ="file-upload-field" id="Nelly">
+            <div class="uploadInterface">
+            <form class ="file-upload-field">
                 <input class ="file-upload" type="file" multiple>
                 <p class="uploadText"> Klicken/ Bilder ablegen</p>
-              <button class="default-button" type="submit">Upload</button>
             </form>
+                <button class="default-button uploadButton" type="submit">Upload</button>
+            </div>
+
      </form>   
     </div>
 </section>
