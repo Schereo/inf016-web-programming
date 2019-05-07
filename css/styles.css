@@ -15,7 +15,7 @@
 body {
     font-family: 'Noto Sans', sans-serif;
     margin: 0;
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 
 /* Scrollbar styles */
@@ -61,10 +61,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-nav > .logo {
-    grid-column-start: 2;
-    grid-column-end: 2;
-}
+nav > .logo {margin-left: 4em;}
 
 input {
     margin: 0.3em;
@@ -80,19 +77,22 @@ input {
 
 /* Header Style */
 
-.header {
-    grid-column: 3 /span 8;
-}
-
-#indexheader {
+.nav-container {
+    display: flex;
+    width: 100%;
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
+    z-index: 1;
+    background-color: var(--main);
+    box-shadow: 0px 7px 22px -5px rgba(0,0,0,1);
 }
 
 .menu {
     float: right;
+    padding-right: 2em;
+    margin-right: auto;
 }
 
 .menu a {
@@ -106,6 +106,11 @@ input {
     background: var(--light-main);
     border-radius: 5px 5px 5px 5px;
 }
+
+.nav-items {
+    margin-left: auto;
+}
+
 /* funktioniert noch nicht, kp wieso, padding nur zum Testen */
 .menu#searchSchool a {
     background:gray;
@@ -148,10 +153,6 @@ label {
         display: block;
     }
 
-    .main-container {
-        margin-right: 0px;
-        margin-left: 0px;
-    }
 }
 
 

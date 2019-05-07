@@ -10,22 +10,16 @@
     padding-bottom: 15px;
 }
 
-.stretch-grid-item {
-    grid-column-start: 1;
-    grid-column-end: 5;
-    margin: 0;
-    background-color: #828C91;
-}
-
 #indexheader {
     background-color: var(--main);
 }
 
-#indexfooter.stretch-grid-item {
+#indexfooter {
     word-spacing: 10px;
     text-align: center;
     padding: 1em;
     color : var(--background);
+    background-color: var(--main);
 }
 
 /* Hyperlinks auch weiß machen, hier alternative Farben für gedrückte Links hinzufügen */
@@ -72,11 +66,11 @@
 
 /* Nav Grid Styles */
 .nav-container {
-    display: grid;
-    grid-template-columns: 1em 1fr 1fr 1fr 1fr 1fr 1fr 1em;
-    grid-gap: 1em;
-    justify-content: end;
+    display: flex;
+}
 
+.nav-container:nth-child(2){
+    margin-left: auto;
 }
 
 .responsive {
