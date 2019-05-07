@@ -9,6 +9,6 @@
             <input class="input" type="password" name="passwort2" placeholder="Passwort wiederholen"><br>
         </div>
         <div class="registerbutton card-footer">
-            <button class="default" type="submit" name="registrieren"> Registrieren</button>
+            <button class="default-button button-size" type="submit" name="registrieren"> Registrieren</button>
     </form>
 </section>

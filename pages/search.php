@@ -31,7 +31,7 @@
             <option value="st16">Tweelbäke</option>
             <option value="st17">Wechloy</option>
         </select>
-        <button class="default" type="submit" name="anmelden">Suchen</button>
+        <button class="default-button button-size" type="submit" name="anmelden">Suchen</button>
     </form>
 </section>
 <div class="search-container">

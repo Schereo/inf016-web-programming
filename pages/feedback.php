@@ -5,6 +5,6 @@
         <span class="star" value="3">&#9734;</span>
         <span class="star" value="2">&#9734;</span>
         <span class="star" value="1">&#9734;</span> <br>
-        <button type="submit" class="default">Bewertung speichern</button>
+        <button type="submit" class="default-button">Bewertung speichern</button>
     </form>
 </div> 

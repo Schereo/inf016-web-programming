@@ -49,30 +49,54 @@
     grid-column: 1;
 }
 
-.mapfilter {
-    grid-column: 2;
-    background-color: var(--main)
+.filter {
+    background-color: var(--main);
+    border-radius: 4px 4px 4px 4px;
 }
 
-.mapfilter .mapfilterheader {
-    background-color: var(--main);
+.mapfilter {
+    grid-column: 2;
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    background-color: var(--light-main);
+    grid-row-gap: 10px;
+    margin: 15px 15px 15px 15px;
+    padding: 15px 15px 15px 15px;
+}
+
+.mapfilterheader {
     color: var(--background);
     margin-top: 0;
     margin-bottom: 0.3em;
     padding: 0.6em;
+    padding-bottom: 0;
+    margin-left: 15px;
+}
+
+#map-filter-body-header {
+    grid-row: 1;
+    margin: 0;
 }
 
 .mapfilter .mapfilterbody {
+    grid-row: 2;
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto auto;
+    grid-row-gap: 10px;
 }
 
-.mapfilter .mapfiltersearch {
-    grid-column: 2;
+
+#filter-search-headline {
+    grid-row: 3;
+}
+
+.mapfilter .map-filter-schools {
+    grid-row: 4;
 }
 
 .mapfilter .mapfilterfooter {
+    grid-row: 5;
 }
 
 .info-container > .text-left {
@@ -87,6 +111,10 @@
     grid-row: 1;
 }
 
+.filter-button {
+    width: 80%;
+    min-width: 120px;
+}
 #gymnasien {
     background-color: darkorange;
 }
@@ -95,4 +123,10 @@
 }
 #bbs {
     background-color: goldenrod;
+}
+#gesamtschulen {
+    background-color: blueviolet;
+}
+#grundschulen {
+    background-color: limegreen;
 }
