@@ -7,7 +7,7 @@
     <meta name="keywords" content="HTML,CSS,PHP,XML,JavaScript">
     <meta name="author" content="Cedric, Nelly, Jens, Tim">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="robots" content="noindex">
     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico"/>
     <link rel="stylesheet" href="/css/styles.css"/>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
