@@ -14,6 +14,7 @@
     grid-column-start: 1;
     grid-column-end: 5;
     margin: 0;
+    background-color: #828C91;
 }
 
 #indexheader {
@@ -25,9 +26,6 @@
     text-align: center;
     padding: 1em;
     color : var(--background);
-    border-radius: 10px 10px 10px 10px;
-    background-color: var(--main);
-    padding: 2em;
 }
 
 /* Hyperlinks auch weiß machen, hier alternative Farben für gedrückte Links hinzufügen */
