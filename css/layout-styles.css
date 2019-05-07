@@ -71,18 +71,22 @@
 
 .newSchool-container {
     display: grid; 
-    grid-template-columns: auto; 
-    grid-template-rows: auto auto auto auto auto;
-    justify-content: space-evenly;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
 }
 .infoHeader-newSchool > .schoolname{
     grid-row: 1;
+    grid-column: 1 span/2; 
 }
+
 .infoHeader-newSchool > .schooltype{
     grid-row: 1;
+    grid-column: 3;
 }
+
 .infoHeader-newSchool > .district{
     grid-row: 1;
+    grid-column: 4;
 }
 
 .textarea{
@@ -92,7 +96,51 @@
 
 .file-upload{
     grid-row: 3;
+    background: grey; 
+    width: 500px;
+    height: 200px;
+    border: 4px dashed lightgrey;
 }
+.file-upload-field{
+grid-row: 3;
+  background: rgba(0,0,0,0.9);
+  width: 500px;
+  height: 200px;
+  border: 4px dashed #fff;
+    margin:0;
+}
+.uploadText{
+  width: 50%;
+  height: 50%;
+  text-align: center;
+  line-height: 170px;
+  color: #ffffff;
+  font-family: Arial;
+    margin :0;
+    grid-column: 1;
+}
+.file-upload{
+    grid-row: 3;
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  height: 50%;
+  outline: none;
+  opacity: 0;
+grid-column: 1;
+}
+.file-upload #Nelly{
+    grid-template-columns: auto auto;
+}
+.update:hover{
+  background: #149174;
+	color: #0C5645;
+}
+.update:active{
+  border:0;
+}
+
+
 
 
 
