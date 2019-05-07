@@ -40,6 +40,7 @@
                 <p class="uploadText"> Klicken/ Bilder ablegen</p>
             </form>
                 <button class="default-button uploadButton" type="submit">Upload</button>
+                <div class="uploadedPictures"><h2>test</h2></div>
             </div>
 
      </form>   
