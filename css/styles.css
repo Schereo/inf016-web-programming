@@ -20,12 +20,16 @@ body {
 
 /* Scrollbar styles */
 
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 0.5em;
   background: transparent;
 }
 body::-webkit-scrollbar-thumb {
   background: var(--light-main);
+  border-radius: 5px;
+}
+.search-container::-webkit-scrollbar-thumb {
+  background: var(--main);
   border-radius: 5px;
 }
 
