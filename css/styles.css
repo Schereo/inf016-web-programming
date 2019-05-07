@@ -3,6 +3,7 @@
 @import "search-styles.css";
 @import "specific-styles.css";
 @import "layout-styles.css";
+@import "imageslider.css";
 
 :root {
     --light-main: #B8B8B8;
@@ -14,6 +15,22 @@
 body {
     font-family: 'Noto Sans', sans-serif;
     margin: 0;
+    overflow-x: hidden; 
+}
+
+/* Scrollbar styles */
+
+::-webkit-scrollbar {
+  width: 0.5em;
+  background: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  background: var(--light-main);
+  border-radius: 5px;
+}
+.search-container::-webkit-scrollbar-thumb {
+  background: var(--main);
+  border-radius: 5px;
 }
 
 /*Input Styles */

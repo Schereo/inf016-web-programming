@@ -13,26 +13,30 @@
 .stretch-grid-item {
     grid-column-start: 1;
     grid-column-end: 5;
-    background-color: var(--main);
-    padding: 2em;
     margin: 0;
 }
 
 #indexheader.stretch-grid-item {
-    padding-top : 5px;
-    padding-bottom : 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 0px 0px 10px 10px;
+    background-color: var(--main);
+    padding: 2em;
 }
 
 #indexfooter.stretch-grid-item {
-  word-spacing: 10px;
+    word-spacing: 10px;
     text-align: center;
     padding: 1em;
     color : var(--background);
+    border-radius: 10px 10px 10px 10px;
+    background-color: var(--main);
+    padding: 2em;
 }
 
 /* Hyperlinks auch weiß machen, hier alternative Farben für gedrückte Links hinzufügen */
 #indexfooter.stretch-grid-item a {
-    color : var(--background);
+    color: var(--background);
 }
 
 .large-grid-item {

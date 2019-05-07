@@ -26,6 +26,8 @@
 .small-card {
     background-color: var(--background);
     margin: 1em;
+    border-radius: 5px;
+    color: var(--main);
 }
 
 .small-card > .small-card-header {
