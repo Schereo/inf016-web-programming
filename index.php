@@ -18,9 +18,7 @@
         <?php include 'pages/header.php'; ?>
     </div>
     <div class="large-grid-item card">
-        <header>
-            <img src="/assets/images/oldenburg-stadt.jpeg" alt="Picture of Oldenburg" class="responsive">
-        </header>
+        <?php include 'pages/imageslider.php'; ?>
     </div>
     <div class="large-grid-item card">
         <?php include 'pages/search.php'; ?>
