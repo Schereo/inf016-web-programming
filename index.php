@@ -14,7 +14,7 @@
 </head>
 <body>
 <div class="main-container">
-    <div class="strech-grid-item">
+    <div class="stretch-grid-item" id="indexheader">
         <?php include 'pages/header.php'; ?>
     </div>
     <div class="large-grid-item card">
@@ -33,15 +33,15 @@
         <?php include 'pages/map.php'; ?>
     </div>
     <div class="left-grid-item card">
-        <?php include 'pages/login.php';?>
+        <?php include 'pages/login.php'; ?>
     </div>
     <div class="right-grid-item card">
-       <?php include 'pages/register.php'; ?>
+        <?php include 'pages/register.php'; ?>
     </div>
     <div class="large-grid-item card">
         <?php include 'pages/newSchool.php'; ?>
     </div>
-    <div class="strech-grid-item">
+    <div class="stretch-grid-item" id="indexfooter">
         <?php include 'pages/footer.php'; ?>
     </div>
 </div>

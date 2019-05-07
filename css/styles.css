@@ -73,6 +73,15 @@ input {
     color: #FCFCFC;
     margin: 0 10px;
     line-height: 70px;
+    border-color: var(--background);
+    padding: 5px;
+    background: var(--light-main);
+    border-radius: 5px 5px 5px 5px;
+}
+/* funktioniert noch nicht, kp wieso, padding nur zum Testen */
+.menu#searchSchool a {
+    background:gray;
+    padding:5em;
 }
 
 label {
@@ -103,6 +112,7 @@ label {
 
     .menu a {
         display: block;
+        background-color: var(--main);
     }
 
     #toggle:checked + .menu {
