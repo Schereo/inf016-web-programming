@@ -1,10 +1,9 @@
 <section>
     <h2 id="anlegen" class="card-header">Neue Schule anlegen</h2>
-    <div class="card-body">
         <form class="newSchool-container">
             <div class="infoHeader-newSchool"> 
-                <input class="input" type="text" id="schoolname" name="schulname" placeholder="Name der Schule">
-                <select class="input" id="schooltype">
+                <input class="input" class="schoolname" type="text" id="schoolname" name="schulname" placeholder="Name der Schule">
+                <select class="input" class="schooltype" id="schooltype">
                     <option value="form1">Grundschule</option>
                     <option value="form2">Gymnasium</option>
                     <option value="form3">Oberschule</option>
@@ -12,7 +11,7 @@
                     <option value="form5">Integrierte Gesamtschule</option>
                     <option value="form6">Berufsbildende Schule</option>
                 </select>
-                <select class="input" id="district">
+                <select class="input" class="district" id="district">
                     <option value="st1">Alexandersfeld</option>
                     <option value="st2">Bloherfelde</option>
                     <option value="st3">Bürgerfelde</option>
@@ -33,12 +32,8 @@
                 </select>
             </div>
             <textarea class="textarea" placeholder="Beschreibung"> </textarea>
-
             <div class="file-upload" data-text="Select your file!">
                     <input class="file-upload-field" type="file">
             </div>
             </form>
-            <br>
-       
-    </div>
 </section>
