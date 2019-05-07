@@ -80,6 +80,13 @@ input {
     grid-column: 3 /span 8;
 }
 
+#indexheader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
 .menu {
     float: right;
 }
@@ -137,5 +144,11 @@ label {
         display: block;
     }
 
+    .main-container {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
 }
+
+
 

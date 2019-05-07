@@ -3,14 +3,98 @@
     <section class="detailcontainer card-body">
         <img src="../assets/images/bbs1.jpeg" alt="Picture of BBS Wechloy" class="responsive detail-picture">
         <div class="detail-contact">
-            <p> Berufsbildungszentrum für Wirtschaft, Informatik und Gesundheit<br>
-            <b>Schlleitung:</b> Diedrich Ahlfeld<br>
-            <b>Adresse:</b> Ammerländer Heerstraße 33/39, 26129 Oldenburg<br>
-            <b>Telefon:</b> 0441 77915-0<br>
-            <b>E-Mail:</b> <a href="mailto:mail@bbs-haarentor.de">mail@bbs-haarentor.de</a><br>
-            <b>Internet:</b> <a href="http://www.bbs-haarentor.de">www.bbs-haarentor.de</a><br>
-            <b>Sekretariat:</b> Montag bis Donnerstag von 7.30 Uhr bis 12 Uhr sowie von 12.30 Uhr
-            bis 15 Uhr, Freitag von 7.30 Uhr bis 13.15 Uhr</p>
+            <section>
+                <h1 class="info-container">
+                    Berufsbildungszentrum für Wirtschaft, Informatik und Gesundheit
+                </h1>
+                <div class="info-container">
+                    <div class="text-left">
+                        Schulleitung:
+                    </div>
+                    <div class="text-right">
+                        Diedrich Ahlfeld
+                    </div>
+                </div>
+                <div class="info-container">
+                    <div class="text-left">
+                        Adresse:
+                    </div>
+                    <div class="text-right">
+                        Ammerländer Heerstraße 33/39<br> 26129 Oldenburg
+                    </div>
+                </div>
+                <div class="info-container">
+                    <div class="text-left">
+                        Telefon:
+                    </div>
+                    <div class="text-right">
+                        <a href="tel:0441 77915-0">0441 77915-0</a>
+                    </div>
+                </div>
+                <div class="info-container">
+                    <div class="text-left">
+                        E-Mail:
+                    </div>
+                    <div class="text-right">
+                        <a href="mailto:mail@bbs-haarentor.de">mail@bbs-haarentor.de</a>
+                    </div>
+                </div>
+                <div class="info-container">
+                    <div class="text-left">
+                        Internet:
+                    </div>
+                    <div class="text-right">
+                        <a href="www.bbs-haarentor.de">www.bbs-haarentor.de</a>
+                    </div>
+                </div>
+                <div class="info-container">
+                    <div class="text-left">
+                        Sekretariat:
+                    </div>
+                    <div class="text-right open-hours">
+                        <div class="info-container">
+                            <div class="text-left">
+                                Montag
+                            </div>
+                            <div class="text-right">
+                                7:30 - 12:00 Uhr und 12:30 - 15:00 Uhr
+                            </div>
+                        </div>
+                        <div class="info-container">
+                            <div class="text-left">
+                                Dienstag
+                            </div>
+                            <div class="text-right">
+                                7:30 - 12:00 Uhr und 12:30 - 15:00 Uhr
+                            </div>
+                        </div>
+                        <div class="info-container">
+                            <div class="text-left">
+                                Mittwoch
+                            </div>
+                            <div class="text-right">
+                                7:30 - 12:00 Uhr und 12:30 - 15:00 Uhr
+                            </div>
+                        </div>
+                        <div class="info-container">
+                            <div class="text-left">
+                                Donnerstag
+                            </div>
+                            <div class="text-right">
+                                7:30 - 12:00 Uhr und 12:30 - 15:00 Uhr
+                            </div>
+                        </div>
+                        <div class="info-container">
+                            <div class="text-left">
+                                Freitag
+                            </div>
+                            <div class="text-right">
+                                7:30 - 13:15 Uhr
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
         <div class="detail-info">
             <h5>Weitere Infos</h5>
@@ -20,8 +104,8 @@
                 <dt>Mitarbeiterinnen/Mitarbeiter</dt>
                 <dd>circa 110</dd>
         </div>
-        <div class ="detail-feedback">
-             <?php include 'feedback.php';?>
+        <div class="detail-feedback">
+            <?php include 'feedback.php'; ?>
         </div>
     </section>
 </article>

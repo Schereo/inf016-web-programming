@@ -14,10 +14,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body>
+<div class="stretch-grid-item" id="indexheader">
+    <?php include 'pages/header.php'; ?>
+</div>
 <div class="main-container">
-    <div class="stretch-grid-item" id="indexheader">
-        <?php include 'pages/header.php'; ?>
-    </div>
     <div class="stretch-grid-item">
         <?php include 'pages/imageslider.php'; ?>
     </div>
@@ -40,9 +40,9 @@
     <div class="large-grid-item card">
         <?php include 'pages/newSchool.php'; ?>
     </div>
-    <div class="stretch-grid-item" id="indexfooter">
-        <?php include 'pages/footer.php'; ?>
-    </div>
+</div>
+<div class="stretch-grid-item" id="indexfooter">
+    <?php include 'pages/footer.php'; ?>
 </div>
 </body>
 </html> 
