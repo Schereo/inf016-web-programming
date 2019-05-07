@@ -15,6 +15,18 @@
 body {
     font-family: 'Noto Sans', sans-serif;
     margin: 0;
+    overflow-x: hidden; 
+}
+
+/* Scrollbar styles */
+
+body::-webkit-scrollbar {
+  width: 0.5em;
+  background: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  background: var(--light-main);
+  border-radius: 5px;
 }
 
 /*Input Sytles */

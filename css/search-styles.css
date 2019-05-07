@@ -18,6 +18,7 @@
 .small-card {
     background-color: var(--background);
     margin: 1em;
+    border-radius: 5px;
 }
 
 .small-card > .small-card-header {
