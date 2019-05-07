@@ -18,12 +18,9 @@
     word-spacing: 10px;
     text-align: center;
     padding: 1em;
-<<<<<<< HEAD
-    color : var(--background);
-    background-color: var(--main);
-=======
     color: var(--background);
->>>>>>> 1c2f427007b91cf3ad6d37fb1b01d2c8a1a8ea73
+    background-color: var(--main);
+
 }
 
 /* Hyperlinks auch weiß machen, hier alternative Farben für gedrückte Links hinzufügen */
@@ -70,18 +67,20 @@
 
 /* Nav Grid Styles */
 .nav-container {
-<<<<<<< HEAD
     display: flex;
 }
 
-.nav-container:nth-child(2){
+.nav-container img {
+    padding-left: 1em;
+    padding-top: 0.3em;
+}
+
+.nav-container:nth-child(2) {
     margin-left: auto;
-=======
     display: grid;
     grid-template-columns: 1em 1fr 1fr 1fr 1fr 1fr 1fr 1em;
     grid-gap: 1em;
     justify-content: end;
->>>>>>> 1c2f427007b91cf3ad6d37fb1b01d2c8a1a8ea73
 }
 
 .responsive {

@@ -1,5 +1,5 @@
 <nav class="nav-container">
-    <a href="/" class="logo"><h1 >Oscolia</h1></a>
+    <a href="/"><img src="/assets/header.png" class="logo"></a>
     <div class="nav-items">
         <label for="toggle">&#9776;</label>
         <input type="checkbox" id="toggle"/>
