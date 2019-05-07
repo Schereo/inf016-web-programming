@@ -9,8 +9,6 @@
 .stretch-grid-item {
     grid-column-start: 1;
     grid-column-end: 5;
-    background-color: var(--main);
-    padding: 2em;
     margin: 0;
 }
 
@@ -18,6 +16,8 @@
     padding-top: 5px;
     padding-bottom: 5px;
     border-radius: 0px 0px 10px 10px;
+    background-color: var(--main);
+    padding: 2em;
 }
 
 #indexfooter.stretch-grid-item {
@@ -26,6 +26,8 @@
     padding: 1em;
     color: var(--background);
     border-radius: 10px 10px 10px 10px;
+    background-color: var(--main);
+    padding: 2em;
 }
 
 /* Hyperlinks auch weiß machen, hier alternative Farben für gedrückte Links hinzufügen */

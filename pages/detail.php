@@ -1,5 +1,5 @@
 <article class>
-    <h3 class="card-header"> BBS Wechloy</h3>
+    <h2 class="card-header"> BBS Wechloy</h2>
     <section class="detailcontainer card-body">
         <img src="../assets/images/bbs1.jpeg" alt="Picture of BBS Wechloy" class="responsive detail-picture">
         <div class="detail-contact">
