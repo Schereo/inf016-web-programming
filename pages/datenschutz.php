@@ -1,4 +1,6 @@
-<link rel="stylesheet" href="/css/styles.css"/>
+<link rel="stylesheet" href="/css/desktop/styles.css"/>
+<link rel="stylesheet" media="only screen and (max-width: 992px)" href="/css/tablet/styles-tablet.css"/>
+
 <div class="main-container">
     <div class="stretch-grid-item" id="indexheader">
         <?php include 'header.php'; ?>
@@ -173,7 +175,11 @@
             <p>Sie können Ihre Datenschutzeinstellungen bei Twitter ändern: <a
                         href="https://twitter.com/account/settings">https://twitter.com/account/settings</a></p>
 
-            <div class="stretch-grid-item" id="indexfooter">
-                <?php include 'footer.php'; ?>
-            </div>
+
         </div>
+        <div class="stretch-grid-item" id="indexfooter">
+            <?php include 'footer.php'; ?>
+        </div>
+    </div>
+
+    </div>

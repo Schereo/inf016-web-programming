@@ -1,10 +1,11 @@
-<link rel="stylesheet" href="/css/styles.css"/>
+<link rel="stylesheet" href="/css/desktop/styles.css"/>
+<link rel="stylesheet" media="only screen and (max-width: 992px)" href="/css/tablet/styles-tablet.css"/>
 <div class="main-container">
     <div class="stretch-grid-item" id="indexheader">
         <?php include 'header.php'; ?>
     </div>
     <div class="card large-grid-item">
-        <h1 class="card-header">Datenschutz</h1>
+        <h1 class="card-header">Impressum</h1>
         <div class="card-body impressum-body">
             Impressum
 
@@ -99,7 +100,10 @@
                 von
                 Rechtsverletzungen werden wir derartige Inhalte unverzüglich entfernen.
                 Dieses Impressum wurde freundlicherweise von www.jurarat.de zur Verfügung gestellt.</p>
-            <div class="stretch-grid-item" id="indexfooter">
-                <?php include 'footer.php'; ?>
-            </div>
+
         </div>
+        <div class="stretch-grid-item" id="indexfooter">
+            <?php include 'footer.php'; ?>
+        </div>
+    </div>
+</div>

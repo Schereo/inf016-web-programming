@@ -10,11 +10,6 @@
     padding-bottom: 15px;
 }
 
-
-#indexheader {
-    background-color: var(--main);
-}
-
 #indexfooter {
     word-spacing: 10px;
     text-align: center;
@@ -89,6 +84,7 @@
     width: 100%;
     height: auto;
     max-width: 600px;
+    justify-self: center;
 }
 
 .update:hover {

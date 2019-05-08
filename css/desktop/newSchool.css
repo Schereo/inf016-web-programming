@@ -60,6 +60,7 @@
     outline: none;
     opacity: 0;
     grid-column: 1;
+    align-self: center;
 }
 
 .uploadInterface button {
@@ -89,46 +90,5 @@
         width:100%;
         justify-content: stretch;
         grid-gap: 0.3em;
-    }
-    .uploadInterface {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto;
-    }
-
-    .uploadInterface button {
-        grid-row: 3;
-        grid-column: 1;
-        justify-self: center;
-    }
-
-    .uploadInterface p {
-        grid-row: 1;
-        grid-column: 1;
-    }
-
-    .uploadInterface input {
-        grid-row: 1;
-        grid-column: 1;
-    }
-
-    .file-upload {
-        width: 80%;
-        height: 100%;
-    }
-
-    .uploadText {
-        width: 80%;
-        height: 60%;
-        margin-top: 1em;
-        margin-bottom: 1em;
-        align-self: center;
-        justify-self: center;
-    }
-
-    .uploadedPictures {
-        grid-row: 2;
-        grid-column: 1;
-        margin-bottom: 2em;
     }
 }

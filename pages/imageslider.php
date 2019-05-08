@@ -52,5 +52,5 @@
 <div class="buttons">
     <button id="prev"><i class="fas fa-arrow-left"></i></button>
     <button id="next"><i class="fas fa-arrow-right"></i></button>
-    <script src="../js/imageslider.js"></script>
+    <!-- <script src="../js/imageslider.js"></script> -->
 </div>
