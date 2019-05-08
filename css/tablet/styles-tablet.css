@@ -61,4 +61,11 @@ detail-headline{
 .mapfilterheader{
     text-align:center;
 }
-
+.login-body{
+    margin-bottom:0;
+    padding-bottom:1em;
+}
+.register-body{
+    margin-bottom:0;
+    padding-bottom:1em;
+}

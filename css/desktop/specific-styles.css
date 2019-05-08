@@ -8,11 +8,11 @@
 }
 
 .info-container {
-     display: grid;
-     grid-template-columns: auto auto;
-     grid-template-rows: auto;
-     column-gap: 1em;
-     row-gap: 1em;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    column-gap: 1em;
+    row-gap: 1em;
     margin-bottom: 10px;
 }
 
@@ -83,18 +83,23 @@
     grid-template-columns: auto auto;
     grid-template-rows: auto auto auto;
     grid-row-gap: 10px;
+    /* grid-column-gap: 10px; */
 }
 
 #filter-search-headline {
     grid-row: 3;
+    text-align: center;
 }
 
 .mapfilter .map-filter-schools {
     grid-row: 4;
+    width: 100%;
 }
 
 .mapfilter .mapfilterfooter {
     grid-row: 5;
+    text-align: center;
+    width: 100%;
 }
 
 .detail-headline {
@@ -115,7 +120,7 @@
 }
 
 .filter-button {
-    width: 80%;
+    /* width: 80%; */
     min-width: 120px;
 }
 
@@ -166,62 +171,85 @@
     margin-bottom: 20px
 }
 
-@media (max-width: 1100px){
+/* Ab hier wird Detail unübersichtlich */
+@media (max-width: 1200px) {
     .detailcontainer {
         grid-template-rows: auto auto auto auto;
         grid-template-columns: auto;
     }
 
+
+    .detail-picture {
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    .detail-feedback {
+        grid-row: 5;
+        grid-column: 1;
+    }
+
+    .detail-contact {
+        grid-row: 4;
+        grid-column: 1;
+    }
+
+    .detail-info {
+        grid-row: 3;
+        grid-column: 1;
+    }
+
+    detail-headline {
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    .rating {
+        text-align: center;
+    }
+
+    .subtitle {
+        text-align: center;
+    }
 }
 
-.detail-picture{
-    grid-row : 1;
-    grid-column: 1;
-}
-.detail-feedback{
-    grid-row:5;
-    grid-column: 1;
-}
-.detail-contact{
-    grid-row:4;
-    grid-column: 1;
-}
-.detail-info {
-    grid-row:3;
-    grid-column: 1;
-}
-detail-headline{
-    grid-row:2;
-    grid-column: 1;
-}
-/* ab hier würde der Filter die Card überlappen */
-@media (max-width: 1264px){
-    .mapcontainer{
-        display:grid;
+/* ab hier würde der Filter die Card überlappen
+   */
+@media (max-width: 1264px) {
+    .mapcontainer {
+        display: grid;
         grid-template-rows: auto auto;
         grid-template-columns: auto;
     }
-    .mapimage{
+
+    .mapimage {
         justify-content: stretch;
         justify-self: center;
     }
-    .filter{
-        grid-row:2;
+
+    .filter {
+        grid-row: 2;
         grid-column: 1;
         background-color: var(--light-main);
         border-radius: 0 0 0 0;
         justify-self: stretch;
     }
-    .mapfilter .mapfilterbody{
-        display:grid;
+
+    .mapfilter .mapfilterbody {
+        display: grid;
         grid-template-columns: 100%;
         grid-template-rows: auto auto auto auto auto;
         width: 100%;
+        margin: auto;
     }
-    .mapfilterheader{
-        text-align:center;
-    }
-    #map-filter-body-header{
+
+    .mapfilterheader {
         text-align: center;
     }
+
+    #map-filter-body-header {
+        text-align: center;
+    }
+
+
 }
