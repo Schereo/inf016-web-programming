@@ -14,34 +14,32 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
-<body>
+<body> 
     <?php include 'pages/header.php'; ?>
-    <div class="stretch-grid-item">
-        <?php include 'pages/imageslider.php'; ?>
-    </div>
+    <?php include 'pages/imageslider.php'; ?>
     <div class="main-container"> 
-    <div class="large-grid-item card">
-        <?php include 'pages/search.php'; ?>
-    </div>
-    <div class="large-grid-item card">
-        <?php include 'pages/detail.php'; ?>
-    </div>
+        <div class="large-grid-item card">
+            <?php include 'pages/search.php'; ?>
+        </div>
+        <div class="large-grid-item card">
+            <?php include 'pages/detail.php'; ?>
+        </div>
 
-    <div class="large-grid-item card">
-        <?php include 'pages/map.php'; ?>
+        <div class="large-grid-item card">
+            <?php include 'pages/map.php'; ?>
+        </div>
+        <div class="left-grid-item card">
+            <?php include 'pages/login.php'; ?>
+        </div>
+        <div class="right-grid-item card">
+            <?php include 'pages/register.php'; ?>
+        </div>
+        <div class="large-grid-item card">
+            <?php include 'pages/newSchool.php'; ?>
+        </div>
     </div>
-    <div class="left-grid-item card">
-        <?php include 'pages/login.php'; ?>
-    </div>
-    <div class="right-grid-item card">
-        <?php include 'pages/register.php'; ?>
-    </div>
-    <div class="large-grid-item card">
-        <?php include 'pages/newSchool.php'; ?>
-    </div>
-</div>
-<div class="stretch-grid-item" id="indexfooter">
-    <?php include 'pages/footer.php'; ?>
-</div>
+    <div class="stretch-grid-item" id="indexfooter">
+        <?php include 'pages/footer.php'; ?>
+    </div>  
 </body>
 </html> 

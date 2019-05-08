@@ -12,10 +12,11 @@
     --background: #FCFCFC;
 }
 
-body {
+body, html {
     font-family: 'Noto Sans', sans-serif;
     margin: 0;
-    overflow-x: hidden;
+    overflow-x: hidden;    
+      
 }
 
 /* Scrollbar styles */
