@@ -2,9 +2,10 @@
     <h2 id="anlegen" class="card-header">Neue Schule anlegen</h2>
     <div class="card-body">
         <form class="newSchool-container">
-            <div class="infoHeader-newSchool"> 
-                <input class="input" class="schoolname" type="text" id="schoolname" name="schulname" placeholder="Name der Schule">
-                <select class="input" class="schooltype" >
+            <div class="infoHeader-newSchool">
+                <input class="input schoolname" type="text" id="schoolname" name="schulname"
+                       placeholder="Name der Schule">
+                <select class="input schooltype">
                     <option value="form1">Grundschule</option>
                     <option value="form2">Gymnasium</option>
                     <option value="form3">Oberschule</option>
@@ -12,7 +13,7 @@
                     <option value="form5">Integrierte Gesamtschule</option>
                     <option value="form6">Berufsbildende Schule</option>
                 </select>
-                <select class="input" class="district">
+                <select class="input district">
                     <option value="st1">Alexandersfeld</option>
                     <option value="st2">Bloherfelde</option>
                     <option value="st3">Bürgerfelde</option>
@@ -32,17 +33,17 @@
                     <option value="st17">Wechloy</option>
                 </select>
             </div>
-
             <textarea class="textarea" placeholder="Beschreibung"> </textarea>
             <div class="uploadInterface">
-            <form class ="file-upload-field">
-                <input class ="file-upload" type="file" multiple>
-                <p class="uploadText"> Klicken/ Bilder ablegen</p>
-            </form>
+                <form class="file-upload-field">
+                    <input class="file-upload" type="file" multiple>
+                    <p class="uploadText"> Klicken/ Bilder ablegen</p>
+                </form>
                 <button class="default-button uploadButton" type="submit">Upload</button>
-                <div class="uploadedPictures"><h2>test</h2></div>
+                <div class="uploadedPictures">
+                    <h2>test</h2>
+                </div>
             </div>
-
-     </form>   
+        </form>
     </div>
 </section>

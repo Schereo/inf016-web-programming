@@ -26,7 +26,6 @@
         <div class="large-grid-item card">
             <?php include 'pages/detail.php'; ?>
         </div>
-
         <div class="large-grid-item card">
             <?php include 'pages/map.php'; ?>
         </div>

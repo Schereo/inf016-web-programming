@@ -28,7 +28,7 @@
                         Telefon:
                     </div>
                     <div class="text-right">
-                        <a href="tel:0441 77915-0">0441 77915-0</a>
+                        <a href="tel:044177915-0">0441 77915-0</a>
                     </div>
                 </div>
                 <div class="info-container">
@@ -44,7 +44,7 @@
                         Internet:
                     </div>
                     <div class="text-right">
-                        <a href="www.bbs-haarentor.de">www.bbs-haarentor.de</a>
+                        <a href="https://www.bbs-haarentor.de">www.bbs-haarentor.de</a>
                     </div>
                 </div>
                 <div class="info-container">

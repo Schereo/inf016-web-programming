@@ -1,10 +1,9 @@
-<h2 id="map" class="card-header" xmlns="http://www.w3.org/1999/html">Map</h2>
+<h2 id="map" class="card-header">Map</h2>
 <section class="card-body mapcontainer">
-
     <div class="mapimage">
         <iframe title="Map of Oldenburg"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2393.0944202097276!2d8.187361315219686!3d53.14439997993721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b6dfb1330a433f%3A0xcd64e0ccd2c6150b!2sBBS+Berufsbildende+Schulen+Haarentor!5e0!3m2!1sde!2sde!4v1555402008182!5m2!1sde!2sde"
-                width="100%" height="100%" style="border:0"></iframe>
+                style="border:0"></iframe>
     </div>
     <section class="filter">
         <h2 class="mapfilterheader">Filter</h2>

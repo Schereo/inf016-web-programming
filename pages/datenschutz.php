@@ -1,6 +1,3 @@
-<link rel="stylesheet" href="/css/desktop/styles.css"/>
-<link rel="stylesheet" media="only screen and (max-width: 992px)" href="/css/tablet/styles-tablet.css"/>
-
 <div class="main-container">
     <div class="stretch-grid-item" id="indexheader">
         <?php include 'header.php'; ?>
@@ -8,8 +5,7 @@
     <div class="card large-grid-item">
         <h1 class="card-header">Datenschutz</h1>
         <div class="card-body">
-
-            <p><strong><big>Datenschutzerklärung</big></strong></p>
+            <p><strong>Datenschutzerklärung</strong></p>
             <p><strong>Allgemeiner Hinweis und Pflichtinformationen</strong></p>
             <p><strong>Benennung der verantwortlichen Stelle</strong></p>
             <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
@@ -174,12 +170,9 @@
                         href="https://twitter.com/privacy">https://twitter.com/privacy</a>.</p>
             <p>Sie können Ihre Datenschutzeinstellungen bei Twitter ändern: <a
                         href="https://twitter.com/account/settings">https://twitter.com/account/settings</a></p>
-
-
         </div>
         <div class="stretch-grid-item" id="indexfooter">
             <?php include 'footer.php'; ?>
         </div>
     </div>
-
-    </div>
+</div>
