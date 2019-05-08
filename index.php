@@ -11,6 +11,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico"/>
     <link rel="stylesheet" href="/css/desktop/styles.css"/>
     <link rel="stylesheet" media="(max-width: 768px)" href="/css/mobile/styles-mobile.css"/>
+    <link rel="stylesheet" media="(max-width: 992px)" href="/css/tablet/styles-tablet.css"/>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">

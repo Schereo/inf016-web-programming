@@ -15,7 +15,8 @@
 body, html {
     font-family: 'Noto Sans', sans-serif;
     margin: 0;
-    overflow-x: hidden;    
+    overflow-x: hidden;
+    scroll-behavior: smooth;    
       
 }
 
@@ -52,6 +53,10 @@ body::-webkit-scrollbar-thumb {
     font-size: 15px;
     padding: 8px 11px;
     color: #FCFCFC;
+}
+
+.default-button:hover {
+    background: var(--main);
 }
 
 .button-size {
@@ -108,6 +113,12 @@ input {
     background: var(--light-main);
     border-radius: 5px 5px 5px 5px;
 }
+
+.menu a:hover {
+    background: var(--accent);
+}
+
+
 
 .nav-items {
     margin-left: auto;

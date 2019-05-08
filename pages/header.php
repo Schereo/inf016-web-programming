@@ -1,5 +1,5 @@
 <nav class="nav-container">
-    <a href="/"><img src="/assets/header.png" class="logo"></a>
+    <a href="/" class="logo"><img src="/assets/header.png" ></a>
     <div class="nav-items">
         <label for="toggle">&#9776;</label>
         <input type="checkbox" id="toggle"/>

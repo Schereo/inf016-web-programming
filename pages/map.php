@@ -1,4 +1,4 @@
-<h2 class="card-header" xmlns="http://www.w3.org/1999/html">Map</h2>
+<h2 id="map" class="card-header" xmlns="http://www.w3.org/1999/html">Map</h2>
 <section class="card-body mapcontainer">
 
     <div class="mapimage">

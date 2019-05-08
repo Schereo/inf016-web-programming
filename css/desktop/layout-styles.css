@@ -10,11 +10,6 @@
     padding-bottom: 15px;
 }
 
-@media (max-width: 768px) {
-    .main-container {
-        margin: 0;
-    }
-}
 
 #indexheader {
     background-color: var(--main);
@@ -92,6 +87,7 @@
 .responsive {
     width: 100%;
     height: auto;
+    max-width: 600px;
 }
 
 .newSchool-container {
@@ -106,7 +102,6 @@
     padding-bottom: 0.5em;
 
 }
-
 
 .textarea {
     grid-row: 2;

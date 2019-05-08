@@ -1,7 +1,7 @@
 <article class>
-    <h2 class="card-header"> BBS Wechloy</h2>
+    <h2 class="card-header"> Herbart Gymansium Oldenburg</h2>
     <section class="detailcontainer card-body">
-        <img src="../assets/images/bbs1.jpeg" alt="Picture of BBS Wechloy" class="responsive detail-picture">
+        <img src="../assets/images/hgo1.jpg" alt="Picture of BBS Wechloy" class="responsive detail-picture">
         <div class="detail-contact">
             <section>
                 <h1 class="info-container detail-headline">
