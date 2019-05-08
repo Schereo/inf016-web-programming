@@ -85,3 +85,10 @@
         grid-template-columns: 1fr;
     }
 }
+@media (max-width: 1250px){
+    .search-container {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        row-gap: 0.5em;
+        justify-content: stretch;
+    }}

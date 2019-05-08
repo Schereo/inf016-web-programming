@@ -4,6 +4,7 @@
 @import "specific-styles.css";
 @import "layout-styles.css";
 @import "imageslider.css";
+@import "newSchool.css";
 
 :root {
     --light-main: #B8B8B8;

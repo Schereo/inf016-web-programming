@@ -70,7 +70,6 @@
     margin-bottom: 0.3em;
     padding: 0.6em;
     padding-bottom: 0;
-    margin-left: 15px;
 }
 
 #map-filter-body-header {
@@ -165,4 +164,64 @@
 .impressum-body p {
     margin-top: 5px;
     margin-bottom: 20px
+}
+
+@media (max-width: 1100px){
+    .detailcontainer {
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: auto;
+    }
+
+}
+
+.detail-picture{
+    grid-row : 1;
+    grid-column: 1;
+}
+.detail-feedback{
+    grid-row:5;
+    grid-column: 1;
+}
+.detail-contact{
+    grid-row:4;
+    grid-column: 1;
+}
+.detail-info {
+    grid-row:3;
+    grid-column: 1;
+}
+detail-headline{
+    grid-row:2;
+    grid-column: 1;
+}
+/* ab hier würde der Filter die Card überlappen */
+@media (max-width: 1264px){
+    .mapcontainer{
+        display:grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: auto;
+    }
+    .mapimage{
+        justify-content: stretch;
+        justify-self: center;
+    }
+    .filter{
+        grid-row:2;
+        grid-column: 1;
+        background-color: var(--light-main);
+        border-radius: 0 0 0 0;
+        justify-self: stretch;
+    }
+    .mapfilter .mapfilterbody{
+        display:grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto auto;
+        width: 100%;
+    }
+    .mapfilterheader{
+        text-align:center;
+    }
+    #map-filter-body-header{
+        text-align: center;
+    }
 }
