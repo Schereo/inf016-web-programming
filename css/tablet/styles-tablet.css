@@ -1,0 +1,13 @@
+.main-container {
+    display: inline;
+}
+
+.login-body {
+    margin-bottom: 0;
+    padding-bottom: 1em;
+}
+
+.register-body {
+    margin-bottom: 0;
+    padding-bottom: 1em;
+}

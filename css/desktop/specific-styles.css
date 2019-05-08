@@ -1,0 +1,256 @@
+/* Styles die spezifisch auf einzelnen Cards angewandt werden müssen */
+.detailcontainer {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    column-gap: 1em;
+    row-gap: 1em;
+}
+
+.info-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    column-gap: 1em;
+    row-gap: 1em;
+    margin-bottom: 10px;
+}
+
+.text-right.open-hours .info-container {
+    margin-bottom: 0px;
+}
+
+.detail-picture {
+    grid-column: 1;
+    grid-row: 1/span 2;
+    justify-self: center;
+}
+
+.detail-info {
+    grid-column: 1;
+    grid-row: 3
+}
+
+.detail-contact {
+    grid-column: 2;
+    grid-row: 1/span 2
+}
+
+.detail-feedback {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.mapcontainer {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.mapimage {
+    grid-column: 1;
+}
+
+.filter {
+    background-color: var(--main);
+    border-radius: 4px 4px 4px 4px;
+}
+
+.mapfilter {
+    grid-column: 2;
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    background-color: var(--light-main);
+    grid-row-gap: 10px;
+    margin: 15px 15px 15px 15px;
+    padding: 15px 15px 15px 15px;
+}
+
+.mapfilterheader {
+    color: var(--background);
+    margin-top: 0;
+    margin-bottom: 0.3em;
+    padding: 0.6em;
+    padding-bottom: 0;
+}
+
+#map-filter-body-header {
+    grid-row: 1;
+    margin: 0;
+}
+
+.mapfilter .mapfilterbody {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    grid-row-gap: 10px;
+    /* grid-column-gap: 10px; */
+}
+
+#filter-search-headline {
+    grid-row: 3;
+    text-align: center;
+}
+
+.mapfilter .map-filter-schools {
+    grid-row: 4;
+    width: 100%;
+}
+
+.mapfilter .mapfilterfooter {
+    grid-row: 5;
+    text-align: center;
+    width: 100%;
+}
+
+.detail-headline {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.info-container > .text-left {
+    text-align: left;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.info-container > .text-right {
+    text-align: right;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.filter-button {
+    /* width: 80%; */
+    min-width: 120px;
+}
+
+#gymnasien {
+    background-color: darkorange;
+}
+
+#oberschulen {
+    background-color: dodgerblue;
+}
+
+#bbs {
+    background-color: goldenrod;
+}
+
+#gesamtschulen {
+    background-color: blueviolet;
+}
+
+#grundschulen {
+    background-color: limegreen;
+}
+
+/* login */
+.login-body > #login-e-mail {
+    grid-column: 1/ span 2;
+    grid-row: 1;
+}
+
+.login-body > #login-password {
+    grid-column: 1/ span 2;
+    grid-row: 2;
+}
+
+.login-body > button {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.login-body > a {
+    grid-column: 2;
+    grid-row: 3;
+    font-size: small;
+}
+
+.impressum-body p {
+    margin-top: 5px;
+    margin-bottom: 20px
+}
+
+/* Ab hier wird Detail unübersichtlich */
+@media (max-width: 1200px) {
+    .detailcontainer {
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: auto;
+    }
+
+
+    .detail-picture {
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    .detail-feedback {
+        grid-row: 5;
+        grid-column: 1;
+    }
+
+    .detail-contact {
+        grid-row: 4;
+        grid-column: 1;
+    }
+
+    .detail-info {
+        grid-row: 3;
+        grid-column: 1;
+    }
+
+    detail-headline {
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    .rating {
+        text-align: center;
+    }
+
+    .subtitle {
+        text-align: center;
+    }
+}
+
+/* ab hier würde der Filter die Card überlappen
+   */
+@media (max-width: 1264px) {
+    .mapcontainer {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: auto;
+    }
+
+    .mapimage {
+        justify-content: stretch;
+        justify-self: center;
+    }
+
+    .filter {
+        grid-row: 2;
+        grid-column: 1;
+        background-color: var(--light-main);
+        border-radius: 0 0 0 0;
+        justify-self: stretch;
+    }
+
+    .mapfilter .mapfilterbody {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto auto;
+        width: 100%;
+        margin: auto;
+    }
+
+    .mapfilterheader {
+        text-align: center;
+    }
+
+    #map-filter-body-header {
+        text-align: center;
+    }
+
+
+}
