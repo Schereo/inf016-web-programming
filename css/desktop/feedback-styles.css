@@ -1,8 +1,22 @@
 
 /* Spezielles Design für den FeedBack Container */
+.subtitle {
+    text-align: left;
+}
+
+.rating > p{
+    font-size: 15px;
+    margin: 0px      
+}
+.rating > textarea {
+    resize: none;
+    width: 25em;
+    height: 7em;
+}
+
 .rating {
     unicode-bidi: bidi-override;
-    direction: rtl;
+    direction: ltr;
     text-align: left;
 }
 
@@ -13,13 +27,13 @@
 }
 
 .star {
-    font-size: 50px;
+    font-size: 20px;
     color: black;
 }
 
 .rating > span:hover:before,
 .rating > span:hover~span:before {
-    font-size: 50px;
+    font-size: 20px;
     content: "\2605";
     position: absolute;
 }
