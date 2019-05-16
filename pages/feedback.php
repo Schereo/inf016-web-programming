@@ -7,4 +7,4 @@
         <span class="star" data-value="1">&#9734;</span> <br>
         <textarea class="comment" placeholder="Beschreibung"> </textarea> <br>
      <button type="submit" class="default-button">Bewertung speichern</button>
-    </form>
+</form>

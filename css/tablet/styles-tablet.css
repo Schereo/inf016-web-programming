@@ -11,3 +11,12 @@
     margin-bottom: 0;
     padding-bottom: 1em;
 }
+.detail-info {
+    grid-column: 1 /span 2;
+    grid-row: 5;
+}
+.detail-feedback {
+    grid-column: 1;
+    grid-row: 6;
+    padding-top: 10px;
+}

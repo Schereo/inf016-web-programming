@@ -12,11 +12,12 @@
     resize: none;
     width: 25em;
     height: 7em;
+    direction: ltr;
 }
 
 .rating {
     unicode-bidi: bidi-override;
-    direction: ltr;
+    direction: rtl;
     text-align: left;
 }
 
@@ -27,13 +28,13 @@
 }
 
 .star {
-    font-size: 20px;
+    font-size: 22px;
     color: black;
 }
 
 .rating > span:hover:before,
 .rating > span:hover~span:before {
-    font-size: 20px;
+    font-size: 22px;
     content: "\2605";
     position: absolute;
 }
