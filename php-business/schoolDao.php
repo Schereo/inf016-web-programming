@@ -2,24 +2,26 @@
 interface SchoolDao {
 
     //Create new School
-    function create($school);
+    static function create($school);
+
+    //Get all schools
+    static function getAll();
 
     //Get school by id
-    function getById($id);
+    static function getById($id);
  
     //Get school by name
-    function getByName($name);
+    static function getByName($name);
 
-    //Get school by disctrict
-    function getByDistrict($district);
+    //Get school by district
+    static function getByDistrict($district);
 
     //Get school by type
-    function getByType($schoolType);
+    static function getByType($schoolType);
 
     //Update school
-    function update($id);
+    static function update($id);
 
     //Delete school
-    function delete($id);
+    static function delete($id);
 }
-?>
