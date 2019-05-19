@@ -1,20 +1,34 @@
 <?php
-if (file_exists("cred.txt") &&
-    is_readable("cred.txt")) {
-    $myfile = "cred.txt";
+if (file_exists("creds.json") &&
+    is_readable("creds.json")) {
+    $myfile = file_get_contents("creds.json") or die("Unable to open file!");
+    $credentials = json_decode($myfile);
+
 }
 if (isset($_POST['registrieren'])) {
-    $matchingPW = false;
-    $username = strip_tags($_POST['email']);
-    while($matchingPW == false) {
-        if ($_POST['passwort'] = $_POST['passwort2']) {
-            $password = strip_tags($_POST['passwort']);
-            file_put_contents($myfile, $username, FILE_APPEND);
-            file_put_contents($myfile, $password, FILE_APPEND);
-            $matchingPW = true;
-        } else {
-            echo("Passwörter stimmen nicht überein");
+    $alreadysaved = false;
+    $forename = strip_tags($_POST['vorname']);
+    $surname = strip_tags($_POST['nachname']);
+    $mailInput = strip_tags($_POST['email']);
+    $passwordInput = strip_tags($_POST['passwort']);
+    $passwordMatch = strip_tags($_POST['passwort2']);
+
+    foreach ($credentials->users as $users) {
+
+        if ($mailInput == $users->mail) {
+            $alreadysaved = true;
+            break;
         }
+    }
+
+    if ($passwordInput == $passwordMatch) {
+        $newUserArray = array('vorname'=>$forename,'nachname'=>$surname,'mail'=>$mailInput,'password'=>$passwordInput);
+        $credentials->users.array_push($newUserArray);
+        file_put_contents($myfile);
+    }
+
+    if ($alreadysaved) {
+        print_r("Bereits vorhanden Bruder");
     }
 }
 ?>

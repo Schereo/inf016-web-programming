@@ -1,28 +1,34 @@
 <?php
-if (file_exists("cred.txt") &&
-is_readable("cred.txt")) {
-    echo("test");
-    $myfile = file_get_contents("cred.txt") or die("Unable to open file!");
-    $credentials = explode("\n", $myfile);
+if (file_exists("creds.json") &&
+    is_readable("creds.json")) {
+    $myfile = file_get_contents("creds.json") or die("Unable to open file!");
+    $credentials = json_decode($myfile);
 }
-if(isset($_POST['anmelden'])){
+if (isset($_POST['anmelden'])) {
     $found = false;
-    $iterator = 0;
-    settype($iterator, "integer");
-    $username = strip_tags($_POST['mail']);
-    $password = strip_tags($_POST['passwort']);
-  //  while($credentials[iteratori+1] != null || $found = true) {
-        if ($username == $credentials[iterator] && $password == $credentials[iterator+1]) {
-            echo("du eingeloggt");
-            $found = true;
+    $usernameInput = strip_tags($_POST['mail']);
+    $passwordInput = strip_tags($_POST['passwort']);
+
+    foreach ($credentials->users as $users) {
+        if ($users->mail == $usernameInput) {
+            if ($users->password == $passwordInput) {
+                print_r("du bist eingeloggt");
+                $_SESSION['userSessions'] = array(
+                    'name' => $users->mail,
+                    'login' => 'login');
+                $found = true;
+            }
         }
-        if($found == true){
-            $_SESSION['user'] = array(
-                'name' => $username,
-                'login' => 'login');
-        }
- //   }
+
+
+    }
+    if($found == false){ print_r("nichts gefunden");}
+
+
+
 }
+
+
 ?>
 
 <section>

@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "vorname": "Jens",
+      "nachname": "Schulte",
+      "mail": "jens@aol.de",
+      "password": "jens"
+    },
+    {
+      "vorname": "Administrator",
+      "nachname": "der Allerechte",
+      "mail": "admin@aol.de",
+      "password": "admin"
+    }
+  ]
+}
+
+
+
+
