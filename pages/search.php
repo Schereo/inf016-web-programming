@@ -3,8 +3,7 @@
     <div class="card-body">
         <form class="search-container">
             <input class="input" type="text">
-            <select class="input">
-                <option value="placeholder" disabled selected>Schulform</option>
+            <select class="input" name="schoolType">
                 <option value="form1">Grundschule</option>
                 <option value="form2">Gymnasium</option>
                 <option value="form3">Oberschule</option>
@@ -12,8 +11,7 @@
                 <option value="form5">Integrierte Gesamtschule</option>
                 <option value="form6">Berufsbildende Schule</option>
             </select>
-            <select class="input">
-                <option value="placeholder" disabled selected>Stadtteil</option>
+            <select class="input" name="district">
                 <option value="st1">Alexandersfeld</option>
                 <option value="st2">Bloherfelde</option>
                 <option value="st3">Bürgerfelde</option>
