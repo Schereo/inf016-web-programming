@@ -1,0 +1,71 @@
+{
+    "schools": [
+        {
+            "name": "Helene-Lange-Schule Oldenburg",
+            "schoolTyp": "Gesamtschule",
+            "description": "Die Helene-Lange-Schule ist als nahe der Innenstadt gelegene Integrierte Gesamtschule mit gymnasialer Oberstufe eine Schule für alle Kinder und Jugendliche. Wir verstehen uns als Schule mit besonderem pädagogischem Engagement, die gleichzeitig Wert auf eine hohe fachliche Qualität legt. Eigenverantwortliches Lernen und Teamfähigkeit sind für uns Grundlage einer umfassenden Persönlichkeitsentwicklung.",
+            "principal": "Claudia Steffen",
+            "phoneNumber": "04419501611",
+            "mail": "sekretarait@hls-ol.de",
+            "students": 1000,
+            "address": {
+                "street": "Marschweg",
+                "number": "38",
+                "city": "Oldenburg",
+                "zipCode": "26122",
+                "district": "Eversten"
+            },
+            "ratings": [
+                {
+                    "environment": 3,
+                    "teacher": 4,
+                    "difficulty": 2,
+                    "user": "Tim Sigl",
+                    "date": "19.05.2019"
+                },
+                {
+                    "stars": 5,
+                    "user": "Tim Sigl",
+                    "date": "19.05.2019"
+                },
+                {
+                    "stars": 2,
+                    "user": "Tim Sigl",
+                    "date": "19.05.2019"
+                }
+            ]
+        },
+        {
+            "name": "Helene-Lange-Schule Oldenburg",
+            "schoolTyp": "Gesamtschule",
+            "description": "Die Helene-Lange-Schule ist als nahe der Innenstadt gelegene Integrierte Gesamtschule mit gymnasialer Oberstufe eine Schule für alle Kinder und Jugendliche. Wir verstehen uns als Schule mit besonderem pädagogischem Engagement, die gleichzeitig Wert auf eine hohe fachliche Qualität legt. Eigenverantwortliches Lernen und Teamfähigkeit sind für uns Grundlage einer umfassenden Persönlichkeitsentwicklung.",
+            "principal": "Claudia Steffen",
+            "phoneNumber": "04419501611",
+            "mail": "sekretarait@hls-ol.de",
+            "students": 1000,
+            "address": {
+                "street": "Marschweg",
+                "number": "38",
+                "city": "Oldenburg",
+                "zipCode": "26122"
+            },
+            "ratings": [
+                {
+                    "stars": 3,
+                    "user": "Tim Sigl",
+                    "date": "19.05.2019"
+                },
+                {
+                    "stars": 5,
+                    "user": "Tim Sigl",
+                    "date": "19.05.2019"
+                },
+                {
+                    "stars": 2,
+                    "user": "Tim Sigl",
+                    "date": "19.05.2019"
+                }
+            ]
+        }
+    ]     
+}
