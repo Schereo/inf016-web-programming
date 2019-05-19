@@ -20,7 +20,8 @@
     <?php
     include 'php-business/schoolDao.php';
     include 'php-business/schoolJson.php';
-    var_dump(School::getAll());
+    //var_dump(School::getAll());
+    var_dump(School::getById(2));
     include 'pages/header.php';
     include 'pages/imageslider.php';?>
     <div class="main-container"> 
