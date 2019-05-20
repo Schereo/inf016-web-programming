@@ -1,0 +1,13 @@
+.editInfos{
+    display: grid;
+    grid-auto-columns: auto auto; 
+    margin-top: 15px;
+}
+
+.info-input{
+    grid-column: 1;
+}
+
+.opening-hours {
+    grid-column: 2;
+}
