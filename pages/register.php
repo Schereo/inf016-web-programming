@@ -1,14 +1,15 @@
 <?php
-if (file_exists("creds.json") &&
-    is_readable("creds.json")) {
+$credentialFile = "creds.json";
+if (file_exists($credentialFile) &&
+    is_readable($credentialFile)) {
     $myfile = file_get_contents("creds.json") or die("Unable to open file!");
     $credentials = json_decode($myfile);
 
 }
 if (isset($_POST['registrieren'])) {
     $alreadysaved = false;
-    $forename = strip_tags($_POST['vorname']);
-    $surname = strip_tags($_POST['nachname']);
+    $forename = strip_tags($_POST['firstName']);
+    $surname = strip_tags($_POST['lastName']);
     $mailInput = strip_tags($_POST['email']);
     $passwordInput = strip_tags($_POST['passwort']);
     $passwordMatch = strip_tags($_POST['passwort2']);
@@ -20,11 +21,10 @@ if (isset($_POST['registrieren'])) {
             break;
         }
     }
-
     if ($passwordInput == $passwordMatch) {
-        $newUserArray = array('vorname'=>$forename,'nachname'=>$surname,'mail'=>$mailInput,'password'=>$passwordInput);
-        $credentials->users.array_push($newUserArray);
-        file_put_contents($myfile);
+        $newUserArray = array('vorname' => $forename, 'nachname' => $surname, 'mail' => $mailInput, 'password' => $passwordInput);
+        $credentials->users[] = $newUserArray;
+        file_put_contents($credentialFile, json_encode($credentials));
     }
 
     if ($alreadysaved) {

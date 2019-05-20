@@ -19,18 +19,10 @@ if (isset($_POST['anmelden'])) {
                 $found = true;
             }
         }
-
-
     }
     if($found == false){ print_r("nichts gefunden");}
-
-
-
 }
-
-
 ?>
-
 <section>
     <h2 id="anmelden" class="card-header">Anmelden</h2>
     <form class="login-body" method="post">
