@@ -2,11 +2,19 @@
 
 require_once 'php-business/loginHandler.php';
 require_once 'php-business/registerHandler.php';
+//TODO: Hier fehlerhafte Eingaben abfangen um unnötige Server Kommunikation zu verhindern
 //Login falls durchgeführt
 $emailLogin = strip_tags($_POST['emailLogin']);
 $passwordLogin = strip_tags($_POST['passwordLogin']);
 userLogin($emailLogin,$passwordLogin);
+
 //Register falls durchgeführt
+$forename = strip_tags($_POST['firstNameReg']);
+$surname = strip_tags($_POST['lastNameReg']);
+$mailInput = strip_tags($_POST['emailReg']);
+$passwordInput = strip_tags($_POST['passwortReg']);
+$passwordMatch = strip_tags($_POST['passwort2Reg']);
+registerUser($forename, $surname, $mailInput, $passwordInput, $passwordMatch)
 
 ;?>
 <!DOCTYPE html>

@@ -29,6 +29,12 @@
       "nachname": "jens",
       "mail": "jensi@aol.de",
       "password": "1234"
+    },
+    {
+      "vorname": "franz",
+      "nachname": "hans",
+      "mail": "franz@aol.de",
+      "password": "franz"
     }
   ]
 }
