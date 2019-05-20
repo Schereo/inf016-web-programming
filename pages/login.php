@@ -14,7 +14,9 @@ if (isset($_POST['anmelden'])) {
             $found = 1;
             if ($users->password == $passwordInput) {
                 $_SESSION['userSessions'] = array(
-                    'name' => $users->mail,
+                    'username' => $users->mail,
+                    'firstName' => $users->vorname,
+                    'lastName' => $users->nachname,
                     'login' => 'login');
                 $found = 2;
             }
