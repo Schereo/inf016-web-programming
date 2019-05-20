@@ -1,7 +1,7 @@
 <section>
     <h2 id="suche" class="card-header">Schule Suchen</h2>
     <div class="card-body">
-        <form class="search-container" method="GET">
+        <form class="search-container" method="GET" action="<?php echo $_SERVER['PHP_SELF']; ?>">
             <input class="input" type="text">
             <select class="input" name="schoolType">
                 <option value="sto" disabled selected>Schulform</option>
