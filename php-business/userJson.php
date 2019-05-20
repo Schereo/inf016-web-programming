@@ -50,15 +50,17 @@ class User implements userDao
         foreach (User::readJson()->users as $user) {
             if ($user->mail == $mail){
                 return true;
+                break;
             }
         }
     }
 
     static function getPassword($mail)
     {
-        foreach (User::getAll() as $user) {
-            if (self::getByMail($mail)){
+        foreach (User::readJson()->users as $user) {
+            if ($user->mail == $mail){
                 return $user->password;
+                break;
             }
         }
     }
