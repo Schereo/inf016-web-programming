@@ -5,22 +5,24 @@ if (file_exists("creds.json") &&
     $credentials = json_decode($myfile);
 }
 if (isset($_POST['anmelden'])) {
-    $found = false;
+    $found = 0;
     $usernameInput = strip_tags($_POST['mail']);
     $passwordInput = strip_tags($_POST['passwort']);
 
     foreach ($credentials->users as $users) {
         if ($users->mail == $usernameInput) {
+            $found = 1;
             if ($users->password == $passwordInput) {
-                print_r("du bist eingeloggt");
                 $_SESSION['userSessions'] = array(
                     'name' => $users->mail,
                     'login' => 'login');
-                $found = true;
+                $found = 2;
             }
         }
     }
-    if($found == false){ print_r("nichts gefunden");}
+    if($found == 0){ print_r("Benutzer nicht gefunden");}
+    if($found == 1){ print_r ("Passwort falsch!");}
+    if($found == 2){ print_r("Login erfolgreich");}
 }
 ?>
 <section>
