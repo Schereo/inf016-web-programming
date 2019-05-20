@@ -1,6 +1,15 @@
-<!DOCTYPE html>
-<?php session_start();?>
+<?php session_start();
 
+require_once 'php-business/loginHandler.php';
+require_once 'php-business/registerHandler.php';
+//Login falls durchgeführt
+$emailLogin = strip_tags($_POST['emailLogin']);
+$passwordLogin = strip_tags($_POST['passwordLogin']);
+userLogin($emailLogin,$passwordLogin);
+//Register falls durchgeführt
+
+;?>
+<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
@@ -21,9 +30,6 @@
 <?php
 include 'php-business/schoolDao.php';
 include 'php-business/schoolJson.php';
-include 'php-business/userDao.php';
-include 'php-business/userJson.php';
-
 include 'pages/header.php';
 include 'pages/imageslider.php';
 ?>
@@ -38,16 +44,14 @@ include 'pages/imageslider.php';
     <div class="large-grid-item card">
         <?php include 'pages/map.php'; ?>
     </div>
-    <?php
-       if(isset($_SESSION['userSessions'])){ ?>
+    <?php if(!($_SESSION['userSessions'])){?>
     <div class="left-grid-item card">
-        <?php
-        include 'pages/login.php'; ?>
+        <?php include 'pages/login.php'; ?>
     </div>
-    <?php }?>
     <div class="right-grid-item card">
         <?php include 'pages/register.php'; ?>
     </div>
+    <?}?>
     <div class="large-grid-item card">
         <?php include 'pages/newSchool.php'; ?>
     </div>
