@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<?php session_start();?>
+
 <html lang="de">
 <head>
     <meta charset="UTF-8">
@@ -16,35 +18,42 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 </head>
 <body>
-    <?php
-    include 'php-business/schoolDao.php';
-    include 'php-business/schoolJson.php';
-    //var_dump(School::getAll());
-    var_dump(School::getById(2));
-    include 'pages/header.php';
-    include 'pages/imageslider.php';?>
-    <div class="main-container"> 
-        <div class="large-grid-item card">
-            <?php include 'pages/search.php'; ?>
-        </div>
-        <div class="large-grid-item card">
-            <?php include 'pages/detail.php'; ?>
-        </div>
-        <div class="large-grid-item card">
-            <?php include 'pages/map.php'; ?>
-        </div>
-        <div class="left-grid-item card">
-            <?php include 'pages/login.php'; ?>
-        </div>
-        <div class="right-grid-item card">
-            <?php include 'pages/register.php'; ?>
-        </div>
-        <div class="large-grid-item card">
-            <?php include 'pages/newSchool.php'; ?>
-        </div>
+<?php
+include 'php-business/schoolDao.php';
+include 'php-business/schoolJson.php';
+include 'php-business/userDao.php';
+include 'php-business/userJson.php';
+
+include 'pages/header.php';
+include 'pages/imageslider.php';
+?>
+
+<div class="main-container">
+    <div class="large-grid-item card">
+        <?php include 'pages/search.php'; ?>
     </div>
-    <div class="stretch-grid-item" id="indexfooter">
-        <?php include 'pages/footer.php'; ?>
-    </div>  
+    <div class="large-grid-item card">
+        <?php include 'pages/detail.php'; ?>
+    </div>
+    <div class="large-grid-item card">
+        <?php include 'pages/map.php'; ?>
+    </div>
+    <?php
+       if(isset($_SESSION['userSessions'])){ ?>
+    <div class="left-grid-item card">
+        <?php
+        include 'pages/login.php'; ?>
+    </div>
+    <?php }?>
+    <div class="right-grid-item card">
+        <?php include 'pages/register.php'; ?>
+    </div>
+    <div class="large-grid-item card">
+        <?php include 'pages/newSchool.php'; ?>
+    </div>
+</div>
+<div class="stretch-grid-item" id="indexfooter">
+    <?php include 'pages/footer.php'; ?>
+</div>
 </body>
 </html> 

@@ -23,6 +23,12 @@
       "nachname": "klassen",
       "mail": "nelly@gmail.com",
       "password": "hi1234"
+    },
+    {
+      "vorname": "jens",
+      "nachname": "jens",
+      "mail": "jensi@aol.de",
+      "password": "1234"
     }
   ]
 }

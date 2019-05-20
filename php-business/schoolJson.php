@@ -1,4 +1,5 @@
 <?php
+
 class School implements schoolDao {
 
     static function getAll()

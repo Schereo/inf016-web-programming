@@ -1,4 +1,4 @@
-<?php require_once('pages/userHandler/registerHandler.php')?>
+<?php require_once('php-business/registerHandler.php') ; ?>
 <section>
     <h2 id=registrieren class="card-header">Registrieren</h2>
     <form class="register-body" method="post">

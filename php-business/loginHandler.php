@@ -1,18 +1,13 @@
 <?php
-if (file_exists("creds.json") &&
-    is_readable("creds.json")) {
-    $myfile = file_get_contents("creds.json") or die("Unable to open file!");
-    $credentials = json_decode($myfile);
-}
 if (isset($_POST['anmelden'])) {
     $found = 0;
     $usernameInput = strip_tags($_POST['mail']);
     $passwordInput = strip_tags($_POST['passwort']);
 
-    foreach ($credentials->users as $users) {
-        if ($users->mail == $usernameInput) {
+    foreach (User::getAll() as $users) {
+        if (User::getByMail($usernameInput)) {
             $found = 1;
-            if ($users->password == $passwordInput) {
+            if (User::getPassword($usernameInput) == $passwordInput) {
                 $_SESSION['userSessions'] = array(
                     'username' => $users->mail,
                     'firstName' => $users->vorname,

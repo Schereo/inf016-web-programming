@@ -1,4 +1,7 @@
-<?php require_once('pages/userHandler/loginHandler.php')?>
+<?php
+require_once('php-business/loginHandler.php');
+
+print_r($_SESSION['userSessions'])?>
 <section>
     <h2 id="anmelden" class="card-header">Anmelden</h2>
     <form class="login-body" method="post">

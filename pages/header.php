@@ -7,7 +7,7 @@
             <a href ="/index.php#suche">Schule suchen</a>
             <a href ="/index.php#map">Schulen Karten</a>
             <a href ="/index.php#anlegen">Schule anlegen</a>
-            <a href ="/index.php#anmelden">Anmelden</a>
+            <a href ="/index.php#anmelden"><Anmelden</a>
             <a href ="/index.php#registrieren">Registrieren</a>
         </div>
     </div>
