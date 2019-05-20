@@ -25,10 +25,11 @@ if (isset($_POST['registrieren'])) {
         $newUserArray = array('vorname' => $forename, 'nachname' => $surname, 'mail' => $mailInput, 'password' => $passwordInput);
         $credentials->users[] = $newUserArray;
         file_put_contents($credentialFile, json_encode($credentials));
+        print_r("Registrierung erfolgreich");
     }
 
     if ($alreadysaved) {
-        print_r("Bereits vorhanden Bruder");
+        print_r("Benutzer bereits vorhanden.");
     }
 }
 ?>
