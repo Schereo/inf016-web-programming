@@ -35,6 +35,12 @@
       "nachname": "hans",
       "mail": "franz@aol.de",
       "password": "franz"
+    },
+    {
+      "vorname": "hanf",
+      "nachname": "hanf",
+      "mail": "hanf@need.de",
+      "password": "12345"
     }
   ]
 }
