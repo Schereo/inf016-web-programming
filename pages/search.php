@@ -15,6 +15,7 @@
                 <option value="Förderschule">Förderschule</option>
                 <option value="Integrierte Gesamtschule">Integrierte Gesamtschule</option>
                 <option value="Berufsbildende Schule">Berufsbildende Schule</option>
+                <option value="Waldorfschule">Waldorfschule</option>
             </select>
             <select class="input" name="district">
                 <option value="sto" disabled selected>Stadtteil</option>
@@ -34,6 +35,7 @@
                 <option value="Osternburg">Osternburg</option>
                 <option value="Tweelbäke">Tweelbäke</option>
                 <option value="Wechloy">Wechloy</option>
+                <option value="Ziegelhofviertel">Ziegelhofviertel</option>
             </select>
             <button class="default-button button-size" type="submit">Suchen</button>
         </form>
@@ -47,19 +49,26 @@
                 <div class="small-card-body">
                     <img src="/assets/images/<?=$school->imagePath?>" alt="Bild zeigt <?=$school->name?>" class="responsive">
                     <ul class="card-list">
-                        <li><?=$school->schoolTyp?></li>
-                        <li><?=$school->address->district?></li>
-                        <li><?=$school->students?></li>
-                        <li>Bewertung</li>
+                        <li><b>Schulform</b> <?=$school->schoolTyp?></li>
+                        <li><b>Stadtteil</b> <?=$school->address->district?></li>
+                        <li><b>Schüler</b> <?=$school->students?></li>
+                        <li><b>Berwertung</b>
+                            <?php if($school->ratingAvg == 0):?>&#x2606 &#x2606 &#x2606 &#x2606 &#x2606<?php endif;?>
+                            <?php if($school->ratingAvg == 1):?>&#x2605 &#x2606 &#x2606 &#x2606 &#x2606<?php endif;?>
+                            <?php if($school->ratingAvg == 2):?>&#x2605 &#x2605 &#x2606 &#x2606 &#x2606<?php endif;?>
+                            <?php if($school->ratingAvg == 3):?>&#x2605 &#x2605 &#x2605 &#x2606 &#x2606<?php endif;?>
+                            <?php if($school->ratingAvg == 4):?>&#x2605 &#x2605 &#x2605 &#x2605 &#x2606<?php endif;?>
+                            <?php if($school->ratingAvg == 5):?>&#x2605 &#x2605 &#x2605 &#x2605 &#x2605<?php endif;?>
+                        </li>
                     </ul>
                 </div>
                 <div class="small-card-footer">
-                    <a href="#">Details anzeigen</a>
-                    <a href="<?=$school->homepageUrl?>" target="_blank">Zur Website</a>
+                    <a href="#">Details</a>
+                    <a href="<?=$school->homepageUrl?>" target="_blank">Homepage</a>
                 </div>
             </div>
             <?php endforeach;
-            endif; ?>
+            endif;?>
         </div>
     </div>
 </section>

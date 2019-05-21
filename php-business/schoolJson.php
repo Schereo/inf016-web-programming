@@ -41,11 +41,11 @@ class School implements schoolDao {
         return $schools;
     }
 
-    static function getByType($schoolType)
+    static function getByType($schoolTyp)
     {
-        $schools[] = [];
-        foreach (School::readJson()->school as $school) {
-            if ($school->schoolType == $schoolType){
+        $schools = [];
+        foreach (School::readJson()->schools as $school) {
+            if ($school->schoolTyp == $schoolTyp){
                 array_push($schools, $school);
             }
         }
