@@ -7,7 +7,10 @@
     ?>
 
     <h2 class="card-header"> <?= $schoolio->name ?>
-        <img src="assets/edit.png"></h2>
+        <form method="post">
+            <button type="submit" class="default-button" name="edit" id="edit">Schule anpassen</button>
+        </form>
+    </h2>
     <form class="detailcontainer card-body" method="GET" action="<?php echo $_SERVER['PHP_SELF'] ?>">
         <img src="../assets/images/hgo1.jpg" alt="Picture of BBS Wechloy" class="responsive detail-picture">
         <div class="detail-contact">
@@ -68,7 +71,7 @@
             <?php include 'feedback.php'; ?>
         </div>
     </form>
-    <div class="text-rigt">
+    <div class="text-right">
         <a href=""></a>
     </div> <?php } ?>
     </section>

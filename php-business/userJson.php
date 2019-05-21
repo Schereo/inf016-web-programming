@@ -6,6 +6,11 @@ class User implements userDao
         return self::readJson()->users;
     }
 
+    static function getUserID ()
+    {
+        return self::readJson()->users->userID;
+    }
+
     static function createUser($vn, $nn, $mail, $pw)
     {
         return array('vorname' => $vn, 'nachname' => $nn, 'mail' => $mail, 'password' => $pw);

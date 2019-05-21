@@ -3,11 +3,12 @@
 require_once 'php-business/loginHandler.php';
 require_once 'php-business/registerHandler.php';
 require_once 'php-business/schoolHandler.php';
+require_once 'php-business/editSchoolHandler.php';
 //TODO: Hier fehlerhafte Eingaben abfangen um unnötige Server Kommunikation zu verhindern
 //Login falls durchgeführt
 $emailLogin = strip_tags($_POST['emailLogin']);
 $passwordLogin = strip_tags($_POST['passwordLogin']);
-userLogin($emailLogin,$passwordLogin);
+userLogin($emailLogin, $passwordLogin);
 
 //Register falls durchgeführt
 $forename = strip_tags($_POST['firstNameReg']);
@@ -15,9 +16,12 @@ $surname = strip_tags($_POST['lastNameReg']);
 $mailInput = strip_tags($_POST['emailReg']);
 $passwordInput = strip_tags($_POST['passwortReg']);
 $passwordMatch = strip_tags($_POST['passwort2Reg']);
-registerUser($forename, $surname, $mailInput, $passwordInput, $passwordMatch)
+registerUser($forename, $surname, $mailInput, $passwordInput, $passwordMatch);
 
-;?>
+//EditSchool falls erwünscht
+if (isset($_POST['edit'])) {
+    editSchool();
+} ?>
 
 <!DOCTYPE html>
 <html lang="de">
@@ -52,26 +56,26 @@ include 'pages/imageslider.php';
     <div class="large-grid-item card">
         <?php include 'pages/map.php'; ?>
     </div>
-    <?php if(!($_SESSION['userSessions'])){?>
-    <div class="left-grid-item card">
-        <?php include 'pages/login.php'; ?>
-    </div>
-    <div class="right-grid-item card">
-        <?php include 'pages/register.php'; ?>
-    </div>
-    <?}?>
-
-    <?php if (!(isset($_POST['']))) { ?>
-    <div class="large-grid-item card">
-        <?php include 'pages/newSchool.php'; ?>
-    </div>
-    <?} else {?>
+    <?php if (!($_SESSION['userSessions'])) { ?>
+        <div class="left-grid-item card">
+            <?php include 'pages/login.php'; ?>
+        </div>
+        <div class="right-grid-item card">
+            <?php include 'pages/register.php'; ?>
+        </div>
+    <? } ?>
+    <?php $editButtonClicked = false;
+    if (!($editButtonClicked)) { ?>
+        <div class="large-grid-item card">
+            <?php include 'pages/newSchool.php'; ?>
+        </div>
+    <? } else { ?>
     <div class="large-grid-item card">
         <?php include 'pages/editSchool.php'; ?>
-    <?}?>
-</div>
-<div class="stretch-grid-item" id="indexfooter">
-    <?php include 'pages/footer.php'; ?>
-</div>
+        <? } ?>
+    </div>
+    <div class="stretch-grid-item" id="indexfooter">
+        <?php include 'pages/footer.php'; ?>
+    </div>
 </body>
 </html> 

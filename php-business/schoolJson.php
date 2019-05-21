@@ -6,6 +6,12 @@ class School implements schoolDao {
             return School::readJson()->schools;
         }
     }
+    static function getUserID ()
+    {
+        if (is_array(School::readJson()->schools)) {
+            return School::readJson()->schools->userID;
+        }
+    }
     static function getById($id)
     {
         if (is_array(School::readJson()->schools)) {
