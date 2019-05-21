@@ -19,6 +19,7 @@ $passwordMatch = strip_tags($_POST['passwort2Reg']);
 registerUser($forename, $surname, $mailInput, $passwordInput, $passwordMatch);
 
 //EditSchool falls erwünscht
+$editButtonClicked = true;
 if (isset($_POST['edit'])) {
     editSchool();
 } ?>
@@ -64,7 +65,7 @@ include 'pages/imageslider.php';
             <?php include 'pages/register.php'; ?>
         </div>
     <? } ?>
-    <?php $editButtonClicked = false;
+    <?php
     if (!($editButtonClicked)) { ?>
         <div class="large-grid-item card">
             <?php include 'pages/newSchool.php'; ?>
