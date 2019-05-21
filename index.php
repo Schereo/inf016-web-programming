@@ -2,6 +2,7 @@
 
 require_once 'php-business/loginHandler.php';
 require_once 'php-business/registerHandler.php';
+require_once 'php-business/schoolHandler.php';
 //TODO: Hier fehlerhafte Eingaben abfangen um unnötige Server Kommunikation zu verhindern
 //Login falls durchgeführt
 $emailLogin = strip_tags($_POST['emailLogin']);
