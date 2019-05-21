@@ -27,6 +27,7 @@
 }
 .file-upload-field {
     grid-row: 1;
+    padding-left: 15px;
 }
 
 .uploadInterface p {
@@ -89,16 +90,28 @@
 }
 
 .info-input input{
-    width: 100%;
+    width: -webkit-fill-available;
 }
 
-.info-input select {
-    width: 100%;
+.info-input select{
+    width: -webkit-fill-available;
+    margin: 0.3em;
 }
 
-.info-input textarea {
-    width: 100%;
+.info-input textarea{
+    width: -webkit-fill-available;
+    border-radius: 4px;
+    border: none;
+    padding: 10px;
+    margin: 0.3em;
 }
+
+.info-input > button {
+    margin: 0.3em;
+}
+
+
+
 
 @media (max-width: 1264px){
     .infoHeader-newSchool{

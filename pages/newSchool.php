@@ -11,68 +11,61 @@
         </div>
         <form class="newSchool-container" action="/php-business/newSchoolHandler.php" method="post">
             <div class="info-input">
-
-                <div class="text-left"> Name:</div>
-                <div class="text-right"><input type="text" name="schoolname" value=""></div>
+                Name:<input class="input" type="text" name="schoolname" value="">
                 <br>
-                <div class="text-left"> Schulform:</div>
-                <div class="text-right">
-                    <select class="input schooltype" name="schooltype">
-                        <option value="Grundschule">Grundschule</option>
-                        <option value="Gymnasium">Gymnasium</option>
-                        <option value="Oberschule">Oberschule</option>
-                        <option value="Förderschule">Förderschule</option>
-                        <option value="Integrierte Gesamtschule">Integrierte Gesamtschule</option>
-                        <option value="Berufsbildende Schule">Berufsbildende Schule</option>
-                    </select>
-                </div>
+                Schulform:
+                <select class="input" name="schooltype">
+                    <option value="Grundschule">Grundschule</option>
+                    <option value="Gymnasium">Gymnasium</option>
+                    <option value="Oberschule">Oberschule</option>
+                    <option value="Förderschule">Förderschule</option>
+                    <option value="Integrierte Gesamtschule">Integrierte Gesamtschule</option>
+                    <option value="Berufsbildende Schule">Berufsbildende Schule</option>
+                </select>
                 <br>
-                <div class="text-left"> Stadtteil:</div>
-                <div class="text-right"><select class="input district" name="district">
-                        <option value="Alexandersfeld">Alexandersfeld</option>
-                        <option value="Bloherfelde">Bloherfelde</option>
-                        <option value="Bürgerfelde">Bürgerfelde</option>
-                        <option value="Donnerschwee">Donnerschwee</option>
-                        <option value="Etzhorn">Etzhorn</option>
-                        <option value="Eversten">Eversten</option>
-                        <option value="Gemeinde Bad Zwischenahn">Gemeinde Bad Zwischenahn</option>
-                        <option value="Innenstadt">Innenstadt</option>
-                        <option value="Kreyenbrück">Kreyenbrück</option>
-                        <option value="Krusenbusch">Krusenbusch</option>
-                        <option value="Nadorst">Nadorst</option>
-                        <option value="Neuenwege">Neuenwege</option>
-                        <option value="Ofenerdiek">Ofenerdiek</option>
-                        <option value="Ohmstede">Ohmstede</option>
-                        <option value="Osternburg">Osternburg</option>
-                        <option value="Tweelbäke">Tweelbäke</option>
-                        <option value="Wechloy">Wechloy</option>
-                    </select></div>
+                Stadtteil:
+                <select class="input district" name="district">
+                    <option value="Alexandersfeld">Alexandersfeld</option>
+                    <option value="Bloherfelde">Bloherfelde</option>
+                    <option value="Bürgerfelde">Bürgerfelde</option>
+                    <option value="Donnerschwee">Donnerschwee</option>
+                    <option value="Etzhorn">Etzhorn</option>
+                    <option value="Eversten">Eversten</option>
+                    <option value="Gemeinde Bad Zwischenahn">Gemeinde Bad Zwischenahn</option>
+                    <option value="Innenstadt">Innenstadt</option>
+                    <option value="Kreyenbrück">Kreyenbrück</option>
+                    <option value="Krusenbusch">Krusenbusch</option>
+                    <option value="Nadorst">Nadorst</option>
+                    <option value="Neuenwege">Neuenwege</option>
+                    <option value="Ofenerdiek">Ofenerdiek</option>
+                    <option value="Ohmstede">Ohmstede</option>
+                    <option value="Osternburg">Osternburg</option>
+                    <option value="Tweelbäke">Tweelbäke</option>
+                    <option value="Wechloy">Wechloy</option>
+                </select>
                 <br>
-                <div class="text-left"> Schulleitung:</div>
-                <div class="right"><input class="input" type="text" name="principal" value=""></div>
+                Schulleitung:
+                <input class="input" type="text" name="principal" value="">
                 <br>
-                <div class="text-left">Adresse:</div>
-                <div class="text-right"><input class="input" type="text" name="street"
-                                               placeholder="Straße"> <input class="input" type="number"
-                                                                            id="editHousenumber" name="number"
-                                                                            placeholder="Hausnummer"></div>
+                Adresse:
+                <input class="input" type="text" name="street" placeholder="Straße">
                 <br>
-                <div class="text-left"> Telefon:</div>
-                <div class="text-right"><input class="input" type="number" id="editPhonenumber" name="telefon"
-                                               placeholder="phoneNumber"></div>
-                <div class="text-left"><br> Email:</div>
-                <div class="text-right"><input class="input" type="email" id="editEmail" name="mail"
-                                               placeholder="E-Mail"></div>
+                <input class="input" type="number" id="editHousenumber" name="number" placeholder="Hausnummer">
                 <br>
-                <div class="text-left">Website:</div>
-                <div class="text-right"><input class="input" type="url" name="homepage"
-                                               placeholder="Website"></div>
+                Telefon:
+                <input class="input" type="number" id="editPhonenumber" name="telefon"
+                       placeholder="phoneNumber">
+                <br> Email:
+                <input class="input" type="email" id="editEmail" name="mail"
+                       placeholder="E-Mail">
                 <br>
-                <div class="text-left">Weitere Infos:</div>
+                Website:
+                <input class="input" type="url" name="homepage" placeholder="Website">
                 <br>
-                <div class="text-right"><textarea class="textarea" name="description"
-                                                  placeholder="Infos"> </textarea>
-                </div>
+                Weitere Infos:
+                <br>
+                <textarea class="textarea" name="description" placeholder="Infos"> </textarea>
+                <br>
                 <button type="submit" class="default-button"> Upload</button>
         </form>
     </div>
