@@ -75,6 +75,174 @@
                     "date": "19.05.2019"
                 }
             ]
+        },
+        {
+            "author": null,
+            "name": "",
+            "schoolType": "Grundschule",
+            "descprition": " ",
+            "principal": "",
+            "phoneNumber": null,
+            "mail": "",
+            "homepageURL": "",
+            "address": {
+                "street": "",
+                "number": "",
+                "zipCode": null,
+                "district": "Alexandersfeld"
+            }
+        },
+        {
+            "author": null,
+            "name": "",
+            "schoolType": "Grundschule",
+            "descprition": " ",
+            "principal": "",
+            "phoneNumber": null,
+            "mail": "",
+            "homepageURL": "",
+            "address": {
+                "street": "",
+                "number": "",
+                "zipCode": null,
+                "district": "Alexandersfeld"
+            }
+        },
+        {
+            "author": null,
+            "name": "",
+            "schoolType": "Grundschule",
+            "descprition": " ",
+            "principal": "",
+            "phoneNumber": null,
+            "mail": "",
+            "homepageURL": "",
+            "imgagePath": null,
+            "0": {
+                "street": "",
+                "number": "",
+                "zipCode": null,
+                "district": "Alexandersfeld"
+            }
+        },
+        {
+            "author": null,
+            "name": "",
+            "schoolType": "Grundschule",
+            "descprition": " ",
+            "principal": "",
+            "phoneNumber": null,
+            "mail": "",
+            "homepageURL": "",
+            "imgagePath": null,
+            "0": {
+                "street": "",
+                "number": "",
+                "zipCode": null,
+                "district": "Alexandersfeld"
+            }
+        },
+        {
+            "author": null,
+            "name": "",
+            "schoolType": "Grundschule",
+            "descprition": " ",
+            "principal": "",
+            "phoneNumber": null,
+            "mail": "",
+            "homepageURL": "",
+            "imgagePath": null,
+            "0": {
+                "street": "",
+                "number": "",
+                "zipCode": null,
+                "district": "Alexandersfeld"
+            }
+        },
+        {
+            "author": null,
+            "name": "",
+            "schoolType": "Grundschule",
+            "descprition": " ",
+            "principal": "",
+            "phoneNumber": null,
+            "mail": "",
+            "homepageURL": "",
+            "imgagePath": null,
+            "0": {
+                "street": "",
+                "number": "",
+                "zipCode": null,
+                "district": "Alexandersfeld"
+            }
+        },
+        {
+            "author": null,
+            "name": null,
+            "schoolType": null,
+            "descprition": null,
+            "principal": null,
+            "phoneNumber": null,
+            "mail": null,
+            "homepageURL": null,
+            "imgagePath": null,
+            "0": {
+                "street": null,
+                "number": null,
+                "zipCode": null,
+                "district": null
+            }
+        },
+        {
+            "author": null,
+            "name": null,
+            "schoolType": null,
+            "descprition": null,
+            "principal": null,
+            "phoneNumber": null,
+            "mail": null,
+            "homepageURL": null,
+            "imgagePath": null,
+            "0": {
+                "street": null,
+                "number": null,
+                "zipCode": null,
+                "district": null
+            }
+        },
+        {
+            "author": null,
+            "name": null,
+            "schoolType": null,
+            "descprition": null,
+            "principal": null,
+            "phoneNumber": null,
+            "mail": null,
+            "homepageURL": null,
+            "imgagePath": null,
+            "0": {
+                "street": null,
+                "number": null,
+                "zipCode": null,
+                "district": null
+            }
+        },
+        {
+            "author": null,
+            "name": null,
+            "schoolType": null,
+            "descprition": null,
+            "principal": null,
+            "phoneNumber": null,
+            "mail": null,
+            "homepageURL": null,
+            "imgagePath": null,
+            "0": {
+                "street": null,
+                "number": null,
+                "zipCode": null,
+                "district": null
+            }
         }
     ]
 }

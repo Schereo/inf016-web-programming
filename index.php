@@ -21,7 +21,7 @@ registerUser($forename, $surname, $mailInput, $passwordInput, $passwordMatch)
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">ew
     <title>Oscolia</title>
     <meta name="description" content="Bildungsstätten der Stadt Oldenburg">
     <meta name="keywords" content="HTML,CSS,PHP,XML,JavaScript">

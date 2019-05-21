@@ -51,7 +51,9 @@ class School implements schoolDao {
         }
         return $schools;
     }
+    static function add($imgPath){
 
+    }
     static function update($id)
     {
         // TODO: Implement update() method.

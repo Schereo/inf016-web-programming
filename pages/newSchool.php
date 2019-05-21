@@ -1,13 +1,17 @@
 <section>
     <h2 id="anlegen" class="card-header">Schule anlegen</h2>
     <div class="card-body">
+        <div class="UploadInterface">
+            <div class="uploadedPictures"> <?php include 'php-business/displayUploads.php' ?> </div>
+            <form action="/php-business/uploadHandler.php" class="file-upload-field"
+                  enctype="multipart/form-data" method="post">
+                <input class="file-upload" type="file" name="upload" multiple>
+                <input class="input" type="submit" value="Upload Image" name="submit">
+            </form>
+        </div>
         <form class="newSchool-container" action="/php-business/newSchoolHandler.php" method="post">
             <div class="info-input">
-                <div class="editPictures">
-                    <img src="../assets/images/hgo1.jpg" alt="Picture of BBS Wechloy" width="150px">
-                    <img src="../assets/images/hgo1.jpg" alt="Picture of BBS Wechloy" width="150px">
-                    <img src="../assets/images/hgo1.jpg" alt="Picture of BBS Wechloy" width="150px">
-                </div>
+
                 <div class="text-left"> Name:</div>
                 <div class="text-right"><input type="text" name="schoolname" value=""></div>
                 <br>
@@ -66,7 +70,8 @@
                 <br>
                 <div class="text-left">Weitere Infos:</div>
                 <br>
-                <div class="text-right"><textarea class="textarea" name="description" placeholder="Infos"> </textarea>
+                <div class="text-right"><textarea class="textarea" name="description"
+                                                  placeholder="Infos"> </textarea>
                 </div>
                 <button type="submit" class="default-button"> Upload</button>
         </form>
