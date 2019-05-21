@@ -14,7 +14,7 @@ if (isset($_GET["district"])) {
 
 if (isset($_GET["schoolType"])) {
     $schoolType = htmlentities($_GET["schoolType"]);
-    $schools = School::getByDistrict($schoolType);
+    $schools = School::getByType($schoolType);
 }
 
 if (isset($_GET["ID"])){

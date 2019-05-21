@@ -6,8 +6,8 @@
     if(isset($schoolio)):
     ?>
 
-    <h2 class="card-header"> <?= $schoolio->name?></h2>
-    <img src="/assets/edit.png">  </a> </h2>
+    <h2 class="card-header"> <?= $schoolio->name?>
+    <img src="assets/edit.png">  </h2>
     <form class="detailcontainer card-body" method="GET" action="<?php echo $_SERVER['PHP_SELF']?>">
         <img src="../assets/images/hgo1.jpg" alt="Picture of BBS Wechloy" class="responsive detail-picture">
         <div class="detail-contact">

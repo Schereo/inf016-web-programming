@@ -2,8 +2,8 @@
     "schools": [
         {
             "id": 1,
-            "name": "Helene-Lange-Schule Oldenburg",
-            "schoolTyp": "Gesamtschule",
+            "name": "Helene-Lange-Schule",
+            "schoolTyp": "Integrierte Gesamtschule",
             "description": "Die Helene-Lange-Schule ist als nahe der Innenstadt gelegene Integrierte Gesamtschule mit gymnasialer Oberstufe eine Schule für alle Kinder und Jugendliche. Wir verstehen uns als Schule mit besonderem pädagogischem Engagement, die gleichzeitig Wert auf eine hohe fachliche Qualität legt. Eigenverantwortliches Lernen und Teamfähigkeit sind für uns Grundlage einer umfassenden Persönlichkeitsentwicklung.",
             "principal": "Claudia Steffen",
             "phoneNumber": "04419501611",
@@ -18,6 +18,7 @@
                 "zipCode": "26122",
                 "district": "Eversten"
             },
+            "ratingAvg": 0,
             "ratings": [
                 {
                     "environment": 3,
@@ -40,22 +41,23 @@
         },
         {
             "id": 2,
-            "name": "Erdinger Weißbier",
-            "schoolTyp": "Förderschule",
+            "name": "Freie Waldorfschule",
+            "schoolTyp": "Waldorfschule",
             "description": "Die Helene-Lange-Schule ist als nahe der Innenstadt gelegene Integrierte Gesamtschule mit gymnasialer Oberstufe eine Schule für alle Kinder und Jugendliche. Wir verstehen uns als Schule mit besonderem pädagogischem Engagement, die gleichzeitig Wert auf eine hohe fachliche Qualität legt. Eigenverantwortliches Lernen und Teamfähigkeit sind für uns Grundlage einer umfassenden Persönlichkeitsentwicklung.",
             "principal": "Claudia Steffen",
             "phoneNumber": "04419501611",
             "mail": "sekretarait@hls-ol.de",
-            "students": 1000,
+            "students": 350,
             "homepageUrl": "http://www.hls-ol.de",
-            "imagePath": "hls1.jpg",
+            "imagePath": "waldorf1.jpg",
             "address": {
                 "street": "Marschweg",
                 "number": "38",
                 "city": "Oldenburg",
                 "zipCode": "26122",
-                "district": "Alexandersfeld"
+                "district": "Osternburg"
             },
+            "ratingAvg": 4,
             "ratings": [
                 {
                     "environment": 3,
@@ -78,22 +80,23 @@
         },
         {
             "id": 3,
-            "name": "Krombacher Pilsener",
+            "name": "Gymanasium Eversten",
             "schoolTyp": "Gymnasium",
             "description": "Die Helene-Lange-Schule ist als nahe der Innenstadt gelegene Integrierte Gesamtschule mit gymnasialer Oberstufe eine Schule für alle Kinder und Jugendliche. Wir verstehen uns als Schule mit besonderem pädagogischem Engagement, die gleichzeitig Wert auf eine hohe fachliche Qualität legt. Eigenverantwortliches Lernen und Teamfähigkeit sind für uns Grundlage einer umfassenden Persönlichkeitsentwicklung.",
             "principal": "Claudia Steffen",
             "phoneNumber": "04419501611",
             "mail": "sekretarait@hls-ol.de",
-            "students": 1000,
-            "homepageUrl": "http://www.hls-ol.de",
-            "imagePath": "hls1.jpg",
+            "students": 895,
+            "homepageUrl": "https://gymnasium-eversten.de/#",
+            "imagePath": "geo1.jpg",
             "address": {
                 "street": "Marschweg",
                 "number": "38",
                 "city": "Oldenburg",
                 "zipCode": "26122",
-                "district": "Etzhorn"
+                "district": "Eversten"
             },
+            "ratingAvg": 2,
             "ratings": [
                 {
                     "environment": 3,
@@ -116,13 +119,13 @@
         },
         {
             "id": 4,
-            "name": "Caecilienschule Oldenburg",
-            "schoolTyp": "Gesamtschule",
+            "name": "C&aumlcilienschule",
+            "schoolTyp": "Gymnasium",
             "description": "Die Helene-Lange-Schule ist als nahe der Innenstadt gelegene Integrierte Gesamtschule mit gymnasialer Oberstufe eine Schule für alle Kinder und Jugendliche. Wir verstehen uns als Schule mit besonderem pädagogischem Engagement, die gleichzeitig Wert auf eine hohe fachliche Qualität legt. Eigenverantwortliches Lernen und Teamfähigkeit sind für uns Grundlage einer umfassenden Persönlichkeitsentwicklung.",
             "principal": "Claudia Steffen",
             "phoneNumber": "04419501611",
             "mail": "sekretarait@hls-ol.de",
-            "students": 1000,
+            "students":  970,
             "homepageUrl": "http://www.hls-ol.de",
             "imagePath": "cäci1.jpg",
             "address": {
@@ -130,8 +133,87 @@
                 "number": "38",
                 "city": "Oldenburg",
                 "zipCode": "26122",
-                "district": "Eversten"
+                "district": "Innenstadt"
             },
+            "ratingAvg": 1,
+            "ratings": [
+                {
+                    "environment": 3,
+                    "teacher": 4,
+                    "difficulty": 2,
+                    "user": "Tim Sigl",
+                    "date": "19.05.2019"
+                },
+                {
+                    "stars": 5,
+                    "user": "Tim Sigl",
+                    "date": "19.05.2019"
+                },
+                {
+                    "stars": 2,
+                    "user": "Tim Sigl",
+                    "date": "19.05.2019"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Liebfrauenschule",
+            "schoolTyp": "Gymnasium",
+            "description": "Die Helene-Lange-Schule ist als nahe der Innenstadt gelegene Integrierte Gesamtschule mit gymnasialer Oberstufe eine Schule für alle Kinder und Jugendliche. Wir verstehen uns als Schule mit besonderem pädagogischem Engagement, die gleichzeitig Wert auf eine hohe fachliche Qualität legt. Eigenverantwortliches Lernen und Teamfähigkeit sind für uns Grundlage einer umfassenden Persönlichkeitsentwicklung.",
+            "principal": "Claudia Steffen",
+            "phoneNumber": "04419501611",
+            "mail": "sekretarait@hls-ol.de",
+            "students":  755,
+            "homepageUrl": "http://www.liebfrauenschule.de/start/",
+            "imagePath": "lfs1.jpg",
+            "address": {
+                "street": "Marschweg",
+                "number": "38",
+                "city": "Oldenburg",
+                "zipCode": "26122",
+                "district": "Ziegelhofviertel"
+            },
+            "ratingAvg": 3,
+            "ratings": [
+                {
+                    "environment": 3,
+                    "teacher": 4,
+                    "difficulty": 2,
+                    "user": "Tim Sigl",
+                    "date": "19.05.2019"
+                },
+                {
+                    "stars": 5,
+                    "user": "Tim Sigl",
+                    "date": "19.05.2019"
+                },
+                {
+                    "stars": 2,
+                    "user": "Tim Sigl",
+                    "date": "19.05.2019"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Graf-Anthon-Günther Gymnasium",
+            "schoolTyp": "Gymnasium",
+            "description": "Die Helene-Lange-Schule ist als nahe der Innenstadt gelegene Integrierte Gesamtschule mit gymnasialer Oberstufe eine Schule für alle Kinder und Jugendliche. Wir verstehen uns als Schule mit besonderem pädagogischem Engagement, die gleichzeitig Wert auf eine hohe fachliche Qualität legt. Eigenverantwortliches Lernen und Teamfähigkeit sind für uns Grundlage einer umfassenden Persönlichkeitsentwicklung.",
+            "principal": "Claudia Steffen",
+            "phoneNumber": "04419501611",
+            "mail": "sekretarait@hls-ol.de",
+            "students":  1140,
+            "homepageUrl": "http://www.liebfrauenschule.de/start/",
+            "imagePath": "gag1.jpg",
+            "address": {
+                "street": "Marschweg",
+                "number": "38",
+                "city": "Oldenburg",
+                "zipCode": "26122",
+                "district": "Innenstadt"
+            },
+            "ratingAvg": 5,
             "ratings": [
                 {
                     "environment": 3,
@@ -152,5 +234,5 @@
                 }
             ]
         }
-    ]
+    ]     
 }
