@@ -22,7 +22,7 @@ class School implements schoolDao {
         } else {
             $schools[] = [];
             foreach (School::readJson()->schools as $school) {
-                if (stripos ($school->name, $name) == false){
+                if (stripos ($school->name, $name) !== false){
                     array_push($schools, $school);
                 }
             }
