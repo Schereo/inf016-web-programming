@@ -63,6 +63,10 @@
                                                   placeholder="Infos"><?= $school->description ?></textarea>
                 </div>
                 <button type="submit" class="default-button"> Upload</button>
+                <button type="submit" class="default-button" name="delete"> Delete</button>
+                <?php if(isset($_POST['delete'])) {
+                   School::delete($school->id);
+                } ?>
         </form>
     </div>
 </section>

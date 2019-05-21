@@ -60,6 +60,7 @@ include 'pages/imageslider.php';
         <?php include 'pages/register.php'; ?>
     </div>
     <?}?>
+
     <?php if (!(isset($_POST['']))) { ?>
     <div class="large-grid-item card">
         <?php include 'pages/newSchool.php'; ?>
