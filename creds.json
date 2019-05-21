@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "vorname": "Jens",
+      "nachname": "Schulte",
+      "mail": "jens@aol.de",
+      "password": "jens"
+    },
+    {
+      "vorname": "Administrator",
+      "nachname": "der Allerechte",
+      "mail": "admin@aol.de",
+      "password": "admin"
+    },
+    {
+      "vorname": "jiens",
+      "nachname": "jiens",
+      "mail": "jiens@aol.de",
+      "password": "jiens1"
+    },
+    {
+      "vorname": "nelly",
+      "nachname": "klassen",
+      "mail": "nelly@gmail.com",
+      "password": "jens"
+    },
+    {
+      "vorname": "jens",
+      "nachname": "jens",
+      "mail": "jensi@aol.de",
+      "password": "jens"
+    },
+    {
+      "vorname": "franz",
+      "nachname": "hans",
+      "mail": "franz@aol.de",
+      "password": "franz"
+    },
+    {
+      "vorname": "hanf",
+      "nachname": "hanf",
+      "mail": "hanf@need.de",
+      "password": "12345"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
  <form class="rating">
-        <p>Diese Schule bewerten </p>
+        <p>    Diese Schule bewerten </p>
         <span class="star" data-value="5">&#9734;</span>
         <span class="star" data-value="4">&#9734;</span>
         <span class="star" data-value="3">&#9734;</span>

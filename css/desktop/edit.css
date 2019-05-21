@@ -1,0 +1,23 @@
+.editInfos{
+    margin: 15px;
+    text-align: center;
+}
+
+.info-input{
+    padding:15px;
+}
+
+.info-input input{
+    width: 100%;
+}
+
+.info-input select {
+    width: 100%;
+}
+
+.info-input textarea {
+    width: 100%;
+}
+.opening-hours {
+    grid-column: 2;
+}

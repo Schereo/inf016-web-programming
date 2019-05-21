@@ -1,16 +1,20 @@
 <?php
 class School implements schoolDao {
-
     static function getAll()
     {
-        return School::readJson()->schools;
+        if (is_array(School::readJson()->schools)) {
+            return School::readJson()->schools;
+        }
     }
+
 
     static function getById($id)
     {
-        foreach (School::readJson()["schools"] as $school) {
-            if ($school["id"] == $id){
-                return $school;
+        if (is_array(School::readJson()["schools"])) {
+            foreach (School::readJson()["schools"] as $school) {
+                if ($school["id"] == $id) {
+                    return $school;
+                }
             }
         }
     }
@@ -76,13 +80,10 @@ class School implements schoolDao {
         return null;
     }
 
-    // Funktioniert noch nicht.
-    static function writeJson($array) {
-        if (file_exists("database.json") && is_writable("database.json")) {
-            $jsondata = json_encode(School::readJson(), JSON_PRETTY_PRINT);
-            file_put_contents("database.json", $jsondata);
-        }
+    static function writeJson($array)
+    {
+        $newData = self::readJson();
+        $newData ['schools'] [] = $array;
+        file_put_contents('../database.json', json_encode($newData, JSON_PRETTY_PRINT));
     }
-
-
 }

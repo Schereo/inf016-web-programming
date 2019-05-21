@@ -1,13 +1,15 @@
-
 /* Spezielles Design für den FeedBack Container */
 .subtitle {
     text-align: left;
 }
 
-.rating > p{
-    font-size: 15px;
-    margin: 0px      
+.rating > p {
+    font-size: 20px;
+    margin: 0px;
+    margin-left: 7px;
+
 }
+
 .rating > textarea {
     resize: none;
     width: 25em;
@@ -33,7 +35,7 @@
 }
 
 .rating > span:hover:before,
-.rating > span:hover~span:before {
+.rating > span:hover ~ span:before {
     font-size: 22px;
     content: "\2605";
     position: absolute;
