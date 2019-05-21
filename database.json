@@ -39,6 +39,82 @@
             ]
         },
         {
+            "id": 1,
+            "name": "Erdinger Weißbier",
+            "schoolTyp": "Förderschule",
+            "description": "Die Helene-Lange-Schule ist als nahe der Innenstadt gelegene Integrierte Gesamtschule mit gymnasialer Oberstufe eine Schule für alle Kinder und Jugendliche. Wir verstehen uns als Schule mit besonderem pädagogischem Engagement, die gleichzeitig Wert auf eine hohe fachliche Qualität legt. Eigenverantwortliches Lernen und Teamfähigkeit sind für uns Grundlage einer umfassenden Persönlichkeitsentwicklung.",
+            "principal": "Claudia Steffen",
+            "phoneNumber": "04419501611",
+            "mail": "sekretarait@hls-ol.de",
+            "students": 1000,
+            "homepageUrl": "http://www.hls-ol.de",
+            "imagePath": "hls1.jpg",
+            "address": {
+                "street": "Marschweg",
+                "number": "38",
+                "city": "Oldenburg",
+                "zipCode": "26122",
+                "district": "Alexandersfeld"
+            },
+            "ratings": [
+                {
+                    "environment": 3,
+                    "teacher": 4,
+                    "difficulty": 2,
+                    "user": "Tim Sigl",
+                    "date": "19.05.2019"
+                },
+                {
+                    "stars": 5,
+                    "user": "Tim Sigl",
+                    "date": "19.05.2019"
+                },
+                {
+                    "stars": 2,
+                    "user": "Tim Sigl",
+                    "date": "19.05.2019"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "name": "Krombacher Pilsener",
+            "schoolTyp": "Gymnasium",
+            "description": "Die Helene-Lange-Schule ist als nahe der Innenstadt gelegene Integrierte Gesamtschule mit gymnasialer Oberstufe eine Schule für alle Kinder und Jugendliche. Wir verstehen uns als Schule mit besonderem pädagogischem Engagement, die gleichzeitig Wert auf eine hohe fachliche Qualität legt. Eigenverantwortliches Lernen und Teamfähigkeit sind für uns Grundlage einer umfassenden Persönlichkeitsentwicklung.",
+            "principal": "Claudia Steffen",
+            "phoneNumber": "04419501611",
+            "mail": "sekretarait@hls-ol.de",
+            "students": 1000,
+            "homepageUrl": "http://www.hls-ol.de",
+            "imagePath": "hls1.jpg",
+            "address": {
+                "street": "Marschweg",
+                "number": "38",
+                "city": "Oldenburg",
+                "zipCode": "26122",
+                "district": "Etzhorn"
+            },
+            "ratings": [
+                {
+                    "environment": 3,
+                    "teacher": 4,
+                    "difficulty": 2,
+                    "user": "Tim Sigl",
+                    "date": "19.05.2019"
+                },
+                {
+                    "stars": 5,
+                    "user": "Tim Sigl",
+                    "date": "19.05.2019"
+                },
+                {
+                    "stars": 2,
+                    "user": "Tim Sigl",
+                    "date": "19.05.2019"
+                }
+            ]
+        },
+        {
             "id": 2,
             "name": "Cäcilienschule Oldenburg",
             "schoolTyp": "Gesamtschule",
