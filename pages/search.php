@@ -63,7 +63,9 @@
                     </ul>
                 </div>
                 <div class="small-card-footer">
-                    <button class="default-button" value="<?=$school->ID?>" name="ID">Details</button>
+                    <form method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                        <button  value="<?=$school->id?>" name="ID">Details</button>
+                    </form>
                     <a href="<?=$school->homepageUrl?>" target="_blank">Homepage</a>
                 </div>
             </div>
