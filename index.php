@@ -17,6 +17,7 @@ $passwordMatch = strip_tags($_POST['passwort2Reg']);
 registerUser($forename, $surname, $mailInput, $passwordInput, $passwordMatch)
 
 ;?>
+
 <!DOCTYPE html>
 <html lang="de">
 <head>

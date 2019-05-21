@@ -1,49 +1,74 @@
 <section>
-    <h2 id="anlegen" class="card-header">Neue Schule anlegen</h2>
+    <h2 id="anlegen" class="card-header">Schule anlegen</h2>
     <div class="card-body">
-        <form class="newSchool-container">
-            <div class="infoHeader-newSchool">
-                <input class="input schoolname" type="text" id="schoolname" name="schulname"
-                       placeholder="Name der Schule">
-                <select class="input schooltype">
-                    <option value="form1">Grundschule</option>
-                    <option value="form2">Gymnasium</option>
-                    <option value="form3">Oberschule</option>
-                    <option value="form4">Förderschule</option>
-                    <option value="form5">Integrierte Gesamtschule</option>
-                    <option value="form6">Berufsbildende Schule</option>
-                </select>
-                <select class="input district">
-                    <option value="st1">Alexandersfeld</option>
-                    <option value="st2">Bloherfelde</option>
-                    <option value="st3">Bürgerfelde</option>
-                    <option value="st4">Donnerschwee</option>
-                    <option value="st5">Etzhorn</option>
-                    <option value="st6">Eversten</option>
-                    <option value="st7">Gemeinde Bad Zwischenahn</option>
-                    <option value="st8">Innenstadt</option>
-                    <option value="st9">Kreyenbrück</option>
-                    <option value="st10">Krusenbusch</option>
-                    <option value="st11">Nadorst</option>
-                    <option value="st12">Neuenwege</option>
-                    <option value="st13">Ofenerdiek</option>
-                    <option value="st14">Ohmstede</option>
-                    <option value="st15">Osternburg</option>
-                    <option value="st16">Tweelbäke</option>
-                    <option value="st17">Wechloy</option>
-                </select>
-            </div>
-            <textarea class="textarea" placeholder="Beschreibung"> </textarea>
-            <div class="uploadInterface">
-                <form class="file-upload-field">
-                    <input class="file-upload" type="file" multiple>
-                    <p class="uploadText"> Klicken/ Bilder ablegen</p>
-                </form>
-                <button class="default-button uploadButton" type="submit">Upload</button>
-                <div class="uploadedPictures">
-                    <h2>test</h2>
+        <form class="newSchool-container" action="/php-business/newSchoolHandler.php" method="post">
+            <div class="info-input">
+                <div class="editPictures">
+                    <img src="../assets/images/hgo1.jpg" alt="Picture of BBS Wechloy" width="150px">
+                    <img src="../assets/images/hgo1.jpg" alt="Picture of BBS Wechloy" width="150px">
+                    <img src="../assets/images/hgo1.jpg" alt="Picture of BBS Wechloy" width="150px">
                 </div>
-            </div>
+                <div class="text-left"> Name:</div>
+                <div class="text-right"><input type="text" name="schoolname" value=""></div>
+                <br>
+                <div class="text-left"> Schulform:</div>
+                <div class="text-right">
+                    <select class="input schooltype" name="schooltype">
+                        <option value="Grundschule">Grundschule</option>
+                        <option value="Gymnasium">Gymnasium</option>
+                        <option value="Oberschule">Oberschule</option>
+                        <option value="Förderschule">Förderschule</option>
+                        <option value="Integrierte Gesamtschule">Integrierte Gesamtschule</option>
+                        <option value="Berufsbildende Schule">Berufsbildende Schule</option>
+                    </select>
+                </div>
+                <br>
+                <div class="text-left"> Stadtteil:</div>
+                <div class="text-right"><select class="input district" name="district">
+                        <option value="Alexandersfeld">Alexandersfeld</option>
+                        <option value="Bloherfelde">Bloherfelde</option>
+                        <option value="Bürgerfelde">Bürgerfelde</option>
+                        <option value="Donnerschwee">Donnerschwee</option>
+                        <option value="Etzhorn">Etzhorn</option>
+                        <option value="Eversten">Eversten</option>
+                        <option value="Gemeinde Bad Zwischenahn">Gemeinde Bad Zwischenahn</option>
+                        <option value="Innenstadt">Innenstadt</option>
+                        <option value="Kreyenbrück">Kreyenbrück</option>
+                        <option value="Krusenbusch">Krusenbusch</option>
+                        <option value="Nadorst">Nadorst</option>
+                        <option value="Neuenwege">Neuenwege</option>
+                        <option value="Ofenerdiek">Ofenerdiek</option>
+                        <option value="Ohmstede">Ohmstede</option>
+                        <option value="Osternburg">Osternburg</option>
+                        <option value="Tweelbäke">Tweelbäke</option>
+                        <option value="Wechloy">Wechloy</option>
+                    </select></div>
+                <br>
+                <div class="text-left"> Schulleitung:</div>
+                <div class="right"><input class="input" type="text" name="principal" value=""></div>
+                <br>
+                <div class="text-left">Adresse:</div>
+                <div class="text-right"><input class="input" type="text" name="street"
+                                               placeholder="Straße"> <input class="input" type="number"
+                                                                            id="editHousenumber" name="number"
+                                                                            placeholder="Hausnummer"></div>
+                <br>
+                <div class="text-left"> Telefon:</div>
+                <div class="text-right"><input class="input" type="number" id="editPhonenumber" name="telefon"
+                                               placeholder="phoneNumber"></div>
+                <div class="text-left"><br> Email:</div>
+                <div class="text-right"><input class="input" type="email" id="editEmail" name="mail"
+                                               placeholder="E-Mail"></div>
+                <br>
+                <div class="text-left">Website:</div>
+                <div class="text-right"><input class="input" type="url" name="homepage"
+                                               placeholder="Website"></div>
+                <br>
+                <div class="text-left">Weitere Infos:</div>
+                <br>
+                <div class="text-right"><textarea class="textarea" name="description" placeholder="Infos"> </textarea>
+                </div>
+                <button type="submit" class="default-button"> Upload</button>
         </form>
     </div>
 </section>

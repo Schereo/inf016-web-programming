@@ -18,6 +18,10 @@
     border-radius: 4px 4px 0px 0px;
 }
 
+.card .card-header .editIcon> img {
+    width: 15px;
+}
+
 .card .card-footer {
     display: flex;
     padding: 0.5em;

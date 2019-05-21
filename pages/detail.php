@@ -7,10 +7,11 @@
     ?>
 
     <h2 class="card-header"> <?= $schoolio->name?></h2>
+    <img src="/assets/edit.png">  </a> </h2>
     <form class="detailcontainer card-body" method="GET" action="<?php echo $_SERVER['PHP_SELF']?>">
         <img src="../assets/images/hgo1.jpg" alt="Picture of BBS Wechloy" class="responsive detail-picture">
         <div class="detail-contact">
-            <form>
+
                 <h1 class="info-container detail-headline">
                     Berufsbildungszentrum für Wirtschaft, Informatik und Gesundheit
                 </h1>
@@ -53,19 +54,21 @@
                         <a href="<?=$schoolio->homepageUrl?>"><?=$schoolio->homepageUrl?></a>
                     </div>
                 </div>
-                <div class="info-container">
+                <div class="detail-info">
+                    <h5 class="detail-headline">Weitere Infos</h5>
+                    <div>
+                        <?= $schoolio->description?>
+                    </div>
                 </div>
-            </form>
+            </section>
         </div>
-        <div class="detail-info">
-            <h5 class="detail-headline">Weitere Infos</h5>
-            <div>
-                <?= $schoolio->description?>
-            </div>
-        </div>
+        <?php if (isset($_SESSION['userSessions'])) { ?>
         <div class="detail-feedback">
             <?php include 'feedback.php'; ?>
         </div>
     </form>
+            <div class="text-rigt"><a href="">
+                </a></div>  <?php } ?>
+    </section>
 </article>
 <?php endif ?>
