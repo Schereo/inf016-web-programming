@@ -12,8 +12,8 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 0.5em;
-
 }
+
 
 .textarea {
     grid-row: 2;

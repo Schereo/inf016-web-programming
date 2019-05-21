@@ -1,5 +1,6 @@
 <article class>
-    <h2 class="card-header"> Herbart Gymansium Oldenburg</h2>
+    <h2 class="card-header"> Herbart Gymansium Oldenburg <a href="/index.php#anlegen" class="editIcon">
+       <img src="/assets/edit.png">  </a> </h2>
     <section class="detailcontainer card-body">
         <img src="../assets/images/hgo1.jpg" alt="Picture of BBS Wechloy" class="responsive detail-picture">
         <div class="detail-contact">
@@ -58,56 +59,11 @@
                 </div>
             </section>
         </div>
-        <div class="info-open-hours">
-            <div class="text-right open-hours">
-                <div class="info-container">
-                    <div class="text-left">
-                        Montag
-                    </div>
-                    <div class="text-right">
-                        7:30 - 12:00 Uhr und 12:30 - 15:00 Uhr
-                    </div>
-                </div>
-                <div class="info-container">
-                    <div class="text-left">
-                        Dienstag
-                    </div>
-                    <div class="text-right">
-                        7:30 - 12:00 Uhr und 12:30 - 15:00 Uhr
-                    </div>
-                </div>
-                <div class="info-container">
-                    <div class="text-left">
-                        Mittwoch
-                    </div>
-                    <div class="text-right">
-                        7:30 - 12:00 Uhr und 12:30 - 15:00 Uhr
-                    </div>
-                </div>
-                <div class="info-container">
-                    <div class="text-left">
-                        Donnerstag
-                    </div>
-                    <div class="text-right">
-                        7:30 - 12:00 Uhr und 12:30 - 15:00 Uhr
-                    </div>
-                </div>
-                <div class="info-container">
-                    <div class="text-left">
-                        Freitag
-                    </div>
-                    <div class="text-right">
-                        7:30 - 13:15 Uhr
-                    </div>
-                </div>
-            </div>
-        </div>
         <?php if (isset($_SESSION['userSessions'])) { ?>
         <div class="detail-feedback">
             <?php include 'feedback.php'; ?>
         </div>
             <div class="text-rigt"><a href="">
-                    <button type="submit" class="default-button">Schule bearbeiten</button>
                 </a></div>  <?php } ?>
     </section>
 </article>
