@@ -6,19 +6,16 @@ class School implements schoolDao {
             return School::readJson()->schools;
         }
     }
-
-
     static function getById($id)
     {
-        if (is_array(School::readJson()["schools"])) {
-            foreach (School::readJson()["schools"] as $school) {
-                if ($school["id"] == $id) {
+        if (is_array(School::readJson()->schools)) {
+            foreach (School::readJson()->schools as $school) {
+                if ($school->id == $id) {
                     return $school;
                 }
             }
         }
     }
-
     static function getByName($name)
     {
         if ($name == "") {
@@ -33,7 +30,6 @@ class School implements schoolDao {
             return $schools;
         }
     }
-
     static function getByDistrict($district)
     {
         $schools = [];
@@ -44,7 +40,6 @@ class School implements schoolDao {
         }
         return $schools;
     }
-
     static function getByType($schoolTyp)
     {
         $schools = [];
@@ -55,22 +50,18 @@ class School implements schoolDao {
         }
         return $schools;
     }
-
     static function update($id)
     {
         // TODO: Implement update() method.
     }
-
     static function delete($id)
     {
         // TODO: Implement delete() method.
     }
-
     static function create($school)
     {
         // TODO: Implement create() method.
     }
-
     static function readJson() {
         if (file_exists("database.json") && is_readable("database.json")) {
             $schools = file_get_contents("database.json");
@@ -79,7 +70,6 @@ class School implements schoolDao {
         }
         return null;
     }
-
     static function writeJson($array)
     {
         $newData = self::readJson();

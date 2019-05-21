@@ -1,6 +1,7 @@
 <?php
 $schools = [];
 
+
 if (isset($_GET["schoolName"])) {
     $schoolName = htmlentities($_GET["schoolName"]);
     $schools = School::getByName($schoolName);
@@ -14,4 +15,9 @@ if (isset($_GET["district"])) {
 if (isset($_GET["schoolType"])) {
     $schoolType = htmlentities($_GET["schoolType"]);
     $schools = School::getByType($schoolType);
+}
+
+if (isset($_GET["ID"])){
+    $schoolID = htmlentities($_GET["ID"]);
+    $schoolio = School::getById($schoolID);
 }
