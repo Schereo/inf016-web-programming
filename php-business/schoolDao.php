@@ -22,6 +22,4 @@ interface SchoolDao {
     //Delete school
     static function delete($id);
 
-    //add img
-    static function add($imgPath);
 }

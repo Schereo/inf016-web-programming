@@ -37,8 +37,6 @@ registerUser($forename, $surname, $mailInput, $passwordInput, $passwordMatch)
 </head>
 <body>
 <?php
-include 'php-business/schoolDao.php';
-include 'php-business/schoolJson.php';
 include 'pages/header.php';
 include 'pages/imageslider.php';
 ?>

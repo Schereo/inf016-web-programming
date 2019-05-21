@@ -18,11 +18,9 @@
     border-radius: 4px 4px 0px 0px;
 }
 
-.card .card-header .editIcon > img {
-    width: 20px;
-}
-.card .card-header .editIcon {
-   float: right;
+.card .card-header .editIcon> img {
+    width: 30px;
+    float: right;
 }
 
 .card .card-footer {
