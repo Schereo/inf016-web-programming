@@ -1,9 +1,17 @@
 <article class>
-    <h2 class="card-header"> Herbart Gymansium Oldenburg</h2>
-    <section class="detailcontainer card-body">
+    <?php
+    require_once 'php-business/schoolDao.php';
+    require_once 'php-business/schoolJson.php';
+    require_once 'php-business/schoolView.php';
+    if(isset($schoolio)):
+    ?>
+
+    <h2 class="card-header"> <?= $schoolio->name?>
+    <img src="assets/edit.png">  </h2>
+    <form class="detailcontainer card-body" method="GET" action="<?php echo $_SERVER['PHP_SELF']?>">
         <img src="../assets/images/hgo1.jpg" alt="Picture of BBS Wechloy" class="responsive detail-picture">
         <div class="detail-contact">
-            <section>
+
                 <h1 class="info-container detail-headline">
                     Berufsbildungszentrum für Wirtschaft, Informatik und Gesundheit
                 </h1>
@@ -12,7 +20,7 @@
                         Schulleitung:
                     </div>
                     <div class="text-right">
-                        Diedrich Ahlfeld
+                        <?= $schoolio->principal ?>
                     </div>
                 </div>
                 <div class="info-container">
@@ -20,15 +28,14 @@
                         Adresse:
                     </div>
                     <div class="text-right">
-                        Ammerländer Heerstraße 33/39<br> 26129 Oldenburg
-                    </div>
+                       <?=$schoolio->address->street?><br> <?=$schoolio->address->zipCode?> <?=$schoolio->address->city?>                    </div>
                 </div>
                 <div class="info-container">
                     <div class="text-left">
                         Telefon:
                     </div>
                     <div class="text-right">
-                        <a href="tel:044177915-0">0441 77915-0</a>
+                        <a href="tel:<?=$schoolio->phoneNumber?>"><?=$schoolio->phoneNumber?></a>
                     </div>
                 </div>
                 <div class="info-container">
@@ -36,7 +43,7 @@
                         E-Mail:
                     </div>
                     <div class="text-right">
-                        <a href="mailto:mail@bbs-haarentor.de">mail@bbs-haarentor.de</a>
+                        <a href="mailto:<?=$schoolio->mail?>"><?=$schoolio->mail?></a>
                     </div>
                 </div>
                 <div class="info-container">
@@ -44,27 +51,24 @@
                         Internet:
                     </div>
                     <div class="text-right">
-                        <a href="https://www.bbs-haarentor.de">www.bbs-haarentor.de</a>
+                        <a href="<?=$schoolio->homepageUrl?>"><?=$schoolio->homepageUrl?></a>
                     </div>
                 </div>
                 <div class="detail-info">
                     <h5 class="detail-headline">Weitere Infos</h5>
                     <div>
-                        Schülerinnen/Schüler
-                        circa 2.300
-                        Mitarbeiterinnen/Mitarbeiter
-                        circa 110
+                        <?= $schoolio->description?>
                     </div>
                 </div>
             </section>
         </div>
-
         <?php if (isset($_SESSION['userSessions'])) { ?>
         <div class="detail-feedback">
             <?php include 'feedback.php'; ?>
         </div>
-            <div class="text-rigt"><a href="/pages/edit.php">
-                    <button type="submit" class="default-button">Schule bearbeiten</button>
+    </form>
+            <div class="text-rigt"><a href="">
                 </a></div>  <?php } ?>
     </section>
 </article>
+<?php endif ?>

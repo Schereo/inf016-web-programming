@@ -3,7 +3,11 @@
     <div class="card-body">
         <form class="newSchool-container" action="/php-business/newSchoolHandler.php" method="post">
             <div class="info-input">
-                <?php ?>
+                <div class="editPictures">
+                    <img src="../assets/images/hgo1.jpg" alt="Picture of BBS Wechloy" width="150px">
+                    <img src="../assets/images/hgo1.jpg" alt="Picture of BBS Wechloy" width="150px">
+                    <img src="../assets/images/hgo1.jpg" alt="Picture of BBS Wechloy" width="150px">
+                </div>
                 <div class="text-left"> Name:</div>
                 <div class="text-right"><input type="text" name="schoolname" value=""></div>
                 <br>
@@ -64,7 +68,7 @@
                 <br>
                 <div class="text-right"><textarea class="textarea" name="description" placeholder="Infos"> </textarea>
                 </div>
-                <button type="submit" class="default-button">  Upload</button>
+                <button type="submit" class="default-button"> Upload</button>
         </form>
     </div>
 </section>
