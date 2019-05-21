@@ -45,7 +45,7 @@ class School implements schoolDao {
     {
         $schools[] = [];
         foreach (School::readJson()->school as $school) {
-            if ($school["schoolType"] == $schoolType){
+            if ($school->schoolType == $schoolType){
                 array_push($schools, $school);
             }
         }
