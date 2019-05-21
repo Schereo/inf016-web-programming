@@ -59,9 +59,14 @@ include 'pages/imageslider.php';
         <?php include 'pages/register.php'; ?>
     </div>
     <?}?>
+    <?php if (!(isset($_POST['']))) { ?>
     <div class="large-grid-item card">
         <?php include 'pages/newSchool.php'; ?>
     </div>
+    <?} else {?>
+    <div class="large-grid-item card">
+        <?php include 'pages/editSchool.php'; ?>
+    <?}?>
 </div>
 <div class="stretch-grid-item" id="indexfooter">
     <?php include 'pages/footer.php'; ?>
