@@ -1,8 +1,12 @@
 <section>
+    <?php
+    include 'php-business/schoolDao.php';
+    include 'php-business/schoolJson.php';
+    include 'php-business/schoolView.php'?>
     <h2 id="suche" class="card-header">Schule Suchen</h2>
     <div class="card-body">
         <form class="search-container" method="GET" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-            <input class="input" type="text">
+            <input class="input" type="text" name="schoolName" placeholder="Schulname">
             <select class="input" name="schoolType">
                 <option value="sto" disabled selected>Schulform</option>
                 <option value="form1">Grundschule</option>
@@ -32,29 +36,32 @@
                 <option value="st16">Tweelbäke</option>
                 <option value="st17">Wechloy</option>
             </select>
-            <button class="default-button button-size" type="submit" name="anmelden">Suchen</button>
+            <button class="default-button button-size" type="submit">Suchen</button>
         </form>
         <div class="school-cards-container">
-            <?php foreach(School::getAll() as $school): ?>
+            <?php if(!empty($schools)):
+                foreach( $schools as $school):?>
             <div class="small-card">
                 <div class="small-card-header">
-                    <h2><?=$school["name"]?></h2>
+                    <h2><?=$school->name?></h2>
                 </div>
                 <div class="small-card-body">
-                    <img src="/assets/images/<?=$school["imagePath"]?>" alt="Bild zeigt <?=$school["name"]?>" class="responsive">
+                    <img src="/assets/images/<?=$school->imagePath?>" alt="Bild zeigt <?=$school->name?>" class="responsive">
                     <ul class="card-list">
-                        <li><?=$school["schoolTyp"]?></li>
-                        <li><?=$school["address"]["district"]?></li>
-                        <li><?=$school["students"]?></li>
+                        <li><?=$school->schoolTyp?></li>
+                        <li><?=$school->address->district?></li>
+                        <li><?=$school->students?></li>
                         <li>Bewertung</li>
                     </ul>
                 </div>
                 <div class="small-card-footer">
                     <a href="#">Details anzeigen</a>
-                    <a href="<?=$school["homepageUrl"]?>" target="_blank">Zur Website</a>
+                    <a href="<?=$school->homepageUrl?>" target="_blank">Zur Website</a>
                 </div>
             </div>
-            <?php endforeach; ?>
+            <?php endforeach;
+            endif;
+            var_dump($schools)?>
         </div>
     </div>
 </section>
