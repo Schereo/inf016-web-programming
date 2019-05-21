@@ -5,8 +5,6 @@ require_once 'php-business/userJson.php';
 function userLogin($emailLogin, $passwordLogin){
 if (isset($_POST['anmelden'])) {
     $found = 0;
-
-
     foreach (User::getAll() as $users) {
         if (User::getByMail($emailLogin)) {
             $found = 1;

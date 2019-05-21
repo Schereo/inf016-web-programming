@@ -39,7 +39,7 @@
             </select>
             <button class="default-button button-size" type="submit">Suchen</button>
         </form>
-        <div class="school-cards-container">
+        <div class="school-cards-container" method="GET" action="<?php echo $_SERVER['PHP_SELF']; ?>">
             <?php if(!empty($schools)):
                 foreach( $schools as $school):?>
             <div class="small-card">
@@ -63,7 +63,7 @@
                     </ul>
                 </div>
                 <div class="small-card-footer">
-                    <a href="#">Details</a>
+                    <button class="default-button" value="<?=$school->ID?>" name="ID">Details</button>
                     <a href="<?=$school->homepageUrl?>" target="_blank">Homepage</a>
                 </div>
             </div>
