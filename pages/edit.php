@@ -17,9 +17,9 @@
                         <div class="info-input">
                             <?php ?>
                             <div class="text-left"> Name: </div>
-                            <div class="text-right"><input type="text" id="name" value=""> </div> <br>
+                            <div class="text-right"><input type="text" name="name" value=""> </div> <br>
                             <div class="text-left"> Schulform: </div>
-                            <div class="text-right"><select class="input schooltype">
+                            <div class="text-right"><select class="input schooltype" name="schooltype">
                                     <option value="form1">Grundschule</option>
                                     <option value="form2">Gymnasium</option>
                                     <option value="form3">Oberschule</option>
@@ -28,7 +28,7 @@
                                     <option value="form6">Berufsbildende Schule</option>
                                 </select> </div> <br>
                             <div class="text-left"> Stadtteil: </div>
-                            <div class="text-right"> <select class="input district">
+                            <div class="text-right"> <select class="input district" name="district">
                                     <option value="st1">Alexandersfeld</option>
                                     <option value="st2">Bloherfelde</option>
                                     <option value="st3">Bürgerfelde</option>
@@ -48,7 +48,7 @@
                                     <option value="st17">Wechloy</option>
                                 </select> </div> <br>
                             <div class="text-left"> Schulleitung: </div>
-                            <div class="right"> <input class="input" type="text" id="director" value=""> </div> <br>
+                            <div class="right"> <input class="input" type="text" name="princ" value=""> </div> <br>
                             <div class="text-left">Adresse: </div>
                             <div class="text-right"><input class="input" type="text" id="editStreet" name="straße" placeholder="Straße"> <input class="input" type="number" id="editHousenumber" name="hausnummer" placeholder="Hausnummer"> </div> <br>
                             <div class="text-left"> Telefon: </div>

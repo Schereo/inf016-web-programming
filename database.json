@@ -77,16 +77,69 @@
             ]
         },
         {
-            "name": "ddd",
-            "schoolType": "Oberschule",
-            "district": "Alexandersfeld",
-            "descprition": " "
+            "name": "",
+            "schoolType": "form1",
+            "descprition": " ",
+            "principal": "",
+            "phoneNumber": null,
+            "mail": "",
+            "homepageURL": "",
+            "street": "",
+            "number": "",
+            "zipCode": null,
+            "district": "st1"
         },
         {
-            "name": "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
-            "schoolType": "Grundschule",
-            "district": "Alexandersfeld",
-            "descprition": " hhhhhhhhhhhhhhhhhhhhhhh"
+            "name": "",
+            "schoolType": "form1",
+            "descprition": " ",
+            "principal": "",
+            "phoneNumber": null,
+            "mail": "",
+            "homepageURL": "",
+            "street": "",
+            "number": "",
+            "zipCode": null,
+            "district": "st1"
+        },
+        {
+            "name": "",
+            "schoolType": "form1",
+            "descprition": " ",
+            "principal": "",
+            "phoneNumber": null,
+            "mail": "",
+            "homepageURL": "",
+            "street": "",
+            "number": "",
+            "zipCode": null,
+            "district": "st1"
+        },
+        {
+            "name": "",
+            "schoolType": "form1",
+            "descprition": " ",
+            "principal": "",
+            "phoneNumber": null,
+            "mail": "",
+            "homepageURL": "",
+            "street": "",
+            "number": "",
+            "zipCode": null,
+            "district": "st1"
+        },
+        {
+            "name": "",
+            "schoolType": "form1",
+            "descprition": " ",
+            "principal": "",
+            "phoneNumber": null,
+            "mail": "",
+            "homepageURL": "",
+            "street": "",
+            "number": "",
+            "zipCode": null,
+            "district": "st1"
         }
     ]
 }
