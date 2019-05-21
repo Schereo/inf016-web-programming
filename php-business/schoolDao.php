@@ -1,9 +1,6 @@
 <?php
 interface SchoolDao {
 
-    //Create new School
-    static function create($school);
-
     //Get all schools
     static function getAll();
 

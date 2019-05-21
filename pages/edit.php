@@ -1,7 +1,7 @@
+
 <link rel="stylesheet" href="/css/desktop/styles.css" />
 <div class="main-container">
     <div class="stretch-grid-item" id="indexheader">
-        <?php include 'header.php'; ?>
     </div>
     <div class="card large-grid-item">
         <section>
@@ -15,8 +15,9 @@
                     </div>
                     <div class="editInfos">
                         <div class="info-input">
+                            <?php ?>
                             <div class="text-left"> Name: </div>
-                            <div class="text-right"><input class="input schoolname" type="text" id="editSchoolname" name="schulname" placeholder="Name der Schule"> </div> <br>
+                            <div class="text-right"><input type="text" id="name" value=""> </div> <br>
                             <div class="text-left"> Schulform: </div>
                             <div class="text-right"><select class="input schooltype">
                                     <option value="form1">Grundschule</option>
@@ -47,7 +48,7 @@
                                     <option value="st17">Wechloy</option>
                                 </select> </div> <br>
                             <div class="text-left"> Schulleitung: </div>
-                            <div class="right"> <input class="input" type="text" id="editHeadmaster" name="schulleiter" placeholder="Schulleiter"></div> <br>
+                            <div class="right"> <input class="input" type="text" id="director" value=""> </div> <br>
                             <div class="text-left">Adresse: </div>
                             <div class="text-right"><input class="input" type="text" id="editStreet" name="straße" placeholder="Straße"> <input class="input" type="number" id="editHousenumber" name="hausnummer" placeholder="Hausnummer"> </div> <br>
                             <div class="text-left"> Telefon: </div>

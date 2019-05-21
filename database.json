@@ -4,12 +4,12 @@
             "id": 1,
             "name": "Helene-Lange-Schule Oldenburg",
             "schoolTyp": "Gesamtschule",
-            "description": "Die Helene-Lange-Schule ist als nahe der Innenstadt gelegene Integrierte Gesamtschule mit gymnasialer Oberstufe eine Schule für alle Kinder und Jugendliche. Wir verstehen uns als Schule mit besonderem pädagogischem Engagement, die gleichzeitig Wert auf eine hohe fachliche Qualität legt. Eigenverantwortliches Lernen und Teamfähigkeit sind für uns Grundlage einer umfassenden Persönlichkeitsentwicklung.",
+            "description": "Die Helene-Lange-Schule ist als nahe der Innenstadt gelegene Integrierte Gesamtschule mit gymnasialer Oberstufe eine Schule f\u00fcr alle Kinder und Jugendliche. Wir verstehen uns als Schule mit besonderem p\u00e4dagogischem Engagement, die gleichzeitig Wert auf eine hohe fachliche Qualit\u00e4t legt. Eigenverantwortliches Lernen und Teamf\u00e4higkeit sind f\u00fcr uns Grundlage einer umfassenden Pers\u00f6nlichkeitsentwicklung.",
             "principal": "Claudia Steffen",
             "phoneNumber": "04419501611",
             "mail": "sekretarait@hls-ol.de",
             "students": 1000,
-            "homepageUrl": "http://www.hls-ol.de",
+            "homepageUrl": "http:\/\/www.hls-ol.de",
             "imagePath": "hls1.jpg",
             "address": {
                 "street": "Marschweg",
@@ -40,15 +40,15 @@
         },
         {
             "id": 2,
-            "name": "Cäcilienschule Oldenburg",
+            "name": "C\u00e4cilienschule Oldenburg",
             "schoolTyp": "Gesamtschule",
-            "description": "Die Helene-Lange-Schule ist als nahe der Innenstadt gelegene Integrierte Gesamtschule mit gymnasialer Oberstufe eine Schule für alle Kinder und Jugendliche. Wir verstehen uns als Schule mit besonderem pädagogischem Engagement, die gleichzeitig Wert auf eine hohe fachliche Qualität legt. Eigenverantwortliches Lernen und Teamfähigkeit sind für uns Grundlage einer umfassenden Persönlichkeitsentwicklung.",
+            "description": "Die Helene-Lange-Schule ist als nahe der Innenstadt gelegene Integrierte Gesamtschule mit gymnasialer Oberstufe eine Schule f\u00fcr alle Kinder und Jugendliche. Wir verstehen uns als Schule mit besonderem p\u00e4dagogischem Engagement, die gleichzeitig Wert auf eine hohe fachliche Qualit\u00e4t legt. Eigenverantwortliches Lernen und Teamf\u00e4higkeit sind f\u00fcr uns Grundlage einer umfassenden Pers\u00f6nlichkeitsentwicklung.",
             "principal": "Claudia Steffen",
             "phoneNumber": "04419501611",
             "mail": "sekretarait@hls-ol.de",
             "students": 1000,
-            "homepageUrl": "http://www.hls-ol.de",
-            "imagePath": "cäci1.jpg",
+            "homepageUrl": "http:\/\/www.hls-ol.de",
+            "imagePath": "c\u00e4ci1.jpg",
             "address": {
                 "street": "Marschweg",
                 "number": "38",
@@ -75,6 +75,18 @@
                     "date": "19.05.2019"
                 }
             ]
+        },
+        {
+            "name": "ddd",
+            "schoolType": "Oberschule",
+            "district": "Alexandersfeld",
+            "descprition": " "
+        },
+        {
+            "name": "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
+            "schoolType": "Grundschule",
+            "district": "Alexandersfeld",
+            "descprition": " hhhhhhhhhhhhhhhhhhhhhhh"
         }
-    ]     
+    ]
 }

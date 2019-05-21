@@ -35,7 +35,7 @@
             <button class="default-button button-size" type="submit" name="anmelden">Suchen</button>
         </form>
         <div class="school-cards-container">
-            <?php foreach(School::getAll() as $school): ?>
+            <?php if(is_array(School::readJson()['schools'])){foreach(School::getAll() as $school): ?>
             <div class="small-card">
                 <div class="small-card-header">
                     <h2><?=$school["name"]?></h2>
@@ -54,7 +54,7 @@
                     <a href="<?=$school["homepageUrl"]?>" target="_blank">Zur Website</a>
                 </div>
             </div>
-            <?php endforeach; ?>
+            <?php endforeach; }?>
         </div>
     </div>
 </section>
