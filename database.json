@@ -39,7 +39,7 @@
             ]
         },
         {
-            "id": 1,
+            "id": 2,
             "name": "Erdinger Weißbier",
             "schoolTyp": "Förderschule",
             "description": "Die Helene-Lange-Schule ist als nahe der Innenstadt gelegene Integrierte Gesamtschule mit gymnasialer Oberstufe eine Schule für alle Kinder und Jugendliche. Wir verstehen uns als Schule mit besonderem pädagogischem Engagement, die gleichzeitig Wert auf eine hohe fachliche Qualität legt. Eigenverantwortliches Lernen und Teamfähigkeit sind für uns Grundlage einer umfassenden Persönlichkeitsentwicklung.",
@@ -77,7 +77,7 @@
             ]
         },
         {
-            "id": 1,
+            "id": 3,
             "name": "Krombacher Pilsener",
             "schoolTyp": "Gymnasium",
             "description": "Die Helene-Lange-Schule ist als nahe der Innenstadt gelegene Integrierte Gesamtschule mit gymnasialer Oberstufe eine Schule für alle Kinder und Jugendliche. Wir verstehen uns als Schule mit besonderem pädagogischem Engagement, die gleichzeitig Wert auf eine hohe fachliche Qualität legt. Eigenverantwortliches Lernen und Teamfähigkeit sind für uns Grundlage einer umfassenden Persönlichkeitsentwicklung.",
@@ -115,8 +115,8 @@
             ]
         },
         {
-            "id": 2,
-            "name": "Cäcilienschule Oldenburg",
+            "id": 4,
+            "name": "Caecilienschule Oldenburg",
             "schoolTyp": "Gesamtschule",
             "description": "Die Helene-Lange-Schule ist als nahe der Innenstadt gelegene Integrierte Gesamtschule mit gymnasialer Oberstufe eine Schule für alle Kinder und Jugendliche. Wir verstehen uns als Schule mit besonderem pädagogischem Engagement, die gleichzeitig Wert auf eine hohe fachliche Qualität legt. Eigenverantwortliches Lernen und Teamfähigkeit sind für uns Grundlage einer umfassenden Persönlichkeitsentwicklung.",
             "principal": "Claudia Steffen",
