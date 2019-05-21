@@ -20,7 +20,7 @@ class School implements schoolDao {
         if ($name == "") {
             return School::getAll();
         } else {
-            $schools[] = [];
+            $schools = [];
             foreach (School::readJson()->schools as $school) {
                 if (stripos ($school->name, $name) !== false){
                     array_push($schools, $school);
@@ -32,9 +32,9 @@ class School implements schoolDao {
 
     static function getByDistrict($district)
     {
-        $schools[] = [];
-        foreach (School::readJson()["schools"] as $school) {
-            if ($school["address"]["district"] == $district){
+        $schools = [];
+        foreach (School::readJson()->schools as $school) {
+            if ($school->address->district == $district){
                 array_push($schools, $school);
             }
         }

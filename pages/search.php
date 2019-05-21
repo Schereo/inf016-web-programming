@@ -9,32 +9,31 @@
             <input class="input" type="text" name="schoolName" placeholder="Schulname">
             <select class="input" name="schoolType">
                 <option value="sto" disabled selected>Schulform</option>
-                <option value="form1">Grundschule</option>
-                <option value="form2">Gymnasium</option>
-                <option value="form3">Oberschule</option>
-                <option value="form4">Förderschule</option>
-                <option value="form5">Integrierte Gesamtschule</option>
-                <option value="form6">Berufsbildende Schule</option>
+                <option value="Grundschule">Grundschule</option>
+                <option value="Gymnasium">Gymnasium</option>
+                <option value="Oberschule">Oberschule</option>
+                <option value="Förderschule">Förderschule</option>
+                <option value="Integrierte Gesamtschule">Integrierte Gesamtschule</option>
+                <option value="Berufsbildende Schule">Berufsbildende Schule</option>
             </select>
             <select class="input" name="district">
                 <option value="sto" disabled selected>Stadtteil</option>
-                <option value="st1">Alexandersfeld</option>
-                <option value="st2">Bloherfelde</option>
-                <option value="st3">Bürgerfelde</option>
-                <option value="st4">Donnerschwee</option>
-                <option value="st5">Etzhorn</option>
-                <option value="st6">Eversten</option>
-                <option value="st7">Gemeinde Bad Zwischenahn</option>
-                <option value="st8">Innenstadt</option>
-                <option value="st9">Kreyenbrück</option>
-                <option value="st10">Krusenbusch</option>
-                <option value="st11">Nadorst</option>
-                <option value="st12">Neuenwege</option>
-                <option value="st13">Ofenerdiek</option>
-                <option value="st14">Ohmstede</option>
-                <option value="st15">Osternburg</option>
-                <option value="st16">Tweelbäke</option>
-                <option value="st17">Wechloy</option>
+                <option value="Alexandersfeld">Alexandersfeld</option>
+                <option value="Bloherfelde">Bloherfelde</option>
+                <option value="Bürgerfelde">Bürgerfelde</option>
+                <option value="Donnerschwee">Donnerschwee</option>
+                <option value="Etzhorn">Etzhorn</option>
+                <option value="Eversten">Eversten</option>
+                <option value="Innenstadt">Innenstadt</option>
+                <option value="Kreyenbrück">Kreyenbrück</option>
+                <option value="Krusenbusch">Krusenbusch</option>
+                <option value="Nadorst">Nadorst</option>
+                <option value="Neuenwege">Neuenwege</option>
+                <option value="Ofenerdiek">Ofenerdiek</option>
+                <option value="Ohmstede">Ohmstede</option>
+                <option value="Osternburg">Osternburg</option>
+                <option value="Tweelbäke">Tweelbäke</option>
+                <option value="Wechloy">Wechloy</option>
             </select>
             <button class="default-button button-size" type="submit">Suchen</button>
         </form>
@@ -60,8 +59,7 @@
                 </div>
             </div>
             <?php endforeach;
-            endif;
-            var_dump($schools)?>
+            endif; ?>
         </div>
     </div>
 </section>
