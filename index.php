@@ -17,12 +17,7 @@ $mailInput = strip_tags($_POST['emailReg']);
 $passwordInput = strip_tags($_POST['passwortReg']);
 $passwordMatch = strip_tags($_POST['passwort2Reg']);
 registerUser($forename, $surname, $mailInput, $passwordInput, $passwordMatch);
-
-//EditSchool falls erwünscht
-$editButtonClicked = true;
-if (isset($_POST['edit'])) {
-    editSchool();
-} ?>
+?>
 
 <!DOCTYPE html>
 <html lang="de">
@@ -66,17 +61,17 @@ include 'pages/imageslider.php';
         </div>
     <? } ?>
     <?php
-    if (!($editButtonClicked)) { ?>
+    if (!(isset($_POST['edit']) && (School::getUserID() == User::getUserID()))) { ?>
         <div class="large-grid-item card">
             <?php include 'pages/newSchool.php'; ?>
         </div>
     <? } else { ?>
     <div class="large-grid-item card">
-        <?php include 'pages/editSchool.php'; ?>
-        <? } ?>
+        <?php include 'pages/editSchool.php';  ?>
     </div>
+    <? } ?>
     <div class="stretch-grid-item" id="indexfooter">
         <?php include 'pages/footer.php'; ?>
     </div>
 </body>
-</html> 
+</html>

@@ -16,14 +16,3 @@ $school ['address'] = array(
     "district" => $_POST['district'],
 );
 School::update($school->id);
-
-function editSchool()
-{
-    global $editButtonClicked;
-    if (!(School::getUserID() == User::getUserID())) {
-        print_r("Sie haben nicht die benötigten Rechte");
-    } else {
-        return $editButtonClicked == true;
-    }
-
-}
