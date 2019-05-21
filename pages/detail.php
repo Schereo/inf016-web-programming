@@ -106,7 +106,7 @@
         <div class="detail-feedback">
             <?php include 'feedback.php'; ?>
         </div>
-            <div class="text-rigt"><a href="/pages/edit.php">
+            <div class="text-rigt"><a href="">
                     <button type="submit" class="default-button">Schule bearbeiten</button>
                 </a></div>  <?php } ?>
     </section>
