@@ -7,17 +7,21 @@
 
 .search-container {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
-    align-content: space-evenly;
     justify-content: space-evenly;
+}
+.search-container input, .search-container select{
+    margin: 0px 20px;
+    padding: 10px;
 }
 
 .school-cards-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 2em;
     margin-top: 2em;
+    padding-bottom: 1em;
     max-height: 30em;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -27,10 +31,11 @@
     display: grid;
     grid-template-rows: auto auto auto;
     background-color: var(--background);
-    margin: 1em;
     border-radius: 5px;
     color: var(--main);
-    width: 250px;
+    width: 300px;
+    justify-self: center;
+    box-shadow: 2px 7px 10px 1px rgba(0,0,0,0.42);
 }
 
 .small-card > .small-card-header {
@@ -41,11 +46,13 @@
 .small-card-header > h2 {
     align-self: center;
     margin: 0 0 0 0;
+    padding: 0.5em;
 }
 
 .small-card > .small-card-body {
     grid-row: 2;
     min-height: 5em;
+    align-self: start;
 }
 
 .card-list {
@@ -55,18 +62,36 @@
 }
 
 .card-list li:before {
-    content: '\2014';
-    margin-left: -25px;
-    margin-right: 8px;
+
 }
 
 .small-card > .small-card-footer {
     grid-row: 3;
     display: grid;
-    grid-template-columns: auto auto;
-    padding: 1em;
-    font-size: 20px;
+    grid-template-columns: 1fr 1fr;
+    padding: 0.5em;
+    font-size: 18px;
+    align-self: end;
 }
+
+.small-card > .small-card-footer a{
+    margin: 5px;
+    padding: 5px;
+    background: var(--main);
+    border-radius: 5px;
+    color: var(--background);
+    text-decoration: none;
+    text-align: center;
+    width: auto;
+    height: 28px;
+}
+
+.small-card > .small-card-footer a:hover{
+
+    background-color: var(--accent);
+
+}
+
 
 @media(max-width: 1200px) {
     .school-cards-container {
