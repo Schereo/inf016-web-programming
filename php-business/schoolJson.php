@@ -1,8 +1,5 @@
 <?php
-
-class School implements schoolDao
-{
-
+class School implements schoolDao {
     static function getAll()
     {
         if(is_array(School::readJson()['schools'])) {
