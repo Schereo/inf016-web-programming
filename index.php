@@ -72,9 +72,9 @@ include 'pages/imageslider.php';
             </div>
         <? }
     } ?>
+</div>
     <div class="stretch-grid-item" id="indexfooter">
         <?php include 'pages/footer.php'; ?>
     </div>
-</div>
 </body>
 </html>
