@@ -60,21 +60,15 @@ include 'pages/imageslider.php';
         <div class="right-grid-item card">
             <?php include 'pages/register.php'; ?>
         </div>
-    <? }
-    if (isset($schoolio)) {
-
-
-
-    if (!(isset($_POST['edit']) && ($schoolio->userID == User::getUserByMail()->userID))) { ?>
-            <div class="large-grid-item card">
-                <?php include 'pages/newSchool.php'; ?>
-            </div>
-        <? } else { ?>
-            <div class="large-grid-item card">
-                <?php include 'pages/editSchool.php'; ?>
-            </div>
-        <? }
-    } ?>
+    <?php } else if (!(isset($_POST['edit']))) { ?>
+    <div class="large-grid-item card">
+        <?php include 'pages/newSchool.php'; ?>
+    </div>
+    <?} else if(isset($schoolio) && ($schoolio->userID == $_SESSION['userID'])) {?>
+    <div class="large-grid-item card">
+        <?php include 'pages/editSchool.php'; ?>
+    </div>
+    <? } ?>
 </div>
     <div class="stretch-grid-item" id="indexfooter">
         <?php include 'pages/footer.php'; ?>
