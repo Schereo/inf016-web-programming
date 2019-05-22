@@ -62,7 +62,10 @@ include 'pages/imageslider.php';
         </div>
     <? }
     if (isset($schoolio)) {
-        if (!(isset($_POST['edit']) && ($schoolio->userID == User::getUserByMail()->userID))) { ?>
+
+
+
+    if (!(isset($_POST['edit']) && ($schoolio->userID == User::getUserByMail()->userID))) { ?>
             <div class="large-grid-item card">
                 <?php include 'pages/newSchool.php'; ?>
             </div>

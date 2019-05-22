@@ -60,7 +60,7 @@ class User implements userDao
     {
         foreach (User::readJson()->users as $user) {
             if ($user->mail == $mail) {
-                return true;
+                return $user->mail;
                 break;
             }
         }

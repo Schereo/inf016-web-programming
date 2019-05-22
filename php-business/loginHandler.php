@@ -7,9 +7,9 @@ function userLogin($emailLogin, $passwordLogin)
     if (isset($_POST['anmelden'])) {
         $found = 0;
         foreach (User::getAll() as $users) {
-            if (User::getByMail($emailLogin)) {
+            if ($emailLogin == $users->mail) {
                 $found = -1;
-                if (User::getPassword($emailLogin) == $passwordLogin) {
+                if ($users->password == $passwordLogin) {
                     $_SESSION['userSessions'] = true;
                     $_SESSION['userName'] = $users->mail;
                     $_SESSION['firstName'] = $users->vorname;
@@ -17,7 +17,6 @@ function userLogin($emailLogin, $passwordLogin)
                     $found = 2;
                 }
             }
-            break;
         }
         if ($found == 0) {
             print_r("Benutzer nicht gefunden");
