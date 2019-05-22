@@ -82,8 +82,8 @@
     color: var(--background);
     text-decoration: none;
     text-align: center;
-    width: auto;
-    height: 28px;
+    width: 80%;
+    height: 80%;
     border: none;
 }
 

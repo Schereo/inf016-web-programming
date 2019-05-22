@@ -14,6 +14,7 @@ function userLogin($emailLogin, $passwordLogin)
                     $_SESSION['userName'] = $users->mail;
                     $_SESSION['firstName'] = $users->vorname;
                     $_SESSION['lastName'] = $users->nachname;
+                    $_SESSION['userID'] = $users->userID;
                     $found = 2;
                 }
             }
