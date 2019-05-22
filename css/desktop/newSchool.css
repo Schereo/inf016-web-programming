@@ -66,13 +66,14 @@
 
 .uploadInterface .uploadedPictures {
     grid-row: 1;
-    grid-column: 2;
-    background: var(--background);
+    grid-column: 1;
+    /* background: var(--background); */
     margin: 2em;
 }
 .uploadedPictures > img{
     width: 250px;
     height: 150px;
+    padding-left: 1em;
 }
 .pictureCard {
     margin: 15px;
