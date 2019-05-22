@@ -1,6 +1,8 @@
 <?php
 require_once 'schoolDao.php';
 require_once 'schoolJson.php';
+require_once 'userDao.php';
+require_once 'userJson.php';
 $school = array(
     "id" => count(School::readJson()->schools)+1,
     "userID" => User::getUserByMail()->userID,
