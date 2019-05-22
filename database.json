@@ -1,6 +1,25 @@
 {
     "schools": [
         {
+            "author": null,
+            "id": 1,
+            "userID": null,
+            "name": "",
+            "schoolType": "Grundschule",
+            "descprition": " ",
+            "principal": "",
+            "phoneNumber": null,
+            "mail": "",
+            "homepageURL": "",
+            "0": {
+                "students": null,
+                "0": {
+                    "street": "",
+                    "number": "",
+                    "zipCode": null,
+                    "district": "Alexandersfeld"
+                }
+            }
         }
     ]
 }

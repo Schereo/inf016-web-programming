@@ -76,8 +76,8 @@ class School implements schoolDao
 
     static function readJson()
     {
-        if (file_exists("../database.json") && is_readable("../database.json")) {
-            $schools = file_get_contents("../database.json");
+        if (file_exists("database.json") && is_readable("database.json")) {
+            $schools = file_get_contents("database.json");
             $schoolsArray = json_decode($schools);
             return $schoolsArray;
         }
