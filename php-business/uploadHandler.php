@@ -12,6 +12,7 @@ if (isset($_FILES['upload'])) {
     $allowed = array('jpg', 'jpeg', 'png');
 
     if (in_array($uploadActuelExt, $allowed)) {
+
         if ($uploadError === 0) {
             if ($uploadSize < 1000000) {
                 $uploadNameNew = uniqid('', true) . "." . $uploadActuelExt;
