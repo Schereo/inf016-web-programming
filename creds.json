@@ -4,43 +4,57 @@
       "vorname": "Jens",
       "nachname": "Schulte",
       "mail": "jens@aol.de",
-      "password": "jens"
+      "password": "jens",
+      "userID": 1
     },
     {
       "vorname": "Administrator",
       "nachname": "der Allerechte",
       "mail": "admin@aol.de",
-      "password": "admin"
+      "password": "admin",
+      "userID": 2
     },
     {
       "vorname": "jiens",
       "nachname": "jiens",
       "mail": "jiens@aol.de",
-      "password": "jiens1"
+      "password": "jiens1",
+      "userID": 3
     },
     {
       "vorname": "nelly",
       "nachname": "klassen",
       "mail": "nelly@gmail.com",
-      "password": "jens"
+      "password": "jens",
+      "userID": 4
     },
     {
       "vorname": "jens",
       "nachname": "jens",
       "mail": "jensi@aol.de",
-      "password": "jens"
+      "password": "jens",
+      "userID": 5
     },
     {
       "vorname": "franz",
       "nachname": "hans",
       "mail": "franz@aol.de",
-      "password": "franz"
+      "password": "franz",
+      "userID": 6
     },
     {
       "vorname": "hanf",
       "nachname": "hanf",
       "mail": "hanf@need.de",
-      "password": "12345"
+      "password": "12345",
+      "userID": 7
+    },
+    {
+      "vorname": "Cedric",
+      "nachname": "Schomaker",
+      "mail": "cedric.schomaker@uni-oldenburg.de",
+      "password": "test",
+      "userID": 8
     }
   ]
 }

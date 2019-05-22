@@ -1,4 +1,5 @@
 <?php
+
 class User implements userDao
 {
     static function getAll()
@@ -6,9 +7,19 @@ class User implements userDao
         return self::readJson()->users;
     }
 
+    static function getUserByMail()
+    {
+        foreach (self::readJson()->users as $user) {
+            if ($_SESSION['userName'] == $user->mail) {
+                return $user;
+            }
+        }
+        return null;
+    }
+
     static function createUser($vn, $nn, $mail, $pw)
     {
-        return array('vorname' => $vn, 'nachname' => $nn, 'mail' => $mail, 'password' => $pw);
+        return array('vorname' => $vn, 'nachname' => $nn, 'mail' => $mail, 'password' => $pw, 'userID' => count(self::readJson()->users) + 1);
     }
 
     static function update($id)
@@ -40,7 +51,7 @@ class User implements userDao
     {
         if (file_exists("creds.json") && is_writable("creds.json")) {
             $bufferArray = self::readJson();
-            $bufferArray->users[]= $array;
+            $bufferArray->users[] = $array;
             file_put_contents("creds.json", json_encode($bufferArray));
         }
     }
@@ -48,20 +59,22 @@ class User implements userDao
     static function getByMail($mail)
     {
         foreach (User::readJson()->users as $user) {
-            if ($user->mail == $mail){
-                return true;
+            if ($user->mail == $mail) {
+                return $user->mail;
                 break;
             }
         }
+        return null;
     }
 
     static function getPassword($mail)
     {
         foreach (User::readJson()->users as $user) {
-            if ($user->mail == $mail){
+            if ($user->mail == $mail) {
                 return $user->password;
                 break;
             }
         }
+        return null;
     }
 }

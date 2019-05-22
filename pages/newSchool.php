@@ -13,36 +13,23 @@
             <div class="info-input">
                 Name:<input class="input" type="text" name="schoolname" value="">
                 <br>
-                Schulform:
-                <select class="input" name="schooltype">
-                    <option value="Grundschule">Grundschule</option>
-                    <option value="Gymnasium">Gymnasium</option>
-                    <option value="Oberschule">Oberschule</option>
-                    <option value="Förderschule">Förderschule</option>
-                    <option value="Integrierte Gesamtschule">Integrierte Gesamtschule</option>
-                    <option value="Berufsbildende Schule">Berufsbildende Schule</option>
-                </select>
+                <div class="text-left"> Schulform:</div>
+                <div class="text-right">
+                    <select class="input schooltype" name="schooltype">
+                        <?php foreach ($schoolforms as $schoolform): ?>
+                            <option value="<?=$schoolform?>"><?=$schoolform?></option>
+                        <?php endforeach;
+                        unset($schoolform);?>
+                    </select>
+                </div>
                 <br>
-                Stadtteil:
-                <select class="input district" name="district">
-                    <option value="Alexandersfeld">Alexandersfeld</option>
-                    <option value="Bloherfelde">Bloherfelde</option>
-                    <option value="Bürgerfelde">Bürgerfelde</option>
-                    <option value="Donnerschwee">Donnerschwee</option>
-                    <option value="Etzhorn">Etzhorn</option>
-                    <option value="Eversten">Eversten</option>
-                    <option value="Gemeinde Bad Zwischenahn">Gemeinde Bad Zwischenahn</option>
-                    <option value="Innenstadt">Innenstadt</option>
-                    <option value="Kreyenbrück">Kreyenbrück</option>
-                    <option value="Krusenbusch">Krusenbusch</option>
-                    <option value="Nadorst">Nadorst</option>
-                    <option value="Neuenwege">Neuenwege</option>
-                    <option value="Ofenerdiek">Ofenerdiek</option>
-                    <option value="Ohmstede">Ohmstede</option>
-                    <option value="Osternburg">Osternburg</option>
-                    <option value="Tweelbäke">Tweelbäke</option>
-                    <option value="Wechloy">Wechloy</option>
-                </select>
+                <div class="text-left"> Stadtteil:</div>
+                <div class="text-right"><select class="input district" name="district">
+                        <?php foreach ($districts as $district): ?>
+                            <option value="<?=$district?>"><?=$district?></option>
+                        <?php endforeach;
+                        unset($district);?>
+                    </select></div>
                 <br>
                 Schulleitung:
                 <input class="input" type="text" name="principal" value="">

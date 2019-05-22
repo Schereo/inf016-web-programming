@@ -7,8 +7,12 @@
     ?>
 
     <h2 class="card-header"> <?= $schoolio->name ?>
-        <a href="../index.php#anlegen" class="editIcon"><img src="assets/edit.png"> </a></h2>
-
+        <form method="post">
+            <button name="edit">
+            <img src="/assets/edit.png" alt="Bearbeiten">
+            </button>
+        </form>
+    </h2>
     <form class="detailcontainer card-body" method="GET" action="<?php echo $_SERVER['PHP_SELF'] ?>">
         <img src="../assets/images/hgo1.jpg" alt="Picture of BBS Wechloy" class="responsive detail-picture">
         <div class="detail-contact">
@@ -69,8 +73,8 @@
             <?php include 'feedback.php'; ?>
         </div>
     </form>
-    <div class="text-rigt"><a href="">
-        </a></div> <?php } ?>
-    </section>
+    <div class="text-right">
+        <a href=""></a>
+    </div> <?php } ?>
 </article>
 <?php endif ?>

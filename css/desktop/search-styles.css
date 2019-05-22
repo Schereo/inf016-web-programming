@@ -74,7 +74,7 @@
     align-self: end;
 }
 
-.small-card > .small-card-footer a{
+.small-card  .small-card-footer a, .small-card  .small-card-footer button{
     margin: 5px;
     padding: 5px;
     background: var(--main);
@@ -82,11 +82,12 @@
     color: var(--background);
     text-decoration: none;
     text-align: center;
-    width: auto;
-    height: 28px;
+    width: 80%;
+    height: 80%;
+    border: none;
 }
 
-.small-card > .small-card-footer a:hover{
+.small-card > .small-card-footer a:hover, .small-card  .small-card-footer button:hover{
 
     background-color: var(--accent);
 
