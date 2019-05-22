@@ -6,15 +6,14 @@
 }
 
 .newSchool-container .editPictures{
-    grid-row: 1;
+    display: grid;
+    grid-template-rows: auto auto;
 }
 .infoHeader-newSchool {
     display: flex;
     justify-content: space-between;
     padding-bottom: 0.5em;
 }
-
-
 .textarea {
     grid-row: 2;
     resize: none;
@@ -23,19 +22,12 @@
 
 .file-upload {
     grid-row: 3;
-    background: grey;
-    width: 500px;
-    height: 200px;
+    height: 20px;
     border: 4px dashed lightgrey;
 }
-
 .file-upload-field {
-    grid-row: 3;
-    background: rgba(0, 0, 0, 0.9);
-    width: 500px;
-    height: 200px;
-    border: 4px dashed #fff;
-    margin: 0;
+    grid-row: 1;
+    padding-left: 15px;
 }
 
 .uploadInterface p {
@@ -73,10 +65,17 @@
 }
 
 .uploadInterface .uploadedPictures {
-    grid-row: 1/span 2;
+    grid-row: 1;
     grid-column: 2;
     background: var(--background);
     margin: 2em;
+}
+.uploadedPictures > img{
+    width: 250px;
+    height: 150px;
+}
+.pictureCard {
+    margin: 15px;
 }
 
 .uploadInterface {
@@ -86,21 +85,33 @@
     grid-template-rows: auto auto;
 }
 .info-input{
-    grid-row: 1;
+    grid-row: 2;
     padding:15px;
 }
 
 .info-input input{
-    width: 100%;
+    width: -webkit-fill-available;
 }
 
-.info-input select {
-    width: 100%;
+.info-input select{
+    width: -webkit-fill-available;
+    margin: 0.3em;
 }
 
-.info-input textarea {
-    width: 100%;
+.info-input textarea{
+    width: -webkit-fill-available;
+    border-radius: 4px;
+    border: none;
+    padding: 10px;
+    margin: 0.3em;
 }
+
+.info-input > button {
+    margin: 0.3em;
+}
+
+
+
 
 @media (max-width: 1264px){
     .infoHeader-newSchool{

@@ -6,10 +6,11 @@
     if (isset($schoolio)):
     ?>
 
-    <h2 class="card-header"> <?= $schoolio->name ?>
-        <form method="post">
-            <button name="edit">
-            <img src="/assets/edit.png" alt="Bearbeiten">
+    <h2 class="card-header">
+        <?= $schoolio->name ?>
+        <form method="post" class="editIcon">
+            <button name="edit" class="editIcon">
+            <img src="/assets/edit.png" alt="Bearbeiten" class="editIcon">
             </button>
         </form>
     </h2>
@@ -66,6 +67,7 @@
                     <?= $schoolio->description ?>
                 </div>
             </div>
+            </section>
         </div>
         <?php if (isset($_SESSION['userSessions'])) { ?>
         <div class="detail-feedback">

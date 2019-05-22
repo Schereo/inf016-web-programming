@@ -23,4 +23,5 @@ interface SchoolDao
 
     //Delete school
     static function delete($id);
+
 }
