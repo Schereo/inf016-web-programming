@@ -9,7 +9,7 @@
                 <input class="input" type="submit" value="Upload Image" name="submit">
             </form>
         </div>
-        <form class="newSchool-container" action="/php-business/newSchoolHandler.php" method="post">
+        <form class="newSchool-container"  method="post">
             <div class="info-input">
                 Name:<input class="input" type="text" name="schoolname" value="">
                 <br>
@@ -53,7 +53,7 @@
                 <br>
                 <textarea class="textarea" name="description" placeholder="Infos"> </textarea>
                 <br>
-                <button type="submit" class="default-button"> Upload</button>
+                <button type="submit" class="default-button" name="newSchoolUpload"> Upload</button>
         </form>
     </div>
 </section>

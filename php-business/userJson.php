@@ -7,16 +7,6 @@ class User implements userDao
         return self::readJson()->users;
     }
 
-    static function getUserByMail()
-    {
-        foreach (self::readJson()->users as $user) {
-            if ($_SESSION['userName'] == $user->mail) {
-                return $user;
-            }
-        }
-        return null;
-    }
-
     static function createUser($vn, $nn, $mail, $pw)
     {
         return array('vorname' => $vn, 'nachname' => $nn, 'mail' => $mail, 'password' => $pw, 'userID' => count(self::readJson()->users) + 1);

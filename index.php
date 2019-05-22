@@ -5,6 +5,7 @@ require_once 'php-business/registerHandler.php';
 require_once 'php-business/schoolHandler.php';
 require_once 'php-business/editSchoolHandler.php';
 require_once 'php-business/schoolView.php';
+require_once 'php-business/newSchoolHandler.php';
 //TODO: Hier fehlerhafte Eingaben abfangen um unnötige Server Kommunikation zu verhindern
 //Login falls durchgeführt
 $emailLogin = strip_tags($_POST['emailLogin']);
@@ -23,7 +24,7 @@ registerUser($forename, $surname, $mailInput, $passwordInput, $passwordMatch);
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">ew
+    <meta charset="UTF-8">
     <title>Oscolia</title>
     <meta name="description" content="Bildungsstätten der Stadt Oldenburg">
     <meta name="keywords" content="HTML,CSS,PHP,XML,JavaScript">

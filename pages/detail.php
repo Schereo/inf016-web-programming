@@ -35,7 +35,8 @@
                 </div>
                 <div class="text-right">
                     <?= $schoolio->address->street ?>
-                    <br> <?= $schoolio->address->zipCode ?> <?= $schoolio->address->city ?>                    </div>
+                    <br> <?= $schoolio->address->zipCode ?> <?= $schoolio->address->city ?>
+                </div>
             </div>
             <div class="info-container">
                 <div class="text-left">
