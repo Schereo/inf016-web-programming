@@ -1,12 +1,14 @@
 <?php
-interface SchoolDao {
+
+interface SchoolDao
+{
 
     //Get all schools
     static function getAll();
 
     //Get school by id
     static function getById($id);
- 
+
     //Get school by name
     static function getByName($name);
 

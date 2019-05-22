@@ -17,7 +17,7 @@ if (isset($_GET["schoolType"])) {
     $schools = School::getByType($schoolType);
 }
 
-if (isset($_GET["ID"])){
+if (isset($_GET["ID"])) {
     $schoolID = htmlentities($_GET["ID"]);
     $schoolio = School::getById($schoolID);
 }

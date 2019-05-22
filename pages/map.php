@@ -20,27 +20,12 @@
             <div id="filter-search-headline">Stadtteil</div>
             <form>
                 <select class="input map-filter-schools">
-                    <option value="st1">Alexandersfeld</option>
-                    <option value="st2">Bloherfelde</option>
-                    <option value="st3">Bürgerfelde</option>
-                    <option value="st4">Donnerschwee</option>
-                    <option value="st5">Etzhorn</option>
-                    <option value="st6">Eversten</option>
-                    <option value="st7">Gemeinde Bad Zwischenahn</option>
-                    <option value="st8">Innenstadt</option>
-                    <option value="st9">Kreyenbrück</option>
-                    <option value="st10">Krusenbusch</option>
-                    <option value="st11">Nadorst</option>
-                    <option value="st12">Neuenwege</option>
-                    <option value="st13">Ofenerdiek</option>
-                    <option value="st14">Ohmstede</option>
-                    <option value="st15">Osternburg</option>
-                    <option value="st16">Tweelbäke</option>
-                    <option value="st17">Wechloy</option>
+                    <?php foreach ($districts as $district): ?>
+                        <option value="<?=$district?>"><?=$district?></option>
+                    <?php endforeach;
+                    unset($district);?>
                 </select>
             </form>
-
-
             <div class="mapfilterfooter">
                 <button class="default-button button-size" type="submit" name="filtern">Filtern</button>
             </div>

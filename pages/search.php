@@ -2,40 +2,25 @@
     <?php
     require_once 'php-business/schoolDao.php';
     require_once 'php-business/schoolJson.php';
-    require_once 'php-business/schoolView.php' ?>
+    require_once 'php-business/schoolHandler.php';
+    require_once 'php-business/schoolView.php'; ?>
     <h2 id="suche" class="card-header">Schule Suchen</h2>
     <div class="card-body">
         <form class="search-container" method="GET" action="<?php echo $_SERVER['PHP_SELF']; ?>">
             <input class="input" type="text" name="schoolName" placeholder="Schulname">
             <select class="input" name="schoolType">
                 <option value="sto" disabled selected>Schulform</option>
-                <option value="Grundschule">Grundschule</option>
-                <option value="Gymnasium">Gymnasium</option>
-                <option value="Oberschule">Oberschule</option>
-                <option value="Förderschule">Förderschule</option>
-                <option value="Integrierte Gesamtschule">Integrierte Gesamtschule</option>
-                <option value="Berufsbildende Schule">Berufsbildende Schule</option>
-                <option value="Waldorfschule">Waldorfschule</option>
+                <?php foreach ($schoolforms as $schoolform): ?>
+                    <option value="<?=$schoolform?>"><?=$schoolform?></option>
+                <?php endforeach;
+                unset($schoolform);?>
             </select>
             <select class="input" name="district">
                 <option value="sto" disabled selected>Stadtteil</option>
-                <option value="Alexandersfeld">Alexandersfeld</option>
-                <option value="Bloherfelde">Bloherfelde</option>
-                <option value="Bürgerfelde">Bürgerfelde</option>
-                <option value="Donnerschwee">Donnerschwee</option>
-                <option value="Etzhorn">Etzhorn</option>
-                <option value="Eversten">Eversten</option>
-                <option value="Innenstadt">Innenstadt</option>
-                <option value="Kreyenbrück">Kreyenbrück</option>
-                <option value="Krusenbusch">Krusenbusch</option>
-                <option value="Nadorst">Nadorst</option>
-                <option value="Neuenwege">Neuenwege</option>
-                <option value="Ofenerdiek">Ofenerdiek</option>
-                <option value="Ohmstede">Ohmstede</option>
-                <option value="Osternburg">Osternburg</option>
-                <option value="Tweelbäke">Tweelbäke</option>
-                <option value="Wechloy">Wechloy</option>
-                <option value="Ziegelhofviertel">Ziegelhofviertel</option>
+                <?php foreach ($districts as $district): ?>
+                    <option value="<?=$district?>"><?=$district?></option>
+                <?php endforeach;
+                unset($district);?>
             </select>
             <button class="default-button button-size" type="submit">Suchen</button>
         </form>
@@ -63,9 +48,7 @@
                     </ul>
                 </div>
                 <div class="small-card-footer">
-                    <form method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                        <button  value="<?=$school->id?>" name="ID">Details</button>
-                    </form>
+                    <button class="default-button" value="<?=$school->ID?>" name="ID">Details</button>
                     <a href="<?=$school->homepageUrl?>" target="_blank">Homepage</a>
                 </div>
             </div>
