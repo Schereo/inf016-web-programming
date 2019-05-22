@@ -1,21 +1,15 @@
 <?php
-class School implements schoolDao {
+
+class School implements schoolDao
+{
     static function getAll()
     {
         if (is_array(School::readJson()->schools)) {
             return School::readJson()->schools;
         }
+        return null;
     }
-    static function getUserID ($z)
-    {
-        if (is_array(School::readJson()->schools)) {
-            foreach (School::readJson()->schools as $school) {
-                if ($school->id == $z) {
-                    return School::readJson()->$school->userID;
-                }
-            }
-        }
-    }
+
     static function getById($id)
     {
         if (is_array(School::readJson()->schools)) {
@@ -25,7 +19,9 @@ class School implements schoolDao {
                 }
             }
         }
+        return null;
     }
+
     static function getByName($name)
     {
         if ($name == "") {
@@ -33,46 +29,53 @@ class School implements schoolDao {
         } else {
             $schools = [];
             foreach (School::readJson()->schools as $school) {
-                if (stripos ($school->name, $name) !== false){
+                if (stripos($school->name, $name) !== false) {
                     array_push($schools, $school);
                 }
             }
             return $schools;
         }
     }
+
     static function getByDistrict($district)
     {
         $schools = [];
         foreach (School::readJson()->schools as $school) {
-            if ($school->address->district == $district){
+            if ($school->address->district == $district) {
                 array_push($schools, $school);
             }
         }
         return $schools;
     }
+
     static function getByType($schoolTyp)
     {
         $schools = [];
         foreach (School::readJson()->schools as $school) {
-            if ($school->schoolTyp == $schoolTyp){
+            if ($school->schoolTyp == $schoolTyp) {
                 array_push($schools, $school);
             }
         }
         return $schools;
     }
+
     static function update($id)
     {
         // TODO: Implement update() method.
     }
+
     static function delete($id)
     {
         // TODO: Implement delete() method.
     }
+
     static function create($school)
     {
         // TODO: Implement create() method.
     }
-    static function readJson() {
+
+    static function readJson()
+    {
         if (file_exists("database.json") && is_readable("database.json")) {
             $schools = file_get_contents("database.json");
             $schoolsArray = json_decode($schools);
@@ -80,6 +83,7 @@ class School implements schoolDao {
         }
         return null;
     }
+
     static function writeJson($array)
     {
         $newData = self::readJson();

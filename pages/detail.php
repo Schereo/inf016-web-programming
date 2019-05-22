@@ -8,7 +8,9 @@
 
     <h2 class="card-header"> <?= $schoolio->name ?>
         <form method="post">
-            <button type="submit" class="default-button" name="edit" id="edit">Schule anpassen</button>
+            <button name="edit">
+            <img src="/assets/edit.png" alt="Bearbeiten">
+            </button>
         </form>
     </h2>
     <form class="detailcontainer card-body" method="GET" action="<?php echo $_SERVER['PHP_SELF'] ?>">

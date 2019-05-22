@@ -1,6 +1,7 @@
 <?php
 
-interface userDao {
+interface userDao
+{
     //Register new User
     static function register($user);
 

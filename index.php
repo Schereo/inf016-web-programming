@@ -4,6 +4,7 @@ require_once 'php-business/loginHandler.php';
 require_once 'php-business/registerHandler.php';
 require_once 'php-business/schoolHandler.php';
 require_once 'php-business/editSchoolHandler.php';
+require_once 'php-business/schoolView.php';
 //TODO: Hier fehlerhafte Eingaben abfangen um unnötige Server Kommunikation zu verhindern
 //Login falls durchgeführt
 $emailLogin = strip_tags($_POST['emailLogin']);
@@ -59,17 +60,18 @@ include 'pages/imageslider.php';
         <div class="right-grid-item card">
             <?php include 'pages/register.php'; ?>
         </div>
-    <? } ?>
-    <?php
-    if (!(isset($_POST['edit']) && (School::getUserID() == User::getUserID()))) { ?>
-        <div class="large-grid-item card">
-            <?php include 'pages/newSchool.php'; ?>
-        </div>
-    <? } else { ?>
-    <div class="large-grid-item card">
-        <?php include 'pages/editSchool.php';  ?>
-    </div>
-    <? } ?>
+    <? }
+    if (isset($schoolio)) {
+        if (!(isset($_POST['edit']) && ($schoolio->userID == User::getUserByMail()->userID))) { ?>
+            <div class="large-grid-item card">
+                <?php include 'pages/newSchool.php'; ?>
+            </div>
+        <? } else { ?>
+            <div class="large-grid-item card">
+                <?php include 'pages/editSchool.php'; ?>
+            </div>
+        <? }
+    } ?>
     <div class="stretch-grid-item" id="indexfooter">
         <?php include 'pages/footer.php'; ?>
     </div>
