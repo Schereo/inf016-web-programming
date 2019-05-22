@@ -18,10 +18,18 @@
     border-radius: 4px 4px 0px 0px;
 }
 
-.card .card-header .editIcon> img {
-    width: 30px;
+.card .card-header .editIcon{
     float: right;
+    width:30px;
 }
+
+.card .card-header .editIcon> img {
+
+}.card .card-header .editIcon> button {
+    background: none;
+    border: none;
+ }
+
 
 .card .card-footer {
     display: flex;
