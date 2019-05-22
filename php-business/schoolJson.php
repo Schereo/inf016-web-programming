@@ -86,8 +86,10 @@ class School implements schoolDao
 
     static function writeJson($array)
     {
-        $newData = self::readJson();
-        $newData->schools[] = $array;
-        file_put_contents('../database.json', json_encode($newData, JSON_PRETTY_PRINT));
+        if (file_exists("database.json") && is_writable("database.json")) {
+            $newData = self::readJson();
+            $newData->schools[] = $array;
+            file_put_contents("database.json", json_encode($newData, JSON_PRETTY_PRINT));
+        }
     }
 }

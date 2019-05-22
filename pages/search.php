@@ -49,9 +49,11 @@
                 </div>
                 <div class="small-card-footer">
                     <form method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                        <button  value="<?=$school->id?>" name="ID">Details</button>
+                        <button class="default-button button-size" value="<?=$school->id?>" name="ID">Details</button>
                     </form>
-                    <a href="<?=$school->homepageUrl?>" target="_blank">Homepage</a>
+                    <form action="<?=$school->homepageUrl?>">
+                        <button class="default-button button-size">Homepage</button>
+                    </form>
                 </div>
             </div>
             <?php endforeach;

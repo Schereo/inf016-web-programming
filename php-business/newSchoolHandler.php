@@ -6,7 +6,7 @@ require_once 'userJson.php';
 
 $school = array(
     "author" => $_SESSION['firstName'],
-    "id" => count(School::readJson()->schools)+1,
+    //"id" => count(School::readJson()->schools)+1,
     "userID" => $_SESSION['userID'],
     "name" => $_POST['schoolname'],
     "schoolType" => $_POST['schooltype'],

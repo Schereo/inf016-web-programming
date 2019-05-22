@@ -1,6 +1,6 @@
 <?php session_start()?>
 <link rel="stylesheet" href="../css/desktop/styles.css"/>
-<link rel="stylesheet" media="only screen and (max-width: 1060px)" href="/css/tablet/styles-tablet.css"/>
+<link rel="stylesheet" media="only screen and (max-width: 1060px)" href="../css/tablet/styles-tablet.css"/>
 <div class="main-container">
     <div class="stretch-grid-item" id="indexheader">
         <?php include 'header.php'; ?>

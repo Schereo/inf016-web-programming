@@ -60,6 +60,9 @@ include 'pages/imageslider.php';
         <div class="right-grid-item card">
             <?php include 'pages/register.php'; ?>
         </div>
+        <div class="large-grid-item card">
+            <?php include 'pages/newSchool.php'; ?>
+        </div>
     <?php } else if (isset($_POST['edit']) && isset($schoolio) && ($schoolio->userID == $_SESSION['userID'])) { ?>
         <div class="large-grid-item card">
             <?php include 'pages/editSchool.php'; ?>

@@ -8,8 +8,8 @@
     <meta name="author" content="Cedric, Nelly, Jens, Tim">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico"/>
-    <link rel="stylesheet" href="/css/desktop/styles.css"/>
-    <link rel="stylesheet" media="only screen and (max-width: 992px)" href="/css/tablet/styles-tablet.css"/>
+    <link rel="stylesheet" href="../css/desktop/styles.css"/>
+    <link rel="stylesheet" media="only screen and (max-width: 992px)" href="../css/tablet/styles-tablet.css"/>
 </head>
 <body>
 <div class="main-container">
