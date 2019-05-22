@@ -24,5 +24,13 @@ $school = array(
             "district" => $_POST['district'],
         )));
 School::writeJson($school);
+$uploads = "./uploads";
+if ($openFile = opendir($uploads)) {
+    while (($file = readdir($openFile)) !== False) {
+        if ($file != "." && $file != ".."){
+            unlink("./uploads/".$file);
+        }
+    }
+};
 header("Location:../index.php");
 
