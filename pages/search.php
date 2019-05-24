@@ -51,7 +51,7 @@
                     <form method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                         <button  value="<?=$school->id?>" name="ID">Details</button>
                     </form>
-                    <a href="<?=$school->homepageUrl?>" target="_blank">Homepage</a>
+                    <a href="<?=$school->homepageUrl?>" target="_blank" class="button">Homepage</a>
                 </div>
             </div>
             <?php endforeach;
