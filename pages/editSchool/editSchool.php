@@ -11,7 +11,7 @@ if (isset($schoolio)):
                     <img src="../assets/images/<?=$schoolio->imagePath?>" alt="Bild zeigt <?=$schoolio->name?>" width="150px">
                 </div>
                 <div class="text-left"> Name:</div>
-                <div class="text-right"><input type="text" name="schoolname" value="<?= $schoolio->name ?>"></div>
+                <div class="text-right" ><input class="input" type="text" name="schoolname" value="<?= $schoolio->name ?>"></div>
                 <br>
                 <div class="text-left"> Schulform:</div>
                 <div class="text-right">

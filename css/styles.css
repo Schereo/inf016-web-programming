@@ -1,11 +1,13 @@
 @import "card-styles.css";
-@import "../../pages/search/search-styles.css";
-@import "specific-styles.css";
+@import "../pages/search/search-styles.css";
 @import "layout-styles.css";
-@import "../../imageslider.css";
-@import "../../pages/editSchool/newSchool.css";
-@import "../../pages/feedback/feedback-styles.css";
-@import "../../pages/feedback/feedback.css";
+@import "../imageslider.css";
+@import "../pages/editSchool/newSchool.css";
+@import "../pages/feedback/feedback-styles.css";
+@import "../pages/feedback/feedback.css";
+@import "../pages/detail/detail.css";
+@import "../pages/map/map.css";
+@import "../pages/login/login.css";
 
 :root {
     --light-main: #B8B8B8;
@@ -18,23 +20,25 @@ body, html {
     font-family: 'Noto Sans', sans-serif;
     margin: 0;
     overflow-x: hidden;
-    scroll-behavior: smooth;    
-      
+    scroll-behavior: smooth;
+
 }
 
 /* Scrollbar styles */
 
 ::-webkit-scrollbar {
-  width: 0.5em;
-  background: transparent;
+    width: 0.5em;
+    background: transparent;
 }
+
 body::-webkit-scrollbar-thumb {
-  background: var(--light-main);
-  border-radius: 5px;
+    background: var(--light-main);
+    border-radius: 5px;
 }
+
 .school-cards-container::-webkit-scrollbar-thumb {
-  background: var(--main);
-  border-radius: 5px;
+    background: var(--main);
+    border-radius: 5px;
 }
 
 /*Input Styles */
@@ -69,7 +73,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-nav > .logo {margin-left: 4em;}
+nav > .logo {
+    margin-left: 4em;
+}
 
 input {
     margin: 0.3em;
@@ -94,7 +100,7 @@ input {
     left: 0;
     z-index: 1;
     background-color: var(--main);
-    box-shadow: 0px 7px 22px -5px rgba(0,0,0,1);
+    box-shadow: 0px 7px 22px -5px rgba(0, 0, 0, 1);
 }
 
 .menu {
@@ -120,15 +126,14 @@ input {
 }
 
 
-
 .nav-items {
     margin-left: auto;
 }
 
 
 .menu#searchSchool a {
-    background:gray;
-    padding:5em;
+    background: gray;
+    padding: 5em;
 }
 
 label {
@@ -169,5 +174,20 @@ label {
 
 }
 
+@media only screen and (max-width: 992px) {
+    .main-container {
+        display: inline;
+    }
+
+    .login-body {
+        margin-bottom: 0;
+        padding-bottom: 1em;
+    }
+
+    .register-body {
+        margin-bottom: 0;
+        padding-bottom: 1em;
+    }
+}
 
 

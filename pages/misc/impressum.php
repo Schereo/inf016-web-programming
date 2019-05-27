@@ -1,5 +1,5 @@
 <?php $depth = "../../" ;?>
-<link rel="stylesheet" href="../../css/desktop/styles.css"/>
+<link rel="stylesheet" href="../../css/styles.css"/>
 <link rel="stylesheet" media="only screen and (max-width: 992px)" href="../../css/tablet/styles-tablet.css"/>
 <div class="main-container">
     <div class="stretch-grid-item" id="indexheader">
