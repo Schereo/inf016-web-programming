@@ -1,0 +1,193 @@
+@import "card-styles.css";
+@import "../pages/search/search-styles.css";
+@import "layout-styles.css";
+@import "../imageslider.css";
+@import "../pages/editSchool/newSchool.css";
+@import "../pages/feedback/feedback-styles.css";
+@import "../pages/feedback/feedback.css";
+@import "../pages/detail/detail.css";
+@import "../pages/map/map.css";
+@import "../pages/login/login.css";
+
+:root {
+    --light-main: #B8B8B8;
+    --main: #828C91;
+    --accent: #6096BA;
+    --background: #FCFCFC;
+}
+
+body, html {
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+}
+
+/* Scrollbar styles */
+
+::-webkit-scrollbar {
+    width: 0.5em;
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--light-main);
+    border-radius: 5px;
+}
+
+.school-cards-container::-webkit-scrollbar-thumb {
+    background: var(--main);
+    border-radius: 5px;
+}
+
+/*Input Styles */
+
+.input {
+    border-radius: 4px;
+    border: none;
+    padding: 10px
+}
+
+/*Button Sytles */
+
+.default-button {
+    background: #6096BA;
+    border-radius: 4px;
+    border: none;
+    font-size: 15px;
+    padding: 8px 11px;
+    color: #FCFCFC;
+}
+
+.default-button:hover {
+    background: var(--main);
+}
+
+.button-size {
+    width: 100px;
+}
+
+.subtitle {
+    font-size: 25px;
+}
+
+
+nav > .logo {
+    margin-left: 4em;
+}
+
+input {
+    margin: 0.3em;
+    padding: 0.1em;
+}
+
+/* Footer Grid Styles */
+
+.footer-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Header Style */
+
+.nav-container {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    background-color: var(--main);
+    box-shadow: 0px 7px 22px -5px rgba(0, 0, 0, 1);
+}
+
+.menu {
+    float: right;
+    padding-right: 2em;
+    margin-right: auto;
+}
+
+.menu a {
+    clear: right;
+    text-decoration: none;
+    color: #FCFCFC;
+    margin: 0 10px;
+    line-height: 70px;
+    border-color: var(--background);
+    padding: 5px;
+    background: var(--light-main);
+    border-radius: 5px 5px 5px 5px;
+}
+
+.menu a:hover {
+    background: var(--accent);
+}
+
+
+.nav-items {
+    margin-left: auto;
+}
+
+
+.menu#searchSchool a {
+    background: gray;
+    padding: 5em;
+}
+
+label {
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+}
+
+#toggle {
+    display: none;
+}
+
+@media only screen and (max-width: 954px) {
+
+    label {
+        display: block;
+        float: right;
+        cursor: pointer;
+    }
+
+    .menu {
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+
+    .menu a {
+        display: block;
+        background-color: var(--main);
+    }
+
+    #toggle:checked + .menu {
+        grid-column: 1 /span 8;
+        display: block;
+    }
+
+}
+
+@media only screen and (max-width: 992px) {
+    .main-container {
+        display: inline;
+    }
+
+    .login-body {
+        margin-bottom: 0;
+        padding-bottom: 1em;
+    }
+
+    .register-body {
+        margin-bottom: 0;
+        padding-bottom: 1em;
+    }
+}
+
+
