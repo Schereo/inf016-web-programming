@@ -32,7 +32,7 @@
                     <h2><?=$school->name?></h2>
                 </div>
                 <div class="small-card-body">
-                    <img src="/assets/images/<?=$school->imagePath?>" alt="Bild zeigt <?=$school->name?>" class="responsive">
+                    <img src="assets/images/<?=$school->imagePath?>" alt="Bild zeigt <?=$school->name?>" class="responsive">
                     <ul class="card-list">
                         <li><b>Schulform</b> <?=$school->schoolTyp?></li>
                         <li><b>Stadtteil</b> <?=$school->address->district?></li>

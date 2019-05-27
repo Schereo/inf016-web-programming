@@ -79,24 +79,24 @@
 /* School images */
 
 .slide:first-child{
-    background: url('../../assets/images/cäci1.jpg') no-repeat center center/cover;
+    background: url('./assets/images/cäci1.jpg') no-repeat center center/cover;
 }
 
 .slide:nth-child(2){
-    background: url('../../assets/images/gag1.jpg') no-repeat center center/cover;
+    background: url('./assets/images/gag1.jpg') no-repeat center center/cover;
 }
 .slide:nth-child(3){
-    background: url('../../assets/images/geo1.jpg') no-repeat center center/cover;
+    background: url('./assets/images/geo1.jpg') no-repeat center center/cover;
 }
 .slide:nth-child(4){
-    background: url('../../assets/images/hgo1.jpg') no-repeat center center/cover;
+    background: url('./assets/images/hgo1.jpg') no-repeat center center/cover;
 }
 .slide:nth-child(5){
-    background: url('../../assets/images/hls1.jpg') no-repeat center center/cover;
+    background: url('./assets/images/hls1.jpg') no-repeat center center/cover;
 }
 .slide:nth-child(6){
-    background: url('../../assets/images/lfs1.jpg') no-repeat center center/cover;
+    background: url('./assets/images/lfs1.jpg') no-repeat center center/cover;
 }
 .slide:nth-child(7){
-    background: url('../../assets/images/waldorf1.jpg') no-repeat center center/cover;
+    background: url('./assets/images/waldorf1.jpg') no-repeat center center/cover;
 }
