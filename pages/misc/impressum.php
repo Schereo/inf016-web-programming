@@ -1,8 +1,9 @@
-<link rel="stylesheet" href="/css/desktop/styles.css"/>
-<link rel="stylesheet" media="only screen and (max-width: 992px)" href="/css/tablet/styles-tablet.css"/>
+<?php $depth = "../../" ;?>
+<link rel="stylesheet" href="../../css/desktop/styles.css"/>
+<link rel="stylesheet" media="only screen and (max-width: 992px)" href="../../css/tablet/styles-tablet.css"/>
 <div class="main-container">
     <div class="stretch-grid-item" id="indexheader">
-        <?php include 'header.php'; ?>
+        <?php include $depth.'header.php'; ?>
     </div>
     <div class="card large-grid-item">
         <h1 class="card-header">Impressum</h1>
@@ -103,7 +104,7 @@
 
         </div>
         <div class="stretch-grid-item" id="indexfooter">
-            <?php include 'footer.php'; ?>
+            <?php include '../../footer.php'; ?>
         </div>
     </div>
 </div>

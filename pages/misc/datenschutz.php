@@ -1,9 +1,10 @@
-<?php session_start()?>
-<link rel="stylesheet" href="../css/desktop/styles.css"/>
-<link rel="stylesheet" media="only screen and (max-width: 1060px)" href="../css/tablet/styles-tablet.css"/>
+<?php session_start();
+ $depth = "../../"?>
+<link rel="stylesheet" href="../../css/desktop/styles.css"/>
+<link rel="stylesheet" media="only screen and (max-width: 1060px)" href="../../css/tablet/styles-tablet.css"/>
 <div class="main-container">
     <div class="stretch-grid-item" id="indexheader">
-        <?php include 'header.php'; ?>
+        <?php include '../../header.php'; ?>
     </div>
     <div class="card large-grid-item">
         <h1 class="card-header">Datenschutz</h1>
@@ -175,7 +176,7 @@
                         href="https://twitter.com/account/settings">https://twitter.com/account/settings</a></p>
         </div>
         <div class="stretch-grid-item" id="indexfooter">
-            <?php include 'footer.php'; ?>
+            <?php include '../../footer.php'; ?>
         </div>
     </div>
 </div>

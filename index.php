@@ -1,5 +1,5 @@
 <?php session_start();
-
+$depth = "";
 require_once 'pages/login/loginHandler.php';
 require_once 'pages/register/registerHandler.php';
 require_once 'pages/selectItems.php';
@@ -71,7 +71,7 @@ include 'imageslider.php';
     <? } ?>
 </div>
     <div class="stretch-grid-item" id="indexfooter">
-        <?php include 'footer.php'; ?>
+        <?php include $depth.'footer.php'; ?>
     </div>
 </body>
 </html>

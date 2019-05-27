@@ -299,6 +299,46 @@
                     "district": "Alexandersfeld"
                 }
             }
+        },
+        {
+            "author": null,
+            "userID": null,
+            "name": "",
+            "schoolType": "Grundschule",
+            "descprition": " ",
+            "principal": "",
+            "phoneNumber": null,
+            "mail": "",
+            "homepageURL": "",
+            "0": {
+                "students": null,
+                "0": {
+                    "street": "",
+                    "number": "",
+                    "zipCode": null,
+                    "district": "Alexandersfeld"
+                }
+            }
+        },
+        {
+            "author": null,
+            "userID": null,
+            "name": "",
+            "schoolType": "Grundschule",
+            "descprition": " ",
+            "principal": "",
+            "phoneNumber": null,
+            "mail": "",
+            "homepageURL": "",
+            "0": {
+                "students": null,
+                "0": {
+                    "street": "",
+                    "number": "",
+                    "zipCode": null,
+                    "district": "Alexandersfeld"
+                }
+            }
         }
     ]
 }
