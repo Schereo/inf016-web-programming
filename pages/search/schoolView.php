@@ -1,4 +1,7 @@
 <?php
+require_once 'db/schoolDao.php';
+require_once 'db/schoolJson.php';
+
 $schools = [];
 
 

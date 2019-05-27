@@ -1,10 +1,10 @@
 <?php session_start();
 
-require_once 'php-business/loginHandler.php';
-require_once 'php-business/registerHandler.php';
-require_once 'php-business/schoolHandler.php';
-require_once 'php-business/editSchoolHandler.php';
-require_once 'php-business/schoolView.php';
+require_once 'pages/login/loginHandler.php';
+require_once 'pages/register/registerHandler.php';
+require_once 'pages/selectItems.php';
+require_once 'pages/search/schoolView.php';
+
 //TODO: Hier fehlerhafte Eingaben abfangen um unnötige Server Kommunikation zu verhindern
 //Login falls durchgeführt
 $emailLogin = strip_tags($_POST['emailLogin']);
@@ -39,42 +39,39 @@ registerUser($forename, $surname, $mailInput, $passwordInput, $passwordMatch);
 </head>
 <body>
 <?php
-include 'pages/header.php';
-include 'pages/imageslider.php';
+include 'header.php';
+include 'imageslider.php';
 ?>
 
 <div class="main-container">
     <div class="large-grid-item card">
-        <?php include 'pages/search.php'; ?>
+        <?php include 'pages/search/search.php'; ?>
     </div>
     <div class="large-grid-item card">
-        <?php include 'pages/detail.php'; ?>
+        <?php include 'pages/detail/detail.php'; ?>
     </div>
     <div class="large-grid-item card">
-        <?php include 'pages/map.php'; ?>
+        <?php include 'pages/map/map.php'; ?>
     </div>
     <?php if (!($_SESSION['userSessions'])) { ?>
         <div class="left-grid-item card">
-            <?php include 'pages/login.php'; ?>
+            <?php include 'pages/login/login.php'; ?>
         </div>
         <div class="right-grid-item card">
-            <?php include 'pages/register.php'; ?>
-        </div>
-        <div class="large-grid-item card">
-            <?php include 'pages/newSchool.php'; ?>
+            <?php include 'pages/register/register.php'; ?>
         </div>
     <?php } else if (isset($_POST['edit']) && isset($schoolio) && ($schoolio->userID == $_SESSION['userID'])) { ?>
         <div class="large-grid-item card">
-            <?php include 'pages/editSchool.php'; ?>
+            <?php include 'pages/editSchool/editSchool.php'; ?>
         </div>
-    <?} else  {?>
+    <?} else if ($_SESSION['userSessions']) {?>
         <div class="large-grid-item card">
-            <?php include 'pages/newSchool.php'; ?>
+            <?php include 'pages/editSchool/newSchool.php'; ?>
         </div>
     <? } ?>
 </div>
     <div class="stretch-grid-item" id="indexfooter">
-        <?php include 'pages/footer.php'; ?>
+        <?php include 'footer.php'; ?>
     </div>
 </body>
 </html>

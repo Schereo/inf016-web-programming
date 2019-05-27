@@ -1,8 +1,8 @@
 <article class>
     <?php
-    require_once 'php-business/schoolDao.php';
-    require_once 'php-business/schoolJson.php';
-    require_once 'php-business/schoolView.php';
+    require_once 'db/schoolDao.php';
+    require_once 'db/schoolJson.php';
+    require_once 'pages/search/schoolView.php';
     if (isset($schoolio)):
     ?>
 
@@ -72,7 +72,7 @@
         </div>
         <?php if (isset($_SESSION['userSessions'])) { ?>
         <div class="detail-feedback">
-            <?php include 'feedback.php'; ?>
+            <?php include 'pages/feedback/feedback.php'; ?>
         </div>
     </form>
     <div class="text-right">

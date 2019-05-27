@@ -1,4 +1,7 @@
 <?php
+require_once '../../db/schoolDao.php';
+require_once '../../db/schoolJson.php';
+
 if (isset($_FILES['upload'])) {
     $upload = $_FILES['upload'];
     $uploadName = $_FILES['upload']['name'];
@@ -18,7 +21,7 @@ if (isset($_FILES['upload'])) {
                 $uploadNameNew = uniqid('', true) . "." . $uploadActuelExt;
                 $destination = 'uploads/'.$uploadNameNew;
                 move_uploaded_file($uploadTmpName, $destination);
-                header("Location:../index.php#anlegen");
+                header("Location:../../index.php#anlegen");
             } else {
             }
         } else {

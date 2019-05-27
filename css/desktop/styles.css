@@ -1,10 +1,11 @@
 @import "card-styles.css";
-@import "feedback-styles.css";
-@import "search-styles.css";
+@import "../../pages/search/search-styles.css";
 @import "specific-styles.css";
 @import "layout-styles.css";
-@import "imageslider.css";
-@import "newSchool.css";
+@import "../../imageslider.css";
+@import "../../pages/editSchool/newSchool.css";
+@import "../../pages/feedback/feedback-styles.css";
+@import "../../pages/feedback/feedback.css";
 
 :root {
     --light-main: #B8B8B8;
@@ -124,7 +125,7 @@ input {
     margin-left: auto;
 }
 
-/* funktioniert noch nicht, kp wieso, padding nur zum Testen */
+
 .menu#searchSchool a {
     background:gray;
     padding:5em;

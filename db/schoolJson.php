@@ -76,8 +76,8 @@ class School implements schoolDao
 
     static function readJson()
     {
-        if (file_exists("database.json") && is_readable("database.json")) {
-            $schools = file_get_contents("database.json");
+        if (file_exists(__DIR__."/database.json") && is_readable(__DIR__."/database.json")) {
+            $schools = file_get_contents(__DIR__."/database.json");
             $schoolsArray = json_decode($schools);
             return $schoolsArray;
         }
@@ -86,10 +86,10 @@ class School implements schoolDao
 
     static function writeJson($array)
     {
-        if (file_exists("database.json") && is_writable("database.json")) {
+        if (file_exists(__DIR__."/database.json") && is_writable(__DIR__."/database.json")) {
             $newData = self::readJson();
             $newData->schools[] = $array;
-            file_put_contents("database.json", json_encode($newData, JSON_PRETTY_PRINT));
+            file_put_contents(__DIR__."/database.json", json_encode($newData, JSON_PRETTY_PRINT));
         }
     }
 }

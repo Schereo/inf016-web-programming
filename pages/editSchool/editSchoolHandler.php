@@ -1,6 +1,7 @@
 <?php
-require_once 'schoolDao.php';
-require_once 'schoolJson.php';
+require_once '../../db/schoolDao.php';
+require_once '../../db/schoolJson.php';
+
 $school = array(
     "name" => $_POST['schoolname'],
     "schoolType" => $_POST['schooltype'],
@@ -16,3 +17,4 @@ $school ['address'] = array(
     "district" => $_POST['district'],
 );
 School::update($school->id);
+header("Location:../../index.php");

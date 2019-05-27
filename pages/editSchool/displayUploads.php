@@ -1,8 +1,8 @@
 <?php
-if(!is_dir("php-business/uploads")){
-    mkdir("php-business/uploads");
+if(!is_dir("pages/editSchool/uploads")){
+    mkdir("pages/editSchool/uploads");
 }
-$uploads = "php-business/uploads";
+$uploads = "pages/editSchool/uploads";
 if ($openFile = opendir($uploads)) {
     while (($file = readdir($openFile)) !== False) {
         if ($file != "." && $file != "..")

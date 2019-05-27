@@ -1,8 +1,8 @@
 <?php
-require_once 'schoolDao.php';
-require_once 'schoolJson.php';
-require_once 'userDao.php';
-require_once 'userJson.php';
+require_once '../../db/schoolDao.php';
+require_once '../../db/schoolJson.php';
+require_once '../../db/userDao.php';
+require_once '../../db/userJson.php';
 
 $school = array(
     "author" => $_SESSION['firstName'],
@@ -24,13 +24,13 @@ $school = array(
             "district" => $_POST['district'],
         )));
 School::writeJson($school);
-$uploads = "./uploads";
+$uploads = "uploads";
 if ($openFile = opendir($uploads)) {
     while (($file = readdir($openFile)) !== False) {
         if ($file != "." && $file != ".."){
-            unlink("./uploads/".$file);
+            unlink("uploads/".$file);
         }
     }
 };
-header("Location:../index.php");
+header("Location:../../index.php");
 

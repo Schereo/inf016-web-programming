@@ -1,9 +1,9 @@
 <section>
     <?php
-    require_once 'php-business/schoolDao.php';
-    require_once 'php-business/schoolJson.php';
-    require_once 'php-business/schoolHandler.php';
-    require_once 'php-business/schoolView.php'; ?>
+    require_once 'db/schoolDao.php';
+    require_once 'db/schoolJson.php';
+    require_once 'pages/selectItems.php';
+    require_once 'pages/search/schoolView.php'; ?>
     <h2 id="suche" class="card-header">Schule Suchen</h2>
     <div class="card-body">
         <form class="search-container" method="GET" action="<?php echo $_SERVER['PHP_SELF']; ?>">

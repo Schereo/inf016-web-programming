@@ -239,6 +239,26 @@
                     "date": "19.05.2019"
                 }
             ]
+        },
+        {
+            "author": null,
+            "userID": null,
+            "name": "",
+            "schoolType": "Grundschule",
+            "descprition": " ",
+            "principal": "",
+            "phoneNumber": null,
+            "mail": "",
+            "homepageURL": "",
+            "0": {
+                "students": null,
+                "0": {
+                    "street": "",
+                    "number": "",
+                    "zipCode": null,
+                    "district": "Alexandersfeld"
+                }
+            }
         }
     ]
 }

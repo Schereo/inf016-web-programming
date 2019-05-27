@@ -29,8 +29,8 @@ class User implements userDao
 
     static function readJson()
     {
-        if (file_exists("creds.json") && is_readable("creds.json")) {
-            $user = file_get_contents("creds.json");
+        if (file_exists(__DIR__."/creds.json") && is_readable(__DIR__."/creds.json")) {
+            $user = file_get_contents(__DIR__."/creds.json");
             $userArray = json_decode($user);
             return $userArray;
         }
@@ -39,10 +39,10 @@ class User implements userDao
 
     static function writeJson($array)
     {
-        if (file_exists("creds.json") && is_writable("creds.json")) {
+        if (file_exists(__DIR__."/creds.json") && is_writable(__DIR__."/creds.json")) {
             $bufferArray = self::readJson();
             $bufferArray->users[] = $array;
-            file_put_contents("creds.json", json_encode($bufferArray));
+            file_put_contents(__DIR__."/creds.json", json_encode($bufferArray));
         }
     }
 
