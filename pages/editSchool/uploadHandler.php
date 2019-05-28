@@ -15,17 +15,16 @@ if (isset($_FILES['upload'])) {
     $allowed = array('jpg', 'jpeg', 'png');
 
     if (in_array($uploadActuelExt, $allowed)) {
-
         if ($uploadError === 0) {
-            if ($uploadSize < 1000000) {
-                $uploadNameNew = uniqid('', true) . "." . $uploadActuelExt;
-                $destination = 'uploads/'.$uploadNameNew;
-                move_uploaded_file($uploadTmpName, $destination);
-                header("Location:../../index.php#anlegen");
-            } else {
-            }
-        } else {
+            $uploadNameNew = uniqid('', true) . "." . $uploadActuelExt;
+            $destination = 'uploads/' . $uploadNameNew;
+            move_uploaded_file($uploadTmpName, $destination);
+            header("Location:../../index.php#anlegen");
+        } else if ($uploadError === 1) {
+            echo " Ihre Datei ist leider zu groß. ";
         }
+    } else {
+        echo "Upload fehlgeschlagen";
     }
 }
 

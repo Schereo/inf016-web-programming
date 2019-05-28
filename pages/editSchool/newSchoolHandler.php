@@ -24,6 +24,8 @@ $school = array(
             "district" => $_POST['district'],
         )));
 School::writeJson($school);
+
+//derzeit werden die Fotos nach upload wieder aus dem Ordner gelöscht - später sollen Sie ihrer Schule richtig zugeordnet werden.
 $uploads = "uploads";
 if ($openFile = opendir($uploads)) {
     while (($file = readdir($openFile)) !== False) {
