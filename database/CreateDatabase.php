@@ -15,7 +15,6 @@ function createDatabase() {
         CREATE TABLE IF NOT EXISTS Rating(
           rating_id INTEGER PRIMARY KEY AUTOINCREMENT,
           rating_type VARCHAR(40) NOT NULL,
-          date_of_creation INTEGER NOT NULL DEFAULT (strftime("now")),
           FOREIGN KEY (user_id) REFERENCES User(user_id) ON UPDATE CASCADE,
           FOREIGN KEY (school_id) REFERENCES School(school_id) ON DELETE CASCADE ON UPDATE CASCADE      
         );
