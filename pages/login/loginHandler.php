@@ -1,32 +1,32 @@
 <?php
-require_once 'db/userDao.php';
-require_once 'db/userJson.php';
+require_once 'database/Query.php';
 
 function userLogin($emailLogin, $passwordLogin)
 {
     if (isset($_POST['anmelden'])) {
-        $found = 0;
-        foreach (User::getAll() as $users) {
-            if ($emailLogin == $users->mail) {
-                $found = -1;
-                if ($users->password == $passwordLogin) {
-                    $_SESSION['userSessions'] = true;
-                    $_SESSION['userName'] = $users->mail;
-                    $_SESSION['firstName'] = $users->vorname;
-                    $_SESSION['lastName'] = $users->nachname;
-                    $_SESSION['userID'] = $users->userID;
-                    $found = 2;
-                }
+        $query = (new Query((new DatabaseConnector())->connect()));
+        if (($query->getUserId($emailLogin)) !== false) {
+            if (password_verify($passwordLogin, $query->getPassword($emailLogin))) {
+                $user_row = $query->getUserRow($query->getUserId($emailLogin));
+                $_SESSION['userSessions'] = true;
+                $_SESSION['user_id'] = $user_row['id'];
+                $_SESSION['userName'] = $user_row->mail;
+                $_SESSION['firstName'] = $user_row->vorname;
+                $_SESSION['lastName'] = $user_row->nachname;
+                header("Location: index.php");
+                return;
+
+            } else {
+                #Wrong password
+                $_SESSION['error'] = "Wrong Email or Password.";
+                header("Location: index.php");
+                return;
             }
-        }
-        if ($found == 0) {
-            print_r("Benutzer nicht gefunden");
-        }
-        if ($found == -1) {
-            print_r("Passwort falsch!");
-        }
-        if ($found == 2) {
-            print_r("Login erfolgreich");
+        } else {
+            #User doesn't exist
+            $_SESSION['error'] = "Wrong Email or Password.";
+            header("Location: index.php");
+            return;
         }
     }
 }

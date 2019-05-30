@@ -1,8 +1,6 @@
 <?php
 require_once '../../db/schoolDao.php';
 require_once '../../db/schoolJson.php';
-require_once '../../db/userDao.php';
-require_once '../../db/userJson.php';
 
 $school = array(
     "author" => $_SESSION['firstName'],
