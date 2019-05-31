@@ -6,7 +6,7 @@ function userLogin($emailLogin, $passwordLogin)
     if (isset($_POST['type'])) {
         if (isset($_POST['anmelden'])) {
             $query = (new Query((new DatabaseConnector())->connect()));
-            if (($query->getUserId($emailLogin)) !== false) {
+            if (($query->getUserId($emailLogin)) != null) {
                 if (password_verify($passwordLogin,$query->getPassword($emailLogin))){
                     $user_row = $query->getUserRow($query->getUserId($emailLogin));
                     $_SESSION['userSessions'] = true;

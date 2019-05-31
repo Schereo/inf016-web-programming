@@ -48,7 +48,6 @@ class Query
     public function getSchool($school_id)
     {
     }
-
     public function getUserId($email)
     {
         $sql = "Select user_id From User
@@ -83,5 +82,4 @@ class Query
         return $row['password'];
     }
 }
-
 $query = new Query((new DatabaseConnector())->connect());

@@ -29,7 +29,6 @@ if (isset($_POST['type'])) {
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -57,7 +56,6 @@ include 'imageslider.php';
     </div>
     <div class="large-grid-item card">
         <?php
-
         include 'pages/detail/detail.php'; ?>
     </div>
     <div class="large-grid-item card">

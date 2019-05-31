@@ -15,11 +15,14 @@ function createDatabase() {
         CREATE TABLE IF NOT EXISTS Rating(
           rating_id INTEGER PRIMARY KEY AUTOINCREMENT,
           rating_type VARCHAR(40) NOT NULL,
+          user_id INTEGER,
+          school_id INTEGER,
           FOREIGN KEY (user_id) REFERENCES User(user_id) ON UPDATE CASCADE,
           FOREIGN KEY (school_id) REFERENCES School(school_id) ON DELETE CASCADE ON UPDATE CASCADE      
         );
         CREATE TABLE IF NOT EXISTS School(
           school_id INTEGER PRIMARY KEY AUTOINCREMENT,
+          creator INTEGER,
           name VARCHAR(255) NOT NULL,
           school_type VARCHAR(40) NOT NULL,
           description VARCHAR(255),
@@ -27,23 +30,23 @@ function createDatabase() {
           phone_number VARCHAR(40),
           house_number INTEGER,
           zip_code INTEGER(4),
-          disctrict VARCHAR(40) NOT NULL,
+          district VARCHAR(40) NOT NULL,
           city VARCHAR(40),
           street VARCHAR(100),
           email VARCHAR(40),
           students INTEGER,
-          homeage_url VARCHAR(100),
+          homepage_url VARCHAR(100),
           FOREIGN KEY (creator) REFERENCES User(user_id)                   
         );
         CREATE TABLE IF NOT EXISTS Image(
           image_id INTEGER PRIMARY KEY AUTOINCREMENT,
+          school_id INTEGER,
           name VARCHAR(100) NOT NULL,
           size INTEGER,
           mime VARCHAR(100) NOT NULL,
           data BLOB NOT NULL,
           FOREIGN KEY (school_id) REFERENCES School(school_id) ON DELETE CASCADE ON UPDATE CASCADE
         );
-
         '
     ];
 
