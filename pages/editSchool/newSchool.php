@@ -1,3 +1,4 @@
+
 <section>
     <h2 id="anlegen" class="card-header">Schule anlegen</h2>
     <div class="card-body">

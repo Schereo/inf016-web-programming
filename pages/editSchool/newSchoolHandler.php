@@ -1,5 +1,5 @@
 <?php
-require_once 'database/Insert.php';
+require_once $depth."database/Insert.php";
 
 function newSchool()
 {
@@ -30,7 +30,7 @@ function newSchool()
             }
         }
     };
-    header("Location:../../index.php");
+    header('Location: ../../index.php');
     $insert = new Insert((new DatabaseConnector())->connect());
     $insert -> newSchool($school);
 }
