@@ -1,15 +1,26 @@
 <?php
-require_once 'db/userDao.php';
-require_once 'db/userJson.php';
-function registerUser($forename, $surname, $mailInput, $passwordInput, $passwordMatch)
-{
-    if (isset($_POST['registrieren'])) {
-        if ($passwordInput == $passwordMatch && !($mailInput == User::getByMail($mailInput))) {
-            $newUser = User::createUser($forename, $surname, $mailInput, $passwordInput);
-            User::register($newUser);
-            print_r("Registrierung erfolgreich");
-        } else {
-            print_r("Benutzer bereits vorhanden.");
+require_once "pages/login/LoginHandler.php";
+require_once "database/Insert.php";
+require_once "database/Query.php";
+
+    function registerUser($first_name, $last_name, $email, $password, $password_match )
+    {
+        if (strlen($_POST['emailReg']) == 0 || strlen($_POST['passwordReg']) == 0 || strlen($_POST['password2Reg']) == 0) {
+            $_SESSION['error'] = "Email, Passwort und Passwordbestätigung müssen gesetzt sein";
         }
-    }
+        if (strpos($_POST['emailReg'], "@") === false) {
+            $_SESSION['error'] = "Email muss ein @-Zeichen enthalten.";
+        }
+        $query = (new Query((new DatabaseConnector())->connect()));
+        if ($query->getUserId($email) != null) {
+            $_SESSION['error'] = "Wrong Email or Password1";
+        } elseif ($password !== $password_match) {
+            $_SESSION['error'] = "Wrong Email or Password11";
+            header("Location: index.php");
+            return;
+        } else {
+            $insert = new Insert((new DatabaseConnector())->connect());
+            $insert->newUser($email, $password, $first_name, $last_name);
+            userLogin($email, $password);
+        }
 }

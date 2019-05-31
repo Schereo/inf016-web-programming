@@ -4,20 +4,30 @@ require_once 'pages/login/loginHandler.php';
 require_once 'pages/register/registerHandler.php';
 require_once 'pages/selectItems.php';
 require_once 'pages/search/schoolView.php';
-
+require_once 'database/CreateDatabase.php';
 //TODO: Hier fehlerhafte Eingaben abfangen um unnötige Server Kommunikation zu verhindern
-//Login falls durchgeführt
-$emailLogin = strip_tags($_POST['emailLogin']);
-$passwordLogin = strip_tags($_POST['passwordLogin']);
-userLogin($emailLogin, $passwordLogin);
 
-//Register falls durchgeführt
-$forename = strip_tags($_POST['firstNameReg']);
-$surname = strip_tags($_POST['lastNameReg']);
-$mailInput = strip_tags($_POST['emailReg']);
-$passwordInput = strip_tags($_POST['passwortReg']);
-$passwordMatch = strip_tags($_POST['passwort2Reg']);
-registerUser($forename, $surname, $mailInput, $passwordInput, $passwordMatch);
+if (isset($_POST['type'])) {
+    if ($_POST['type'] == "Login") {
+        if (isset($_POST['emailLogin']) && isset($_POST['passwordLogin'])) {
+            if (strlen($_POST['emailLogin']) == 0 || strlen($_POST['passwordLogin']) == 0) {
+                $_SESSION['error'] = "Email & Passwort müssen gesetzt sein";
+                header("Location: index.php");
+                return;
+            } else {
+                userLogin($_POST['emailLogin'], $_POST['passwordLogin']);
+                header("Location: index.php");
+                return;
+            }
+        }
+    } elseif ($_POST['type'] == "Register") {
+        if(isset($_POST['firstNameReg']) && isset($_POST['lastNameReg']) && isset($_POST['emailReg']) && isset($_POST['passwordReg']) && isset($_POST['password2Reg'])) {
+            registerUser($_POST['firstNameReg'], $_POST['lastNameReg'], $_POST['emailReg'], $_POST['passwordReg'], $_POST['password2Reg']);
+            header("Location: index.php");
+            return;
+        }
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +56,9 @@ include 'imageslider.php';
         <?php include 'pages/search/search.php'; ?>
     </div>
     <div class="large-grid-item card">
-        <?php include 'pages/detail/detail.php'; ?>
+        <?php
+
+        include 'pages/detail/detail.php'; ?>
     </div>
     <div class="large-grid-item card">
         <?php include 'pages/map/map.php'; ?>
@@ -66,10 +78,12 @@ include 'imageslider.php';
         <div class="large-grid-item card">
             <?php include 'pages/editSchool/newSchool.php'; ?>
         </div>
-    <? } ?>
+    <? }
+    print_r($_SESSION['userName']); ?>
 </div>
     <div class="stretch-grid-item" id="indexfooter">
-        <?php include $depth.'footer.php'; ?>
+        <?php  print_r($_SESSION['error']);
+        include $depth.'footer.php'; ?>
     </div>
 </body>
 </html>
