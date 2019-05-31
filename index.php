@@ -8,7 +8,7 @@ require_once 'database/CreateDatabase.php';
 //TODO: Hier fehlerhafte Eingaben abfangen um unnötige Server Kommunikation zu verhindern
 
 if (isset($_POST['type'])) {
-    if ($_POST['type'] == "anmelden") {
+    if ($_POST['type'] == "Login") {
         if (isset($_POST['emailLogin']) && isset($_POST['passwordLogin'])) {
             if (strlen($_POST['emailLogin']) == 0 || strlen($_POST['passwordLogin']) == 0) {
                 $_SESSION['error'] = "Email & Passwort müssen gesetzt sein";
@@ -20,9 +20,9 @@ if (isset($_POST['type'])) {
                 return;
             }
         }
-    } elseif ($_POST['type'] == "registrieren") {
+    } elseif ($_POST['type'] == "Register") {
         if(isset($_POST['firstNameReg']) && isset($_POST['lastNameReg']) && isset($_POST['emailReg']) && isset($_POST['passwordReg']) && isset($_POST['password2Reg'])) {
-            registerUser($_POST['firstNameReg'], $_POST['lastNameReg'], $_POST['emailReg'], $_POST['passwortReg'], $_POST['password2Reg']);
+            registerUser($_POST['firstNameReg'], $_POST['lastNameReg'], $_POST['emailReg'], $_POST['passwordReg'], $_POST['password2Reg']);
             header("Location: index.php");
             return;
         }
@@ -56,7 +56,9 @@ include 'imageslider.php';
         <?php include 'pages/search/search.php'; ?>
     </div>
     <div class="large-grid-item card">
-        <?php include 'pages/detail/detail.php'; ?>
+        <?php
+
+        include 'pages/detail/detail.php'; ?>
     </div>
     <div class="large-grid-item card">
         <?php include 'pages/map/map.php'; ?>
@@ -80,7 +82,8 @@ include 'imageslider.php';
     print_r($_SESSION['userName']); ?>
 </div>
     <div class="stretch-grid-item" id="indexfooter">
-        <?php include $depth.'footer.php'; ?>
+        <?php  print_r($_SESSION['error']);
+        include $depth.'footer.php'; ?>
     </div>
 </body>
 </html>

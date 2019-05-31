@@ -12,10 +12,10 @@ require_once "database/Query.php";
             $_SESSION['error'] = "Email muss ein @-Zeichen enthalten.";
         }
         $query = (new Query((new DatabaseConnector())->connect()));
-        if ($query->getUserId($email) !== false) {
-            $_SESSION['error'] = "Wrong Email or Password";
+        if ($query->getUserId($email) != null) {
+            $_SESSION['error'] = "Wrong Email or Password1";
         } elseif ($password !== $password_match) {
-            $_SESSION['error'] = "Wrong Email or Password";
+            $_SESSION['error'] = "Wrong Email or Password11";
             header("Location: index.php");
             return;
         } else {

@@ -19,7 +19,7 @@ class Query
 
         try {
             $stmt = $this->pdo->prepare($sql);
-            $stmt->bindValue(':id', $user_id, SQLITE3_TEXT);
+            $stmt->bindValue(':id', $user_id);
             $stmt->execute();
         } catch (Exception $ex) {
             error_log("Query->getUserRow Error: " . $ex->getMessage());
@@ -55,8 +55,11 @@ class Query
                 where email = :email";
         try {
             $stmt = $this->pdo->prepare($sql);
-            $stmt->bindValue(':email', $email, SQLITE3_TEXT);
-            $stmt->execute();
+            $stmt->execute(
+                [
+                    ':email' => $email
+                ]
+            );
         } catch (Exception $ex) {
             error_log("Query->getUserRow Error: " . $ex->getMessage());
         }
@@ -71,7 +74,7 @@ class Query
                 where email = :email";
         try {
             $stmt = $this->pdo->prepare($sql);
-            $stmt->bindValue(':email', $email, SQLITE3_TEXT);
+            $stmt->bindValue(':email', $email);
             $stmt->execute();
         } catch (Exception $ex) {
             error_log("Query->getUserRow Error: " . $ex->getMessage());

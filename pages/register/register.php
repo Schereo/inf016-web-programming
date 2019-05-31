@@ -1,6 +1,7 @@
 <section>
     <h2 id=registrieren class="card-header">Registrieren</h2>
     <form class="register-body" method="post">
+        <input type="hidden" name="type" value="Register">
         <input class="input" type="text" name="firstNameReg" placeholder="Vorname">
         <input class="input" type="text" name="lastNameReg" placeholder="Nachname">
         <input class="input" type="email" name="emailReg" placeholder="Email">
