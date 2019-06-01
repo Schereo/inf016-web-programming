@@ -1,4 +1,3 @@
-
 <section>
     <h2 id="anlegen" class="card-header">Schule anlegen</h2>
     <div class="card-body">
@@ -41,7 +40,7 @@
                 <input class="input" type="number" id="editHousenumber" name="number" placeholder="Hausnummer">
                 <br>
                 Telefon:
-                <input class="input" type="number" id="editPhonenumber" name="telefon"
+                <input class="input" type="number" id="editPhonenumber" name="phonenumber"
                        placeholder="phoneNumber">
                 <br> Email:
                 <input class="input" type="email" id="editEmail" name="mail"
