@@ -16,7 +16,6 @@ class Update
 
     public function editSchool($school)
     {
-        print_r("moin baby");
         $sql = "UPDATE School
             SET   name = :name, 
                 school_type = :school_type,
