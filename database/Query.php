@@ -1,5 +1,5 @@
 <?php
-require_once $depth."database/DatabaseConnector.php";
+require_once "DatabaseConnector.php";
 
 class Query
 {
@@ -166,9 +166,6 @@ class Query
         print_r($row[0]['school_id']);
         return $row;
     }
-
-
-
 
 }
 

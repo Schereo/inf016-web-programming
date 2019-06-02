@@ -1,6 +1,8 @@
 <?php
 session_start();
 require_once "DatabaseConnector.php";
+require_once "Update.php";
+
 class Insert
 {
     private $pdo;
@@ -42,30 +44,49 @@ class Insert
                 (creator, name, school_type, description, principal, phone_number, house_number, zip_code, district, city, street, email, students, homepage_url)
         VALUES (:creator, :name, :school_type, :description, :principal, :phone_number, :house_number, :zip_code, :district, :city, :street, :email, :students, :homepage_url)";
 
-               try {
-                   $stmt = $this->pdo->prepare($sql);
-                   // einzelne Werte gibt es gar nicht im Formular, deswegen hardgecodet drin.
-                   $stmt->execute([
-                       ':name' => $school['name'],
-                       ':school_type' => $school['schoolType'],
-                       ':description' => $school['description'],
-                       ':principal' => $school['principal'],
-                       ':phone_number' => $school['phoneNumber'],
-                       ':house_number' => $school['address']['number'],
-                       ':district' => $school['address']['district'],
-                       ':city' => 'oldenburg',
-                       ':zip_code' => ['address']['street'],
-                       ':street' => ['address']['street'],
-                       ':email' => $school['mail'],
-                       ':students' => 1000,
-                       ':homepage_url' => $school['homepageURL'],
-                       ':creator' => $school['creator']
-                   ]);
-               }catch (Exception $ex) {
-                   error_log("Insert->newUser() Error: " . $ex->getMessage());
-               }
+            try {
+                $stmt = $this->pdo->prepare($sql);
+                // einzelne Werte gibt es gar nicht im Formular, deswegen hardgecodet drin.
+                $stmt->execute([
+                    ':name' => $school['name'],
+                    ':school_type' => $school['schoolType'],
+                    ':description' => $school['description'],
+                    ':principal' => $school['principal'],
+                    ':phone_number' => $school['phoneNumber'],
+                    ':house_number' => $school['address']['number'],
+                    ':district' => $school['address']['district'],
+                    ':city' => 'oldenburg',
+                    ':zip_code' => ['address']['street'],
+                    ':street' => ['address']['street'],
+                    ':email' => $school['mail'],
+                    ':students' => 1000,
+                    ':homepage_url' => $school['homepageURL'],
+                    ':creator' => $school['creator']
+                ]);
+                $update = new Update((new DatabaseConnector())->connect());
                 $row = $stmt->fetch();
-                echo $row['school_id'];
+                $schoolId = $row['school_id'];
+                $update->imageSchoolID($schoolId);
+            } catch (Exception $ex) {
+                error_log("Insert->newUser() Error: " . $ex->getMessage());
+            }
+        }
+    }
+
+    public function newImage($name, $size, $mime, $data)
+    {
+        $sql = "INSERT INTO Image(name, size, mime, data)
+                        VALUES (:name, :size, :mime, :data)";
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([
+                ':name' => $name,
+                ':size' => $size,
+                ':mime' => $mime,
+                ':data' => $data
+            ]);
+        } catch (Exception $ex) {
+            error_log("Insert->newImage() Error: " . $ex->getMessage());
         }
     }
 }
