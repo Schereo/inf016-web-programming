@@ -1,7 +1,5 @@
 <section>
     <?php
-    require_once 'db/schoolDao.php';
-    require_once 'db/schoolJson.php';
     require_once 'pages/selectItems.php';
     require_once 'pages/search/schoolView.php'; ?>
     <h2 id="suche" class="card-header">Schule Suchen</h2>
@@ -25,6 +23,10 @@
             <button class="default-button button-size" type="submit">Suchen</button>
         </form>
         <div class="school-cards-container" method="GET" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+            <?php
+            //Debugging
+            foreach($schools['School'] as $school){print_r($school->schoolTyp);}
+            ?>
             <?php if(!empty($schools)):
                 foreach( $schools as $school):?>
             <div class="small-card">

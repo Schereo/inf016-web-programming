@@ -32,12 +32,12 @@ class Update
             'house_number' => $school['address']['number'],
             'zip_code' => $school['address']['zipCode'],
             'district' => $school['district']['name'],
-            'city' => oldenburg,
+            'city' => 'Oldenburg',
             'street' => $school['address']['street'],
             'email' => $school['mail'],
             'students' => $school['students'],
             'homepage_url' => $school['homepageURL'],
-            'creator' => $creator
+            'creator' => $_SESSION['user_ID']
 
         ]);
         $row = $stmt->fetch();
