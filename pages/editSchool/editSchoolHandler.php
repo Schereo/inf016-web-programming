@@ -1,11 +1,11 @@
 <?php
-require_once "database/Update.php";
+$depth ="";
+require_once $depth."database/Update.php";
 
 function editSchool()
 {
-    $school = array(
-        "author" => $_SESSION['firstName'],
-        "userID" => $_SESSION['userID'],
+    $school = [
+        "creator" => $_SESSION['user_ID'],
         "name" => $_POST['schoolname'],
         "schoolType" => $_POST['schooltype'],
         "description" => $_POST['description'],
@@ -13,13 +13,12 @@ function editSchool()
         "phoneNumber" => $_POST['phonenumber'],
         "mail" => $_POST['mail'],
         "homepageURL" => $_POST['homepage'],
-        "students" => $_POST['students'],
-        $school ['address'] = array(
+        'address' => [
             "street" => $_POST['street'],
             "number" => $_POST['number'],
-            "zipCode" => $_POST['zipCode'],
             "district" => $_POST['district'],
-        ));
+            ]]
+        ;
 
 //derzeit werden die Fotos nach upload wieder aus dem Ordner gelöscht - später sollen Sie ihrer Schule richtig zugeordnet werden.
     $uploads = "uploads";
@@ -30,7 +29,8 @@ function editSchool()
             }
         }
     };
-    header("Location:../../index.php");
+
     $update = new Update((new DatabaseConnector())->connect());
     $update -> editSchool($school);
+    header("Location:../../index.php");
 }

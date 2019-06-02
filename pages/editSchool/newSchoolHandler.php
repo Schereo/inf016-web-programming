@@ -27,6 +27,7 @@ if ($openFile = opendir($uploads)) {
 };
 $insert = new Insert((new DatabaseConnector())->connect());
 $insert->newSchool($school);
+header("Location: ../../index.php");
 
 
 /*    für die Bilder später ^^

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "DatabaseConnector.php";
+require_once $depth."database/DatabaseConnector.php";
 class Insert
 {
     private $pdo;

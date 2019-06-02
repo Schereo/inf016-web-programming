@@ -1,5 +1,5 @@
 <?php
-require_once "database/DatabaseConnector.php";
+require_once $depth."database/DatabaseConnector.php";
 
 class Query
 {

@@ -1,7 +1,7 @@
 <?php
-require_once "./DatabaseConnector.php";
-require_once "./Query.php";
-require_once "./Insert.php";
+require_once $depth."database/DatabaseConnector.php";
+require_once $depth."database/Query.php";
+require_once $depth."database/Insert.php";
 
 class Update
 {
@@ -14,7 +14,7 @@ class Update
     }
 
 
-    public function editSchool($creator, $school)
+    public function editSchool($school)
     {
         $sql = "UPDATE School
             SET   name = :name, school_type = :school_type, description = :description, principal = :principal, phone_number = :phone_number,
