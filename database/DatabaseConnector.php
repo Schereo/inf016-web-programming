@@ -6,7 +6,6 @@
  * Time: 22:48
  */
 class DatabaseConnector {
-
     private $pdo;
     private $user = "root";
     private $password = null;
