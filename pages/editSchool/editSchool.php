@@ -47,7 +47,7 @@
                            value="<?= $school['house_number'] ?>"></div>
                 <br>
                 <div class="text-left"> Telefon:</div>
-                <div class="text-right"><input class="input" type="number" id="editPhonenumber" name="telefon"
+                <div class="text-right"><input class="input" type="number" id="editPhonenumber" name="phonenumber"
                                                value="<?= $school['phone_number'] ?>"></div>
                 <div class="text-left"><br> Email:</div>
                 <div class="text-right"><input class="input" type="email" id="editEmail" name="mail"
@@ -62,8 +62,8 @@
                 <div class="text-right"><textarea class="textarea" name="description"
                                                   placeholder="Infos"><?= $school['description'] ?></textarea>
                 </div>
-                <button type="submit" class="default-button"> Upload</button>
-                <button type="submit" class="default-button" name="delete"> Delete</button>
+                    <button type="submit" class="default-button" value="<?=$school['school_id']?>" name="editID"> Upload</button>
+                <button type="submit" class="default-button" value="<?=$school['school_id']?>" name="delete"> Delete</button>
                 <?php if(isset($_POST['delete'])) {
 
                 } ?>
