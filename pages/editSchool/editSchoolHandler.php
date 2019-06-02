@@ -1,5 +1,5 @@
 <?php
-$depth ="";
+$depth = "../../";
 require_once $depth."database/Update.php";
 
 function editSchool()

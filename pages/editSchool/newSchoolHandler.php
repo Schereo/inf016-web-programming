@@ -1,5 +1,5 @@
 <?php
-require_once "../../database/Insert.php";
+require_once $depth."database/Insert.php";
 $school = [
     "creator" => $_SESSION['user_ID'],
     "name" => $_POST['schoolname'],
