@@ -1,5 +1,5 @@
 <?php
-require_once $depth."database/DatabaseConnector.php";
+require_once "DatabaseConnector.php";
 
 class Query
 {
@@ -126,8 +126,6 @@ class Query
             error_log("Query->getUserRow Error: " . $ex->getMessage());
         }
         $row = $stmt->fetchAll();
-        print_r('Type_________________________________');
-        print_r($row['school_id']);
         return $row;
     }
 
@@ -145,8 +143,6 @@ class Query
             error_log("Query->getSchoolsByDistrict Error: " . $ex->getMessage());
         }
         $row = $stmt->fetchAll();
-        print_r('District_________________________________');
-        print_r($row['school_id']);
         return $row;
     }
     public function getSchoolsByName($name){
@@ -162,8 +158,6 @@ class Query
             error_log("Query->getSchoolsByDistrict Error: " . $ex->getMessage());
         }
         $row = $stmt->fetchAll();
-        print_r('Name_________________________________');
-        print_r($row[0]['school_id']);
         return $row;
     }
 

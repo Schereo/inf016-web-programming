@@ -1,7 +1,7 @@
 <section>
     <h2 id="anlegen" class="card-header">Schule ändern</h2>
     <div class="card-body">
-        <form class="newSchool-container" action="pages/editSchool/newSchoolHandler.php" method="post">
+        <form class="newSchool-container" action="pages/editSchool/editSchoolHandler.php" method="post">
             <div class="info-input">
                 <div class="editPictures">
                     <img src="../assets/images/<?=$school['image_path']?>" alt="Bild zeigt <?=$school['name']?>" width="150px">
@@ -65,7 +65,7 @@
                 <button type="submit" class="default-button"> Upload</button>
                 <button type="submit" class="default-button" name="delete"> Delete</button>
                 <?php if(isset($_POST['delete'])) {
-                   School::delete($school->id);
+
                 } ?>
         </form>
     </div>
