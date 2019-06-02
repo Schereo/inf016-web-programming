@@ -1,5 +1,5 @@
 <?php
-require_once "./DatabaseConnector.php";
+require_once $depth."DatabaseConnector.php";
 
 class Delete
 {

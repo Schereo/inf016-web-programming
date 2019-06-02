@@ -5,7 +5,6 @@ require_once 'pages/register/registerHandler.php';
 require_once 'pages/selectItems.php';
 require_once 'pages/search/schoolView.php';
 require_once 'database/CreateDatabase.php';
-//TODO: Hier fehlerhafte Eingaben abfangen um unnötige Server Kommunikation zu verhindern
 
 if (isset($_POST['type'])) {
     if ($_POST['type'] == "Login") {
@@ -29,7 +28,6 @@ if (isset($_POST['type'])) {
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -57,7 +55,6 @@ include 'imageslider.php';
     </div>
     <div class="large-grid-item card">
         <?php
-
         include 'pages/detail/detail.php'; ?>
     </div>
     <div class="large-grid-item card">
@@ -70,7 +67,7 @@ include 'imageslider.php';
         <div class="right-grid-item card">
             <?php include 'pages/register/register.php'; ?>
         </div>
-    <?php } else if (isset($_POST['edit']) && isset($schoolio) && ($schoolio->userID == $_SESSION['userID'])) { ?>
+    <?php } else if (isset($_POST['edit']) && isset($school) && ($school['creator'] == $_SESSION['user_ID'])) { ?>
         <div class="large-grid-item card">
             <?php include 'pages/editSchool/editSchool.php'; ?>
         </div>

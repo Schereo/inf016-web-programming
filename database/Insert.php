@@ -1,5 +1,6 @@
 <?php
-require_once "database/DatabaseConnector.php";
+session_start();
+require_once "DatabaseConnector.php";
 class Insert
 {
     private $pdo;
@@ -31,31 +32,41 @@ class Insert
 
     public function newSchool($school)
     {
-        $sql = "INSERT into School
-                (name, school_type, description, principal, phone_number, house_number, zip_code, district, city, street, email, students, homepage_url, creator)
-        VALUES (:name, :school_type, :description, :principal, :phone_number, :house_number, :zip_code, :district, :city, :street, :email, :students, :homeage_url, :creator);";
+        // die sessions hab ich auskommentiert, weil der sonst erst gar nicht in die If schleife reingeht..
+        if ( /*isset ($_SESSION['firstName']) isset($_SESSION['userID'])&&*/ isset($_POST['schoolname'])
+            && isset($_POST['schooltype']) && isset($_POST['description']) && isset($_POST['principal'])
+            && isset($_POST['phonenumber']) && isset($_POST['mail']) && isset($_POST['homepage'])
+            && isset($_POST['street']) && isset($_POST['number']) && isset($_POST['district'])) {
 
+            $sql = "INSERT INTO School
+                (creator, name, school_type, description, principal, phone_number, house_number, zip_code, district, city, street, email, students, homepage_url)
+        VALUES (:creator, :name, :school_type, :description, :principal, :phone_number, :house_number, :zip_code, :district, :city, :street, :email, :students, :homepage_url)";
 
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->execute([
-            'name' => $school['name'],
-            'school_type' => $school['schoolType'],
-            'description' => $school['description'],
-            'principal' => $school['principal'],
-            'phone_number' => $school['phoneNumber'],
-            'house_number' => $school['address']['number'],
-            'zip_code' => $school['address']['zipCode'],
-            'district' => $school['district']['name'],
-            'city' => oldenburg,
-            'street' => $school['address']['street'],
-            'email' => $school['mail'],
-            'students' => $school['students'],
-            'homepage_url' => $school['homepageURL'],
-            'creator' => $school['userID'],
-
-        ]);
-        $row = $stmt->fetch();
-        return $row['school_id'];
+               try {
+                   $stmt = $this->pdo->prepare($sql);
+                   // einzelne Werte gibt es gar nicht im Formular, deswegen hardgecodet drin.
+                   $stmt->execute([
+                       ':name' => $school['name'],
+                       ':school_type' => $school['schoolType'],
+                       ':description' => $school['description'],
+                       ':principal' => $school['principal'],
+                       ':phone_number' => $school['phoneNumber'],
+                       ':house_number' => $school['address']['number'],
+                       ':district' => $school['address']['district'],
+                       ':city' => 'oldenburg',
+                       ':zip_code' => 1234,
+                       ':street' => $school['address']['street'],
+                       ':email' => $school['mail'],
+                       ':students' => 1000,
+                       ':homepage_url' => $school['homepageURL'],
+                       ':creator' => $school['creator']
+                   ]);
+               }catch (Exception $ex) {
+                   error_log("Insert->newUser() Error: " . $ex->getMessage());
+               }
+                $row = $stmt->fetch();
+                echo $row['school_id'];
+        }
     }
 }
 $insert = new Insert((new DatabaseConnector())->connect());
