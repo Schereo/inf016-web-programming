@@ -4,7 +4,6 @@ require_once 'pages/login/loginHandler.php';
 require_once 'pages/register/registerHandler.php';
 require_once 'pages/selectItems.php';
 require_once 'pages/search/schoolView.php';
-require_once 'pages/editSchool/editSchoolHandler.php';
 require_once 'database/CreateDatabase.php';
 
 if (isset($_POST['type'])) {
