@@ -7,7 +7,6 @@ if (isset($_FILES['upload'])) {
     $imgSize = $_FILES['upload']['size'];
     $imgMime = $_FILES['upload']['type'];
 
-
     $uploadError = $_FILES['upload']['error'];
     $allowed = array('jpg', 'jpeg', 'png', 'JPG', 'JPEG', 'PNG');
     $extension = pathinfo($imgName, PATHINFO_EXTENSION);
@@ -15,7 +14,7 @@ if (isset($_FILES['upload'])) {
     if ($uploadError === 0 && in_array($extension, $allowed)) {
         $imgData = file_get_contents($_FILES['upload']['tmp_name']);
         $uploadNameNew = uniqid('', true) . "." . $extension;
-        $insert->newImage($uploadNameNew, $imgSize, $imgMime, $imgData);
+        $insert->newImage($uploadNameNew, $imgSize, $imgMime, $imgData, $_SESSION['user_ID']);
         $_SESSION['uploadError'] = "Upload erfolgreich";
         header("Location:../../index.php#anlegen");
     } else if ($uploadError === 1) {

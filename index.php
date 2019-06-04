@@ -54,8 +54,7 @@ include 'imageslider.php';
         <?php include 'pages/search/search.php'; ?>
     </div>
     <div class="large-grid-item card">
-        <?php
-        include 'pages/detail/detail.php'; ?>
+        <?php include 'pages/detail/detail.php'; ?>
     </div>
     <div class="large-grid-item card">
         <?php include 'pages/map/map.php'; ?>
@@ -71,11 +70,11 @@ include 'imageslider.php';
         <div class="large-grid-item card">
             <?php include 'pages/editSchool/editSchool.php'; ?>
         </div>
-    <?} else if ($_SESSION['userSessions']) {?>
+    <?php } else if ($_SESSION['userSessions']) { ?>
         <div class="large-grid-item card">
             <?php include 'pages/editSchool/newSchool.php'; ?>
         </div>
-    <? }
+    <?php }
     print_r($_SESSION['userName']); ?>
 </div>
     <div class="stretch-grid-item" id="indexfooter">

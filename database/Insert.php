@@ -2,7 +2,6 @@
 session_start();
 require_once "DatabaseConnector.php";
 require_once "Update.php";
-
 class Insert
 {
     private $pdo;
@@ -32,7 +31,7 @@ class Insert
         }
     }
 
-    public function newSchool($school)
+    public function newSchool($school, $user_id)
     {
         $sql = "INSERT INTO School
                 (creator, name, school_type, description, principal, phone_number, house_number, zip_code, district, city, street, email, students, homepage_url)
@@ -59,17 +58,16 @@ class Insert
             ]);
             $update = new Update((new DatabaseConnector())->connect());
             $schoolId = $this->pdo->lastInsertID();
-            $update->imageSchoolID($schoolId);
-            $_SESSION['uploadError'] = "Ihre Schule wurde erfolgreich angelegt.";
+            $update->imageSchoolID($schoolId, $user_id);
         } catch (Exception $ex) {
             error_log("Insert->newSchool() Error: " . $ex->getMessage());
         }
     }
 
-    public function newImage($name, $size, $mime, $data)
+    public function newImage($name, $size, $mime, $data, $schoolId)
     {
-        $sql = "INSERT INTO Image(name, size, mime, data)
-                        VALUES (:name, :size, :mime, :data)";
+        $sql = "INSERT INTO Image(name, size, mime, data, school_id)
+                        VALUES (:name, :size, :mime, :data, :school_id)";
         try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute([
@@ -77,6 +75,7 @@ class Insert
                 ':size' => $size,
                 ':mime' => $mime,
                 ':data' => $data,
+                ':school_id' => $schoolId
             ]);
         } catch (Exception $ex) {
             error_log("Insert->newImage() Error: " . $ex->getMessage());

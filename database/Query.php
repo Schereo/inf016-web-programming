@@ -127,8 +127,6 @@ class Query
             error_log("Query->getUserRow Error: " . $ex->getMessage());
         }
         $row = $stmt->fetchAll();
-        print_r('Type_________________________________');
-        print_r($row['school_id']);
         return $row;
     }
 
@@ -146,8 +144,6 @@ class Query
             error_log("Query->getSchoolsByDistrict Error: " . $ex->getMessage());
         }
         $row = $stmt->fetchAll();
-        print_r('District_________________________________');
-        print_r($row['school_id']);
         return $row;
     }
 
@@ -165,17 +161,17 @@ class Query
             error_log("Query->getSchoolsByDistrict Error: " . $ex->getMessage());
         }
         $row = $stmt->fetchAll();
-        print_r('Name_________________________________');
-        print_r($row[0]['school_id']);
         return $row;
     }
 
-    function getUploadedImages(){
-        $sql = "SELECT * FROM Image WHERE school_id ISNULL" ;
+    function getUploadedImages($tempId){
+        $sql = "SELECT * FROM Image WHERE school_id = :tempId" ;
 
         try {
             $stmt = $this->pdo->prepare($sql);
-            $stmt->execute();
+            $stmt->execute([
+                ':tempId' => $tempId
+            ]);
         } catch (Exception $ex) {
             error_log("Query->getUploadedImages Error: " . $ex->getMessage());
         }
