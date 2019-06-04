@@ -171,7 +171,7 @@ class Query
     }
 
     function getUploadedImages(){
-        $sql = "SELECT * FROM Image WHERE image_id =63";
+        $sql = "SELECT * FROM Image WHERE school_id ISNULL" ;
 
         try {
             $stmt = $this->pdo->prepare($sql);
@@ -179,7 +179,7 @@ class Query
         } catch (Exception $ex) {
             error_log("Query->getUploadedImages Error: " . $ex->getMessage());
         }
-        $row = $stmt->fetch();
+        $row = $stmt->fetchAll();
         return $row;
     }
 }
