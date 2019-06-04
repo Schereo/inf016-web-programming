@@ -6,7 +6,7 @@
  * Time: 16:13
  */
 
-require_once "DatabaseConnector.php";
+require_once $depth."DatabaseConnector.php";
 
 function insertData()
 {
