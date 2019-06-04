@@ -60,6 +60,7 @@ class Insert
             $update = new Update((new DatabaseConnector())->connect());
             $schoolId = $this->pdo->lastInsertID();
             $update->imageSchoolID($schoolId);
+            $_SESSION['uploadError'] = "Ihre Schule wurde erfolgreich angelegt.";
         } catch (Exception $ex) {
             error_log("Insert->newSchool() Error: " . $ex->getMessage());
         }

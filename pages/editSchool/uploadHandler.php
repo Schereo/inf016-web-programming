@@ -19,7 +19,7 @@ if (isset($_FILES['upload'])) {
         $_SESSION['uploadError'] = "Upload erfolgreich";
         header("Location:../../index.php#anlegen");
     } else if ($uploadError === 1) {
-        $_SESSION['uploadError'] = "Ihre Bild ist zu groß";
+        $_SESSION['uploadError'] = "Ihr Bild ist zu groß";
         header("Location:../../index.php#anlegen");
     } else {
         $_SESSION['uploadError'] = "Fehlgeschlagen - bitte nur jpg, jpeg oder png hochladen";
