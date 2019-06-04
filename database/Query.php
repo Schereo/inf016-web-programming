@@ -179,7 +179,7 @@ class Query
         } catch (Exception $ex) {
             error_log("Query->getUploadedImages Error: " . $ex->getMessage());
         }
-        $row = $stmt->fetchAll();
+        $row = $stmt->fetch();
         return $row;
     }
 }
