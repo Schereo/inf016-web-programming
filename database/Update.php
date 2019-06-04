@@ -45,10 +45,10 @@ class Update
     }
 
     public function imageSchoolID($schoolId){
-        $sql = "UPDATE Image SET school_id = :school_id Where school_id ISNULL";
+        $sql = "UPDATE Image SET school_id = :school_id Where school_id ISNULL ";
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([
-            ':school_id' => $schoolId
+            ':school_id' => $schoolId,
         ]);
     }
 }

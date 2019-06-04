@@ -2,32 +2,26 @@
 require_once "../../database/Insert.php";
 
 if (isset($_FILES['upload'])) {
-    $upload = $_FILES['upload'];
-    $uploadName = $_FILES['upload']['name'];
-    $uploadSize = $_FILES['upload']['size'];
+    $imgName = $_FILES['upload']['name'];
+    $imgSize = $_FILES['upload']['size'];
+    $imgMime = $_FILES['upload']['type'] ;
+    $imgData = file_get_contents($_FILES['upload']['tmp_name']);
+
     $uploadError = $_FILES['upload']['error'];
-    $uploadTmpName = $_FILES['upload']['tmp_name'];
-    $imgProperties = getimagesize($uploadTmpName);
-    $imgData = addslashes(file_get_contents($uploadTmpName));
-
-    $uploadExt = explode('.', $uploadName);
-    $uploadActuelExt = strtolower(end($uploadExt));
-
     $allowed = array('jpg', 'jpeg', 'png');
+    $extension = pathinfo($imgName, PATHINFO_EXTENSION);
 
-    if (in_array($uploadActuelExt, $allowed)) {
+    if (in_array($extension, $allowed)) {
         if ($uploadError === 0) {
-            $uploadNameNew = uniqid('', true) . "." . $uploadActuelExt;
-            $destination = 'uploads/' . $uploadNameNew;
-            move_uploaded_file($uploadTmpName, $destination);
-            $insert->newImage($uploadNameNew, $uploadSize, $imgProperties, $imgData);
+            $uploadNameNew = uniqid('', true) . "." . $extension;
+            $insert->newImage($uploadNameNew, $imgSize, $imgMime, $imgData);
             header("Location:../../index.php#anlegen");
 
         } else if ($uploadError === 1) {
             echo " Ihre Datei ist leider zu groß. ";
         }
     } else {
-        echo "Upload fehlgeschlagen";
+        echo "Bitte nur jpg, jpeg oder png Bilder hochladen.";
     }
 }
 
