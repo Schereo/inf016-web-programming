@@ -3,11 +3,11 @@
     require_once 'db/schoolDao.php';
     require_once 'db/schoolJson.php';
     require_once 'pages/search/schoolView.php';
-    if (isset($schoolio)):
+    if (isset($school)):
     ?>
 
     <h2 class="card-header">
-        <?= $schoolio->name ?>
+        <?= $school['name'] ?>
         <form method="post" class="editIcon">
             <button name="edit" class="editIcon">
             <img src="../../assets/edit.png" alt="Bearbeiten" class="editIcon">
@@ -26,7 +26,7 @@
                     Schulleitung:
                 </div>
                 <div class="text-right">
-                    <?= $schoolio->principal ?>
+                    <?= $school['principal'] ?>
                 </div>
             </div>
             <div class="info-container">
@@ -34,8 +34,8 @@
                     Adresse:
                 </div>
                 <div class="text-right">
-                    <?= $schoolio->address->street ?>
-                    <br> <?= $schoolio->address->zipCode ?> <?= $schoolio->address->city ?>
+                    <?= $school['street'] ; echo " " .$school['house_number'];?>
+                    <br> <?= $school['zip'] ?> <?= $school['city'] ?>
                 </div>
             </div>
             <div class="info-container">
@@ -43,7 +43,7 @@
                     Telefon:
                 </div>
                 <div class="text-right">
-                    <a href="tel:<?= $schoolio->phoneNumber ?>"><?= $schoolio->phoneNumber ?></a>
+                    <a href="tel:<?= $school['phone_number'] ?>"><?= $school['phone_number'] ?></a>
                 </div>
             </div>
             <div class="info-container">
@@ -51,7 +51,7 @@
                     E-Mail:
                 </div>
                 <div class="text-right">
-                    <a href="mailto:<?= $schoolio->mail ?>"><?= $schoolio->mail ?></a>
+                    <a href="mailto:<?= $school['email'] ?>"><?= $school['email'] ?></a>
                 </div>
             </div>
             <div class="info-container">
@@ -59,13 +59,13 @@
                     Internet:
                 </div>
                 <div class="text-right">
-                    <a href="<?= $schoolio->homepageUrl ?>"><?= $schoolio->homepageUrl ?></a>
+                    <a href="<?= $school['homepage_url'] ?>"><?= $school['homepage_url'] ?></a>
                 </div>
             </div>
             <div class="detail-info">
                 <h5 class="detail-headline">Weitere Infos</h5>
                 <div>
-                    <?= $schoolio->description ?>
+                    <?= $school['description'] ?>
                 </div>
             </div>
             </section>

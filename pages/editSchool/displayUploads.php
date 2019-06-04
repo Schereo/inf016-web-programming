@@ -1,11 +1,6 @@
 <?php
-if(!is_dir("pages/editSchool/uploads")){
-    mkdir("pages/editSchool/uploads");
-}
-$uploads = "pages/editSchool/uploads";
-if ($openFile = opendir($uploads)) {
-    while (($file = readdir($openFile)) !== False) {
-        if ($file != "." && $file != "..")
-            echo " <img src='$uploads/$file'>";
-    }
-}
+
+$query = new Query((new DatabaseConnector())->connect());
+$img = $query->getUploadedImages();
+
+echo '<img src="data:image/png;base64,' . base64_encode($img['data']) . '"/>';
