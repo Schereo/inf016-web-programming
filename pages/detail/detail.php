@@ -1,9 +1,7 @@
 <article class>
     <?php
-    require_once 'db/schoolDao.php';
-    require_once 'db/schoolJson.php';
     require_once 'pages/search/schoolView.php';
-    if (isset($school)):
+    if (isset($school) && $search && isset($_GET['ID'])):
     ?>
 
     <h2 class="card-header">

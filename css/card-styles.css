@@ -23,6 +23,11 @@
     width:30px;
 }
 
+.card .card-header#rueckmeldung{
+    color: lawngreen;
+    text-align: center;
+}
+
 .card .card-header .editIcon> img {
 
 }.card .card-header .editIcon> button {

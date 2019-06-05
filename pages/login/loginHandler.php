@@ -14,7 +14,7 @@ function userLogin($emailLogin, $passwordLogin)
                     $_SESSION['userName'] = $user_row->mail;
                     $_SESSION['firstName'] = $user_row->vorname;
                     $_SESSION['lastName'] = $user_row->nachname;
-                    $_SESSION['error'] = ($query->getUserId($emailLogin));
+                    $_SESSION['error'] = "Login erfolgreich";
                     header("Location: index.php");
                     return;
                 } else {

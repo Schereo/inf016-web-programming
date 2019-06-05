@@ -50,6 +50,11 @@ include 'imageslider.php';
 ?>
 
 <div class="main-container">
+    <?php if(isset($_SESSION['error'])){ ?>
+    <div class="large-grid-item card">
+        <h2 class="card-header" id="rueckmeldung" ><?php echo $_SESSION['error']?></h2>
+    </div>
+    <?php } ?>
     <div class="large-grid-item card">
         <?php include 'pages/search/search.php'; ?>
     </div>
