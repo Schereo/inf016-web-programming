@@ -7,6 +7,7 @@ $query = (new Query((new DatabaseConnector())->connect()));
 if (isset($_GET["schoolName"])) {
     $schoolName = htmlentities($_GET["schoolName"]);
     $schools = $query->getSchoolsByName($_GET['schoolName']);
+
 }
 
 if (isset($_GET["district"])) {

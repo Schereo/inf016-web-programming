@@ -5,9 +5,9 @@
         <form class="newSchool-container">
             <form action="pages/editSchool/editSchoolHandler.php" method="post">
                 <div class="info-input">
-                    <div class="editPictures">
-                        <img src="../assets/images/<?= $school['image_path'] ?>" alt="Bild zeigt <?= $school['name'] ?>"
-                             width="150px">
+                    <div class="uploadedPictures">
+                        <?php include 'pages/editSchool/showPicture.php' ?>
+
                     </div>
                     <div class="text-left"> Name:</div>
                     <div class="text-right"><input class="input" type="text" name="schoolname"

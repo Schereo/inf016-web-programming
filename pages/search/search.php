@@ -30,7 +30,7 @@
                     <h2><?=$school['name']?></h2>
                 </div>
                 <div class="small-card-body">
-                    <img src="assets/images/<?=$school['imagePath']?>" alt="Bild zeigt <?=$school['name']?>" class="responsive">
+                    <div>  <?php include 'pages/search/showPicture.php' ?> </div>
                     <ul class="card-list">
                         <li><b>Schulform</b> <?=$school['school_type']?></li>
                         <li><b>Stadtteil</b> <?=$school['district']?></li>
