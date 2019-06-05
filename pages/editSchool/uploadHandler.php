@@ -1,30 +1,28 @@
 <?php
-require_once '../../db/schoolDao.php';
-require_once '../../db/schoolJson.php';
+require_once "../../database/Insert.php";
+session_start();
 
 if (isset($_FILES['upload'])) {
-    $upload = $_FILES['upload'];
-    $uploadName = $_FILES['upload']['name'];
-    $uploadSize = $_FILES['upload']['size'];
+    $imgName = $_FILES['upload']['name'];
+    $imgSize = $_FILES['upload']['size'];
+    $imgMime = $_FILES['upload']['type'];
+
     $uploadError = $_FILES['upload']['error'];
-    $uploadTmpName = $_FILES['upload']['tmp_name'];
+    $allowed = array('jpg', 'jpeg', 'png', 'JPG', 'JPEG', 'PNG');
+    $extension = pathinfo($imgName, PATHINFO_EXTENSION);
 
-    $uploadExt = explode('.', $uploadName);
-    $uploadActuelExt = strtolower(end($uploadExt));
-
-    $allowed = array('jpg', 'jpeg', 'png');
-
-    if (in_array($uploadActuelExt, $allowed)) {
-        if ($uploadError === 0) {
-            $uploadNameNew = uniqid('', true) . "." . $uploadActuelExt;
-            $destination = 'uploads/' . $uploadNameNew;
-            move_uploaded_file($uploadTmpName, $destination);
-            header("Location:../../index.php#anlegen");
-        } else if ($uploadError === 1) {
-            echo " Ihre Datei ist leider zu groß. ";
-        }
+    if ($uploadError === 0 && in_array($extension, $allowed)) {
+        $imgData = file_get_contents($_FILES['upload']['tmp_name']);
+        $uploadNameNew = uniqid('', true) . "." . $extension;
+        $insert->newImage($uploadNameNew, $imgSize, $imgMime, $imgData, $_SESSION['user_ID']);
+        $_SESSION['uploadError'] = "Upload erfolgreich";
+        header("Location:../../index.php#anlegen");
+    } else if ($uploadError === 1) {
+        $_SESSION['uploadError'] = "Ihr Bild ist zu groß";
+        header("Location:../../index.php#anlegen");
     } else {
-        echo "Upload fehlgeschlagen";
+        $_SESSION['uploadError'] = "Fehlgeschlagen - bitte nur jpg, jpeg oder png hochladen";
+        header("Location:../../index.php#anlegen");
     }
 }
 

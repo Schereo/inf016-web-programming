@@ -71,15 +71,27 @@
     grid-row: 1;
     grid-column: 1;
     /* background: var(--background); */
-    margin: 2em;
+
 }
 
+.uploadedPictures {
+    margin-bottom: 10px;
+    width: min-content;
+}
 .uploadedPictures > img {
     width: 250px;
     height: 150px;
     padding-left: 1em;
 }
 
+.uploadedPictures > button {
+    background: darkred;
+    border-radius: 2px;
+    border: none;
+    font-size: 10px;
+    padding: 5px 6px;
+    color: #FCFCFC;
+}
 .pictureCard {
     margin: 15px;
 }

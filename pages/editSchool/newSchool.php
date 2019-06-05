@@ -2,14 +2,16 @@
     <h2 id="anlegen" class="card-header">Schule anlegen</h2>
     <div class="card-body">
         <div class="UploadInterface">
-            <div class="uploadedPictures"> <?php include 'displayUploads.php' ?> </div>
+            <div class="uploadedPictures" id="uploadID">
+                <?php include 'displayUploads.php' ?> </div>
             <form action="pages/editSchool/uploadHandler.php" class="file-upload-field"
-                  enctype="multipart/form-data" method="post">
+                  enctype="multipart/form-data" method="post"><br>
+                <?php session_start(); print_r($_SESSION['uploadError']) ?> <br>
                 <input class="file-upload" type="file" name="upload" multiple>
                 <input class="input" type="submit" value="Upload Image" name="submit">
             </form>
         </div>
-        <form class="newSchool-container"  action="pages/editSchool/newSchoolHandler.php" method="post">
+        <form class="newSchool-container" action="pages/editSchool/newSchoolHandler.php" method="post">
             <div class="info-input">
                 Name:<input class="input" type="text" name="schoolname" value="">
                 <br>
@@ -17,18 +19,18 @@
                 <div class="text-right">
                     <select class="input schooltype" name="schooltype">
                         <?php foreach ($schoolforms as $schoolform): ?>
-                            <option value="<?=$schoolform?>"><?=$schoolform?></option>
+                            <option value="<?= $schoolform ?>"><?= $schoolform ?></option>
                         <?php endforeach;
-                        unset($schoolform);?>
+                        unset($schoolform); ?>
                     </select>
                 </div>
                 <br>
                 <div class="text-left"> Stadtteil:</div>
                 <div class="text-right"><select class="input district" name="district">
                         <?php foreach ($districts as $district): ?>
-                            <option value="<?=$district?>"><?=$district?></option>
+                            <option value="<?= $district ?>"><?= $district ?></option>
                         <?php endforeach;
-                        unset($district);?>
+                        unset($district); ?>
                     </select></div>
                 <br>
                 Schulleitung:
@@ -53,7 +55,7 @@
                 <br>
                 <textarea class="textarea" name="description" placeholder="Infos"> </textarea>
                 <br>
-                <button type="submit" class="default-button" > Upload</button>
+                <button type="submit" class="default-button"> Upload</button>
         </form>
     </div>
 </section>

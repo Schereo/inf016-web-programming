@@ -20,7 +20,6 @@ $school = [
         "zip_code" => "12345"
     ]];
 
-//derzeit werden die Fotos nach upload wieder aus dem Ordner gelöscht - später sollen Sie ihrer Schule richtig zugeordnet werden.
 $update = new Update((new DatabaseConnector())->connect());
 $update->editSchool($school);
 header("Location: ../../index.php");

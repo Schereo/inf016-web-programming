@@ -55,4 +55,13 @@ class Update
         $row = $stmt->fetch();
         return $row['school_id'];
     }
+
+    public function imageSchoolID($schoolId, $user_id){
+        $sql = "UPDATE Image SET school_id = :school_id Where school_id = :user_id";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([
+            ':user_id' => $user_id,
+            ':school_id' => $schoolId
+        ]);
+    }
 }

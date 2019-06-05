@@ -32,7 +32,7 @@ class Query
     {
         $sql = "Select *
                 From School, User
-                where :author = author";
+                where creator = :author";
         $stmt = $this->pdo->prepare($sql);
         try {
             $stmt->execute([
@@ -113,7 +113,8 @@ class Query
         return $row['password'];
     }
 
-    public function getSchoolsByType($school_type){
+    public function getSchoolsByType($school_type)
+    {
         $sql = "Select *
                 From School
                 where school_type = :school_type";
@@ -145,7 +146,9 @@ class Query
         $row = $stmt->fetchAll();
         return $row;
     }
-    public function getSchoolsByName($name){
+
+    public function getSchoolsByName($name)
+    {
         $sql = "Select *
                 From School
                 where name LIKE '%' ||:name ||'%'";
@@ -161,9 +164,20 @@ class Query
         return $row;
     }
 
+    function getUploadedImages($tempId){
+        $sql = "SELECT * FROM Image WHERE school_id = :tempId" ;
 
-
-
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([
+                ':tempId' => $tempId
+            ]);
+        } catch (Exception $ex) {
+            error_log("Query->getUploadedImages Error: " . $ex->getMessage());
+        }
+        $row = $stmt->fetchAll();
+        return $row;
+    }
 }
 
 $query = new Query((new DatabaseConnector())->connect());
