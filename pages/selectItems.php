@@ -25,5 +25,5 @@ $districts = array(
     13 => "Osternburg",
     14 => "Tweelbäke",
     15 => "Wechloy",
-    16 => "Ziegelhofviertel"
+    16 => "Ziegelhofviertel",
 );

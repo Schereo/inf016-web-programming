@@ -17,8 +17,10 @@ $school = [
         "street" => $_POST['street'],
         "number" => $_POST['number'],
         "district" => $_POST['district'],
-        "zip_code" => "12345"
+        "zip_code" => $zip_codes[$_POST['district']]
     ]];
+
+
 
 $update = new Update((new DatabaseConnector())->connect());
 $update->editSchool($school);

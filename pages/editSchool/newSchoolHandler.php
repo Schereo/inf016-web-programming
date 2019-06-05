@@ -1,5 +1,7 @@
 <?php
 require_once "../../database/Insert.php";
+require_once "zip_codes.php";
+
 $school = [
     "creator" => $_SESSION['user_ID'],
     "name" => $_POST['schoolname'],
@@ -11,11 +13,12 @@ $school = [
     "homepageURL" => $_POST['homepage'],
     'address' => [
         "street" => $_POST['street'],
+        "zip_code" => getZip()[$_POST['district']],
         "number" => $_POST['number'],
         "district" => $_POST['district'],
     ]];
 
 $insert = new Insert((new DatabaseConnector())->connect());
 $insert->newSchool($school, $_SESSION['user_ID'] );
-$_SESSION['uploadError'] = "Ihre Schule wurde erfolgreich angelegt.";
+$_SESSION['error'] = "Ihre Schule wurde erfolgreich angelegt.";
 header("Location: ../../index.php");
