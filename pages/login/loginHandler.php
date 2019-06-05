@@ -19,13 +19,13 @@ function userLogin($emailLogin, $passwordLogin)
                     return;
                 } else {
                     #Wrong password
-                    $_SESSION['error'] ="Wrong Password";
+                    $_SESSION['error'] ="Falsches Passwort";
                     header("Location: index.php");
                     return;
                 }
             } else {
                 #User doesn't exist
-                $_SESSION['error'] = "User doesn't exist.";
+                $_SESSION['error'] = "Benutzer nicht vorhanden";
                 header("Location: index.php");
                 return;
             }

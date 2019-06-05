@@ -17,5 +17,5 @@ $school = [
 
 $insert = new Insert((new DatabaseConnector())->connect());
 $insert->newSchool($school, $_SESSION['user_ID'] );
-$_SESSION['uploadError'] = "Ihre Schule wurde erfolgreich angelegt.";
+$_SESSION['error'] = "Ihre Schule wurde erfolgreich angelegt.";
 header("Location: ../../index.php");

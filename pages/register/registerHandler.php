@@ -13,9 +13,9 @@ require_once "database/Query.php";
         }
         $query = (new Query((new DatabaseConnector())->connect()));
         if ($query->getUserId($email) != null) {
-            $_SESSION['error'] = "Wrong Email or Password1";
+            $_SESSION['error'] = "Benutzer bereits vorhanden";
         } elseif ($password !== $password_match) {
-            $_SESSION['error'] = "Wrong Email or Password11";
+            $_SESSION['error'] = "Passwörter stimmen nicht überein";
             header("Location: index.php");
             return;
         } else {

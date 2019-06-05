@@ -6,7 +6,6 @@
                 <?php include 'displayUploads.php' ?> </div>
             <form action="pages/editSchool/uploadHandler.php" class="file-upload-field"
                   enctype="multipart/form-data" method="post"><br>
-                <?php session_start(); print_r($_SESSION['uploadError']) ?> <br>
                 <input class="file-upload" type="file" name="upload" multiple>
                 <input class="input" type="submit" value="Upload Image" name="submit">
             </form>
