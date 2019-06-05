@@ -38,12 +38,12 @@
                         <li><b>Stadtteil</b> <?=$school['district']?></li>
                         <li><b>Schüler</b> <?=$school['students']?></li>
                         <li><b>Bewertung</b>
-                            <?php if($school['ratingAvg'] >= 0 && $school['ratingAvg'] < 1):?>&#x2606 &#x2606 &#x2606 &#x2606 &#x2606<?php endif;?>
-                            <?php if($school['ratingAvg'] >= 1 && $school['ratingAvg'] < 2):?>&#x2605 &#x2606 &#x2606 &#x2606 &#x2606<?php endif;?>
-                            <?php if($school['ratingAvg'] >= 2 && $school['ratingAvg'] < 3):?>&#x2605 &#x2605 &#x2606 &#x2606 &#x2606<?php endif;?>
-                            <?php if($school['ratingAvg'] >= 3 && $school['ratingAvg'] < 4):?>&#x2605 &#x2605 &#x2605 &#x2606 &#x2606<?php endif;?>
-                            <?php if($school['ratingAvg'] >= 4 && $school['ratingAvg'] < 5):?>&#x2605 &#x2605 &#x2605 &#x2605 &#x2606<?php endif;?>
-                            <?php if($school['ratingAvg'] == 5):?>&#x2605 &#x2605 &#x2605 &#x2605 &#x2605<?php endif;?>
+                            <?php if($school[15] >= 0 && $school[15] < 1):?>&#x2606 &#x2606 &#x2606 &#x2606 &#x2606<?php endif;?>
+                            <?php if($school[15] >= 1 && $school[15] < 2):?>&#x2605 &#x2606 &#x2606 &#x2606 &#x2606<?php endif;?>
+                            <?php if($school[15] >= 2 && $school[15] < 3):?>&#x2605 &#x2605 &#x2606 &#x2606 &#x2606<?php endif;?>
+                            <?php if($school[15] >= 3 && $school[15] < 4):?>&#x2605 &#x2605 &#x2605 &#x2606 &#x2606<?php endif;?>
+                            <?php if($school[15] >= 4 && $school[15] < 5):?>&#x2605 &#x2605 &#x2605 &#x2605 &#x2606<?php endif;?>
+                            <?php if($school[15] == 5):?>&#x2605 &#x2605 &#x2605 &#x2605 &#x2605<?php endif;?>
                         </li>
                     </ul>
                 </div>
