@@ -79,12 +79,10 @@ include 'imageslider.php';
         <div class="large-grid-item card">
             <?php include 'pages/editSchool/newSchool.php'; ?>
         </div>
-    <?php }
-    print_r($_SESSION['userName']); ?>
+    <?php } ?>
 </div>
     <div class="stretch-grid-item" id="indexfooter">
-        <?php  print_r($_SESSION['error']);
-        include $depth.'footer.php'; ?>
+        <?php include $depth.'footer.php'; ?>
     </div>
 </body>
 </html>

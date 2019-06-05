@@ -7,7 +7,6 @@
                 <div class="info-input">
                     <div class="uploadedPictures">
                         <?php include 'pages/editSchool/showPicture.php' ?>
-
                     </div>
                     <div class="text-left"> Name:</div>
                     <div class="text-right"><input class="input" type="text" name="schoolname"

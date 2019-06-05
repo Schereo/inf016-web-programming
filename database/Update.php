@@ -2,6 +2,7 @@
 require_once "DatabaseConnector.php";
 require_once "Query.php";
 require_once "Insert.php";
+session_start();
 
 class Update
 {
@@ -53,6 +54,7 @@ class Update
             ':id' => $school['school_id']
         ]);
         $row = $stmt->fetch();
+        $_SESSION['Schule erfolgreich geändert'];
         return $row['school_id'];
     }
 

@@ -49,19 +49,17 @@ class Insert
                 ':house_number' => $school['address']['number'],
                 ':district' => $school['address']['district'],
                 ':city' => 'oldenburg',
-                ':zip_code' => ['address']['street'],
-                ':street' => ['address']['street'],
+                ':zip_code' => $school['address']['zip_code'],
+                ':street' => $school['address']['street'],
                 ':email' => $school['mail'],
                 ':students' => 1000,
                 ':homepage_url' => $school['homepageURL'],
                 ':creator' => $school['creator']
             ]);
-            $update = new Update((new DatabaseConnector())->connect());
-            $schoolId = $this->pdo->lastInsertID();
-            $update->imageSchoolID($schoolId, $user_id);
         } catch (Exception $ex) {
             error_log("Insert->newSchool() Error: " . $ex->getMessage());
         }
+            $_SESSION['error'] = "Neue Schule erfolgreich angelegt";
     }
 
     public function newImage($name, $size, $mime, $data, $schoolId)
