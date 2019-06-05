@@ -178,6 +178,19 @@ class Query
         $row = $stmt->fetchAll();
         return $row;
     }
+
+    function getAllSchools(){
+        $sql = "SELECT * FROM School" ;
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+        } catch (Exception $ex) {
+            error_log("Query->getUploadedImages Error: " . $ex->getMessage());
+        }
+        $row = $stmt->fetchAll();
+        return $row;
+    }
 }
 
 $query = new Query((new DatabaseConnector())->connect());
