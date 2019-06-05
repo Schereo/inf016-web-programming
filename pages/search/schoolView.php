@@ -13,9 +13,7 @@ if(isset($_GET["schoolName"]) || isset($_GET["district"]) || isset($_GET["school
             $ratingAvg = $query->getAvgRatingForSchool($school['school_id']);
             array_push($school, $ratingAvg);
             array_push($schools, $school);
-
         }
-        print_r($schools);
     }
 
     if (isset($_GET["district"])) {

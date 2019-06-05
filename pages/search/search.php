@@ -57,7 +57,6 @@
                 </div>
             </div>
             <?php endforeach;
-
             endif; ?>
         </div>
     </div>
