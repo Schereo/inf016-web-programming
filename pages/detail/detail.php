@@ -15,7 +15,7 @@
         </form>
     </h2>
     <form class="detailcontainer card-body" method="GET" action="<?php echo $_SERVER['PHP_SELF'] ?>">
-        <img src="../../assets/images/hgo1.jpg" alt="Picture of BBS Wechloy" class="responsive detail-picture">
+        <?php include 'pages/detail/showPicture.php';?>
         <div class="detail-contact">
 
             <h1 class="info-container detail-headline">

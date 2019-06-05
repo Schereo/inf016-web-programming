@@ -87,6 +87,13 @@
     border: none;
 }
 
+.small-card .responsivePicture{
+     width: 250px;
+    padding-left: 10px;
+    /* height:  5px; */
+    /* justify-content: center; */
+}
+
 .small-card > .small-card-footer a:hover, .small-card  .small-card-footer button:hover{
 
     background-color: var(--accent);
