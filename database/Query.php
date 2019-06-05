@@ -198,12 +198,14 @@ class Query
                 WHERE school_id = :school_id";
         try {
             $stmt = $this->pdo->prepare($sql);
-            $stmt->execute();
+            $stmt->execute([
+                ':school_id' => $school_id
+            ]);
         } catch (Exception $ex) {
             error_log("Query->getAvgRating Error: " . $ex->getMessage());
         }
-        $row = $stmt->fetchAll();
-        return $row;
+        $row = $stmt->fetch();
+        return $row['AVG(rating_value)'];
     }
 }
 

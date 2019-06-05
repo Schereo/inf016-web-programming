@@ -37,7 +37,7 @@
                         <li><b>Schulform</b> <?=$school['school_type']?></li>
                         <li><b>Stadtteil</b> <?=$school['district']?></li>
                         <li><b>Schüler</b> <?=$school['students']?></li>
-                        <li><b>Berwertung</b>
+                        <li><b>Bewertung</b>
                             <?php if($school['ratingAvg'] >= 0 && $school['ratingAvg'] < 1):?>&#x2606 &#x2606 &#x2606 &#x2606 &#x2606<?php endif;?>
                             <?php if($school['ratingAvg'] >= 1 && $school['ratingAvg'] < 2):?>&#x2605 &#x2606 &#x2606 &#x2606 &#x2606<?php endif;?>
                             <?php if($school['ratingAvg'] >= 2 && $school['ratingAvg'] < 3):?>&#x2605 &#x2605 &#x2606 &#x2606 &#x2606<?php endif;?>
@@ -57,7 +57,8 @@
                 </div>
             </div>
             <?php endforeach;
-            endif;?>
+
+            endif; ?>
         </div>
     </div>
 </section>
