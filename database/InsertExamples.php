@@ -29,9 +29,9 @@ function insertData()
                 "number" => 38,
                 "district" => "Eversten",
         ]];
-        $insert->newSchool($school, 1);
-        $insert->newRating("CanteenRating", 3, 1, 1);
-        $insert->newRating("LearnEnvironmentRating", 4, 1,1);
+        //$insert->newSchool($school, 1);
+        $insert->newRating("CanteenRating", 5, 1, 6);
+        $insert->newRating("LearnEnvironmentRating", 4, 1,6);
         //$insert->newImage("hls4", 10000, "image/jpg;base64", base64_encode(file_get_contents('../assets/images/hls2.jpg')), 5);
 
 }
