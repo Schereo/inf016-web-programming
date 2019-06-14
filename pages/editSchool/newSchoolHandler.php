@@ -8,6 +8,7 @@ $school = [
     "schoolType" => $_POST['schooltype'],
     "description" => $_POST['description'],
     "principal" => $_POST['principal'],
+    "students" => $_POST['numberOfStudents'],
     "phoneNumber" => $_POST['phonenumber'],
     "mail" => $_POST['mail'],
     "homepageURL" => $_POST['homepage'],
