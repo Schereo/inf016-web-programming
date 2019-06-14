@@ -33,7 +33,7 @@
                     Schüleranzahl:
                 </div>
                 <div class="text-right">
-                    <?= $school['numberOfStudents'] ?>
+                    <?= $school['students'] ?>
                 </div>
             </div>
             <div class="info-container">
