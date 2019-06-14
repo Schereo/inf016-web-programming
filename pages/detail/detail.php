@@ -17,8 +17,9 @@
         <div class="detail-contact">
 
             <h1 class="info-container detail-headline">
-                Berufsbildungszentrum für Wirtschaft, Informatik und Gesundheit
+                Was soll hier eigentlich stehen?!?!
             </h1>
+            <h3>Kurzprofil</h3>
             <div class="info-container">
                 <div class="text-left">
                     Schulleitung:
@@ -29,13 +30,30 @@
             </div>
             <div class="info-container">
                 <div class="text-left">
+                    Schüleranzahl:
+                </div>
+                <div class="text-right">
+                    <?= $school['numberOfStudents'] ?>
+                </div>
+            </div>
+            <div class="info-container">
+                <div class="text-left"> Beschreibung: </div>
+                <div class="text-right">
+                    <?= $school['description'] ?>
+                </div>
+            </div>
+            <br>
+            <div class="info-container">
+                <div class="text-left">
                     Adresse:
                 </div>
                 <div class="text-right">
                     <?= $school['street'] ; echo " " .$school['house_number'];?>
-                    <br> <?= $school['zip'] ?> <?= $school['city'] ?>
+                    <br><?=$school['district'] ?><?= $school['zip'] ?>, <?= $school['city'] ?>
                 </div>
             </div>
+            <br>
+            <h3>Kontakt</h3>
             <div class="info-container">
                 <div class="text-left">
                     Telefon:
@@ -54,16 +72,10 @@
             </div>
             <div class="info-container">
                 <div class="text-left">
-                    Internet:
+                    Homepage:
                 </div>
                 <div class="text-right">
                     <a href="<?= $school['homepage_url'] ?>"><?= $school['homepage_url'] ?></a>
-                </div>
-            </div>
-            <div class="detail-info">
-                <h5 class="detail-headline">Weitere Infos</h5>
-                <div>
-                    <?= $school['description'] ?>
                 </div>
             </div>
             </section>
