@@ -176,6 +176,11 @@ class Query
             error_log("Query->getUploadedImages Error: " . $ex->getMessage());
         }
         $row = $stmt->fetchAll();
+
+
+        foreach ($row as $rows){
+            $rows['data']=base64_encode($rows['data']);
+        }
         return $row;
     }
 

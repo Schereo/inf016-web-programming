@@ -13,7 +13,7 @@
         </form>
     </h2>
     <form class="detailcontainer card-body" method="GET" action="<?php echo $_SERVER['PHP_SELF'] ?>">
-        <?php include 'pages/detail/showPicture.php';?>
+        <div><?php include 'pages/detail/showPicture.php';?></div>
         <div class="detail-contact">
 
             <h1 class="info-container detail-headline">
