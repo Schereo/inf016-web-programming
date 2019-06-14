@@ -7,8 +7,8 @@
         <input class="input" type="text" name="lastNameReg" placeholder="Nachname">
         <input class="input" type="email" name="emailReg" placeholder="Email">
         <input class="input"  id="regPassword" type="password" name="password" placeholder="Passwort" onload="checkPasswordStrength()">
-        <meter max="4" id="password-strength-meter"></meter>
-        <p id="password-strength-text"></p>
+        <script><meter max="4" id="password-strength-meter"></meter>
+        <p id="password-strength-text"></p></script>
         <input class="input" type="password" name="password2Reg" placeholder="Passwort wiederholen">
         <button class="default-button button-size" type="submit" name="registrieren"> Registrieren</button>
     </form>
