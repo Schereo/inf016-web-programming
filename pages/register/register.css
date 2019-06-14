@@ -1,12 +1,16 @@
 /* Password Stärke Anzeige Anfang*/
 
 meter {
+    display:none;
     -moz-appearance: none;
     appearance: none;
 
     width: 100%;
     height: 0.5em;
     }
+p#password-strength-text{
+    display:none;
+}
 
 meter::-webkit-meter-bar {
     background: none;
