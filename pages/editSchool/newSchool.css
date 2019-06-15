@@ -48,7 +48,15 @@
     margin-bottom: 2em;
 
 }
-
+.UploadInterface {
+    grid-row: 2;
+}
+.UploadGallery {
+    grid-row: 1;
+}
+.UploadStatus {
+    margin-left: 1em;
+}
 .uploadInterface input {
     grid-row: 1;
     margin: 0;
@@ -104,7 +112,7 @@
 }
 
 .info-input {
-    grid-row: 2;
+    grid-row: 3;
     padding: 15px;
 }
 
