@@ -20,7 +20,7 @@ if (isset($_POST['type'])) {
             }
         }
     } elseif ($_POST['type'] == "Register") {
-        if(isset($_POST['firstNameReg']) && isset($_POST['lastNameReg']) && isset($_POST['emailReg']) && isset($_POST['passwordReg']) && isset($_POST['password2Reg'])) {
+        if (isset($_POST['firstNameReg']) && isset($_POST['lastNameReg']) && isset($_POST['emailReg']) && isset($_POST['passwordReg']) && isset($_POST['password2Reg'])) {
             registerUser($_POST['firstNameReg'], $_POST['lastNameReg'], $_POST['emailReg'], $_POST['passwordReg'], $_POST['password2Reg']);
             header("Location: index.php");
             return;
@@ -42,11 +42,10 @@ if (isset($_POST['type'])) {
     <link rel="stylesheet" href="css/styles.css"/>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="js/userFunctions.js"></script>
-    <script
-            src="http://code.jquery.com/jquery-3.4.1.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-            crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 <?php
@@ -55,10 +54,10 @@ include 'imageslider.php';
 ?>
 
 <div class="main-container">
-    <?php if(isset($_SESSION['error'])){ ?>
-    <div class="large-grid-item card">
-        <h2 class="card-header" id="rueckmeldung" ><?php echo $_SESSION['error']?></h2>
-    </div>
+    <?php if (isset($_SESSION['error'])) { ?>
+        <div class="large-grid-item card">
+            <h2 class="card-header" id="rueckmeldung"><?php echo $_SESSION['error'] ?></h2>
+        </div>
     <?php } ?>
     <div class="large-grid-item card">
         <?php include 'pages/search/search.php'; ?>
@@ -86,8 +85,8 @@ include 'imageslider.php';
         </div>
     <?php } ?>
 </div>
-    <div class="stretch-grid-item" id="indexfooter">
-        <?php include $depth.'footer.php'; ?>
-    </div>
+<div class="stretch-grid-item" id="indexfooter">
+    <?php include $depth . 'footer.php'; ?>
+</div>
 </body>
 </html>
