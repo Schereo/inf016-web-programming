@@ -13,8 +13,6 @@ class Update
     {
         $this->pdo = $pdo;
     }
-
-
     public function editSchool($school)
     {
         $sql = "UPDATE School
@@ -53,6 +51,8 @@ class Update
             ':creator' => $school['creator'],
             ':id' => $school['school_id']
         ]);
+        $update = new Update((new DatabaseConnector())->connect());
+        $update->imageSchoolID($school['school_id'], $school['creator']);
         $row = $stmt->fetch();
         $_SESSION['Schule erfolgreich geändert'];
         return $row['school_id'];
@@ -66,4 +66,5 @@ class Update
             ':school_id' => $schoolId
         ]);
     }
+
 }

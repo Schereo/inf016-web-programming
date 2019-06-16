@@ -2,15 +2,15 @@
     <h2 id="anlegen" class="card-header">Schule anlegen</h2>
     <div class="card-body">
 
-        <div id="UploadGallery"> </div>
+
         <div class="UploadInterface">
+            <div id="UploadGallery">  <?php include 'pages/editSchool/displayUploads.php' ?> </div>
             <form id ="upload" class="file-upload-field" enctype="multipart/form-data" method="post"><br>
-                <input class="file-upload" type="file" name="upload"  id="file" multiple>
+                <input class="file-upload" type="file" name="upload" multiple>
                 <input class="input" type="submit" value="Upload" name="uploadButton">
             </form>
             <div id="uploadStatus"> </div>
         </div>
-
         <form class="newSchool-container" action="pages/editSchool/newSchoolHandler.php" method="post">
             <div class="info-input">
                 <p>Kurzprofil</p>
