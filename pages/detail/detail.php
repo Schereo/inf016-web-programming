@@ -1,3 +1,5 @@
+<?php
+?>
 <article class>
     <?php
     require_once 'pages/search/schoolView.php';

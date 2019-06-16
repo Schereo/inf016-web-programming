@@ -1,10 +1,5 @@
- <form class="rating">
-        <p>    Diese Schule bewerten </p>
-        <span class="star" data-value="5">&#9734;</span>
-        <span class="star" data-value="4">&#9734;</span>
-        <span class="star" data-value="3">&#9734;</span>
-        <span class="star" data-value="2">&#9734;</span>
-        <span class="star" data-value="1">&#9734;</span> <br>
-        <textarea class="comment" placeholder="Beschreibung"> </textarea> <br>
-     <button type="submit" class="default-button">Bewertung speichern</button>
+<form>
+    <div class="star-rating star-rating-active rating-md"><div class="clear-rating clear-rating-active" title="Clear"><i class="glyphicon glyphicon-minus-sign"></i></div><s class="rated"><s class="rated"><s class="rated"><s class="rated"><s class="rated"></s></s></s></s></s><div class="caption"><span class="label label-success">Five Stars</span></div></div><input id="rating-system" type="number" class="rating" min="1" max="5" step="1" style="display: none;"><br>
+    <br>
+
 </form>
