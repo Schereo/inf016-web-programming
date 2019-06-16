@@ -15,7 +15,7 @@ $(document).ready(function () {
             },
             success: function () {
                 $('#uploadStatus').html('<span style=color:#28A74B;">Upload erfolgreich.<span>');
-                $('#UploadGallery').load("pages/editSchool/displayUploads.php");
+                //$('#UploadGallery').load("pages/editSchool/displayUploads.php");
             }
         })
     });
