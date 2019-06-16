@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('#upload').on('submit', function (e) {
+    $('#upload').on('submit', function uploadPictures (e) {
         e.preventDefault();
         $.ajax({
             type: 'POST',
@@ -13,9 +13,9 @@ $(document).ready(function () {
             error: function () {
                 $('#uploadStatus').html('<span style="color:#EA4335;">Upload fehlgeschlagen.<span>');
             },
-            success: function (data) {
+            success: function () {
                 $('#uploadStatus').html('<span style=color:#28A74B;">Upload erfolgreich.<span>');
-                $('.UploadGallery').html(data);
+                $('#UploadGallery').load("pages/editSchool/displayUploads.php");
             }
         })
     });
