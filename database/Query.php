@@ -210,6 +210,22 @@ class Query
         $row = $stmt->fetchAll();
         return $row;
     }
+
+    function getAvgRatingForSchool($school_id){
+        $sql = "SELECT AVG(rating_value)
+                FROM Rating
+                WHERE school_id = :school_id";
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([
+                ':school_id' => $school_id
+            ]);
+        } catch (Exception $ex) {
+            error_log("Query->getAvgRating Error: " . $ex->getMessage());
+        }
+        $row = $stmt->fetch();
+        return $row['AVG(rating_value)'];
+    }
 }
 
 $query = new Query((new DatabaseConnector())->connect());
