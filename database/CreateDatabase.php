@@ -22,8 +22,7 @@ function createDatabase() {
           user_id INTEGER,
           school_id INTEGER,
           FOREIGN KEY (user_id) REFERENCES User(user_id) ON UPDATE CASCADE,
-          FOREIGN KEY (school_id) REFERENCES School(school_id) ON DELETE CASCADE ON UPDATE CASCADE,
-          CONSTRAINT unq UNIQUE (rating_type, user_id, school_id)      
+          FOREIGN KEY (school_id) REFERENCES School(school_id) ON DELETE CASCADE ON UPDATE CASCADE
         );
         ',
         '
@@ -35,7 +34,7 @@ function createDatabase() {
           principal VARCHAR(100),
           phone_number VARCHAR(40),
           house_number INTEGER,
-          zip_code INTEGER(4),
+          zip_code INTEGER(5),
           district VARCHAR(40) NOT NULL,
           city VARCHAR(40),
           street VARCHAR(100),
