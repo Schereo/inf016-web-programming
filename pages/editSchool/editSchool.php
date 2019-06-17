@@ -4,7 +4,7 @@
 
         <div class="UploadInterface">
             <div id="UploadGallery"> <?php include 'pages/editSchool/displayUploads.php' ?> </div>
-            <form id ="eUpload" class="file-upload-field" enctype="multipart/form-data" method="post"><br>
+            <form id ="eUpload" name="<?= $school['school_id'] ?>" class="file-upload-field" enctype="multipart/form-data" method="post"><br>
                 <input class="file-upload" type="file" name="upload" multiple>
                 <input class="input" type="submit" value="Upload" name="uploadButton">
             </form>

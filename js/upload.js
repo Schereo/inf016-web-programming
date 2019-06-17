@@ -2,7 +2,7 @@ $(document).ready(function () {
     var id;
     $('#upload').on('submit', function uploadPic(e) {
         //id = "<?php echo $_SESSION['user_ID'] ?>";
-        id=4;
+        id = document.getElementById("upload").name;
         e.preventDefault();
         $.ajax({
             type: 'POST',
@@ -23,13 +23,14 @@ $(document).ready(function () {
         })
     });
     $('#eUpload').on('submit', function eUploadPic(e) {
-        //id = "<?php echo $school['school_id'] ?>";
-        id = 57;
+        id = document.getElementById("eUpload").name;
+        var data = new FormData(this);
+        data.append("id", id);
         e.preventDefault();
         $.ajax({
             type: 'POST',
             url: "pages/editSchool/upload.php",
-            data: new FormData(this),
+            data: data,
             contentType: false,
             cache: false,
             processData: false,
@@ -42,12 +43,12 @@ $(document).ready(function () {
                 $('#uploadStatus').html('<span style=color:#28A74B;">Upload erfolgreich.<span>');
                 $('#UploadGallery').load("pages/editSchool/displayUploads.php", {id: id});
             }
-        })
+        });
     });
-
 });
 
-function deletePic(img) {
+function deletePic(img, schoolID){
+    var id = schoolID;
     $.ajax({
         type: 'POST',
         url: "pages/editSchool/deleteImgHandler.php",
@@ -56,21 +57,9 @@ function deletePic(img) {
             $('#uploadStatus').html('<span style="color:#EA4335;">löschen fehlgeschlagen.<span>');
         },
         success: function () {
-            $('#uploadStatus').html('<span style=color:#28A74B;">löschen erfolgreich.<span>');
-        }
-    })
-}
-
-function showPicture() {
-    var id = "<?php echo $school['school_id'] ?>";
-    e.preventDefault();
-    $.ajax({
-        type: 'POST',
-        url: 'pages/editSchool/displayUploads.php',
-        data: {id : id},
-        success: function () {
-            $('#uploadStatus').html('<span style=color:#28A74B;">löschen erfolgreich.<span>');
+            $('#uploadStatus').html('<span style=color:#28A74B;">löschen erfolgreich. <span>');
             $('#UploadGallery').load("pages/editSchool/displayUploads.php", {id: id});
         }
-    })
+    });
+    return false;
 }

@@ -7,8 +7,8 @@
 
 
         <div class="UploadInterface">
-            <div id="UploadGallery">  <?php include __DIR__.'/displayUploads.php' ?> </div>
-            <form id ="upload" class="file-upload-field" enctype="multipart/form-data" method="post"><br>
+            <div id="UploadGallery" >  </div>
+            <form name="<?= $_SESSION['user_ID'] ?>" id ="upload" class="file-upload-field" enctype="multipart/form-data" method="post"><br>
                 <input class="file-upload" type="file" name="upload" multiple>
                 <input id="ubutton" class="input" type="submit" value="Upload" name="uploadButton">
             </form>
