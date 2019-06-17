@@ -55,6 +55,6 @@
 
 
     <button class="default-button button-size" type="submit"
-            onclick="addRating('<?= $_GET['school_id'] ?>','<?= $_SESSION['user_id'] ?>')">Bewertung senden
+            onclick="addRating(<?= $_GET['ID'] ?>,<?= $_SESSION['user_ID'] ?>)">Bewertung senden
     </button>
 </form>

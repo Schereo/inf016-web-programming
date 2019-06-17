@@ -27,6 +27,7 @@ function checkPasswordStrength() {
 function addRating(schoolID, userID) {
     var schoolID = schoolID;
     var userID = userID;
+    alert(schoolID + "  "+userID);
     var Kantine = $("input[name='ratingK']:checked").val();
     var Lernumgebung = $("input[name='ratingLU']:checked").val();
     var Lehrer = $("input[name='ratingL']:checked").val();
