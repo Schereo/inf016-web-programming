@@ -1,11 +1,13 @@
 <?php
 require_once 'database/Query.php';
 
+$search = false;
 $schools = [];
 $ratingAvg = 0;
 $query = (new Query((new DatabaseConnector())->connect()));
 
-if(isset($_GET["schoolName"]) || isset($_GET["district"]) || isset($_GET["schoolType"])|| isset($_GET["ID"])) {
+if (isset($_GET["schoolName"]) || isset($_GET["district"]) || isset($_GET["schoolType"]) || isset($_GET["ID"])) {
+    $search = true;
     if (isset($_GET["schoolName"])) {
         $schoolName = htmlentities($_GET["schoolName"]);
         $schoolTemp = $query->getSchoolsByName($_GET['schoolName']);
@@ -30,7 +32,7 @@ if(isset($_GET["schoolName"]) || isset($_GET["district"]) || isset($_GET["school
         $schoolID = htmlentities($_GET["ID"]);
         $school = $query->getSchool($_GET['ID']);
     }
-}
-else {
+} else {
+    $search = false;
     $schools = $query->getAllSchools();
 }

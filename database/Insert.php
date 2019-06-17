@@ -2,6 +2,7 @@
 session_start();
 require_once "DatabaseConnector.php";
 require_once "Update.php";
+
 class Insert
 {
     private $pdo;
@@ -34,8 +35,8 @@ class Insert
     public function newSchool($school, $user_id)
     {
         $sql = "INSERT INTO School
-                (creator, name, school_type, description, principal, phone_number, house_number, zip_code, district, city, street, email, students, homepage_url)
-        VALUES (:creator, :name, :school_type, :description, :principal, :phone_number, :house_number, :zip_code, :district, :city, :street, :email, :students, :homepage_url)";
+                (creator, name, school_type, description, principal, students, phone_number, house_number, zip_code, district, city, street, email, students, homepage_url)
+        VALUES (:creator, :name, :school_type, :description, :principal, :students, :phone_number, :house_number, :zip_code, :district, :city, :street, :email, :students, :homepage_url)";
 
         try {
             $stmt = $this->pdo->prepare($sql);
@@ -49,10 +50,10 @@ class Insert
                 ':house_number' => $school['address']['number'],
                 ':district' => $school['address']['district'],
                 ':city' => 'oldenburg',
-                ':zip_code' => ['address']['street'],
-                ':street' => ['address']['street'],
+                ':zip_code' => $school['address']['zip_code'],
+                ':street' => $school['address']['street'],
                 ':email' => $school['mail'],
-                ':students' => 1000,
+                ':students' => $school['numberOfStudents'],
                 ':homepage_url' => $school['homepageURL'],
                 ':creator' => $school['creator']
             ]);
@@ -62,6 +63,7 @@ class Insert
         } catch (Exception $ex) {
             error_log("Insert->newSchool() Error: " . $ex->getMessage());
         }
+        $_SESSION['error'] = "Neue Schule erfolgreich angelegt";
     }
 
     public function newImage($name, $size, $mime, $data, $schoolId)
@@ -99,4 +101,5 @@ class Insert
         }
     }
 }
+
 $insert = new Insert((new DatabaseConnector())->connect());

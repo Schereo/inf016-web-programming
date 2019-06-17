@@ -1,0 +1,32 @@
+/* Password Stärke Anzeige Anfang*/
+
+meter {
+    display:none;
+    -moz-appearance: none;
+    appearance: none;
+
+    width: 100%;
+    height: 0.5em;
+    }
+p#password-strength-text{
+    display:none;
+}
+
+meter::-webkit-meter-bar {
+    background: none;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.feedback {
+    color: black;
+    font-size: 90%;
+    padding: 0 .25em;
+    margin-top: 1em;
+}
+
+meter[value="1"]::-webkit-meter-optimum-value { background: red; }
+meter[value="2"]::-webkit-meter-optimum-value { background: yellow; }
+meter[value="3"]::-webkit-meter-optimum-value { background: orange; }
+meter[value="4"]::-webkit-meter-optimum-value { background: green; }
+
+/* Password Stärke Anzeige Ende */
