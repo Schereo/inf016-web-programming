@@ -1,14 +1,18 @@
+<Script>
+    var userID = ''
+</Script>
 <section>
     <h2 id="anlegen" class="card-header">Schule anlegen</h2>
     <div class="card-body">
+
+
         <div class="UploadInterface">
-            <div class="uploadedPictures" id="uploadID">
-                <?php include 'displayUploads.php' ?> </div>
-            <form action="pages/editSchool/uploadHandler.php" class="file-upload-field"
-                  enctype="multipart/form-data" method="post"><br>
+            <div id="UploadGallery" >  </div>
+            <form name="<?= $_SESSION['user_ID'] ?>" id ="upload" class="file-upload-field" enctype="multipart/form-data" method="post"><br>
                 <input class="file-upload" type="file" name="upload" multiple>
-                <input class="input" type="submit" value="Upload Image" name="submit">
+                <input id="ubutton" class="input" type="submit" value="Upload" name="uploadButton">
             </form>
+            <div id="uploadStatus"> </div>
         </div>
         <form class="newSchool-container" action="pages/editSchool/newSchoolHandler.php" method="post">
             <div class="info-input">

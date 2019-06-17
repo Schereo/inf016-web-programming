@@ -28,10 +28,28 @@ function addRating(schoolID, userID) {
     var schoolID = schoolID;
     var userID = userID;
     alert(schoolID + "  "+userID);
+
     var Kantine = $("input[name='ratingK']:checked").val();
     var Lernumgebung = $("input[name='ratingLU']:checked").val();
     var Lehrer = $("input[name='ratingL']:checked").val();
     var Aktivitaeten = $("input[name='ratingA']:checked").val();
+
+    $.ajax({
+        type: 'POST',
+        url: "pages/editSchool/feedbackHandler.php",
+        data: {Kantine, Lehrer, Lernumgebung, Aktivitaeten},
+        error: function () {
+            $('#feedbackStatus').html('<span style="color:#EA4335;">löschen fehlgeschlagen.<span>');
+        },
+        success: function () {
+            $('#feedbackStatus').html('<span style=color:#28A74B;">löschen erfolgreich. <span>');
+        }
+    });
+    return false;
+
+
+
+
 
 
     if (Kantine) {

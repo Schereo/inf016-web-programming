@@ -52,7 +52,7 @@
     </span>
         </fieldset>
     </form>
-
+    <div id="feedbackStatus"> </div>
 
     <button class="default-button button-size" type="submit"
             onclick="addRating(<?= $_GET['ID'] ?>,<?= $_SESSION['user_ID'] ?>)">Bewertung senden

@@ -49,7 +49,7 @@ class Insert
                 ':phone_number' => $school['phoneNumber'],
                 ':house_number' => $school['address']['number'],
                 ':district' => $school['address']['district'],
-                ':city' => 'oldenburg',
+                ':city' => 'Oldenburg',
                 ':zip_code' => $school['address']['zip_code'],
                 ':street' => $school['address']['street'],
                 ':email' => $school['mail'],
@@ -81,6 +81,26 @@ class Insert
             ]);
         } catch (Exception $ex) {
             error_log("Insert->newImage() Error: " . $ex->getMessage());
+        }
+    }
+
+    public function newRating($canteen, $learnEnvironment, $teacher, $activity, $school_id, $user_id)
+    {
+        $sql = "INSERT into Rating (canteen, learnenvironment, teacher, activitydiversity, school_id, user_id)
+                VALUES (:canteen, :learnEnvironment, :teacher, :activity, :school_id, :user_id);";
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute([
+                ':canteen' => $canteen,
+                ':learnEnvironment' => $learnEnvironment,
+                ':teacher' => $teacher,
+                ':activity' => $activity,
+                ':school_id' => $school_id,
+                ':user_id' => $user_id
+            ]);
+        } catch (Exception $ex) {
+            error_log("Insert->newRating() Error: " . $ex->getMessage());
         }
     }
 }

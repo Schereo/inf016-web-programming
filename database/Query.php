@@ -210,6 +210,20 @@ class Query
         $row = $stmt->fetchAll();
         return $row;
     }
+    function hasRatingsForSchool($user_id, $school_id){
+        $sql = "SELECT * FROM Rating WHERE user_id = :user_id AND school_id = :school_id" ;
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([
+                ':user_id' => $user_id,
+                ':school_id' => $school_id
+            ]);
+        } catch (Exception $ex) {
+            error_log("Query->getUploadedImages Error: " . $ex->getMessage());
+        }
+        $row = $stmt->fetchAll();
+        return  $row > 0;
+    }
 }
 
 $query = new Query((new DatabaseConnector())->connect());
