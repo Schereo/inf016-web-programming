@@ -83,10 +83,11 @@
             </section>
         </div>
         <?php if (isset($_SESSION['userSessions'])) { ?>
-        <div class="detail-feedback">
-            <?php include 'pages/feedback/feedback.php'; ?>
-        </div>
+
     </form>
+        <div class="detail-feedback">
+            <?php include 'pages/feedback/feedback.php';?>
+        </div>
     <div class="text-right">
         <a href=""></a>
     </div> <?php } ?>
