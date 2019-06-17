@@ -49,7 +49,7 @@ class Insert
                 ':phone_number' => $school['phoneNumber'],
                 ':house_number' => $school['address']['number'],
                 ':district' => $school['address']['district'],
-                ':city' => 'oldenburg',
+                ':city' => 'Oldenburg',
                 ':zip_code' => $school['address']['zip_code'],
                 ':street' => $school['address']['street'],
                 ':email' => $school['mail'],
