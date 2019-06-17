@@ -179,6 +179,25 @@ class Query
         return $row;
     }
 
+    function getUploadedImagesEncoded($tempId){
+        $sql = "SELECT * FROM Image WHERE school_id = :tempId" ;
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([
+                ':tempId' => $tempId
+            ]);
+        } catch (Exception $ex) {
+            error_log("Query->getUploadedImages Error: " . $ex->getMessage());
+        }
+        $row = $stmt->fetchAll();
+        $showphoto = null;
+       foreach ($row as $rows){
+            $showphoto[]=base64_encode($rows['data']);
+        }
+        return $showphoto;
+    }
+
     function getAllSchools(){
         $sql = "SELECT * FROM School" ;
 
