@@ -66,5 +66,4 @@ class Update
             ':school_id' => $schoolId
         ]);
     }
-
 }
