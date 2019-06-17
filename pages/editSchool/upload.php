@@ -14,6 +14,9 @@ if (isset($_FILES['upload'])) {
     if ($uploadError === 0 && in_array($extension, $allowed)) {
         $imgData = file_get_contents($_FILES['upload']['tmp_name']);
         $uploadNameNew = uniqid('', true) . "." . $extension;
+        if(isset($school['school_id'])){
+            $insert->newImage($uploadNameNew, $imgSize, $imgMime, $imgData, $school['school_id']);
+        }
         $insert->newImage($uploadNameNew, $imgSize, $imgMime, $imgData, $_SESSION['user_ID']);
         $_SESSION['uploadError'] = "Upload erfolgreich";
         header("Location:../../index.php#anlegen");
