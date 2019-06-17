@@ -6,8 +6,7 @@
         <input class="input" type="text" name="firstNameReg" placeholder="Vorname">
         <input class="input" type="text" name="lastNameReg" placeholder="Nachname">
         <input class="input" type="email" name="emailReg" placeholder="Email">
-        <input class="input"  id="regPassword" type="password" name="password" placeholder="Passwort">
-
+        <input class="input"  id="regPassword" type="password" name="passwordReg" placeholder="Passwort">
         <meter max="4" id="password-strength-meter"></meter>
         <p id="password-strength-text"></p>
         <!-- Enable the CheckPasswordStrength + Bar and Info when Scripts are enabled, default CSS property : display:hidden-->
