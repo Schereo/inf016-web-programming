@@ -24,7 +24,6 @@
 
 .file-upload {
     grid-row: 3;
-    height: 20px;
     border: 4px dashed lightgrey;
 }
 
@@ -32,7 +31,12 @@
     grid-row: 1;
     padding-left: 15px;
 }
-
+button, input, optgroup, select, textarea {
+    color: var(--main);
+}
+input[type=file] {
+     display: -webkit-inline-box;
+}
 .uploadInterface p {
     width: 70%;
     height: 50%;

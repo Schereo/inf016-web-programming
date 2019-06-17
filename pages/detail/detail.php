@@ -8,14 +8,13 @@
         <?= $school['name'] ?>
         <form method="post" class="editIcon">
             <button name="edit" class="editIcon">
-            <img src="../../assets/edit.png" alt="Bearbeiten" class="editIcon">
+                <img src="../../assets/edit.png" alt="Bearbeiten" class="editIcon">
             </button>
         </form>
     </h2>
     <form class="detailcontainer card-body" method="GET" action="<?php echo $_SERVER['PHP_SELF'] ?>">
-        <?php include 'pages/detail/showPicture.php';?>
+        <div class="detail-picture"><?php include 'pages/detail/showPicture.php'; ?></div>
         <div class="detail-contact">
-
             <h1 class="info-container detail-headline">
                 Was soll hier eigentlich stehen?!?!
             </h1>
@@ -37,7 +36,7 @@
                 </div>
             </div>
             <div class="info-container">
-                <div class="text-left"> Beschreibung: </div>
+                <div class="text-left"> Beschreibung:</div>
                 <div class="text-right">
                     <?= $school['description'] ?>
                 </div>
@@ -48,8 +47,9 @@
                     Adresse:
                 </div>
                 <div class="text-right">
-                    <?= $school['street'] ; echo " " .$school['house_number'];?>
-                    <br><?=$school['district'] ?><?= $school['zip'] ?>, <?= $school['city'] ?>
+                    <?= $school['street'];
+                    echo " " . $school['house_number']; ?>
+                    <br><?= $school['district'] ?><?= $school['zip'] ?>, <?= $school['city'] ?>
                 </div>
             </div>
             <br>
