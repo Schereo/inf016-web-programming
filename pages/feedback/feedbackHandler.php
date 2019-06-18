@@ -2,6 +2,7 @@
 require_once "../../database/Query.php";
 require_once "../../database/Update.php";
 require_once "../../database/Insert.php";
+require_once "../../database/DatabaseConnector.php";
 session_start();
 
 

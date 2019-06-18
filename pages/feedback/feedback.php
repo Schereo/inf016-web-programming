@@ -11,11 +11,11 @@ $ratingA = round($ratings['AVG(activitydiversity)']);
     <form>
         <fieldset id="rating_K">
     <span class="star-cb-group"> <p id="rating_A_Info" class="ratingLabel">Kantine <?=round($ratings['AVG(canteen)'],2)?>/5</p>
-      <input type="radio" id="rating-5K" name="ratingK" value="5" <?php if($ratingK == 5): echo 'checked="checked"'; endif?>/><label for="rating-5K">5</label>
-      <input type="radio" id="rating-4K" name="ratingK" value="4" <?php if($ratingK == 4): echo 'checked="checked"'; endif?>/><label for="rating-4K">4</label>
-      <input type="radio" id="rating-3K" name="ratingK" value="3" <?php if($ratingK == 3): echo 'checked="checked"'; endif?>/><label for="rating-3K">3</label>
-      <input type="radio" id="rating-2K" name="ratingK" value="2" <?php if($ratingK == 2): echo 'checked="checked"'; endif?>/><label for="rating-2K">2</label>
-      <input type="radio" id="rating-1K" name="ratingK" value="1" <?php if($ratingK == 1): echo 'checked="checked"'; endif?>/><label for="rating-1K">1</label>
+      <input type="radio" id="rating-5K" name="ratingK" value="5" <?php if($ratingK == 5):?> checked="checked" <?php endif?>/><label for="rating-5K">5</label>
+      <input type="radio" id="rating-4K" name="ratingK" value="4" <?php if($ratingK == 4):?>checked="checked" <?php endif?>/><label for="rating-4K">4</label>
+      <input type="radio" id="rating-3K" name="ratingK" value="3" <?php if($ratingK == 3):?> checked="checked" <?php endif?>/><label for="rating-3K">3</label>
+      <input type="radio" id="rating-2K" name="ratingK" value="2" <?php if($ratingK == 2):?> checked="checked" <?php endif?>/><label for="rating-2K">2</label>
+      <input type="radio" id="rating-1K" name="ratingK" value="1" <?php if($ratingK == 1):?> checked="checked" <?php endif?>/><label for="rating-1K">1</label>
       <input type="radio" id="rating-0K" name="ratingK" value="0" class="star-cb-clear"/><label for="rating-0K">0</label>
 
     </span>
@@ -59,8 +59,8 @@ $ratingA = round($ratings['AVG(activitydiversity)']);
         </fieldset>
     </form>
     <div id="feedbackStatus"> </div>
-    <button class="default-button button-size" onclick="addRating(<?= $_GET['ID'] ?>,<?= $_SESSION['user_ID'] ?>)">Bewertung senden
+    <input type="hidden" name="school_id" value="<?= $_GET['ID'] ?>" id="school_id_hidden" />
+    <button class="default-button button-size" id="btn-feedback">Bewertung senden
     </button>
 </form>
-
 </div>

@@ -23,33 +23,43 @@ function checkPasswordStrength() {
     })
 };
 
+$(function() {
+    $(document).on("click","#btn-feedback",function(e) {
+        e.preventDefault();
+
+        var schoolID = jQuery("#school_id_hidden").val();
+
+        var Kantine = $("input[name='ratingK']:checked").val();
+        var Lernumgebung = $("input[name='ratingLU']:checked").val();
+        var Lehrer = $("input[name='ratingL']:checked").val();
+        var Aktivitaeten = $("input[name='ratingA']:checked").val();
+
+        $.ajax({
+            type: 'POST',
+            url: "pages/feedback/feedbackHandler.php",
+            data: {
+                canteen: Kantine,
+                teacher: Lehrer,
+                learnenvironment: Lernumgebung,
+                activity: Aktivitaeten,
+                school_id: schoolID
+            },
+            error: function () {
+                $('#feedbackStatus').html('<span style="color:#EA4335;">Bewertung fehlgeschlagen.<span>');
+            },
+            success: function () {
+                $("#feedbackDiv").load(location.href + " #feedbackDiv");
+                $('#feedbackStatus').html('<span style=color:#28A74B;">Bewertung hinzugefügt. <span>');
+            }
+        });
+
+        console.log("test");
+    });
+});
+
 
 function addRating(schoolID, userID) {
-    var schoolID = schoolID;
 
-    var Kantine = $("input[name='ratingK']:checked").val();
-    var Lernumgebung = $("input[name='ratingLU']:checked").val();
-    var Lehrer = $("input[name='ratingL']:checked").val();
-    var Aktivitaeten = $("input[name='ratingA']:checked").val();
-
-    $.ajax({
-        type: 'POST',
-        url: "pages/feedback/feedbackHandler.php",
-        data: {
-            canteen: Kantine,
-            teacher: Lehrer,
-            learnenvironment: Lernumgebung,
-            activity: Aktivitaeten,
-            school_id: schoolID
-        },
-        error: function () {
-            $('#feedbackStatus').html('<span style="color:#EA4335;">Bewertung fehlgeschlagen.<span>');
-        },
-        success: function () {
-            $("#feedbackDiv").load(location.href + " #feedbackDiv");
-            $('#feedbackStatus').html('<span style=color:#28A74B;">Bewertung hinzugefügt. <span>');
-        }
-    });
     return false;
 
 }
