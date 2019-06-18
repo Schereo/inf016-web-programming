@@ -11,7 +11,6 @@
             <div id="uploadStatus"> </div>
         </div>
 
-
         <form class="newSchool-container" action="pages/editSchool/editSchoolHandler.php" method="post">
             <div class="info-input">
                 <p>Kurzprofil</p>

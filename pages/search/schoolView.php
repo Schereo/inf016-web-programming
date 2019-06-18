@@ -33,6 +33,10 @@ if (isset($_GET["schoolName"]) || isset($_GET["district"]) || isset($_GET["schoo
         $school = $query->getSchool($_GET['ID']);
     }
 } else {
-    $search = false;
-    $schools = $query->getAllSchools();
+    $schoolTemp = $query->getAllSchools();
+    foreach ($schoolTemp as $school) {
+        $ratingAvg = $query->getAvgRatingForSchool($school['school_id']);
+        array_push($school, $ratingAvg);
+        array_push($schools, $school);
+    }
 }

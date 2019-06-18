@@ -8,7 +8,10 @@
     /* the hidden clearer */
 }
 .star-cb-group * {
-    font-size: 1rem;
+    font-size: 1.0rem;
+}
+.star-cb-group > p {
+    font-size: 0.5rem;
 }
 .star-cb-group > input {
     display: none;
@@ -74,6 +77,13 @@ fieldset {
     background: transparent;
 }
 
-h1 {
-    text-align: center;
+.ratingLabel {
+    text-align: left;
+    padding-left: 3.5em;
 }
+
+
+
+
+
+

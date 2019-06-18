@@ -35,14 +35,22 @@ function addRating(schoolID, userID) {
     $.ajax({
         type: 'POST',
         url: "pages/feedback/feedbackHandler.php",
-        data: {canteen : Kantine, teacher : Lehrer, learnenvironment : Lernumgebung, activity : Aktivitaeten, school_id : schoolID},
+        data: {
+            canteen: Kantine,
+            teacher: Lehrer,
+            learnenvironment: Lernumgebung,
+            activity: Aktivitaeten,
+            school_id: schoolID
+        },
         error: function () {
-            $('#feedbackStatus').html('<span style="color:#EA4335;">löschen fehlgeschlagen.<span>');
+            $('#feedbackStatus').html('<span style="color:#EA4335;">Bewertung fehlgeschlagen.<span>');
         },
         success: function () {
-            $('#feedbackStatus').html('<span style=color:#28A74B;">löschen erfolgreich. <span>');
+            $("#feedbackDiv").load(location.href + " #feedbackDiv");
+            $('#feedbackStatus').html('<span style=color:#28A74B;">Bewertung hinzugefügt. <span>');
         }
     });
     return false;
 
 }
+
