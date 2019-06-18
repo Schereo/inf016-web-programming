@@ -26,8 +26,6 @@ function checkPasswordStrength() {
 
 function addRating(schoolID, userID) {
     var schoolID = schoolID;
-    var userID = userID;
-    alert(schoolID + "  "+userID);
 
     var Kantine = $("input[name='ratingK']:checked").val();
     var Lernumgebung = $("input[name='ratingLU']:checked").val();
@@ -36,8 +34,8 @@ function addRating(schoolID, userID) {
 
     $.ajax({
         type: 'POST',
-        url: "pages/editSchool/feedbackHandler.php",
-        data: {Kantine, Lehrer, Lernumgebung, Aktivitaeten},
+        url: "pages/feedback/feedbackHandler.php",
+        data: {canteen : Kantine, teacher : Lehrer, learnenvironment : Lernumgebung, activity : Aktivitaeten, school_id : schoolID},
         error: function () {
             $('#feedbackStatus').html('<span style="color:#EA4335;">löschen fehlgeschlagen.<span>');
         },
@@ -46,18 +44,5 @@ function addRating(schoolID, userID) {
         }
     });
     return false;
-
-
-
-
-
-
-    if (Kantine) {
-        alert("Your are a - " + Kantine +
-            "Your are a - " + Lernumgebung +
-            "Your are a - " + Lehrer +
-            "Your are a - " + Aktivitaeten);
-    }
-
 
 }

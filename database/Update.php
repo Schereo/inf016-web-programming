@@ -78,7 +78,7 @@ class Update
                 activitydiversity = :activity,
                 school_id = :school_id,
                 user_id = :user_id
-        WHERE school_id = :id and user_id = :user_id";
+        WHERE school_id = :school_id and user_id = :user_id";
 
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([
