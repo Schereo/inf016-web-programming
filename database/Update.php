@@ -69,7 +69,7 @@ class Update
         ]);
     }
 
-    public function updateRatings($canteen, $learnEnvironment, $teacher, $activity, $school_id, $user_id)
+    public function updateRatings($canteen, $learnEnvironment, $teacher, $activity, $user_id,$school_id)
     {
         $sql = "UPDATE Rating
             SET  canteen = :canteen, 

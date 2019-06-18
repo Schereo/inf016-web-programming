@@ -49,7 +49,7 @@ class Insert
                 ':phone_number' => $school['phoneNumber'],
                 ':house_number' => $school['address']['number'],
                 ':district' => $school['address']['district'],
-                ':city' => 'Oldenburg',
+                ':city' => $school['address']['city'],
                 ':zip_code' => $school['address']['zip_code'],
                 ':street' => $school['address']['street'],
                 ':email' => $school['mail'],
@@ -71,7 +71,9 @@ class Insert
         $sql = "INSERT INTO Image(name, size, mime, data, school_id)
                         VALUES (:name, :size, :mime, :data, :school_id)";
         try {
+            $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $stmt = $this->pdo->prepare($sql);
+            $this->pdo->beginTransaction();
             $stmt->execute([
                 ':name' => $name,
                 ':size' => $size,
@@ -79,25 +81,26 @@ class Insert
                 ':data' => $data,
                 ':school_id' => $schoolId
             ]);
+            $this->pdo->commit();
         } catch (Exception $ex) {
+            $this->pdo->rollBack();
             error_log("Insert->newImage() Error: " . $ex->getMessage());
         }
     }
 
-    public function newRating($canteen, $learnEnvironment, $teacher, $activity, $school_id, $user_id)
+    public function newRating($canteen, $learnenvironment, $teacher, $activitydiversity, $user_id, $school_id)
     {
-        $sql = "INSERT into Rating (canteen, learnenvironment, teacher, activitydiversity, school_id, user_id)
-                VALUES (:canteen, :learnEnvironment, :teacher, :activity, :school_id, :user_id);";
+        $sql = "INSERT INTO Rating (canteen, learnenvironment, teacher, activitydiversity, user_id, school_id) 
+                VALUES (:canteen, :learnenvironment, :teacher, :activitydiversity, :user_id, :school_id)";
         try {
             $stmt = $this->pdo->prepare($sql);
-
             $stmt->execute([
                 ':canteen' => $canteen,
-                ':learnEnvironment' => $learnEnvironment,
+                ':learnenvironment' => $learnenvironment,
                 ':teacher' => $teacher,
-                ':activity' => $activity,
-                ':school_id' => $school_id,
-                ':user_id' => $user_id
+                ':activitydiversity' => $activitydiversity,
+                ':user_id' => $user_id,
+                ':school_id' => $school_id
             ]);
         } catch (Exception $ex) {
             error_log("Insert->newRating() Error: " . $ex->getMessage());

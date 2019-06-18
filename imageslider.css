@@ -79,7 +79,7 @@
 /* School images */
 
 .slide_custom:first-child{
-    background: url('./assets/images/cäci1.jpg') no-repeat center center/cover;
+    background: url('assets/images/caeci1.jpg') no-repeat center center/cover;
 }
 
 .slide_custom:nth-child(2){
