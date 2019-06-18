@@ -227,7 +227,6 @@ class Query
             error_log("Query->getUploadedImages Error: " . $ex->getMessage());
         }
         $row = $stmt->fetchAll();
-
         return $row;
 
     }
@@ -250,7 +249,6 @@ class Query
         $avg = ($row['AVG(canteen)'] + $row['AVG(learnenvironment)']+ $row['AVG(teacher)']+ $row['AVG(activitydiversity)'])/4;
         return round($avg);
     }
-
 
     function getAvgRatingForEachSchool($school_id)
     {

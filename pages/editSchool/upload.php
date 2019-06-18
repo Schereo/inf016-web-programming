@@ -16,7 +16,7 @@ if (isset($_FILES['upload'])) {
         if (isset($_POST['id'])) {
             $insert->newImage($uploadNameNew, $imgSize, $imgMime, $imgData, $_POST['id']);
         } else {
-            $insert->newImage($uploadNameNew, $imgSize, $imgMime, $imgData, $_SESSION['user_ID']);
+            $insert->newImage($uploadNameNew, $imgSize, $imgMime, $imgData, $_SESSION['user_ID']+1000);
         }
         $_SESSION['uploadError'] = "Upload erfolgreich";
         header("Location:../../index.php#anlegen");
