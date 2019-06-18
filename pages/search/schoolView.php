@@ -6,6 +6,7 @@ $schools = [];
 $query = (new Query((new DatabaseConnector())->connect()));
 
 if (isset($_GET["schoolName"]) || isset($_GET["district"]) || isset($_GET["schoolType"]) || isset($_GET["ID"])) {
+    var_dump($schools);
     $search = true;
     if (isset($_GET["schoolName"])) {
         $schoolName = htmlentities($_GET["schoolName"]);

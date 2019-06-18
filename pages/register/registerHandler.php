@@ -5,22 +5,26 @@ require_once "database/Query.php";
 
     function registerUser($first_name, $last_name, $email, $password, $password_match )
     {
-        if (strlen($_POST['emailReg']) == 0 || strlen($_POST['passwordReg']) == 0 || strlen($_POST['password2Reg']) == 0) {
-            $_SESSION['error'] = "Email, Passwort und Passwordbestätigung müssen gesetzt sein";
-        }
-        if (strpos($_POST['emailReg'], "@") === false) {
-            $_SESSION['error'] = "Email muss ein @-Zeichen enthalten.";
+        if (strlen($_POST['emailReg']) == 0 || strlen($_POST['passwordReg']) == 0 || strlen($_POST['password2Reg']) == 0
+            && strpos($_POST['emailReg'], "@") === false) {
+            return '';
         }
         $query = (new Query((new DatabaseConnector())->connect()));
         if ($query->getUserId($email) != null) {
-            $_SESSION['error'] = "Benutzer bereits vorhanden";
+            $registerError = 'existiert';
         } elseif ($password !== $password_match) {
-            $_SESSION['error'] = "Passwörter stimmen nicht überein";
-            header("Location: index.php");
-            return;
+            $registerError = 'verschieden';
         } else {
             $insert = new Insert((new DatabaseConnector())->connect());
             $insert->newUser($email, $password, $first_name, $last_name);
             userLogin($email, $password);
+            $user_row = $query->getUserRow($query->getUserId($email));
+            $_SESSION['userSessions'] = true;
+            $_SESSION['user_ID'] = $user_row['user_id'];
+            $_SESSION['userName'] = $user_row->mail;
+            $_SESSION['firstName'] = $user_row->vorname;
+            $_SESSION['lastName'] = $user_row->nachname;
+            $registerError = 'loggedIn';
         }
+        return $registerError;
 }

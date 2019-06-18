@@ -11,12 +11,12 @@
 
 .login-body > button {
     grid-column: 1;
-    grid-row: 3;
+    grid-row: 4;
 }
 
 .login-body > a {
     grid-column: 2;
-    grid-row: 3;
+    grid-row: 4;
     font-size: small;
 }
 
