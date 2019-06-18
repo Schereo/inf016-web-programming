@@ -52,15 +52,5 @@ $(function() {
                 $('#feedbackStatus').html('<span style=color:#28A74B;">Bewertung hinzugefügt. <span>');
             }
         });
-
-        console.log("test");
     });
 });
-
-
-function addRating(schoolID, userID) {
-
-    return false;
-
-}
-

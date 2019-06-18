@@ -247,7 +247,7 @@ class Query
         }
 
         $row = $stmt->fetch();
-        $avg = ($row['AVG(canteen)'] + $row['AVG(learnenvironment)']+ $row['AVG(teacher)']+ $row['AVG(activitydiversity'])/4;
+        $avg = ($row['AVG(canteen)'] + $row['AVG(learnenvironment)']+ $row['AVG(teacher)']+ $row['AVG(activitydiversity)'])/4;
         return round($avg);
     }
 

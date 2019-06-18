@@ -2,7 +2,8 @@
     <?php
     require_once 'pages/selectItems.php';
     require_once 'pages/search/schoolView.php';
-    require_once 'database/Query.php'?>
+    require_once 'database/Query.php'
+    ?>
     <h2 id="suche" class="card-header">Schule Suchen</h2>
     <div class="card-body">
         <form class="search-container" method="GET" action="<?php echo $_SERVER['PHP_SELF']; ?>">
@@ -43,7 +44,7 @@
                             <?php if($school[15] >= 2 && $school[15] < 3):?>&#x2605 &#x2605 &#x2606 &#x2606 &#x2606<?php endif;?>
                             <?php if($school[15] >= 3 && $school[15] < 4):?>&#x2605 &#x2605 &#x2605 &#x2606 &#x2606<?php endif;?>
                             <?php if($school[15] >= 4 && $school[15] < 5):?>&#x2605 &#x2605 &#x2605 &#x2605 &#x2606<?php endif;?>
-                            <?php if($school[15] == 5):?>&#x2605 &#x2605 &#x2605 &#x2605 &#x2605<?php endif;?>
+                            <?php if($school[15] == 5):?>&#x2605 &#x2605 &#x2605 &#x2605 &#x2605<?php endif; ?>
                         </li>
                     </ul>
                 </div>

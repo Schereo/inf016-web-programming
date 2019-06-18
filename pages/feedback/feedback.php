@@ -5,7 +5,6 @@ $ratingLU = round($ratings['AVG(learnenvironment)']);
 $ratingL = round($ratings['AVG(teacher)']);
 $ratingA = round($ratings['AVG(activitydiversity)']);
 ?>
-
 <div class="feedbackDiv" id="feedbackDiv">
 <form>
     <form>
@@ -17,7 +16,6 @@ $ratingA = round($ratings['AVG(activitydiversity)']);
       <input type="radio" id="rating-2K" name="ratingK" value="2" <?php if($ratingK == 2):?> checked="checked" <?php endif?>/><label for="rating-2K">2</label>
       <input type="radio" id="rating-1K" name="ratingK" value="1" <?php if($ratingK == 1):?> checked="checked" <?php endif?>/><label for="rating-1K">1</label>
       <input type="radio" id="rating-0K" name="ratingK" value="0" class="star-cb-clear"/><label for="rating-0K">0</label>
-
     </span>
         </fieldset>
     </form>
@@ -48,7 +46,7 @@ $ratingA = round($ratings['AVG(activitydiversity)']);
     </form>
     <form>
         <fieldset id="rating_A">
-    <span class="star-cb-group"> <p id="rating_A_Info" class="ratingLabel">Aktivitäten Vielfalt <?=round($ratings['AVG(activitydiversity))'],2)?>/5</p>
+    <span class="star-cb-group"> <p id="rating_A_Info" class="ratingLabel">Aktivitäten Vielfalt <?=round($ratings['AVG(activitydiversity)'],2)?>/5</p>
       <input type="radio" id="rating-5A" name="ratingA" value="5" <?php if($ratingA == 5): echo 'checked="checked"'; endif?>/><label for="rating-5A">5</label>
       <input type="radio" id="rating-4A" name="ratingA" value="4" <?php if($ratingA == 4): echo 'checked="checked"'; endif?>/><label for="rating-4A">4</label>
       <input type="radio" id="rating-3A" name="ratingA" value="3" <?php if($ratingA == 3): echo 'checked="checked"'; endif?>/><label for="rating-3A">3</label>
@@ -58,9 +56,9 @@ $ratingA = round($ratings['AVG(activitydiversity)']);
     </span>
         </fieldset>
     </form>
-    <div id="feedbackStatus"> </div>
     <input type="hidden" name="school_id" value="<?= $_GET['ID'] ?>" id="school_id_hidden" />
     <button class="default-button button-size" id="btn-feedback">Bewertung senden
     </button>
 </form>
 </div>
+<div id="feedbackStatus"> </div>

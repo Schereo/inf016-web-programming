@@ -83,7 +83,7 @@ if (isset($school) && $search && isset($_GET['ID'])):
         </div>
     </form>
     <?php if (isset($_SESSION['userSessions'])) { ?>
-    <form class="feedBackContainer card-body">
+    <form class="card-body">
         <div class="detail-feedback">
             <?php include 'pages/feedback/feedback.php'; ?>
         </div>
