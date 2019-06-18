@@ -28,7 +28,6 @@ if(!empty($img)): ;
         <span class="sr-only">Next</span>
     </a>
 </div>
-
  <?php endif; ?>
 
 

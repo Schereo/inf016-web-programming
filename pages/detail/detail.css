@@ -1,3 +1,4 @@
+
 .detailcontainer {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -32,6 +33,7 @@
 }
 
 .detail-feedback {
+    width: 400px;
     grid-column: 1;
     grid-row: 4;
 }
@@ -83,10 +85,6 @@
     detail-headline {
         grid-row: 2;
         grid-column: 1;
-    }
-
-    .rating {
-        /* text-align: center; */
     }
 
     .subtitle {

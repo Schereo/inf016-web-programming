@@ -1,9 +1,10 @@
-<article class>
-    <?php
-    require_once 'pages/search/schoolView.php';
-    if (isset($school) && $search && isset($_GET['ID'])):
+<?php
+?>
+    <article class>
+<?php
+require_once 'pages/search/schoolView.php';
+if (isset($school) && $search && isset($_GET['ID'])):
     ?>
-
     <h2 class="card-header">
         <?= $school['name'] ?>
         <form method="post" class="editIcon">
@@ -80,7 +81,9 @@
             </div>
             </section>
         </div>
-        <?php if (isset($_SESSION['userSessions'])) { ?>
+    </form>
+    <?php if (isset($_SESSION['userSessions'])) { ?>
+    <form class="card-body">
         <div class="detail-feedback">
             <?php include 'pages/feedback/feedback.php'; ?>
         </div>
@@ -88,5 +91,5 @@
     <div class="text-right">
         <a href=""></a>
     </div> <?php } ?>
-</article>
+    </article>
 <?php endif ?>

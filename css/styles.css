@@ -3,7 +3,6 @@
 @import "layout-styles.css";
 @import "../imageslider.css";
 @import "../pages/editSchool/newSchool.css";
-@import "../pages/feedback/feedback-styles.css";
 @import "../pages/feedback/feedback.css";
 @import "../pages/detail/detail.css";
 @import "../pages/map/map.css";
@@ -137,7 +136,7 @@ input {
 }
 
 label {
-    margin: 0 40px 0 0;
+    margin: 0 20px 0 0;
     font-size: 26px;
     line-height: 70px;
     display: none;

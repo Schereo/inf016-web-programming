@@ -13,6 +13,7 @@ class Update
     {
         $this->pdo = $pdo;
     }
+
     public function editSchool($school)
     {
         $sql = "UPDATE School
@@ -58,12 +59,35 @@ class Update
         return $row['school_id'];
     }
 
-    public function imageSchoolID($schoolId, $user_id){
+    public function imageSchoolID($schoolId, $user_id)
+    {
         $sql = "UPDATE Image SET school_id = :school_id Where school_id = :user_id";
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([
             ':user_id' => $user_id,
             ':school_id' => $schoolId
+        ]);
+    }
+
+    public function updateRatings($canteen, $learnEnvironment, $teacher, $activity, $user_id,$school_id)
+    {
+        $sql = "UPDATE Rating
+            SET  canteen = :canteen, 
+                learnenvironment = :learnEnvironment,
+                teacher = :teacher, 
+                activitydiversity = :activity,
+                school_id = :school_id,
+                user_id = :user_id
+        WHERE school_id = :school_id and user_id = :user_id";
+
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([
+            ':canteen' => $canteen,
+            ':learnEnvironment' => $learnEnvironment,
+            ':teacher' => $teacher,
+            ':activity' => $activity,
+            ':school_id' => $school_id,
+            ':user_id' => $user_id
         ]);
     }
 }
