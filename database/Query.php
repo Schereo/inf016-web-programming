@@ -212,7 +212,7 @@ class Query
     }
 
     function getAvgRatingForSchool($school_id){
-        $sql = "SELECT AVG(rating_value)
+        $sql = "SELECT *
                 FROM Rating
                 WHERE school_id = :school_id";
         try {
@@ -224,7 +224,7 @@ class Query
             error_log("Query->getAvgRating Error: " . $ex->getMessage());
         }
         $row = $stmt->fetch();
-        return $row['AVG(rating_value)'];
+        return $row;
     }
 }
 
