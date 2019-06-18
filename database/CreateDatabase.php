@@ -16,8 +16,10 @@ function createDatabase() {
         '
         CREATE TABLE IF NOT EXISTS Rating(
           rating_id INTEGER PRIMARY KEY AUTOINCREMENT,
-          rating_type VARCHAR(40) NOT NULL,
-          rating_value INTEGER NOT NULL,
+          canteen INTEGER NOT NULL,
+          learnenvironment INTEGER NOT NULL,
+          teacher INTEGER NOT NULL,
+          activitydiversity INTEGER NOT NULL,
           date_of_creation INTEGER NOT NULL DEFAULT (strftime(\'%s\',\'now\')),
           user_id INTEGER,
           school_id INTEGER,

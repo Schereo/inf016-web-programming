@@ -38,10 +38,10 @@ function insertData()
             "city" => "Oldenburg"
         ]];
     $insert->newSchool($school, 1);
-    $insert->newRating("CanteenRating", 5, 1, 1);
-    $insert->newRating("LearnEnvironmentRating", 4, 2, 1);
-    $insert->newRating("TeacherRating", 2, 3, 1);
-    $insert->newRating("ActivityDiversityRating", 3, 4, 1);
+    $insert->newRating(2,3, 1,4, 1, 1);
+    $insert->newRating(3,2, 4,4, 2, 1);
+    $insert->newRating(4,5, 5,4, 3, 1);
+    $insert->newRating(1,1, 0,4, 4, 1);
     $insert->newImage("hls1", 10000, "image/jpg", file_get_contents('../assets/images/hls1.jpg'), 1);
     $insert->newImage("hls2", 10000, "image/jpg", file_get_contents('../assets/images/hls2.jpg'), 1);
     $insert->newImage("hls3", 10000, "image/jpg", file_get_contents('../assets/images/hls3.jpg'), 1);
@@ -64,10 +64,10 @@ function insertData()
             "city" => "Oldenburg"
         ]];
     $insert->newSchool($school, 2);
-    $insert->newRating("CanteenRating", 3, 1, 2);
-    $insert->newRating("LearnEnvironmentRating", 2, 2, 2);
-    $insert->newRating("TeacherRating", 1, 3, 2);
-    $insert->newRating("ActivityDiversityRating", 2, 6, 2);
+    $insert->newRating(1,3, 1,4, 2, 2);
+    $insert->newRating(1,3, 4,4, 6, 2);
+    $insert->newRating(1,5, 5,4, 5, 2);
+    $insert->newRating(1,1, 0,4, 4, 2);
     $insert->newImage("cäci1", 10000, "image/jpg", file_get_contents('../assets/images/caeci1.jpg'), 2);
     $insert->newImage("cäci2", 10000, "image/jpg", file_get_contents('../assets/images/caeci2.jpg'), 2);
     $insert->newImage("cäci3", 10000, "image/jpg", file_get_contents('../assets/images/caeci3.jpg'), 2);
@@ -89,10 +89,10 @@ function insertData()
             "city" => "Oldenburg"
         ]];
     $insert->newSchool($school, 3);
-    $insert->newRating("CanteenRating", 2, 1, 3);
-    $insert->newRating("LearnEnvironmentRating", 2, 2, 3);
-    $insert->newRating("TeacherRating", 1, 3, 3);
-    $insert->newRating("ActivityDiversityRating", 5, 6, 3);
+    $insert->newRating(1,3, 1,3, 3, 3);
+    $insert->newRating(1,3, 4,4, 5, 3);
+    $insert->newRating(1,5, 3,2, 2, 3);
+    $insert->newRating(1,1, 5,1, 1, 3);
     $insert->newImage("gag1", 10000, "image/jpg", file_get_contents('../assets/images/gag1.jpg'), 3);
     $insert->newImage("gag2", 10000, "image/jpg", file_get_contents('../assets/images/gag2.jpg'), 3);
     $insert->newImage("gag3", 10000, "image/jpg", file_get_contents('../assets/images/gag3.jpg'), 3);
@@ -114,10 +114,10 @@ function insertData()
             "city" => "Oldenburg"
         ]];
     $insert->newSchool($school, 5);
-    $insert->newRating("CanteenRating", 3, 5, 4);
-    $insert->newRating("LearnEnvironmentRating", 2, 3, 4);
-    $insert->newRating("TeacherRating", 0, 1, 4);
-    $insert->newRating("ActivityDiversityRating", 5, 6, 4);
+    $insert->newRating(2,3, 1,3, 3, 4);
+    $insert->newRating(1,3, 4,4, 5, 4);
+    $insert->newRating(4,1, 2,5, 2, 4);
+    $insert->newRating(2,1, 5,1, 1, 4);
     $insert->newImage("geo1", 10000, "image/jpg", file_get_contents('../assets/images/geo1.jpg'), 4);
     $insert->newImage("geo2", 10000, "image/jpg", file_get_contents('../assets/images/geo2.jpg'), 4);
     $insert->newImage("geo3", 10000, "image/jpg", file_get_contents('../assets/images/geo3.jpg'), 4);
@@ -139,10 +139,10 @@ function insertData()
             "city" => "Oldenburg"
         ]];
     $insert->newSchool($school, 6);
-    $insert->newRating("CanteenRating", 5, 5, 5);
-    $insert->newRating("LearnEnvironmentRating", 4, 3, 5);
-    $insert->newRating("TeacherRating", 5, 1, 5);
-    $insert->newRating("ActivityDiversityRating", 3, 6, 5);
+    $insert->newRating(2,3, 3,3, 1, 5);
+    $insert->newRating(1,3, 4,4, 4, 5);
+    $insert->newRating(4,2, 2,2, 6, 5);
+    $insert->newRating(2,1, 0,1, 1, 5);
     $insert->newImage("hgo1", 10000, "image/jpg", file_get_contents('../assets/images/hgo1.jpg'), 5);
     $insert->newImage("hgo2", 10000, "image/jpg", file_get_contents('../assets/images/hgo2.jpg'), 5);
     $insert->newImage("hgo3", 10000, "image/jpg", file_get_contents('../assets/images/hgo3.jpg'), 5);
@@ -164,10 +164,10 @@ function insertData()
             "city" => "Oldenburg"
         ]];
     $insert->newSchool($school, 3);
-    $insert->newRating("CanteenRating", 1, 5, 6);
-    $insert->newRating("LearnEnvironmentRating", 2, 3, 6);
-    $insert->newRating("TeacherRating", 1, 1, 6);
-    $insert->newRating("ActivityDiversityRating", 0, 6, 6);
+    $insert->newRating(1,3, 3,3, 1, 6);
+    $insert->newRating(5,3, 4,3, 4, 6);
+    $insert->newRating(4,2, 2,2, 6, 6);
+    $insert->newRating(2,1, 2,1, 1, 6);
     $insert->newImage("lfs1", 10000, "image/jpg", file_get_contents('../assets/images/lfs1.jpg'), 6);
     $insert->newImage("lfs2", 10000, "image/jpg", file_get_contents('../assets/images/lfs2.jpg'), 6);
     $insert->newImage("lfs3", 10000, "image/jpg", file_get_contents('../assets/images/lfs3.jpg'), 6);
@@ -189,10 +189,10 @@ function insertData()
             "city" => "Oldenburg"
         ]];
     $insert->newSchool($school, 1);
-    $insert->newRating("CanteenRating", 2, 5, 7);
-    $insert->newRating("LearnEnvironmentRating", 4, 3, 7);
-    $insert->newRating("TeacherRating", 2, 1, 7);
-    $insert->newRating("ActivityDiversityRating", 3, 6, 7);
+    $insert->newRating(2,3, 3,3, 1, 7);
+    $insert->newRating(5,3, 5,3, 2, 7);
+    $insert->newRating(4,2, 2,2, 6, 7);
+    $insert->newRating(2,3, 2,1, 1, 7);
     $insert->newImage("waldorf1", 10000, "image/jpg", file_get_contents('../assets/images/waldorf1.jpg'), 7);
     $insert->newImage("waldorf2", 10000, "image/jpg", file_get_contents('../assets/images/waldorf2.jpg'), 7);
     $insert->newImage("waldorf3", 10000, "image/jpg", file_get_contents('../assets/images/waldorf3.jpg'), 7);

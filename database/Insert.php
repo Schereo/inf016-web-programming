@@ -88,15 +88,17 @@ class Insert
         }
     }
 
-    public function newRating($rating_type, $rating_value, $user_id, $school_id)
+    public function newRating($canteen, $learnenvironment, $teacher, $activitydiversity, $user_id, $school_id)
     {
-        $sql = "INSERT INTO Rating (rating_type, rating_value, user_id, school_id) 
-                VALUES (:rating_type, :rating_value, :user_id, :school_id)";
+        $sql = "INSERT INTO Rating (canteen, learnenvironment, teacher, activitydiversity, user_id, school_id) 
+                VALUES (:canteen, :learnenvironment, :teacher, :activitydiversity, :user_id, :school_id)";
         try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute([
-                ':rating_type' => $rating_type,
-                ':rating_value' => $rating_value,
+                ':canteen' => $canteen,
+                ':learnenvironment' => $learnenvironment,
+                ':teacher' => $teacher,
+                ':activitydiversity' => $activitydiversity,
                 ':user_id' => $user_id,
                 ':school_id' => $school_id
             ]);
