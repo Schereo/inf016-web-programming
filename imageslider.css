@@ -1,10 +1,10 @@
-.slider {
+.slider_custom {
     position: relative;
     overflow: hidden;
     height: 100vh;
     width: 100vw;
 }
-.slide {
+.slide_custom {
     position: absolute;
     top: 0;
     left: 0;
@@ -14,14 +14,14 @@
     transition: opacity 0.5 ease-in-out;
 }
 
-.slide.current {
+.slide_custom.current {
     opacity: 1;
 }
-.slide .content h2 {
+.slide_custom .content h2 {
      margin-bottom: 10px;
 }
 
-.slider .content {
+.slider_custom .content {
     position: absolute;
     bottom: 70px;
     left: -600px;
@@ -32,7 +32,7 @@
     padding: 35px;
 }
 
-.slide.current .content {
+.slide_custom.current .content {
     opacity: 1;
     transform: translateX(600px);
     transition: all 0.7s ease-in-out 0.3s;
@@ -65,38 +65,38 @@
 }
 
 @media(max-width: 500px) {
-    .slide .content {
+    .slide_custom .content {
         bottom: -300px;
         left: 0;
         width: 100%;
     }
 
-    .slide.current .content {
+    .slide_custom.current .content {
         transform: translateY(-300px);
     }
 }
 
 /* School images */
 
-.slide:first-child{
-    background: url('./assets/images/cäci1.jpg') no-repeat center center/cover;
+.slide_custom:first-child{
+    background: url('assets/images/caeci1.jpg') no-repeat center center/cover;
 }
 
-.slide:nth-child(2){
+.slide_custom:nth-child(2){
     background: url('./assets/images/gag1.jpg') no-repeat center center/cover;
 }
-.slide:nth-child(3){
+.slide_custom:nth-child(3){
     background: url('./assets/images/geo1.jpg') no-repeat center center/cover;
 }
-.slide:nth-child(4){
+.slide_custom:nth-child(4){
     background: url('./assets/images/hgo1.jpg') no-repeat center center/cover;
 }
-.slide:nth-child(5){
+.slide_custom:nth-child(5){
     background: url('./assets/images/hls1.jpg') no-repeat center center/cover;
 }
-.slide:nth-child(6){
+.slide_custom:nth-child(6){
     background: url('./assets/images/lfs1.jpg') no-repeat center center/cover;
 }
-.slide:nth-child(7){
+.slide_custom:nth-child(7){
     background: url('./assets/images/waldorf1.jpg') no-repeat center center/cover;
 }

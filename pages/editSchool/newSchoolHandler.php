@@ -8,6 +8,7 @@ $school = [
     "schoolType" => $_POST['schooltype'],
     "description" => $_POST['description'],
     "principal" => $_POST['principal'],
+    "students" => $_POST['numberOfStudents'],
     "phoneNumber" => $_POST['phonenumber'],
     "mail" => $_POST['mail'],
     "homepageURL" => $_POST['homepage'],
@@ -19,6 +20,6 @@ $school = [
     ]];
 
 $insert = new Insert((new DatabaseConnector())->connect());
-$insert->newSchool($school, $_SESSION['user_ID'] );
+$insert->newSchool($school, $_SESSION['user_ID']+1000);
 $_SESSION['error'] = "Ihre Schule wurde erfolgreich angelegt.";
 header("Location: ../../index.php");

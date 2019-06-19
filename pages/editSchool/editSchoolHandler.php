@@ -1,6 +1,9 @@
 <?php
-session_start();
+/*
+    session_start();
+*/
 require_once "../../database/Update.php";
+require_once "zip_codes.php";
 
 $school = [
     "school_id" => $_POST['editID'],
@@ -12,12 +15,12 @@ $school = [
     "phoneNumber" => $_POST['phonenumber'],
     "mail" => $_POST['mail'],
     "homepageURL" => $_POST['homepage'],
-    "students" => 1000,
+    "students" => $_POST['numberOfStudents'],
     'address' => [
         "street" => $_POST['street'],
         "number" => $_POST['number'],
         "district" => $_POST['district'],
-        "zip_code" => $zip_codes[$_POST['district']]
+        "zip_code" => getZip()[$_POST['district']]
     ]];
 
 

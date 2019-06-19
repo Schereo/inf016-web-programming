@@ -2,7 +2,9 @@
 require_once "DatabaseConnector.php";
 require_once "Query.php";
 require_once "Insert.php";
-session_start();
+/*
+    session_start();
+*/
 
 class Update
 {
@@ -13,7 +15,6 @@ class Update
     {
         $this->pdo = $pdo;
     }
-
 
     public function editSchool($school)
     {
@@ -53,17 +54,42 @@ class Update
             ':creator' => $school['creator'],
             ':id' => $school['school_id']
         ]);
+        $update = new Update((new DatabaseConnector())->connect());
+        $update->imageSchoolID($school['school_id'], $school['creator']);
         $row = $stmt->fetch();
         $_SESSION['Schule erfolgreich geändert'];
         return $row['school_id'];
     }
 
-    public function imageSchoolID($schoolId, $user_id){
+    public function imageSchoolID($schoolId, $user_id)
+    {
         $sql = "UPDATE Image SET school_id = :school_id Where school_id = :user_id";
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([
             ':user_id' => $user_id,
             ':school_id' => $schoolId
+        ]);
+    }
+
+    public function updateRatings($canteen, $learnEnvironment, $teacher, $activity, $user_id,$school_id)
+    {
+        $sql = "UPDATE Rating
+            SET  canteen = :canteen, 
+                learnenvironment = :learnEnvironment,
+                teacher = :teacher, 
+                activitydiversity = :activity,
+                school_id = :school_id,
+                user_id = :user_id
+        WHERE school_id = :school_id and user_id = :user_id";
+
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([
+            ':canteen' => $canteen,
+            ':learnEnvironment' => $learnEnvironment,
+            ':teacher' => $teacher,
+            ':activity' => $activity,
+            ':school_id' => $school_id,
+            ':user_id' => $user_id
         ]);
     }
 }

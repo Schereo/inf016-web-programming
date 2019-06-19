@@ -3,14 +3,19 @@ require_once 'database/Query.php';
 
 $search = false;
 $schools = [];
+$ratingAvg = 0;
 $query = (new Query((new DatabaseConnector())->connect()));
 
 if (isset($_GET["schoolName"]) || isset($_GET["district"]) || isset($_GET["schoolType"]) || isset($_GET["ID"])) {
-    var_dump($schools);
     $search = true;
     if (isset($_GET["schoolName"])) {
         $schoolName = htmlentities($_GET["schoolName"]);
-        $schools = $query->getSchoolsByName($_GET['schoolName']);
+        $schoolTemp = $query->getSchoolsByName($_GET['schoolName']);
+        foreach ($schoolTemp as $school) {
+            $ratingAvg = $query->getAvgRatingForSchool($school['school_id']);
+            array_push($school, $ratingAvg);
+            array_push($schools, $school);
+        }
     }
 
     if (isset($_GET["district"])) {
@@ -28,6 +33,10 @@ if (isset($_GET["schoolName"]) || isset($_GET["district"]) || isset($_GET["schoo
         $school = $query->getSchool($_GET['ID']);
     }
 } else {
-    $search = false;
-    $schools = $query->getAllSchools();
+    $schoolTemp = $query->getAllSchools();
+    foreach ($schoolTemp as $school) {
+        $ratingAvg = $query->getAvgRatingForSchool($school['school_id']);
+        array_push($school, $ratingAvg);
+        array_push($schools, $school);
+    }
 }

@@ -1,4 +1,7 @@
-<?php session_start();
+<?php
+/*
+    session_start();
+*/
 $depth = "";
 require_once 'pages/login/loginHandler.php';
 require_once 'pages/register/registerHandler.php';
@@ -12,7 +15,7 @@ if (isset($_POST['type'])) {
                 $loginError = userLogin($_POST['emailLogin'], $_POST['passwordLogin']);
         }
     } elseif ($_POST['type'] == "Register") {
-        if(isset($_POST['firstNameReg']) && isset($_POST['lastNameReg']) && isset($_POST['emailReg']) && isset($_POST['passwordReg']) && isset($_POST['password2Reg'])) {
+        if (isset($_POST['firstNameReg']) && isset($_POST['lastNameReg']) && isset($_POST['emailReg']) && isset($_POST['passwordReg']) && isset($_POST['password2Reg'])) {
             $registerError = registerUser($_POST['firstNameReg'], $_POST['lastNameReg'], $_POST['emailReg'], $_POST['passwordReg'], $_POST['password2Reg']);
         }
     }
@@ -29,13 +32,15 @@ if (isset($_POST['type'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
     <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico"/>
-    <link rel="stylesheet" href="css/styles.css"/>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <script
-            src="http://code.jquery.com/jquery-3.4.1.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" ></script>
+    <script src="js/userFunctions.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/upload.js"></script>
 </head>
 <body>
 <?php
@@ -44,19 +49,22 @@ include 'imageslider.php';
 ?>
 
 <div class="main-container">
-    <?php  if(isset($loginError) && $loginError === 'loggedIn' || isset($registerError) && $registerError == 'loggedIn') {?>
-        <script>alert(JSON.stringify("You have registered successfully."));</script> <?php
+    <?php  if (isset($loginError) && $loginError === 'loggedIn' || isset($registerError) && $registerError == 'loggedIn') {?>
+        <script>alert(JSON.stringify("You have logged in successfully."));</script> <?php
     }?>
     <div class="large-grid-item card">
         <?php include 'pages/search/search.php'; ?>
     </div>
+
+   <div class="large-grid-item card"></div>
+
     <div class="large-grid-item card">
         <?php include 'pages/detail/detail.php'; ?>
     </div>
     <div class="large-grid-item card">
         <?php include 'pages/map/map.php'; ?>
     </div>
-    <?php if (!($_SESSION['userSessions'])) { ?>
+    <?php if (!isset($_SESSION['userSessions'])) { ?>
         <div class="left-grid-item card">
             <?php include 'pages/login/login.php'; ?>
         </div>
@@ -73,9 +81,9 @@ include 'imageslider.php';
         </div>
     <?php } ?>
 </div>
-    <div class="stretch-grid-item" id="indexfooter">
-        <?php include $depth.'footer.php'; ?>
-    </div>
+<div class="stretch-grid-item" id="indexfooter">
+    <?php include $depth . 'footer.php'; ?>
+</div>
 </body>
 </html>
 

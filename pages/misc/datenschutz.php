@@ -1,4 +1,7 @@
-<?php session_start();
+<?php
+/*
+    session_start();
+*/
  $depth = "../../"?>
 <link rel="stylesheet" href="../../css/styles.css"/>
 <link rel="stylesheet" media="only screen and (max-width: 1060px)" href="../../css/tablet/styles-tablet.css"/>

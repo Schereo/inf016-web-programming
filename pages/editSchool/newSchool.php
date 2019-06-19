@@ -1,58 +1,56 @@
+<Script>
+    var userID = ''
+</Script>
 <section>
     <h2 id="anlegen" class="card-header">Schule anlegen</h2>
     <div class="card-body">
+
+
         <div class="UploadInterface">
-            <div class="uploadedPictures" id="uploadID">
-                <?php include 'displayUploads.php' ?> </div>
-            <form action="pages/editSchool/uploadHandler.php" class="file-upload-field"
-                  enctype="multipart/form-data" method="post"><br>
+            <div id="UploadGallery" >  </div>
+            <form name="<?= $_SESSION['user_ID']+1000 ?>" id ="upload" class="file-upload-field" enctype="multipart/form-data" method="post"><br>
                 <input class="file-upload" type="file" name="upload" multiple>
-                <input class="input" type="submit" value="Upload Image" name="submit">
+                <input id="ubutton" class="input" type="submit" value="Upload" name="uploadButton">
             </form>
+            <div id="uploadStatus"> </div>
         </div>
         <form class="newSchool-container" action="pages/editSchool/newSchoolHandler.php" method="post">
             <div class="info-input">
-                Name:<input class="input" type="text" name="schoolname" value="">
+                <p>Kurzprofil</p>
+                <input class="input" type="text" name="schoolname" value="" placeholder="Schulname">
                 <br>
-                <div class="text-left"> Schulform:</div>
-                <div class="text-right">
-                    <select class="input schooltype" name="schooltype">
-                        <?php foreach ($schoolforms as $schoolform): ?>
-                            <option value="<?= $schoolform ?>"><?= $schoolform ?></option>
-                        <?php endforeach;
-                        unset($schoolform); ?>
-                    </select>
-                </div>
+                <select class="input schooltype" name="schooltype">
+                    <option value="sto" disabled selected>Schulform</option>
+                    <?php foreach ($schoolforms as $schoolform): ?>
+                        <option value="<?= $schoolform ?>"><?= $schoolform ?></option>
+                    <?php endforeach;
+                    unset($schoolform); ?>
+                </select>
                 <br>
-                <div class="text-left"> Stadtteil:</div>
-                <div class="text-right"><select class="input district" name="district">
-                        <?php foreach ($districts as $district): ?>
-                            <option value="<?= $district ?>"><?= $district ?></option>
-                        <?php endforeach;
-                        unset($district); ?>
-                    </select></div>
+                <input class="input" type="text" name="principal" value="" placeholder="Schulleitung">
                 <br>
-                Schulleitung:
-                <input class="input" type="text" name="principal" value="">
-                <br>
-                Adresse:
+                <input class="input" type="text" name="numberOfStudents" value=""
+                       placeholder="Schüleranzahl">
+                <p> Beschreibung</p>
+                <textarea class="textarea" name="description" placeholder="Beschreibung"> </textarea>
+                <p>Adresse</p>
                 <input class="input" type="text" name="street" placeholder="Straße">
                 <br>
                 <input class="input" type="number" id="editHousenumber" name="number" placeholder="Hausnummer">
                 <br>
-                Telefon:
-                <input class="input" type="number" id="editPhonenumber" name="phonenumber"
-                       placeholder="phoneNumber">
-                <br> Email:
-                <input class="input" type="email" id="editEmail" name="mail"
-                       placeholder="E-Mail">
+                <select class="input district" name="district">
+                    <option value="sto" disabled selected>Stadtteil</option>
+                    <?php foreach ($districts as $district): ?>
+                        <option value="<?= $district ?>"><?= $district ?></option>
+                    <?php endforeach;
+                    unset($district); ?>
+                </select>
+                <p>Kontakt </p>
+                <input class="input" type="number" id="editPhonenumber" name="phonenumber" placeholder="Telefonnummer">
                 <br>
-                Website:
-                <input class="input" type="url" name="homepage" placeholder="Website">
+                <input class="input" type="email" id="editEmail" name="mail" placeholder="Email">
                 <br>
-                Weitere Infos:
-                <br>
-                <textarea class="textarea" name="description" placeholder="Infos"> </textarea>
+                <input class="input" type="url" name="homepage" placeholder="Homepage">
                 <br>
                 <button type="submit" class="default-button"> Upload</button>
         </form>

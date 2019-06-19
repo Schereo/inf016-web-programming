@@ -15,6 +15,7 @@ require_once "database/Query.php";
         } elseif ($password !== $password_match) {
             $registerError = 'verschieden';
         } else {
+            session_start();
             $insert = new Insert((new DatabaseConnector())->connect());
             $insert->newUser($email, $password, $first_name, $last_name);
             userLogin($email, $password);
