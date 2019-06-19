@@ -1,4 +1,5 @@
 <?php session_start();
+error_reporting(0);
 $depth = "";
 require_once 'pages/login/loginHandler.php';
 require_once 'pages/register/registerHandler.php';
@@ -9,21 +10,11 @@ require_once 'database/CreateDatabase.php';
 if (isset($_POST['type'])) {
     if ($_POST['type'] == "Login") {
         if (isset($_POST['emailLogin']) && isset($_POST['passwordLogin'])) {
-            if (strlen($_POST['emailLogin']) == 0 || strlen($_POST['passwordLogin']) == 0) {
-                $_SESSION['error'] = "Email & Passwort müssen gesetzt sein";
-                header("Location: index.php");
-                return;
-            } else {
-                userLogin($_POST['emailLogin'], $_POST['passwordLogin']);
-                header("Location: index.php");
-                return;
-            }
+            $loginError = userLogin($_POST['emailLogin'], $_POST['passwordLogin']);
         }
     } elseif ($_POST['type'] == "Register") {
         if (isset($_POST['firstNameReg']) && isset($_POST['lastNameReg']) && isset($_POST['emailReg']) && isset($_POST['passwordReg']) && isset($_POST['password2Reg'])) {
-            registerUser($_POST['firstNameReg'], $_POST['lastNameReg'], $_POST['emailReg'], $_POST['passwordReg'], $_POST['password2Reg']);
-            header("Location: index.php");
-            return;
+            $registerError = registerUser($_POST['firstNameReg'], $_POST['lastNameReg'], $_POST['emailReg'], $_POST['passwordReg'], $_POST['password2Reg']);
         }
     }
 }
@@ -56,11 +47,9 @@ include 'imageslider.php';
 ?>
 
 <div class="main-container">
-    <?php if (isset($_SESSION['error'])) { ?>
-        <div class="large-grid-item card">
-            <h2 class="card-header" id="rueckmeldung"><?php echo $_SESSION['error'] ?></h2>
-        </div>
-    <?php } ?>
+    <?php  if(isset($loginError) && $loginError === 'loggedIn' || isset($registerError) && $registerError == 'loggedIn') {?>
+        <script>alert(JSON.stringify("You have been logged in!."));</script> <?php
+    }?>
     <div class="large-grid-item card">
         <?php include 'pages/search/search.php'; ?>
     </div>
@@ -93,5 +82,21 @@ include 'imageslider.php';
 <div class="stretch-grid-item" id="indexfooter">
     <?php include $depth . 'footer.php'; ?>
 </div>
+<script>
+    $('#searchInput').keyup(function () {
+        $.get("resultsAJAX.php", $(".search-container").serialize(), function (data) {
+            $("#results").html(data);
+        });
+    });
+    if ($('#passwordRegisterError').length > 0) {
+        document.getElementById("registrieren").scrollIntoView();
+    }
+    if ($('#benutzerRegisterError').length > 0) {
+        document.getElementById("registrieren").scrollIntoView();
+    }
+    if ($('#loginError').length > 0) {
+        document.getElementById("anmelden").scrollIntoView();
+    }
+</script>
 </body>
 </html>
