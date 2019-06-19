@@ -12,7 +12,7 @@ require_once 'database/CreateDatabase.php';
 if (isset($_POST['type'])) {
     if ($_POST['type'] == "Login") {
         if (isset($_POST['emailLogin']) && isset($_POST['passwordLogin'])) {
-                $loginError = userLogin($_POST['emailLogin'], $_POST['passwordLogin']);
+            $loginError = userLogin($_POST['emailLogin'], $_POST['passwordLogin']);
         }
     } elseif ($_POST['type'] == "Register") {
         if (isset($_POST['firstNameReg']) && isset($_POST['lastNameReg']) && isset($_POST['emailReg']) && isset($_POST['passwordReg']) && isset($_POST['password2Reg'])) {
@@ -37,7 +37,7 @@ if (isset($_POST['type'])) {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/styles.css"/>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="js/userFunctions.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/upload.js"></script>
@@ -49,14 +49,14 @@ include 'imageslider.php';
 ?>
 
 <div class="main-container">
-    <?php  if (isset($loginError) && $loginError === 'loggedIn' || isset($registerError) && $registerError == 'loggedIn') {?>
+    <?php if (isset($loginError) && $loginError === 'loggedIn' || isset($registerError) && $registerError == 'loggedIn') { ?>
         <script>alert(JSON.stringify("You have logged in successfully."));</script> <?php
-    }?>
+    } ?>
     <div class="large-grid-item card">
         <?php include 'pages/search/search.php'; ?>
     </div>
 
-   <div class="large-grid-item card"></div>
+    <div class="large-grid-item card"></div>
 
     <div class="large-grid-item card">
         <?php include 'pages/detail/detail.php'; ?>
@@ -84,13 +84,11 @@ include 'imageslider.php';
 <div class="stretch-grid-item" id="indexfooter">
     <?php include $depth . 'footer.php'; ?>
 </div>
-</body>
-</html>
 
 <script>
     $('#searchInput').keyup(function () {
         $.get("resultsAJAX.php", $(".search-container").serialize(), function (data) {
-           $("#results").html(data);
+            $("#results").html(data);
         });
     });
     if ($('#passwordRegisterError').length > 0) {
@@ -103,3 +101,6 @@ include 'imageslider.php';
         document.getElementById("anmelden").scrollIntoView();
     }
 </script>
+
+</body>
+</html>
