@@ -59,14 +59,28 @@ class Update
         return $row['school_id'];
     }
 
-    public function imageSchoolID($schoolId, $user_id)
+    public function imageSchoolID($user_id)
     {
         $sql = "UPDATE Image SET school_id = :school_id Where school_id = :user_id";
+        $schoolId = $this->getLastSchoolInsert();
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([
             ':user_id' => $user_id,
             ':school_id' => $schoolId
         ]);
+    }
+
+    public function getLastSchoolInsert() {
+        $sql="SELECT * FROM School ORDER BY school_id DESC LIMIT 1";
+        $stmt = $this->pdo->prepare($sql);
+        try {
+            $stmt->execute();
+        }
+        catch (Exception $ex) {
+            error_log("Query->getLastSchoolInsert Error: " . $ex->getMessage());
+        }
+        $schoolId = $stmt->fetch();
+        return $schoolId['school_id'];
     }
 
     public function updateRatings($canteen, $learnEnvironment, $teacher, $activity, $user_id,$school_id)
