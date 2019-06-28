@@ -304,7 +304,7 @@
                         case"repeat":
                             return t = 1 === e.base_token.length ? 'Wiederholungen wie "aaa" sind leicht zu erraten': 'Wiederholungen wie "abcabcabc" sind nur geringfügig schwieriger zu erraten als "abc".', {
                                 warning: t,
-                                suggestions: ["Avoid repeated words and characters"]
+                                suggestions: ["Versuche Wiederholungen zu vermeiden"]
                             };
                         case"sequence":
                             return {

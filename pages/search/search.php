@@ -7,15 +7,15 @@
     <h2 id="suche" class="card-header">Schule Suchen</h2>
     <div class="card-body">
         <form class="search-container" method="GET" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-            <input class="input form-control" id="searchInput" type="text" name="schoolName" placeholder="Schulname">
-            <select class="input form-control" name="schoolType">
+            <input class="input" id="searchInput" type="text" name="schoolName" placeholder="Schulname">
+            <select class="input" name="schoolType">
                 <option value="sto" disabled selected>Schulform</option>
                 <?php foreach ($schoolforms as $schoolform): ?>
                     <option value="<?=$schoolform?>"><?=$schoolform?></option>
                 <?php endforeach;
                 unset($schoolform);?>
             </select>
-            <select class="input form-control" name="district">
+            <select class="input" name="district">
                 <option value="sto" disabled selected>Stadtteil</option>
                 <?php foreach ($districts as $district): ?>
                     <option value="<?=$district?>"><?=$district?></option>

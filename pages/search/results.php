@@ -26,7 +26,7 @@
                         </ul>
                     </div>
                     <div class="small-card-footer">
-                        <form method="get" action="<?= 'index.php'?>">
+                        <form method="get" action="<?= 'index.php'; ?>">
                             <button class="default-button button-size" value="<?= $school['school_id'] ?>" name="ID">
                                 Details
                             </button>

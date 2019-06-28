@@ -21,5 +21,7 @@ $school = [
 
 $insert = new Insert((new DatabaseConnector())->connect());
 $insert->newSchool($school, $_SESSION['user_ID']+1000);
+$update = new Update((new DatabaseConnector())->connect());
+$update->imageSchoolID($_SESSION['user_ID']+1000);
 $_SESSION['error'] = "Ihre Schule wurde erfolgreich angelegt.";
 header("Location: ../../index.php");

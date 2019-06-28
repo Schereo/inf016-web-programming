@@ -6,7 +6,7 @@ if (isset($school) && $search && isset($_GET['ID'])):
         <?= $school['name'] ?>
         <form method="post" class="editIcon">
             <button name="edit" class="editIcon">
-                <img src="../../assets/edit.png" alt="Bearbeiten" class="editIcon">
+                <img src="assets/edit.png" alt="Bearbeiten" class="editIcon">
             </button>
         </form>
     </h2>
