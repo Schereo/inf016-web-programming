@@ -60,9 +60,6 @@ class Insert
                 ':homepage_url' => $school['homepageURL'],
                 ':creator' => $school['creator']
             ]);
-            $update = new Update((new DatabaseConnector())->connect());
-            $schoolId = $this->pdo->lastInsertID();
-            $update->imageSchoolID($schoolId, $user_id);
         } catch (Exception $ex) {
             error_log("Insert->newSchool() Error: " . $ex->getMessage());
         }
