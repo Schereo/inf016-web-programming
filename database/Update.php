@@ -2,7 +2,9 @@
 require_once "DatabaseConnector.php";
 require_once "Query.php";
 require_once "Insert.php";
-session_start();
+/*
+    session_start();
+*/
 
 class Update
 {

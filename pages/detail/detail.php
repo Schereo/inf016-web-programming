@@ -1,7 +1,4 @@
 <?php
-?>
-    <article class>
-<?php
 require_once 'pages/search/schoolView.php';
 if (isset($school) && $search && isset($_GET['ID'])):
     ?>

@@ -53,6 +53,7 @@
                 <input class="input" type="url" name="homepage" placeholder="Homepage">
                 <br>
                 <button type="submit" class="default-button"> Upload</button>
+            </div>
         </form>
     </div>
 </section>

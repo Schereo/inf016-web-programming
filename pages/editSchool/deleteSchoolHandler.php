@@ -1,5 +1,7 @@
 <?php
-session_start();
+/*
+    session_start();
+*/
 require_once "../../database/Delete.php";
 
     $delete = new Delete((new DatabaseConnector())->connect());
