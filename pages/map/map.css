@@ -7,9 +7,9 @@
     grid-column: 1;
 }
 
-.mapimage iframe {
-    width: 100%;
+.mapimage #map {
     height: 100%;
+
 }
 
 .filter {

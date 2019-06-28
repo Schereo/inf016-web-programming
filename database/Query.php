@@ -164,6 +164,26 @@ class Query
         return $row;
     }
 
+    public function getSchoolsForFilter($district, $school_type)
+    {
+        $sql = "Select *
+                From School
+                where district = :district
+                AND school_type = :school_type";
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([
+                ':district' => $district,
+                ':school_type' => $school_type
+            ]);
+        } catch (Exception $ex) {
+            error_log("Query->getSchoolsForFilter Error: " . $ex->getMessage());
+        }
+        $row = $stmt->fetchAll();
+        return $row;
+    }
+
+
     function getUploadedImages($tempId)
     {
         $sql = "SELECT * FROM Image WHERE school_id = :tempId";
