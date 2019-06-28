@@ -19,7 +19,7 @@
 
             <div id="filter-search-headline">Stadtteil</div>
             <form>
-                <select class="input map-filter-schools">
+                <select class="input map-filter-schools form-control">
                     <?php foreach ($districts as $district): ?>
                         <option value="<?=$district?>"><?=$district?></option>
                     <?php endforeach;

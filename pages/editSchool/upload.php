@@ -1,6 +1,8 @@
 <?php
 require_once "../../database/Insert.php";
-session_start();
+/*
+    session_start();
+*/
 if (isset($_FILES['upload'])) {
     $imgName = $_FILES['upload']['name'];
     $imgSize = $_FILES['upload']['size'];

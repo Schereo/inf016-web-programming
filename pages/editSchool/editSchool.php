@@ -14,9 +14,9 @@
         <form class="newSchool-container" action="pages/editSchool/editSchoolHandler.php" method="post">
             <div class="info-input">
                 <p>Kurzprofil</p>
-                <input class="input" type="text" name="schoolname" value="<?= $school['name'] ?>">
+                <input class="input form-control" type="text" name="schoolname" value="<?= $school['name'] ?>">
                 <br>
-                <select class="input schooltype" name="schooltype">
+                <select class="input schooltype form-control" name="schooltype">
                     <?php foreach ($schoolforms as $schoolform):
                         if ($school['schoolType'] == $schoolform) { ?>
                             <option value="<?= $schoolform ?>" selected="selected"><?= $schoolform ?></option>
@@ -27,20 +27,20 @@
                     unset($schoolform); ?>
                 </select>
                 <br>
-                <input class="input" type="text" name="principal" value="<?= $school['principal']; ?>">
+                <input class="input form-control" type="text" name="principal" value="<?= $school['principal']; ?>">
                 <br>
-                <input class="input" type="text" name="numberOfStudents" value="<?= $school['students'] ?>">
+                <input class="input form-control" type="text" name="numberOfStudents" value="<?= $school['students'] ?>">
                 <br>
                 <p> Beschreibung</p>
                 <textarea class="textarea" name="description"
                           placeholder="Infos"><?= $school['description'] ?></textarea>
                 <p> Adresse</p>
-                <input class="input" type="text" name="street" value="<?= $school['street'] ?>">
+                <input class="input form-control" type="text" name="street" value="<?= $school['street'] ?>">
                 <br>
-                <input class="input" type="number" id="editHousenumber" name="number"
+                <input class="input form-control" type="number" id="editHousenumber" name="number"
                        value="<?= $school['house_number'] ?>">
                 <br>
-                <select class="input" name="district">
+                <select class="input form-control" name="district">
                     <?php foreach ($districts as $district):
                         if ($school['district'] == $district) { ?>
                             <option value="<?= $district ?>" selected="selected"><?= $district ?></option>
@@ -52,12 +52,12 @@
                 </select>
                 <br>
                 <p>Kontakt </p>
-                <input class="input" type="number" id="editPhonenumber" name="phonenumber"
+                <input class="input form-control" type="number" id="editPhonenumber" name="phonenumber"
                        value="<?= $school['phone_number'] ?>">
                 <br>
-                <input class="input" type="email" id="editEmail" name="mail" value="<?= $school['email'] ?>">
+                <input class="input form-control" type="email" id="editEmail" name="mail" value="<?= $school['email'] ?>">
                 <br>
-                <input class="input" type="url" name="homepage" value="<?= $school['homepage_url'] ?>">
+                <input class="input form-control" type="url" name="homepage" value="<?= $school['homepage_url'] ?>">
                 <br>
                 <button type="submit" class="default-button" value="<?= $school['school_id'] ?>" name="editID">
                     Upload

@@ -1,5 +1,7 @@
 <?php
-session_start();
+/*
+    session_start();
+*/
 require_once "../../database/Update.php";
 require_once "zip_codes.php";
 
