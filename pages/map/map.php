@@ -35,6 +35,8 @@
                 <button type="submit" name="filternType" class="default-button filter-button" id="grundschulen"
                         value="Grundschule">Grundschulen
                 </button>
+                <button type="submit" name="filternType" class="default-button filter-button" id="resetMarkers" value="resetMarkers">Alle Schulen
+                </button>
             </form>
             <div id="filter-search-headline">Stadtteil</div>
             <form>
