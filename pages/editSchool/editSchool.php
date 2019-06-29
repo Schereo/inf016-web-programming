@@ -4,11 +4,12 @@
 
         <div class="UploadInterface">
             <div id="UploadGallery"> <?php include 'pages/editSchool/displayUploads.php' ?> </div>
-            <form id ="eUpload" name="<?= $school['school_id'] ?>" class="file-upload-field" enctype="multipart/form-data" method="post"><br>
+            <form id="eUpload" name="<?= $school['school_id'] ?>" class="file-upload-field"
+                  enctype="multipart/form-data" method="post"><br>
                 <input class="file-upload" type="file" name="upload" multiple>
                 <input class="input" type="submit" value="Upload" name="uploadButton">
             </form>
-            <div id="uploadStatus"> </div>
+            <div id="uploadStatus"></div>
         </div>
 
         <form class="newSchool-container" action="pages/editSchool/editSchoolHandler.php" method="post">
@@ -29,7 +30,8 @@
                 <br>
                 <input class="input form-control" type="text" name="principal" value="<?= $school['principal']; ?>">
                 <br>
-                <input class="input form-control" type="text" name="numberOfStudents" value="<?= $school['students'] ?>">
+                <input class="input form-control" type="text" name="numberOfStudents"
+                       value="<?= $school['students'] ?>">
                 <br>
                 <p> Beschreibung</p>
                 <textarea class="textarea" name="description"
@@ -55,7 +57,8 @@
                 <input class="input form-control" type="number" id="editPhonenumber" name="phonenumber"
                        value="<?= $school['phone_number'] ?>">
                 <br>
-                <input class="input form-control" type="email" id="editEmail" name="mail" value="<?= $school['email'] ?>">
+                <input class="input form-control" type="email" id="editEmail" name="mail"
+                       value="<?= $school['email'] ?>">
                 <br>
                 <input class="input form-control" type="url" name="homepage" value="<?= $school['homepage_url'] ?>">
                 <br>

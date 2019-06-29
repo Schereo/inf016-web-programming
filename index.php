@@ -39,6 +39,7 @@ if (isset($_POST['type'])) {
     <script src="js/userFunctions.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/upload.js"></script>
+
 </head>
 <body>
 <?php
