@@ -7,12 +7,13 @@
 
 
         <div class="UploadInterface">
-            <div id="UploadGallery" >  </div>
-            <form name="<?= $_SESSION['user_ID']+1000 ?>" id ="upload" class="file-upload-field" enctype="multipart/form-data" method="post"><br>
+            <div id="UploadGallery"></div>
+            <form name="<?= $_SESSION['user_ID'] + 1000 ?>" id="upload" class="file-upload-field"
+                  enctype="multipart/form-data" method="post"><br>
                 <input class="file-upload" type="file" name="upload" multiple>
                 <input id="ubutton" class="input" type="submit" value="Upload" name="uploadButton">
             </form>
-            <div id="uploadStatus"> </div>
+            <div id="uploadStatus"></div>
         </div>
         <form class="newSchool-container" action="pages/editSchool/newSchoolHandler.php" method="post">
             <div class="info-input">

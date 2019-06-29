@@ -91,6 +91,7 @@
 }
 
 @media (max-width: 1264px) {
+
     .mapcontainer {
         display: grid;
         grid-template-rows: auto auto;
@@ -98,16 +99,19 @@
     }
 
     .mapimage {
-        justify-content: stretch;
-        justify-self: center;
+        grid-row:1;
+        grid-column: 1;
     }
+    .mapimage #map {
+        height: 100%;
+    }
+
 
     .filter {
         grid-row: 2;
         grid-column: 1;
         background-color: var(--light-main);
         border-radius: 0 0 0 0;
-        justify-self: stretch;
     }
 
     .mapfilter .mapfilterbody {
