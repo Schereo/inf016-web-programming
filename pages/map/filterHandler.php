@@ -5,6 +5,11 @@ $district = $_POST['district'];
 $schoolType = $_POST['schoolType'];
 
 $query = (new Query((new DatabaseConnector())->connect()));
-$schoolsForFilter = $query->GetSchoolsForFilter($district, $schoolType);
-print json_encode($schoolsForFilter, JSON_PRETTY_PRINT);
+if ($schoolType != null) {
+    $schoolsForFilter = $query->GetSchoolsForFilter($district, $schoolType);
+    print json_encode($schoolsForFilter, JSON_PRETTY_PRINT);
+} else {
+    $schoolsForFilter = $query->getSchoolsByDistrict($district);
+    print json_encode($schoolsForFilter, JSON_PRETTY_PRINT);
+}
 ?>
