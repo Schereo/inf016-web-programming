@@ -9,7 +9,9 @@
 
 .mapimage #map {
     height: 100%;
-
+    width: 100%;
+    border : 0;
+    min-height:300px;
 }
 
 .filter {
@@ -101,9 +103,6 @@
     .mapimage {
         grid-row:1;
         grid-column: 1;
-    }
-    .mapimage #map {
-        height: 100%;
     }
 
 
