@@ -4,7 +4,7 @@ var markers = [];
 //Initialize the Map with Oldenburg in Center. Zoom may be adjusted. By Default load all Schools.
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 12,
+        zoom: 13,
         center: {lat: 53.141259, lng: 8.211299}
     });
     var geocoder = new google.maps.Geocoder();
@@ -73,12 +73,13 @@ function geocodeAddressOnlyShow(geocoder, resultsMap, specificSchools) {
     specificSchools.forEach(forEachSchoolReplace);
 
     function forEachSchoolReplace(item, index) {
-        var address = item.street + " oldenburg " + item.house_number + " " + item.zip_code;
+        var address = item.street + " oldenburg " + item.house_number + " " + item.zip_code+" "+item.name;;
         geocoder.geocode({'address': address}, function (results, status) {
             if (status === 'OK') {
                 var marker = new google.maps.Marker({
                     map: resultsMap,
-                    position: results[0].geometry.location
+                    position: results[0].geometry.location,
+                    title: item.name + "\nSchultyp: "+ item.school_type+"\n"+item.street+" "+item.house_number+"\n"+item.zip_code+" "+item.city,
                 });
                 markers.push(marker);
                 if(markers[0] == null){
@@ -97,12 +98,13 @@ function geocodeAddressLoadDefault(geocoder, resultsMap, allSchools) {
     allSchools.forEach(forEachSchool);
 
     function forEachSchool(item, index) {
-        var address = item.street + " oldenburg " + item.house_number + " " + item.zip_code;
+        var address = item.street + " oldenburg " + item.house_number + " " + item.zip_code+" "+item.name;
         geocoder.geocode({'address': address}, function (results, status) {
             if (status === 'OK') {
                 var marker = new google.maps.Marker({
                     map: resultsMap,
-                    position: results[0].geometry.location
+                    position: results[0].geometry.location,
+                    title: item.name + "\nSchultyp: "+ item.school_type+"\n"+item.street+" "+item.house_number+"\n"+item.zip_code+" "+item.city,
                 });
                 markers.push(marker);
                 if(markers[0] == null){
