@@ -19,4 +19,8 @@
     grid-row: 4;
     font-size: small;
 }
+.login-body .checkbox{
+    width: 30px;
+    height: 30px;
+}
 

@@ -1,8 +1,8 @@
-const slides = document.querySelectorAll('.slide');
+const slides = document.querySelectorAll('.slide_custom');
 const next = document.querySelector('#next');
 const prev = document.querySelector('#prev');
-const auto = false;
-const intervalTime = 4000;
+const auto = true;
+const intervalTime = 6000;
 let slideInterval;
 
 const nextSlide = () => {
@@ -15,7 +15,7 @@ const nextSlide = () => {
         slides[0].classList.add('current');
     }
     setTimeout(() => current.classList.remove('current'));
-}
+};
 
 const prevSlide = () => {
     const current = document.querySelector('.current');

@@ -7,7 +7,7 @@ require_once 'pages/selectItems.php';
 require_once 'pages/search/schoolView.php';
 require_once 'database/CreateDatabase.php';
 
-if (isset($_POST['type'])) {
+if (isset($_POST['type'])&& isset($_POST['checkbox'])) {
     if ($_POST['type'] == "Login") {
         if (isset($_POST['emailLogin']) && isset($_POST['passwordLogin'])) {
             $loginError = userLogin($_POST['emailLogin'], $_POST['passwordLogin']);
@@ -16,6 +16,9 @@ if (isset($_POST['type'])) {
         if (isset($_POST['firstNameReg']) && isset($_POST['lastNameReg']) && isset($_POST['emailReg']) && isset($_POST['passwordReg']) && isset($_POST['password2Reg'])) {
             $registerError = registerUser($_POST['firstNameReg'], $_POST['lastNameReg'], $_POST['emailReg'], $_POST['passwordReg'], $_POST['password2Reg']);
         }
+    }
+    else{
+        print_r("Login nicht erfolgreich!");
     }
 }
 ?>
@@ -34,7 +37,6 @@ if (isset($_POST['type'])) {
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/styles.css"/>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" ></script>
     <script src="js/userFunctions.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -48,9 +50,9 @@ include 'imageslider.php';
 ?>
 
 <div class="main-container">
-    <?php  if(isset($loginError) && $loginError === 'loggedIn' || isset($registerError) && $registerError == 'loggedIn') {?>
+    <?php  if((isset($loginError) && $loginError === 'loggedIn' || isset($registerError) && $registerError == 'loggedIn')&& isset($_POST['checkbox'])) {?>
         <script>alert(JSON.stringify("You have been logged in!."));</script> <?php
-    }?>
+} ?>
     <div class="large-grid-item card">
         <?php include 'pages/search/search.php'; ?>
     </div>

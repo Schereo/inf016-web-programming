@@ -1,4 +1,6 @@
-<?php $depth = "../../" ;?>
+<?php $depth = "../../" ;
+session_start();
+?>
 <link rel="stylesheet" href="../../css/styles.css"/>
 <link rel="stylesheet" media="only screen and (max-width: 992px)" href="../../css/tablet/styles-tablet.css"/>
 <div class="main-container">
@@ -8,102 +10,28 @@
     <div class="card large-grid-item">
         <h1 class="card-header">Impressum</h1>
         <div class="card-body impressum-body">
-            Impressum
+            <div class='impressum'><h1>Impressum</h1><p>Angaben gemäß § 5 TMG</p><p>Gruppe  2 <br>
+                    Ammerländer Heerstraße 114<br>
+                    26129 Oldenburg <br>
+                </p><p> <strong>Vertreten durch: </strong><br>
+                    Gruppe  2<br>
+                </p><p><strong>Kontakt:</strong> <br>
+                    Telefon: 0441-1234567<br>
+                    Fax: 0441-1234567<br>
+                    E-Mail: <a href='mailto:gruppe2@uol.de'>gruppe2@uol.de</a></br></p><p><strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong><br>
+                    Gruppe  2 <br>
+                    Ammerländer Heerstraße 114<br>
+                    26129 Oldenburg <br></p> <p><strong>Haftungsausschluss: </strong><br><br><strong>Haftung für Inhalte</strong><br><br>
+                    Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.<br><br><strong>Haftung für Links</strong><br><br>
+                    Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.<br><br><strong>Datenschutz</strong><br><br>
+                    Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder eMail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben. <br>
+                    Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich. <br>
+                    Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor.<br>
+                    <br><br><strong>Google Analytics</strong><br><br>
+                    Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc. (''Google''). Google Analytics verwendet sog. ''Cookies'', Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglicht. Die durch den Cookie erzeugten Informationen über Ihre Benutzung dieser Website (einschließlich Ihrer IP-Adresse) wird an einen Server von Google in den USA übertragen und dort gespeichert. Google wird diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten für die Websitebetreiber zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen zu erbringen. Auch wird Google diese Informationen gegebenenfalls an Dritte übertragen, sofern dies gesetzlich vorgeschrieben oder soweit Dritte diese Daten im Auftrag von Google verarbeiten. Google wird in keinem Fall Ihre IP-Adresse mit anderen Daten der Google in Verbindung bringen. Sie können die Installation der Cookies durch eine entsprechende Einstellung Ihrer Browser Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website voll umfänglich nutzen können. Durch die Nutzung dieser Website erklären Sie sich mit der Bearbeitung der über Sie erhobenen Daten durch Google in der zuvor beschriebenen Art und Weise und zu dem zuvor benannten Zweck einverstanden.</p><br>
+            </div>
 
-            <p>
-                Angaben gem. § 5 TMG:
-
-                Vorname, Name
-                Adresse
-                PLZ
-
-
-                Kontaktaufnahme:
-
-                Telefon:
-                Fax:
-                E-Mail:
-            </p>
-            <p>
-                Umsatzsteuer-ID
-
-                Umsatzsteuer-Identifikationsnummer gem. § 27 a Umsatzsteuergesetz:
-
-                DE XXX XXX XXX
-            </p>
-            <p>
-                Haftungsausschluss - Disclaimer:
-
-                Haftung für Inhalte
-
-                Alle Inhalte unseres Internetauftritts wurden mit größter Sorgfalt und nach bestem Gewissen erstellt.
-                Für
-                die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.
-                Als
-                Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen
-                Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet,
-                übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die
-                auf
-                eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von
-                Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt.
-
-                Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntniserlangung einer konkreten
-                Rechtsverletzung möglich. Bei Bekanntwerden von den o.g. Rechtsverletzungen werden wir diese Inhalte
-                unverzüglich entfernen.
-
-            </p>
-            <p>
-                Haftungsbeschränkung für externe Links
-
-
-                Unsere Webseite enthält Links auf externe Webseiten Dritter. Auf die Inhalte dieser direkt oder indirekt
-                verlinkten Webseiten haben wir keinen Einfluss. Daher können wir für die „externen Links“ auch keine
-                Gewähr
-                auf Richtigkeit der Inhalte übernehmen. Für die Inhalte der externen Links sind die jeweilige Anbieter
-                oder
-                Betreiber (Urheber) der Seiten verantwortlich.
-
-                Die externen Links wurden zum Zeitpunkt der Linksetzung auf eventuelle Rechtsverstöße überprüft und
-                waren im
-                Zeitpunkt der Linksetzung frei von rechtswidrigen Inhalten. Eine ständige inhaltliche Überprüfung der
-                externen Links ist ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht möglich. Bei direkten oder
-                indirekten Verlinkungen auf die Webseiten Dritter, die außerhalb unseres Verantwortungsbereichs liegen,
-                würde eine Haftungsverpflichtung ausschließlich in dem Fall nur bestehen, wenn wir von den Inhalten
-                Kenntnis
-                erlangen und es uns technisch möglich und zumutbar wäre, die Nutzung im Falle rechtswidriger Inhalte zu
-                verhindern.
-                Diese Haftungsausschlusserklärung gilt auch innerhalb des eigenen Internetauftrittes „Name Ihrer Domain“
-                gesetzten Links und Verweise von Fragestellern, Blogeinträgern, Gästen des Diskussionsforums. Für
-                illegale,
-                fehlerhafte oder unvollständige Inhalte und insbesondere für Schäden, die aus der Nutzung oder
-                Nichtnutzung
-                solcherart dargestellten Informationen entstehen, haftet allein der Diensteanbieter der Seite, auf
-                welche
-                verwiesen wurde, nicht derjenige, der über Links auf die jeweilige Veröffentlichung lediglich verweist.
-
-                Werden uns Rechtsverletzungen bekannt, werden die externen Links durch uns unverzüglich entfernt.
-            </p>
-            <p>
-                Urheberrecht
-
-                Die auf unserer Webseite veröffentlichen Inhalte und Werke unterliegen dem deutschen Urheberrecht
-                (http://www.gesetze-im-internet.de/bundesrecht/urhg/gesamt.pdf) . Die Vervielfältigung, Bearbeitung,
-                Verbreitung und jede Art der Verwertung des geistigen Eigentums in ideeller und materieller Sicht des
-                Urhebers außerhalb der Grenzen des Urheberrechtes bedürfen der vorherigen schriftlichen Zustimmung des
-                jeweiligen Urhebers i.S.d. Urhebergesetzes
-                (http://www.gesetze-im-internet.de/bundesrecht/urhg/gesamt.pdf ).
-                Downloads und Kopien dieser Seite sind nur für den privaten und nicht kommerziellen Gebrauch erlaubt.
-                Sind
-                die Inhalte auf unserer Webseite nicht von uns erstellt wurden, sind die Urheberrechte Dritter zu
-                beachten.
-                Die Inhalte Dritter werden als solche kenntlich gemacht. Sollten Sie trotzdem auf eine
-                Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden
-                von
-                Rechtsverletzungen werden wir derartige Inhalte unverzüglich entfernen.
-                Dieses Impressum wurde freundlicherweise von www.jurarat.de zur Verfügung gestellt.</p>
-
-        </div>
-        <div class="stretch-grid-item" id="indexfooter">
+            <div class="stretch-grid-item" id="indexfooter">
             <?php include '../../footer.php'; ?>
         </div>
     </div>
