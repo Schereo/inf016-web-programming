@@ -9,7 +9,7 @@ require_once 'pages/selectItems.php';
 require_once 'pages/search/schoolView.php';
 require_once 'database/CreateDatabase.php';
 
-if (isset($_POST['type'])&& isset($_POST['checkbox'])) {
+if (isset($_POST['type'])) {
     if ($_POST['type'] == "Login") {
         if (isset($_POST['emailLogin']) && isset($_POST['passwordLogin'])) {
             $loginError = userLogin($_POST['emailLogin'], $_POST['passwordLogin']);
