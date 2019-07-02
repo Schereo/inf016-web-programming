@@ -7,6 +7,7 @@
 @import "../pages/detail/detail.css";
 @import "../pages/map/map.css";
 @import "../pages/login/login.css";
+@import "./cookie-banner-styles.css";
 
 :root {
     --light-main: #B8B8B8;
