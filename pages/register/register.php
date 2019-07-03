@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="pages/register/register.css"/>
-<section>
+<section id="registrierenSection">
     <h2 id="registrieren" class="card-header">Registrieren</h2>
     <form class="register-body" method="post">
         <input type="hidden" name="type" value="Register">

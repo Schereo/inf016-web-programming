@@ -1,4 +1,6 @@
-<?php session_start();
+<?php if (isset($_COOKIE['acceptedCookies'])) {
+    session_start();
+}
 error_reporting(0);
 $depth = "";
 require_once 'pages/login/loginHandler.php';
@@ -7,7 +9,7 @@ require_once 'pages/selectItems.php';
 require_once 'pages/search/schoolView.php';
 require_once 'database/CreateDatabase.php';
 
-if (isset($_POST['type'])&& isset($_POST['checkbox'])) {
+if (isset($_POST['type'])) {
     if ($_POST['type'] == "Login") {
         if (isset($_POST['emailLogin']) && isset($_POST['passwordLogin'])) {
             $loginError = userLogin($_POST['emailLogin'], $_POST['passwordLogin']);
@@ -41,6 +43,7 @@ if (isset($_POST['type'])&& isset($_POST['checkbox'])) {
     <script src="js/userFunctions.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/upload.js"></script>
+
 
 </head>
 <body>
@@ -82,6 +85,10 @@ include 'imageslider.php';
         </div>
     <?php } ?>
 </div>
+<div class="alert text-center" id="cookie-banner">
+    Unsere Website benutzt Cookies &#x1F36A;. Um die Website komplett benutzen zu können, müssen Sie diesen zustimmen.
+    <button class="btn default-button cookie-accept">Akzeptieren</button>
+</div>
 <div class="stretch-grid-item" id="indexfooter">
     <?php include $depth . 'footer.php'; ?>
 </div>
@@ -101,5 +108,6 @@ include 'imageslider.php';
         document.getElementById("anmelden").scrollIntoView();
     }
 </script>
+<script src="js/cookieBanner.js"></script>
 </body>
 </html>

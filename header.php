@@ -10,8 +10,8 @@
             <?php if (isset($_SESSION['userSessions'])) { ?>
                 <a href="pages/logout/logout.php">Logout</a>
             <?php } else { ?>
-                <a href="index.php#anmelden">Anmelden</a>
-                <a href="index.php#registrieren">Registrieren</a>
+                <a id="anmeldenLink" href="index.php#anmelden">Anmelden</a>
+                <a id="registrierenLink" href="index.php#registrieren">Registrieren</a>
             <?php } ?>
         </div>
     </div>
