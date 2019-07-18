@@ -56,7 +56,7 @@ class Insert
                 ':zip_code' => $school['address']['zip_code'],
                 ':street' => $school['address']['street'],
                 ':email' => $school['mail'],
-                ':students' => $school['numberOfStudents'],
+                ':students' => $school['students'],
                 ':homepage_url' => $school['homepageURL'],
                 ':creator' => $school['creator']
             ]);

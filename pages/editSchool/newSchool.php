@@ -4,8 +4,6 @@
 <section>
     <h2 id="anlegen" class="card-header">Schule anlegen</h2>
     <div class="card-body">
-
-
         <div class="UploadInterface">
             <div id="UploadGallery"></div>
             <form name="<?= $_SESSION['user_ID'] + 1000 ?>" id="upload" class="file-upload-field"

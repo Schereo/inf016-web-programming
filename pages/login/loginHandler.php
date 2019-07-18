@@ -16,12 +16,10 @@ function userLogin($emailLogin, $passwordLogin)
             session_start();
             $user_row = $query->getUserRow($query->getUserId($emailLogin));
             $_SESSION['userSessions'] = true;
-            if (!$user_row) {
                 $_SESSION['user_ID'] = $user_row['user_id'];
                 $_SESSION['userName'] = $user_row->mail;
                 $_SESSION['firstName'] = $user_row->vorname;
                 $_SESSION['lastName'] = $user_row->nachname;
-            }
             $loginError = 'loggedIn';
         } else {
             $loginError = 'loginFehler';

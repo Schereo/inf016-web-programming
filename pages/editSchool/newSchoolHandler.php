@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once "../../database/Insert.php";
 require_once "zip_codes.php";
 
@@ -17,6 +18,7 @@ $school = [
         "zip_code" => getZip()[$_POST['district']],
         "number" => $_POST['number'],
         "district" => $_POST['district'],
+        "city"  => "Oldenburg",
     ]];
 
 $insert = new Insert((new DatabaseConnector())->connect());
