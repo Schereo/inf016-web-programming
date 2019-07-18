@@ -87,7 +87,8 @@ input[type=file] {
     opacity: 0.6;
 }
 #uploadStatus {
-    margin-left: 1em;
+    padding-left: 20px;
+    padding-top: 5px;
 }
 .uploadInterface input {
     grid-row: 1;

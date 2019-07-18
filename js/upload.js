@@ -1,7 +1,6 @@
 $(document).ready(function () {
     var id;
     $('#upload').on('submit', function uploadPic(e) {
-        //id = "<?php echo $_SESSION['user_ID'] ?>";
         id = document.getElementById("upload").name;
         e.preventDefault();
         $.ajax({
@@ -16,8 +15,12 @@ $(document).ready(function () {
             error: function () {
                 $('#uploadStatus').html('<span style="color:#EA4335;">Upload fehlgeschlagen.<span>');
             },
-            success: function () {
-                $('#uploadStatus').html('<span style=color:#28A74B;">Upload erfolgreich.<span>');
+            success: function (data) {
+                var color;
+                if(data === "Upload erfolgreich"){
+                    color = "green";
+                } else color = "red";
+                $('#uploadStatus').html('<span style=color:' + color + '>' + data + '</span>');
                 $('#UploadGallery').load("pages/editSchool/displayUploads.php", {id: id});
             }
         })
@@ -39,8 +42,13 @@ $(document).ready(function () {
             error: function () {
                 $('#uploadStatus').html('<span style="color:#EA4335;">Upload fehlgeschlagen.<span>');
             },
-            success: function () {
-                $('#uploadStatus').html('<span style=color:#28A74B;">Upload erfolgreich.<span>');
+            success: function (data) {
+                var color;
+                if(data === "Upload erfolgreich"){
+                    color = "green";
+                } else color = "red";
+                alert(data);
+                $('#uploadStatus').html('<span style=color:' + color + '>' + data + '</span>');
                 $('#UploadGallery').load("pages/editSchool/displayUploads.php", {id: id});
             }
         });

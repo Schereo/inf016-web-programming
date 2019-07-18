@@ -1,8 +1,7 @@
 <?php
 require_once "../../database/Insert.php";
-/*
     session_start();
-*/
+
 if (isset($_FILES['upload'])) {
     $imgName = $_FILES['upload']['name'];
     $imgSize = $_FILES['upload']['size'];
@@ -18,16 +17,13 @@ if (isset($_FILES['upload'])) {
         if (isset($_POST['id'])) {
             $insert->newImage($uploadNameNew, $imgSize, $imgMime, $imgData, $_POST['id']);
         } else {
-            $insert->newImage($uploadNameNew, $imgSize, $imgMime, $imgData, $_SESSION['user_ID']+1000);
+            $insert->newImage($uploadNameNew, $imgSize, $imgMime, $imgData, $_SESSION['user_ID'] + 1000);
         }
-        $_SESSION['uploadError'] = "Upload erfolgreich";
-        header("Location:../../index.php#anlegen");
+        echo "Upload erfolgreich";
     } else if ($uploadError === 1) {
-        $_SESSION['uploadError'] = "Ihr Bild ist zu groß";
-        header("Location:../../index.php#anlegen");
+        echo "Ihr Bild ist zu groß";
     } else {
-        $_SESSION['uploadError'] = "Fehlgeschlagen - bitte nur jpg, jpeg oder png hochladen";
-        header("Location:../../index.php#anlegen");
+        echo "Fehlgeschlagen - bitte nur jpg, jpeg oder png hochladen";
     }
 }
 
