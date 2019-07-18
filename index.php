@@ -108,6 +108,6 @@ include 'imageslider.php';
         document.getElementById("anmelden").scrollIntoView();
     }
 </script>
-<script src="js/cookieBanner.js"></script>
+<!--<script src="js/cookieBanner.js"></script>-->
 </body>
 </html>

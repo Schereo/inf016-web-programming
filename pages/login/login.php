@@ -1,3 +1,44 @@
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '486010828897938',
+            cookie: true,
+            xfbml: true,
+            version: 'v2.8'
+        });
+        FB.getLoginStatus(function (response) {
+            statusChangeCallback(response);
+        });
+    };
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/de_DE/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    function statusChangeCallback(response) {
+        if (response.status === 'connected') {
+            console.log('Logged in and authenticated');
+        } else {
+            console.log('Not authenticated');
+        }
+    }
+
+    function checkLoginState() {
+        FB.getLoginStatus(function (response) {
+            statusChangeCallback(response);
+        });
+    }
+
+    function logout() {
+        FB.logout(function (response) {
+        });
+    }
+</script>
+<script async defer src="https://connect.facebook.net/de_DE/sdk.js"></script>
 <section id="anmeldenSection">
     <h2 id="anmelden" class="card-header">Anmelden</h2>
     <form class="login-body" method="post">
@@ -11,7 +52,11 @@
             </div>
             <div id="loginError" style="display: none"></div>
         <?php } ?>
-        <button class="default-button card-footer button-size" type="submit" name="anmelden">Anmelden</button>
-        <a href="#">Passwort vergessen</a>
+        <div>
+            <button class="default-button card-footer button-size" type="submit" name="anmelden">Anmelden</button>
+            <a href="#">Passwort vergessen</a></div>
+        <div class="fb-login-button" data-width="" data-size="medium" data-button-type="continue_with"
+             data-auto-logout-link="false" data-use-continue-as="false"></div>
+
     </form>
 </section>
