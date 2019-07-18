@@ -1,7 +1,5 @@
 <?php
-/*
     session_start();
-*/
 require_once "../../database/Update.php";
 require_once "zip_codes.php";
 
@@ -22,9 +20,6 @@ $school = [
         "district" => $_POST['district'],
         "zip_code" => getZip()[$_POST['district']]
     ]];
-
-var_dump($school);
-
 $update = new Update((new DatabaseConnector())->connect());
 $update->editSchool($school);
 header("Location: ../../index.php");
