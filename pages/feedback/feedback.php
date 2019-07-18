@@ -57,7 +57,7 @@ $ratingA = round($ratings['AVG(activitydiversity)']);
         </fieldset>
     </form>
     <input type="hidden" name="school_id" value="<?= $_GET['ID'] ?>" id="school_id_hidden" />
-    <button class="default-button button-size" id="btn-feedback">Bewertung senden
+    <button class="default-button button-size" id="btn-feedback">Speichern
     </button>
 </form>
 </div>

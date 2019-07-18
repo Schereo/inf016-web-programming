@@ -13,9 +13,7 @@ if (isset($school) && $search && isset($_GET['ID'])):
     <form class="detailcontainer card-body" method="GET" action="<?php echo $_SERVER['PHP_SELF'] ?>">
         <div class="detail-picture"><?php include 'pages/detail/showPicture.php'; ?></div>
         <div class="detail-contact">
-            <h1 class="info-container detail-headline">
-                Was soll hier eigentlich stehen?!?!
-            </h1>
+
             <h3>Kurzprofil</h3>
             <div class="info-container">
                 <div class="text-left">
@@ -33,12 +31,6 @@ if (isset($school) && $search && isset($_GET['ID'])):
                     <?= $school['students'] ?>
                 </div>
             </div>
-            <div class="info-container">
-                <div class="text-left"> Beschreibung:</div>
-                <div class="text-right">
-                    <?= $school['description'] ?>
-                </div>
-            </div>
             <br>
             <div class="info-container">
                 <div class="text-left">
@@ -50,7 +42,6 @@ if (isset($school) && $search && isset($_GET['ID'])):
                     <br><?= $school['district'] ?><?= $school['zip'] ?>, <?= $school['city'] ?>
                 </div>
             </div>
-            <br>
             <h3>Kontakt</h3>
             <div class="info-container">
                 <div class="text-left">
@@ -76,6 +67,10 @@ if (isset($school) && $search && isset($_GET['ID'])):
                     <a href="<?= $school['homepage_url'] ?>"><?= $school['homepage_url'] ?></a>
                 </div>
             </div>
+            <h3>Beschreibung</h3>
+            <div class="info-container">
+                <?= $school['description'] ?>
+            </div>
             </section>
         </div>
     </form>
@@ -84,9 +79,6 @@ if (isset($school) && $search && isset($_GET['ID'])):
         <div class="detail-feedback">
             <?php include 'pages/feedback/feedback.php'; ?>
         </div>
-    </form>
-    <div class="text-right">
-        <a href=""></a>
-    </div> <?php } ?>
+    </form> <?php } ?>
     </article>
 <?php endif ?>

@@ -106,8 +106,6 @@ input[type=file] {
 .uploadInterface .uploadedPictures {
     grid-row: 1;
     grid-column: 1;
-    /* background: var(--background); */
-
 }
 
 .uploadedPictures {
@@ -206,9 +204,4 @@ input[type=file] {
         align-self: center;
         justify-self: center;
     }
-
-    .uploadInterface .uploadedPictures {
-        grid-row: 1;
-    }
-
 }
