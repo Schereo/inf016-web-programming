@@ -1,8 +1,11 @@
 <?php
-require_once 'database/Query.php';
 
+if(isset($_POST['id'])){
+    facebookLogin($_POST['id']);
+}
 function userLogin($emailLogin, $passwordLogin)
 {
+    require_once 'database/Query.php';
     $loginError = '';
     if (strlen($_POST['emailLogin']) == 0 || strlen($_POST['passwordLogin']) == 0) {
         return '';
@@ -25,4 +28,10 @@ function userLogin($emailLogin, $passwordLogin)
         }
     }
     return $loginError;
+}
+
+function facebookLogin($id){
+    session_start();
+    $_SESSION['userSessions'] = true;
+    $_SESSION['user_ID'] = $id;
 }

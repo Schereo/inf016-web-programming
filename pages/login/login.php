@@ -22,6 +22,18 @@
     function statusChangeCallback(response) {
         if (response.status === 'connected') {
             console.log('Logged in and authenticated');
+            FB.api('/me', function(response) {
+                var id = response.id;
+                alert(response.id);
+               jQuery.ajax({
+                   type: 'post',
+                   url: 'pages/login/loginHandler.php',
+                   data: {id : id},
+                   success:function (result) {
+                       console.log(result);
+                   }
+               })
+            });
         } else {
             console.log('Not authenticated');
         }

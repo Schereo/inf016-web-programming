@@ -13,7 +13,7 @@
     $(".cookie-accept").on("click", () => {
         setCookie("acceptedCookies", true, true, 365);
         cookieBanner.classList.remove("visible");
-        $.ajax("../php/startSession.php",
+        $.ajax("php/startSession.php",
             {
                 success: () => {
                     $("#anmeldenSection").show();
