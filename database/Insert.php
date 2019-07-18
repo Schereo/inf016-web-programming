@@ -35,7 +35,7 @@ class Insert
         }
     }
 
-    public function newSchool($school, $user_id)
+    public function newSchool($school)
     {
         $sql = "INSERT INTO School
                 (creator, name, school_type, description, principal, students, phone_number, house_number, zip_code, district, city, street, email, students, homepage_url)
@@ -43,7 +43,6 @@ class Insert
 
         try {
             $stmt = $this->pdo->prepare($sql);
-            // einzelne Werte gibt es gar nicht im Formular, deswegen hardgecodet drin.
             $stmt->execute([
                 ':name' => $school['name'],
                 ':school_type' => $school['schoolType'],

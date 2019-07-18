@@ -33,7 +33,7 @@ class Delete
         try {
             $stmt->execute([':id' => $school_id]);
         } catch (Exception $ex) {
-            error_log("Delete->image() Error: " . $ex->getMessage());
+            error_log("Delete->school() Error: " . $ex->getMessage());
 
         }
     }

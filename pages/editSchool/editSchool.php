@@ -64,13 +64,12 @@
                 <br>
                 <button type="submit" class="default-button" value="<?= $school['school_id'] ?>" name="editID">
                     Upload
-                </button>
-                <form action="pages/editSchool/deleteSchoolHandler.php" method="post" class="deleteForm">
-                    <button type="submit" class="default-button" value="<?= $school['school_id'] ?>" name="deleteID"
-                            formmethod="post">
-                        Delete
-                    </button>
-                </form>
+        </form>
+        </button>
+        <form action="pages/editSchool/deleteSchoolHandler.php" method="post" class="deleteForm">
+            <button type="submit" class="default-button" value="<?= $school['school_id'] ?>" name="deleteID">
+                Delete
+            </button>
         </form>
     </div>
 </section>

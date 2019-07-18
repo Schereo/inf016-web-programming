@@ -23,7 +23,7 @@ $school = [
         "zip_code" => getZip()[$_POST['district']]
     ]];
 
-
+var_dump($school);
 
 $update = new Update((new DatabaseConnector())->connect());
 $update->editSchool($school);
