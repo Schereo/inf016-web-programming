@@ -47,7 +47,6 @@ $(document).ready(function () {
                 if(data === "Upload erfolgreich"){
                     color = "green";
                 } else color = "red";
-                alert(data);
                 $('#uploadStatus').html('<span style=color:' + color + '>' + data + '</span>');
                 $('#UploadGallery').load("pages/editSchool/displayUploads.php", {id: id});
             }
