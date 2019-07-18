@@ -1,0 +1,31 @@
+/* login */
+.login-body > #login-e-mail {
+    grid-column: 1/ span 2;
+    grid-row: 1;
+}
+
+.login-body > #login-password {
+    grid-column: 1/ span 2;
+    grid-row: 2;
+}
+
+.login-body > button {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.login-body > a {
+    grid-column: 1;
+    grid-row: 4;
+    font-size: small;
+}
+.login-body .checkbox{
+    width: 30px;
+    height: 30px;
+}
+
+.fb-login-button {
+    grid-row: 3;
+    grid-column: 2;
+}
+

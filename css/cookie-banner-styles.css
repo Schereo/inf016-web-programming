@@ -1,0 +1,16 @@
+#cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 !important;
+    z-index: 999;
+    opacity: 0;
+    border-radius: 0;
+    background: var(--main);
+    color: var(--background);
+}
+
+#cookie-banner.visible {
+    opacity: 1;
+}

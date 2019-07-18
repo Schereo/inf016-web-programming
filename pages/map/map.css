@@ -1,0 +1,132 @@
+.mapcontainer {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.mapimage {
+    grid-column: 1;
+}
+
+.mapimage #map {
+    height: 100%;
+    width: 100%;
+    border : 0;
+    min-height:300px;
+}
+
+.filter {
+    background-color: var(--main);
+    border-radius: 4px 4px 4px 4px;
+}
+
+.mapfilter {
+    grid-column: 2;
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    background-color: var(--light-main);
+    grid-row-gap: 10px;
+    margin: 15px 15px 15px 15px;
+    padding: 15px 15px 15px 15px;
+}
+
+.mapfilterheader {
+    color: var(--background);
+    margin-top: 0;
+    margin-bottom: 0.3em;
+    padding: 0.6em;
+    padding-bottom: 0;
+}
+
+#map-filter-body-header {
+    grid-row: 1;
+    margin: 0;
+}
+
+.mapfilter .mapfilterbody {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    grid-row-gap: 10px;
+    /* grid-column-gap: 10px; */
+}
+
+#filter-search-headline {
+    grid-row: 3;
+    text-align: center;
+}
+
+.mapfilter .map-filter-schools {
+    grid-row: 4;
+    width: 100%;
+}
+
+.mapfilter .mapfilterfooter {
+    grid-row: 5;
+    text-align: center;
+    width: 100%;
+}
+
+.filter-button {
+    /* width: 80%; */
+    min-width: 120px;
+}
+
+#gymnasien {
+    background-color: darkorange;
+}
+
+#oberschulen {
+    background-color: dodgerblue;
+}
+
+#bbs {
+    background-color: goldenrod;
+}
+
+#gesamtschulen {
+    background-color: blueviolet;
+}
+
+#grundschulen {
+    background-color: limegreen;
+}
+
+@media (max-width: 1264px) {
+
+    .mapcontainer {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: auto;
+    }
+
+    .mapimage {
+        grid-row:1;
+        grid-column: 1;
+    }
+
+
+    .filter {
+        grid-row: 2;
+        grid-column: 1;
+        background-color: var(--light-main);
+        border-radius: 0 0 0 0;
+    }
+
+    .mapfilter .mapfilterbody {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto auto;
+        width: 100%;
+        margin: auto;
+    }
+
+    .mapfilterheader {
+        text-align: center;
+    }
+
+    #map-filter-body-header {
+        text-align: center;
+    }
+}
+

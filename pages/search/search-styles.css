@@ -1,0 +1,135 @@
+:root {
+    --light-main: #B8B8B8;
+    --main: #828C91;
+    --accent: #6096BA;
+    --background: #FCFCFC;
+}
+
+.search-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    justify-content: space-evenly;
+}
+.search-container input, .search-container select{
+    margin: 0px 20px;
+}
+
+.school-cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 2em;
+    margin-top: 2em;
+    padding-bottom: 1em;
+    max-height: 30em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.small-card {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    background-color: var(--background);
+    border-radius: 5px;
+    color: var(--main);
+    width: 300px;
+    justify-self: center;
+    box-shadow: 2px 7px 10px 1px rgba(0,0,0,0.42);
+}
+
+.small-card > .small-card-header {
+    justify-content: center;
+    grid-row: 1;
+}
+
+.small-card-header > h2 {
+    align-self: center;
+    margin: 0 0 0 0;
+    padding: 0.5em;
+}
+
+.small-card > .small-card-body {
+    grid-row: 2;
+    min-height: 5em;
+    align-self: start;
+}
+
+.card-list {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 34px;
+}
+
+.card-list li:before {
+
+}
+
+.small-card > .small-card-footer {
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0.5em;
+    font-size: 18px;
+    align-self: end;
+}
+
+.small-card  .small-card-footer a, .small-card  .small-card-footer button{
+    margin: 5px;
+    padding: 5px;
+    background: var(--main);
+    border-radius: 5px;
+    color: var(--background);
+    text-decoration: none;
+    text-align: center;
+    width: 80%;
+    height: 80%;
+    border: none;
+}
+
+.small-card .responsivePicture{
+     width: 250px;
+    padding-left: 10px;
+    /* height:  5px; */
+    /* justify-content: center; */
+}
+
+.small-card > .small-card-footer a:hover, .small-card  .small-card-footer button:hover{
+
+    background-color: var(--accent);
+
+}
+.small-card-footer a.homepagebutton{
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+}
+
+
+
+@media(max-width: 1200px) {
+    .school-cards-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media(max-width: 900px) {
+    .school-cards-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 700px) {
+    .school-cards-container {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 1250px){
+    .search-container {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        row-gap: 0.5em;
+        justify-content: stretch;
+    }}
