@@ -26,4 +26,5 @@ $districts = array(
     14 => "Tweelbäke",
     15 => "Wechloy",
     16 => "Ziegelhofviertel",
+    17 => "Alle",
 );

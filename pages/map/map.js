@@ -15,28 +15,32 @@ $(function () {
     var wantedSchoolType;
     document.getElementById('oberschulen').addEventListener('click', function () {
         wantedSchoolType = $(this).val();
-        console.log(wantedSchoolType);
+        filter()
     });
     document.getElementById('gymnasien').addEventListener('click', function () {
         wantedSchoolType = $(this).val();
+        filter()
     });
     document.getElementById('bbs').addEventListener('click', function () {
         wantedSchoolType = $(this).val();
+        filter()
     });
     document.getElementById('gesamtschulen').addEventListener('click', function () {
         wantedSchoolType = $(this).val();
+        filter()
     });
     document.getElementById('grundschulen').addEventListener('click', function () {
         wantedSchoolType = $(this).val();
+        filter()
     });
     document.getElementById('resetMarkers').addEventListener('click', function (e) {
         wantedSchoolType = $(this).val();
+        filter( )
     });
     $(document).on("submit", "#schoolTypeFilter", function (e) {
         e.preventDefault();
     });
-    $(document).on("click", "#addMarks", function (e) {
-        e.preventDefault();
+   function filter(){
         var geocoder = new google.maps.Geocoder();
         //get the chosen district
         var district = jQuery("#districtFilter").val();
@@ -63,7 +67,7 @@ $(function () {
                     geocodeAddressOnlyShow(geocoder, map, data)
             }
         });
-    }});
+    }}
 });
 
 // Only show selected amount of Schools

@@ -19,7 +19,7 @@
                 var allSchools = <?php echo json_encode($schools, JSON_PRETTY_PRINT); ?>
             </script>
             <h5 id="map-filter-body-header">Schultyp</h5>
-            <form class="mapfilterbody" method="POST" id="schoolTypeFilter">
+            <form class="mapfilterbody" id="schoolTypeFilter">
                 <button type="submit" name="filtern" class="default-button filter-button" id="gymnasien"
                         value="Gymnasium">
                     Gymnasien
@@ -43,15 +43,15 @@
             <div id="filter-search-headline">Stadtteil</div>
             <form>
                 <select class="input map-filter-schools form-control" id="districtFilter">
-                    <?php foreach ($districts as $district): ?>
+                    <?php foreach ($districts as $district):
+                    if ($district == "Alle") { ?>
+                    <option value="<?= $district ?>" selected="selected"><?= $district ?></option>
+                    <? } else { ?>
                         <option value="<?= $district ?>"><?= $district ?></option>
-                    <?php endforeach;
+                    <?php } endforeach;
                     unset($district); ?>
                 </select>
             </form>
-            <div class="mapfilterfooter">
-                <button class="default-button button-size" type="submit" name="filtern" id="addMarks">Filtern</button>
-            </div>
         </div>
 
         </form>
